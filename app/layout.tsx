@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Manrope, Orbitron } from "next/font/google";
 import "./globals.css";
+import GlassyNavbar from "@/components/navbar/Navbar";
+
+import CinematicFooter from "@/components/Footer";
+import LenisProvider from "@/providers/LenisProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +14,19 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-orbitron",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"], // pick what you need
+  display: "swap",
+  variable: "--font-manrope", // exposes as CSS variable
 });
 
 export const metadata: Metadata = {
@@ -25,9 +42,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${manrope.variable} antialiased`}
       >
-        {children}
+        <LenisProvider>
+          <GlassyNavbar />
+          {children}
+          <CinematicFooter />
+        </LenisProvider>
       </body>
     </html>
   );
