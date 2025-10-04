@@ -1,0 +1,22 @@
+name: Deploy to Server
+on:
+  push:
+    branches: [ "main" ]   # change if your default branch is different
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: |
+            ${{ secrets.HETZNER_SSH_KEY }}
+
+      - name: Trust server host key
+        run: ssh-keyscan -H 37.27.92.148 >> ~/.ssh/known_hosts
+
+      - name: Trigger remote deploy
+        run: ssh deploy@37.27.92.148 'bash -lc "/srv/hbc-site/deploy.sh"'
