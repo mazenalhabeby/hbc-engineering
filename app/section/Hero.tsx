@@ -52,7 +52,7 @@ export default function Hero({
             className="font-orbitron text-balance leading-tight tracking-wide
                       text-3xl sm:text-4xl md:text-5xl lg:text-6xl capitalize"
           >
-            <span className="block text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold uppercase text-yellow-400 tracking-normal">
+            <span className="block text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold uppercase text-[#a31613] tracking-normal">
               {title.highlight}
             </span>
             <span className=" block text-[clamp(2rem,4.5vw,3.5rem)] font-semibold">
