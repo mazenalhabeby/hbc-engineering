@@ -4,9 +4,9 @@ import MapCard from "@/components/map/MapCard";
 import Hero from "@/components/ui/Hero";
 import ContactForm from "@/components/ContactForm";
 import FaqAccordion from "@/components/ui/FaqAccordion";
-import CTA from "@/components/ui/CTA";
 import InfoGrid from "@/components/InfoGrid";
 import ButtonsRow from "@/components/ButtonsRow";
+import { siteConfig } from "@/config/site";
 
 export default function Contact() {
   return (
@@ -23,16 +23,64 @@ export default function Contact() {
         }
         right={
           <div className="space-y-6">
-            <InfoGrid />
-            <InfoGrid />
+            <InfoGrid
+              items={[
+                {
+                  label: "Address",
+                  value: siteConfig.address1,
+                },
+                {
+                  label: "Hours",
+                  value: (
+                    <div className="space-y-0.5">
+                      <div>Mon–Thu · 8:00–17:00</div>
+                      <div>Fri · 8:00–12:00</div>
+                    </div>
+                  ),
+                },
+                { label: "Regions", value: "USA" },
+                {
+                  label: "Response",
+                  value: (
+                    <span className="tabular-nums">&lt; 1 business day</span>
+                  ),
+                },
+              ]}
+              cols={{ base: 1, sm: 2, lg: 4 }} // 1 col on mobile, 2 on small, 4 on large
+            />
+            <InfoGrid
+              items={[
+                {
+                  label: "Address",
+                  value: siteConfig.address2,
+                },
+                {
+                  label: "Hours",
+                  value: (
+                    <div className="space-y-0.5">
+                      <div>Mon–Thu · 8:00–17:00</div>
+                      <div>Fri · 8:00–12:00</div>
+                    </div>
+                  ),
+                },
+                { label: "Regions", value: "EU" },
+                {
+                  label: "Response",
+                  value: (
+                    <span className="tabular-nums">&lt; 1 business day</span>
+                  ),
+                },
+              ]}
+              cols={{ base: 1, sm: 2, lg: 4 }} // 1 col on mobile, 2 on small, 4 on large
+            />
           </div>
         }
       >
         <ButtonsRow
-          primary="Call +43 680 13 19 199"
-          primaryHref="tel:+436801319199"
-          secondary="office@hbc-group.us"
-          secondaryHref="mailto:office@hbc-group.us"
+          primary={`call ${siteConfig.phone}`}
+          primaryHref={`tel:${siteConfig.phone}`}
+          secondary={siteConfig.officeEmail as string}
+          secondaryHref={`mailto:${siteConfig.officeEmail}`}
         />
       </Hero>
 
@@ -56,14 +104,13 @@ export default function Contact() {
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-700">
                 <li>
-                  <strong>Phone:</strong> +43 680 13 19 199
+                  <strong>Phone:</strong> {siteConfig.phone}
                 </li>
                 <li>
-                  <strong>Email:</strong> office@hbc-group.us
+                  <strong>Email:</strong> {siteConfig.officeEmail}
                 </li>
                 <li>
-                  <strong>HQ:</strong> Kapellenstraße 30, 4664 Laakirchen,
-                  Austria
+                  <strong>HQ:</strong> {siteConfig.address1}
                 </li>
               </ul>
             </div>
@@ -133,19 +180,6 @@ export default function Contact() {
           ]}
         />
       </Section>
-
-      <CTA
-        title="We’ll reply within one business day"
-        subtitle="Prefer phone or email? Reach out directly or send the form above."
-        bullets={[
-          "Sales & Support",
-          "Partnerships",
-          "Project planning",
-          "Documentation requests",
-        ]}
-        phone="+43 680 13 19 199"
-        email="office@hbc-group.us"
-      />
     </main>
   );
 }

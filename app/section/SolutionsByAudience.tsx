@@ -19,7 +19,7 @@ const fireImgs = [
   "/images/fire2.jpeg", // abstract tech / lab visual
 ];
 
-const individualImgs = [
+const intelligentBuildingImgs = [
   "/images/SmartAutomation.jpg",
   "/images/Security.jpg",
   "/images/Energy.jpg",
@@ -164,7 +164,7 @@ function Band({
               <span className="h-1.5 w-1.5 rounded-full bg-green-600" />
               {label}
             </span>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
               {title}
             </h2>
             <p className="mt-4 whitespace-pre-line text-lg text-slate-600">
@@ -211,7 +211,7 @@ export default function SolutionsShowcaseAnimated() {
       {/* INDUSTRIAL */}
       <Band
         label="Industrial"
-        title="Keeping Industry Moving"
+        title="From Uptime to Upgrades — We’ve Got You Covered"
         desc={`Precision maintenance, integrated security, and complex relocations engineered for uptime.
 At HBC Group, we go beyond simple repairs — we deliver complete lifecycle care for heavy industries. From hydraulic and electrical systems to mechanical structures, welding, and programming, our expertise ensures every machine runs at peak performance.
 
@@ -255,9 +255,9 @@ Our solutions form a protective barrier that resists ignition, slows spread, and
         flip
       />
 
-      {/* INDIVIDUAL */}
+      {/* intelligent Building */}
       <Band
-        label="Individual"
+        label="Intelligent Building"
         title="Smarter Homes, Greener Living"
         desc={`Comfort, security, and energy intelligence — beautifully connected.
 At HBC Group, we transform houses into smart living spaces that think ahead. From automation systems that adapt to your daily routines, to solar integration, energy monitoring, and home security, we make modern living effortless and secure.
@@ -274,7 +274,7 @@ Our mission: smarter homes, greener choices, and a lifestyle built for tomorrow.
           "Energy",
           "Soil",
         ]}
-        images={individualImgs}
+        images={intelligentBuildingImgs}
       />
 
       {/* bottom wave */}

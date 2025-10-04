@@ -3,10 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { siteConfig } from "@/config/site";
 
 /* ========= EDIT THESE ========= */
 const EMAIL_LOCAL_PARTS = ["office", "careers"]; // first item is default
-const EMAIL_DOMAIN = "@hbc-engineering.com";
+const EMAIL_DOMAIN = `@${siteConfig.domain}`;
 const PANEL_IMAGES = ["/hbc-logo.svg"]; // put files in /public
 /* ================================= */
 
@@ -14,13 +15,13 @@ export default function CinematicFooter() {
   return (
     <section
       className="
-        relative min-h-[100svh] overflow-hidden bg-[#0d0d0e] text-white
+        relative overflow-hidden bg-[#0d0d0e] text-white
         pb-24 sm:pb-16
       "
       style={{ paddingBottom: "max(6rem, env(safe-area-inset-bottom))" }}
     >
       {/* BIG MOVING WORD */}
-      <div className="pointer-events-none absolute inset-x-0 top-[10vh] sm:top-[8vh] z-0 select-none">
+      <div className="pointer-events-none absolute inset-x-0 z-0 select-none">
         <MarqueeWord word="HBC-ENGINEERING" />
       </div>
 
@@ -28,14 +29,14 @@ export default function CinematicFooter() {
       <div
         className="
           relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 gap-8
-          px-4 sm:px-6 md:gap-10 lg:grid-cols-12 lg:px-8
+          px-4 sm:px-6 md:gap-10 lg:grid-cols-12 lg:px-8 py-12
         "
       >
         {/* LEFT: brand + emails + phone + newsletter */}
         <div className="col-span-12 flex flex-col justify-center gap-10 sm:gap-12 lg:col-span-6 pt-16 sm:pt-20">
           <div className="space-y-2 sm:space-y-3">
             <div className="text-xl sm:text-2xl font-extrabold">
-              HBC Engineering
+              {siteConfig.company}
             </div>
             <p className="text-white/70 text-base sm:text-[17px]">
               260 Peachtree Street
@@ -58,7 +59,9 @@ export default function CinematicFooter() {
               Call us
             </div>
             <div className="mt-2 text-2xl sm:text-3xl font-extrabold">
-              +43 680 13 19 199
+              <a href={`tel:${siteConfig.phone}`} className="hover:underline">
+                {siteConfig.phone}
+              </a>
             </div>
           </div>
 
@@ -179,7 +182,7 @@ function HoverEmails({ locals, domain }: { locals: string[]; domain: string }) {
 
 function Panel({ src }: { src: string }) {
   return (
-    <div className="relative h-[56vh] w-[40vh] overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)] flex items-center justify-center px-2">
+    <div className="relative h-[56vh] w-[40vh] overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)] flex items-center justify-center px-2 backdrop-blur-sm">
       <Image
         src={src}
         alt=""

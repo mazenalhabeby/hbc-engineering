@@ -14,13 +14,13 @@ export type NavItem = {
 };
 
 const NAV: NavItem[] = [
-  { label: paths.company.label, href: paths.company.href },
+  // { label: paths.company.label, href: paths.company.href },
   { label: paths.industrial.label, href: paths.industrial.href },
+  { label: paths.fireProtection.label, href: paths.fireProtection.href },
   {
     label: paths.intelligentBuilding.label,
     href: paths.intelligentBuilding.href,
   },
-  { label: paths.fireProtection.label, href: paths.fireProtection.href },
   { label: paths.careers.label, href: paths.careers.href },
   { label: paths.contact.label, href: paths.contact.href },
   // {
@@ -113,14 +113,14 @@ export default function Navbar() {
             </svg>
           </button> */}
           <Link
-            href="/Corporate"
+            href={paths.corporate.href}
             className="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2"
             style={{
               background:
                 "linear-gradient(90deg, rgba(6, 110, 176, 1) 0%, rgba(0, 118, 192, 1) 35%, rgba(0, 121, 196, 1) 100%)",
             }}
           >
-            Request a Corporate Meeting
+            {paths.corporate.label}
           </Link>
           <MobileMenu />
         </div>
@@ -282,23 +282,16 @@ function MobileMenu() {
                   )}
                 </div>
               ))}
-
               <div className="pt-2 flex gap-2">
                 <Link
-                  href="/login"
-                  className="flex-1 rounded-full border border-white/25 bg-white/50 px-4 py-2 text-center font-medium backdrop-blur-2xl"
-                >
-                  Login
-                </Link>
-                <Link
-                  href="/demo"
+                  href={paths.corporate.href}
                   className="flex-1 rounded-full px-4 py-2 text-center font-semibold text-white shadow-lg"
                   style={{
                     background:
                       "linear-gradient(90deg, rgba(86,60,255,1) 0%, rgba(93,74,255,1) 35%, rgba(116,86,255,1) 100%)",
                   }}
                 >
-                  Book a Demo
+                  {paths.corporate.label}
                 </Link>
               </div>
             </div>

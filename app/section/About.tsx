@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { qutation, smartSolution } from "@/assets";
+import { qutation } from "@/assets";
 
 export default function AboutSection() {
   return (
     <section aria-labelledby="about-heading" className="relative bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-14">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2">
-          <div className="font-manrope flex flex-col gap-6">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+          <div className="flex flex-col justify-center gap-6">
             <h2
               id="about-heading"
               className="text-5xl font-semibold tracking-tight text-slate-900"
@@ -19,24 +19,18 @@ export default function AboutSection() {
             </h2>
 
             <p className=" text-slate-600 text-lg leading-loose tracking-wider">
-              At HBC Group, we help industries meet their most demanding
-              challenges in machinery service, maintenance, and relocation. As a
-              trusted partner, we deliver actionable solutions that keep
-              large-scale industrial operations running with precision and
-              reliability. Our expertise spans preventive maintenance,
-              diagnostics, overhauls, and complex plant relocations across
-              Europe and the USA. By combining European engineering excellence
-              with local support and international partnerships, we provide 24/7
-              services that ensure continuity, efficiency, and long-term
-              performance. With a focus on innovation and resource-efficient
-              practices, we enable our clients to maximize uptime, extend asset
-              lifecycles, and operate with confidence in a competitive global
-              market.
+              HBC Group provides expert industrial maintenance, machinery
+              service, and plant relocation across the US and Europe. We combine
+              European engineering excellence with local support to deliver 24/7
+              solutions that keep operations running reliably. Our services span
+              preventive maintenance, diagnostics, overhauls, fire protection,
+              and smart building solutions—helping clients maximize uptime,
+              extend asset life, and operate with confidence.
             </p>
           </div>
           <div className="relative rounded-bl-[72px] rounded-tr-[72px] rounded-tl-lg  rounded-br-lg text-white shadow-xl min-h-[624px] flex flex-col justify-between px-8 py-10 overflow-hidden">
             <Image
-              src={smartSolution}
+              src={"/images/factoryBg.jpeg"}
               alt="Background"
               fill
               className="absolute inset-0 object-cover"
@@ -53,9 +47,8 @@ export default function AboutSection() {
                   height={32}
                 />
                 <p className="text-2xl font-medium">
-                  We are here to solve the hardest challenges: to keep
-                  industries moving, homes smarter, and resources used wisely.
-                  Our promise is simple — reliability without compromise.{" "}
+                  More than service — we’re your partner in protecting
+                  investments, ensuring safety, and powering progress.
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ export default function Hero({
   title = {
     highlight: "Engineering",
     mid: "the Future,",
-    tail: "Partnering With You Today",
+    tail: "Service, Safety & Industrial Innovation.",
   },
 }: HeroProps) {
   return (
@@ -41,7 +41,11 @@ export default function Hero({
         }}
         aria-hidden="true"
       />
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:px-8 min-h-[100svh] md:min-h-0 pt-[calc(env(safe-area-inset-top)+88px)] md:grid-cols-2 md:pt-20 pb-16 md:pb-24 items-start md:items-center">
+      <div
+        className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 
+                gap-10 px-4 sm:px-6 lg:px-8 
+                min-h-screen items-center"
+      >
         <div className="flex h-full flex-col items-start justify-end md:justify-center gap-6">
           <h1
             id="hero-heading"

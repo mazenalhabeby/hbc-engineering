@@ -1,6 +1,7 @@
+import { siteConfig } from "@/config/site";
 import React from "react";
 export default function MapCard() {
-  const addr = "Kapellenstraße 30, 4664 Laakirchen, Austria";
+  const addr = siteConfig.address1 as string;
   const q = encodeURIComponent(addr);
   return (
     <div className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
