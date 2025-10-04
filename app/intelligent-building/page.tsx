@@ -15,7 +15,6 @@ import {
   IconTarget,
 } from "@/components/Icons";
 import TiltCard from "@/components/TiltCard";
-import CTA from "@/components/CTA";
 import LiveControl from "@/components/LiveControl";
 
 /* --------------------------------------------------------------- */
@@ -84,10 +83,8 @@ export default function IntelligentBuildingPage() {
         cta={{ label: "Conect Us", href: paths.contact.href }}
         heroImage={ASSETS.hero}
       />
-
       <SmartHomeFeatureGrid />
       <LiveControl />
-      {/* <ShopGreenSection /> */}
       <BadgesMarquee />
       <FAQ title="Frequently Asked Questions" faqItems={faqItems} />
       <FinalCTA
@@ -184,73 +181,6 @@ function SmartHomeFeatureGrid() {
 }
 
 /* --------------------------------------------------------------- */
-/* Shop Green – categories                                          */
-/* --------------------------------------------------------------- */
-function ShopGreenSection() {
-  const cats = [
-    {
-      k: "Accessories",
-      d: "Cables, sensors, valves & parts built to last.",
-      img: ASSETS.accessories,
-    },
-    {
-      k: "Agro",
-      d: "Durable, efficient tools for farms and gardens.",
-      img: ASSETS.agro,
-    },
-    {
-      k: "Concrete",
-      d: "Performance additives & protection for concrete.",
-      img: ASSETS.concrete,
-    },
-    {
-      k: "Construction",
-      d: "Site essentials — reliable from ground to roof.",
-      img: ASSETS.construction,
-    },
-    {
-      k: "Energy",
-      d: "PV gear, storage, monitoring & optimization.",
-      img: ASSETS.energyCat,
-    },
-    {
-      k: "Soil",
-      d: "Sustainable substrates and soil performance.",
-      img: ASSETS.soil,
-    },
-  ];
-
-  return (
-    <section className="relative">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
-        >
-          Shop Green Products
-        </motion.h2>
-
-        <p className="mt-2 max-w-2xl text-slate-600">
-          Sustainable products with industrial durability. Same HBC reliability.
-        </p>
-
-        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {cats.map((c, i) => (
-            <ProductCard key={c.k} i={i} {...c} />
-          ))}
-        </div>
-
-        <div className="mt-8">
-          <CTA href={paths.shop.href}>Browse full catalog</CTA>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* --------------------------------------------------------------- */
 /* Badges marquee                                                   */
 /* --------------------------------------------------------------- */
 function BadgesMarquee() {
@@ -306,61 +236,5 @@ function BadgesMarquee() {
         }
       `}</style>
     </section>
-  );
-}
-
-/* =============================================================== */
-/* Components                                                       */
-/* =============================================================== */
-
-function ProductCard({
-  k,
-  d,
-  img,
-  i,
-}: {
-  k: string;
-  d: string;
-  img: string;
-  i: number;
-}) {
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.5, delay: i * 0.05 }}
-      className="group overflow-hidden rounded-3xl border border-white/60 bg-white/70 shadow-sm backdrop-blur"
-    >
-      <div className="relative h-40 w-full overflow-hidden">
-        <Image
-          src={img}
-          alt={k}
-          fill
-          sizes="(max-width:1024px) 100vw, 33vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-        />
-      </div>
-      <div className="p-5">
-        <div className="flex items-center justify-between gap-4">
-          <h3 className="text-lg font-semibold text-slate-900">{k}</h3>
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="opacity-70"
-          >
-            <path
-              d="M5 12h14M13 5l7 7-7 7"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-        <p className="mt-1 text-slate-600">{d}</p>
-      </div>
-    </motion.article>
   );
 }

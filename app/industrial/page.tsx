@@ -27,7 +27,7 @@ import ChipKinetic from "@/components/ChipKinetic";
 const ASSETS = {
   hero: "/images/factory.png",
   maintain: "/images/maintenance.png",
-  hydraulics: "/images/hydraulics.jpg",
+  hydraulics: "/images/Hydraulics.jpg",
   electrical: "/images/electrical.jpg",
   mechanical: "/images/mechanical.jpg",
   welding: "/images/welding.jpg",
