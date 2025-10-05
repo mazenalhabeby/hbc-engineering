@@ -9,16 +9,18 @@ interface LogoStageProps {
   spinSpeed?: number;
   frame?: number;
   yLift?: number;
+  fitPadding?: number;
 }
 
 export default function LogoStage({
   targetSize = 4.0,
-  spinSpeed = 0.008,
-  frame = 0.8,
+  spinSpeed = 0.006,
+  frame = 1.0,
   yLift = 0.1,
+  fitPadding = 1.1,
 }: LogoStageProps) {
   return (
-    <React.Fragment>
+    <>
       <ambientLight intensity={0.6} />
       <directionalLight position={[3.5, 5, 6]} intensity={1.2} castShadow />
       <directionalLight
@@ -30,11 +32,12 @@ export default function LogoStage({
 
       <HbcLogo
         url="/hbc-logo.glb"
-        targetSize={targetSize} // try 4.0
-        spinSpeed={spinSpeed} // try 0.005
-        frame={frame} // closer (1.35 is your default). Try 0.9 → 0.85
-        yLift={yLift} // (optional) nudge up a bit if it looks low
+        targetSize={targetSize}
+        spinSpeed={spinSpeed}
+        frame={frame}
+        yLift={yLift}
+        fitPadding={fitPadding}
       />
-    </React.Fragment>
+    </>
   );
 }

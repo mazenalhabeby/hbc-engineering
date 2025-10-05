@@ -1,22 +1,24 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import { useThree } from "@react-three/fiber";
 import { Html, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 type Props = {
   url?: string;
-  /** Normalize the model so its longest side equals this value (world units) */
+  /** Longest model side after normalization (world units) */
   targetSize?: number;
-  /** Autorotate on/off */
+  /** Autorotate toggle */
   autoRotate?: boolean;
-  /** Radians per frame at 60fps (smaller = slower). Default 0.003 */
+  /** Radians/frame at 60fps */
   spinSpeed?: number;
-  /** Camera distance multiplier (1.0 = tight fit; smaller = closer/bigger; larger = more margin). Default 1.35 */
+  /** Camera distance multiplier (keep 1.0; use fitPadding to add margin) */
   frame?: number;
-  /** Optional vertical nudge for the final camera lookAt (useful for shadows) */
+  /** Vertical nudge for lookAt */
   yLift?: number;
+  /** Extra padding around model (1.10–1.25 is great) */
+  fitPadding?: number;
 };
 
 export default function HbcLogo({
@@ -24,44 +26,46 @@ export default function HbcLogo({
   targetSize = 2.6,
   autoRotate = true,
   spinSpeed = 0.003,
-  frame = 1.35,
+  frame = 1.0,
   yLift = 0,
+  fitPadding = 1.1,
 }: Props) {
   const { scene } = useGLTF(url);
   const group = useRef<THREE.Group>(null);
   const { camera, gl } = useThree();
 
-  // Clone and sanitize materials once
+  // Clone & sanitize materials once
   const model = useMemo(() => {
     const clone = scene.clone(true);
-    clone.traverse((o) => {
-      if ((o as THREE.Object3D).type === "Mesh") {
-        const mesh = o as THREE.Mesh;
-        mesh.castShadow = mesh.receiveShadow = true;
-        const mat = mesh.material;
-        const mats = Array.isArray(mat) ? mat : [mat];
-        mats.forEach((m) => {
-          const p = m as THREE.MeshPhysicalMaterial;
-          p.transparent = false;
-          p.opacity = 1;
-          p.depthWrite = true;
-          p.depthTest = true;
-          if ((p as THREE.MeshPhysicalMaterial).metalness !== undefined)
-            p.metalness = 0.35;
-          if ((p as THREE.MeshPhysicalMaterial).roughness !== undefined)
-            p.roughness = 0.35;
-        });
-      }
+    clone.traverse((obj) => {
+      const mesh = obj as THREE.Mesh;
+      if (!mesh.isMesh) return;
+      mesh.castShadow = mesh.receiveShadow = true;
+
+      const mats = Array.isArray(mesh.material)
+        ? mesh.material
+        : [mesh.material];
+
+      mats.forEach((m) => {
+        const p = m as THREE.MeshPhysicalMaterial;
+        if (p && "metalness" in p) p.metalness = 0.35;
+        if (p && "roughness" in p) p.roughness = 0.35;
+        p.transparent = false;
+        p.opacity = 1;
+        p.depthWrite = true;
+        p.depthTest = true;
+      });
     });
     return clone;
   }, [scene]);
 
-  // Center, scale, tilt a hair, and frame the camera
-  useEffect(() => {
+  // Center, scale, slight tilt, frame camera with padding
+  useLayoutEffect(() => {
     if (!group.current) return;
     group.current.clear();
     group.current.add(model);
 
+    // center + normalize scale
     const box = new THREE.Box3().setFromObject(model);
     const size = new THREE.Vector3();
     const center = new THREE.Vector3();
@@ -73,28 +77,34 @@ export default function HbcLogo({
     model.scale.setScalar(targetSize / longest);
     model.rotation.set(0.04, -0.28, 0);
 
+    // re-measure after scaling
     const sphere = new THREE.Sphere();
     new THREE.Box3().setFromObject(model).getBoundingSphere(sphere);
 
-    if ("fov" in camera) {
-      const fov = (camera.fov * Math.PI) / 180;
-      const dist = sphere.radius / Math.tan(fov / 2);
-      // 🔑 control on-screen size here:
-      camera.position.set(sphere.center.x, sphere.center.y, dist * frame);
-      camera.lookAt(sphere.center.x, sphere.center.y + yLift, sphere.center.z);
-      camera.updateProjectionMatrix();
+    // perspective vs ortho
+    const isPerspective =
+      (camera as THREE.PerspectiveCamera).isPerspectiveCamera === true;
+
+    if (isPerspective) {
+      const cam = camera as THREE.PerspectiveCamera;
+      const fov = (cam.fov * Math.PI) / 180;
+      const dist = (sphere.radius * fitPadding) / Math.tan(fov / 2);
+      cam.position.set(sphere.center.x, sphere.center.y, dist * frame);
+      cam.lookAt(sphere.center.x, sphere.center.y + yLift, sphere.center.z);
+      cam.updateProjectionMatrix();
     } else {
-      camera.position.set(
+      const cam = camera as THREE.OrthographicCamera;
+      cam.position.set(
         sphere.center.x,
         sphere.center.y,
-        sphere.center.z + targetSize * frame
+        sphere.center.z + targetSize * frame * fitPadding
       );
-      camera.lookAt(sphere.center.x, sphere.center.y + yLift, sphere.center.z);
-      camera.updateProjectionMatrix();
+      cam.lookAt(sphere.center.x, sphere.center.y + yLift, sphere.center.z);
+      cam.updateProjectionMatrix();
     }
 
     gl.outputColorSpace = THREE.SRGBColorSpace;
-  }, [model, targetSize, camera, gl, frame, yLift]);
+  }, [model, targetSize, camera, gl, frame, yLift, fitPadding]);
 
   // Gentle autorotate
   useEffect(() => {
