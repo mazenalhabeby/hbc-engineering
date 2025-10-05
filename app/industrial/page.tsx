@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, {
   useEffect,
   useLayoutEffect,
@@ -18,6 +18,13 @@ import ChipGhost from "@/components/ChipGhost";
 import TiltCard from "@/components/TiltCard";
 import Wave from "@/components/Wave";
 import ChipKinetic from "@/components/ChipKinetic";
+import {
+  Electrical,
+  Hydraulics,
+  Mechanical,
+  Programming,
+  Welding,
+} from "@/assets";
 
 /**
  * =========================
@@ -27,11 +34,6 @@ import ChipKinetic from "@/components/ChipKinetic";
 const ASSETS = {
   hero: "/images/factory.png",
   maintain: "/images/maintenance.png",
-  hydraulics: "/images/Hydraulics.jpg",
-  electrical: "/images/electrical.jpg",
-  mechanical: "/images/mechanical.jpg",
-  welding: "/images/welding.jpg",
-  programming: "/images/programming.jpg",
   cta: "/images/Consultation.jpg",
 
   security: "/images/industrial/fire-protection.jpg",
@@ -146,7 +148,7 @@ function PinnedShowcase() {
         tag: "Maintenance",
         title: "Hydraulics",
         text: "Diagnostics, pump/valve service, hoses, sealing, filtration, and contamination control. We restore force and motion with micron-level precision.",
-        img: ASSETS.hydraulics,
+        img: Hydraulics,
         bullets: [
           "Power units",
           "Manifolds",
@@ -160,7 +162,7 @@ function PinnedShowcase() {
         tag: "Maintenance",
         title: "Electrical",
         text: "Control panels, drives, PLCs, sensors, power routing. We do clean installs and retrofit wiring with safety and clarity.",
-        img: ASSETS.electrical,
+        img: Electrical,
         bullets: [
           "PLC/Drive tuning",
           "Switchgear",
@@ -174,7 +176,7 @@ function PinnedShowcase() {
         tag: "Maintenance",
         title: "Mechanical",
         text: "Gearboxes, conveyors, bearings, shaft alignment, structural fabrication—built to take industrial punishment.",
-        img: ASSETS.mechanical,
+        img: Mechanical,
         bullets: [
           "Precision alignment",
           "Conveyors",
@@ -188,7 +190,7 @@ function PinnedShowcase() {
         tag: "Maintenance",
         title: "Welding",
         text: "Certified welding and on-site fabrication for production lines and heavy assets. Strong, clean, inspected.",
-        img: ASSETS.welding,
+        img: Welding,
         bullets: [
           "Steel & SS",
           "Pipe welding",
@@ -202,7 +204,7 @@ function PinnedShowcase() {
         tag: "Maintenance",
         title: "Programming",
         text: "Commissioning and optimization of PLC/HMI code. We make machines think smarter and operators work faster.",
-        img: ASSETS.programming,
+        img: Programming,
         bullets: [
           "Siemens/TIA",
           "Rockwell",
@@ -334,7 +336,7 @@ function FixedVisualizer({
   insetTop = 120, // keep this many px below the section top
   insetBottom = 45, // keep this many px above the section bottom
 }: {
-  slides: { img: string; title: string }[];
+  slides: { img: StaticImageData; title: string }[];
   active: number;
   sectionRef: React.RefObject<HTMLElement | null>;
   topOffset?: number;
