@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import React from "react";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { paths } from "@/lib/urls";
 
 export type NavItem = {
@@ -13,8 +13,14 @@ export type NavItem = {
   children?: { label: string; href: string }[];
 };
 
+const NOISE_BG =
+  'url("data:image/svg+xml;utf8,\
+<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\">\
+<filter id=\\"n\\"><feTurbulence type=\\"fractalNoise\\" baseFrequency=\\"1.2\\" numOctaves=\\"2\\" stitchTiles=\\"stitch\\"/></filter>\
+<rect width=\\"100%\\" height=\\"100%\\" filter=\\"url(%23n)\\" opacity=\\"0.9\\"/>\
+</svg>")';
+
 const NAV: NavItem[] = [
-  // { label: paths.company.label, href: paths.company.href },
   { label: paths.industrial.label, href: paths.industrial.href },
   { label: paths.fireProtection.label, href: paths.fireProtection.href },
   {
@@ -23,14 +29,6 @@ const NAV: NavItem[] = [
   },
   { label: paths.careers.label, href: paths.careers.href },
   { label: paths.contact.label, href: paths.contact.href },
-  // {
-  //   label: "Solutions",
-  //   children: [
-  //     { label: "Property Managers", href: "/solutions/property-managers" },
-  //     { label: "Owners", href: "/solutions/owners" },
-  //     { label: "Service Providers", href: "/solutions/service-providers" },
-  //   ],
-  // },
 ];
 
 function cn(...classes: Array<string | false | undefined>) {
@@ -72,17 +70,17 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all",
+        "fixed top-0 inset-x-0 z-40 transition-all", // lowered so the drawer (z-[100]) sits above it
         scrolled
           ? "backdrop-blur-xl bg-[rgb(246_249_255/0.55)] border-b border-white/20"
           : "bg-transparent"
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-24 flex items-center gap-4 justify-around">
-        <Link href={"/"}>
+        <Link href="/">
           <Image
             src="/hbc-logo.svg"
-            alt="Brand logo"
+            alt="HBC Engineering"
             className="h-20 w-20"
             width={80}
             height={80}
@@ -91,10 +89,12 @@ export default function Navbar() {
         </Link>
 
         <div className="ml-auto flex items-center gap-2">
+          {/* desktop menu */}
           <div
             className={cn(
               "hidden md:flex items-center gap-1 rounded-full border px-2 py-1",
-              "border-white/25 bg-white/10 backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_8px_24px_rgba(31,38,135,.15)]"
+              "border-white/25 bg-white/10 backdrop-blur-2xl",
+              "shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_8px_24px_rgba(31,38,135,.15)]"
             )}
             role="menubar"
             aria-label="Primary"
@@ -103,25 +103,20 @@ export default function Navbar() {
               <MenuItem key={item.label} item={item} activeRoot={activeRoot} />
             ))}
           </div>
-          {/* <button
-            className="hidden sm:inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm backdrop-blur-2xl hover:bg-white/20 transition"
-            aria-label="Language"
-          >
-            EN
-            <svg viewBox="0 0 20 20" className="h-4 w-4" aria-hidden>
-              <path d="M5 7l5 6 5-6H5z" fill="currentColor" />
-            </svg>
-          </button> */}
+
+          {/* CTA */}
           <Link
             href={paths.corporate.href}
             className="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2"
             style={{
               background:
-                "linear-gradient(90deg, rgba(6, 110, 176, 1) 0%, rgba(0, 118, 192, 1) 35%, rgba(0, 121, 196, 1) 100%)",
+                "linear-gradient(90deg, rgba(6,110,176,1) 0%, rgba(0,118,192,1) 35%, rgba(0,121,196,1) 100%)",
             }}
           >
             {paths.corporate.label}
           </Link>
+
+          {/* mobile drawer */}
           <MobileMenu />
         </div>
       </nav>
@@ -175,7 +170,7 @@ function MenuItem({
         </svg>
       </button>
 
-      {/* Dropdown */}
+      {/* hover dropdown (desktop) */}
       <div
         className={cn(
           "invisible absolute left-1/2 z-40 w-56 -translate-x-1/2 pt-2 opacity-0 transition",
@@ -203,12 +198,38 @@ function MenuItem({
   );
 }
 
+/* ---------- Mobile Drawer in a portal (glass only on mobile) ---------- */
 function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  // lock page scroll when open
+  useEffect(() => {
+    const root = document.documentElement;
+    if (open) {
+      root.style.overflow = "hidden";
+      root.style.touchAction = "none";
+      root.style.overscrollBehavior = "none";
+    } else {
+      root.style.overflow = "";
+      root.style.touchAction = "";
+      root.style.overscrollBehavior = "";
+    }
+    return () => {
+      root.style.overflow = "";
+      root.style.touchAction = "";
+      root.style.overscrollBehavior = "";
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
+
   return (
-    <React.Fragment>
+    <>
       <button
-        className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 backdrop-blur-2xl"
+        className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/15 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,.35)]"
         aria-label="Open menu"
         onClick={() => setOpen(true)}
       >
@@ -222,82 +243,123 @@ function MobileMenu() {
         </svg>
       </button>
 
-      {open && (
-        <div
-          className="fixed inset-0 z-50 md:hidden"
-          role="dialog"
-          aria-modal="true"
-        >
+      {mounted &&
+        open &&
+        createPortal(
           <div
-            className="absolute inset-0 bg-black/30"
-            onClick={() => setOpen(false)}
-          />
-          <div className="absolute inset-y-0 right-0 w-[82%] max-w-sm p-4 overflow-y-auto border-l border-white/20 bg-[rgb(246_249_255/0.75)] backdrop-blur-2xl shadow-2xl">
-            <div className="flex items-center justify-between">
-              <span className="text-base font-semibold">Menu</span>
-              <button
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 backdrop-blur-2xl"
-                aria-label="Close menu"
-                onClick={() => setOpen(false)}
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-                  <path
-                    d="M6 6l12 12M18 6l-12 12"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </button>
-            </div>
+            className="fixed inset-0 z-[100] md:hidden"
+            role="dialog"
+            aria-modal="true"
+          >
+            {/* backdrop */}
+            <div className="absolute inset-0 bg-black/45" onClick={close} />
 
-            <div className="mt-6 space-y-4">
-              {NAV.map((item) => (
-                <div key={item.label}>
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      className="block rounded-xl border border-white/25 bg-white/50 px-4 py-3 backdrop-blur-2xl"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <details className="rounded-xl border border-white/25 bg-white/50 backdrop-blur-2xl">
-                      <summary className="cursor-pointer list-none px-4 py-3 font-medium">
-                        {item.label}
-                      </summary>
-                      <ul className="px-2 pb-2">
-                        {item.children?.map((c) => (
-                          <li key={c.href}>
-                            <Link
-                              href={c.href}
-                              className="block rounded-lg px-3 py-2 hover:bg-white/50"
-                            >
-                              {c.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
-                </div>
-              ))}
-              <div className="pt-2 flex gap-2">
-                <Link
-                  href={paths.corporate.href}
-                  className="flex-1 rounded-full px-4 py-2 text-center font-semibold text-white shadow-lg"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, rgba(86,60,255,1) 0%, rgba(93,74,255,1) 35%, rgba(116,86,255,1) 100%)",
-                  }}
+            {/* drawer (glassmorphism) */}
+            <aside
+              className="
+                absolute inset-y-0 right-0 w-[86%] max-w-sm
+                p-4 pt-[max(16px,env(safe-area-inset-top))] pb-[max(16px,env(safe-area-inset-bottom))]
+                overflow-y-auto border-l border-white/25
+                bg-white/25 supports-[backdrop-filter]:backdrop-blur-3xl backdrop-saturate-150
+                shadow-[0_20px_50px_rgba(0,0,0,.25)]
+                transition-transform duration-300 will-change-transform
+              "
+              style={{
+                backgroundImage:
+                  "linear-gradient(180deg, rgba(255,255,255,0.66) 0%, rgba(255,255,255,0.18) 100%), radial-gradient(70% 120% at 0% 0%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%)",
+              }}
+            >
+              {/* subtle glass grain */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  backgroundImage: NOISE_BG,
+                  opacity: 0.06,
+                  mixBlendMode: "overlay",
+                  backgroundSize: "200px 200px",
+                }}
+              />
+              {/* hairlines */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/50"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-black/5"
+              />
+
+              <div className="relative flex items-center justify-between">
+                <span className="text-base font-semibold">Menu</span>
+                <button
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/20 supports-[backdrop-filter]:backdrop-blur-xl"
+                  aria-label="Close menu"
+                  onClick={close}
                 >
-                  {paths.corporate.label}
-                </Link>
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
+                    <path
+                      d="M6 6l12 12M18 6l-12 12"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </React.Fragment>
+
+              <div className="relative mt-6 space-y-4 pb-8">
+                {NAV.map((item) => (
+                  <div key={item.label}>
+                    {item.href ? (
+                      <Link
+                        href={item.href}
+                        onClick={close}
+                        className="block rounded-xl border border-white/25 bg-white/55 supports-[backdrop-filter]:backdrop-blur-2xl px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,.45)]"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <details className="rounded-xl border border-white/25 bg-white/55 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,.45)]">
+                        <summary className="cursor-pointer list-none px-4 py-3 font-medium">
+                          {item.label}
+                        </summary>
+                        <ul className="px-2 pb-2">
+                          {item.children?.map((c) => (
+                            <li key={c.href}>
+                              <Link
+                                href={c.href}
+                                onClick={close}
+                                className="block rounded-lg px-3 py-2 hover:bg-white/50"
+                              >
+                                {c.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </div>
+                ))}
+
+                <div className="pt-2 flex gap-2">
+                  <Link
+                    href={paths.corporate.href}
+                    onClick={close}
+                    className="flex-1 rounded-full px-4 py-2 text-center font-semibold text-white shadow-xl border border-white/20 supports-[backdrop-filter]:backdrop-blur-2xl"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, rgba(6,110,176,0.98) 0%, rgba(0,118,192,0.98) 35%, rgba(0,121,196,0.98) 100%)",
+                    }}
+                  >
+                    {paths.corporate.label}
+                  </Link>
+                </div>
+              </div>
+            </aside>
+          </div>,
+          document.body
+        )}
+    </>
   );
 }
