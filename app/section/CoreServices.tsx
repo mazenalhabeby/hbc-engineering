@@ -24,7 +24,7 @@ const DEFAULT_ITEMS: ServiceItem[] = [
   {
     title: "Industrial Maintenance and Services",
     description:
-      "From preventive or recurring maintenance and diagnostic to  fast responds trouble-shooting or complex relocation of assembly lines.",
+      "From preventive or recurring maintenance and diagnostic to fast-response troubleshooting or complex relocation of assembly lines.",
     image: "/images/Electrical.jpg",
     accent: "#0ea5e9",
     href: "/industrial",
@@ -53,12 +53,14 @@ export default function ServicesSection({
     [items]
   );
 
-  // Ensure Industrial is visually centered and larger on desktop (lg+)
+  // Mobile: Industrial first
+  // Desktop: Industrial centered and larger
   const desktopOrder = (title: string) => {
-    if (/industrial/i.test(title)) return "lg:order-2 lg:scale-110 lg:z-10";
-    if (/fire protection/i.test(title)) return "lg:order-1";
-    if (/intelligent building/i.test(title)) return "lg:order-3";
-    return ""; // fallback
+    if (/industrial/i.test(title))
+      return "order-1 lg:order-2 lg:scale-110 lg:z-10"; // mobile first, desktop center
+    if (/fire protection/i.test(title)) return "order-2 lg:order-1"; // fire second on mobile, left on desktop
+    if (/intelligent building/i.test(title)) return "order-3 lg:order-3"; // stays last
+    return "";
   };
 
   return (
