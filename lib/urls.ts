@@ -9,4 +9,5 @@ export const paths: Record<string, PathEntry> = {
   contact: { label: "Contact", href: "/contact" },
   careers: { label: "Careers", href: "/careers" },
   corporate: { label: "Schedule a Meeting", href: "/corporate" },
+  itSolutions: {label: "IT Solutions", href: "/it-solutions"},
 };

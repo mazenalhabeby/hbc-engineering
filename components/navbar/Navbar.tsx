@@ -27,6 +27,7 @@ const NAV: NavItem[] = [
     label: paths.intelligentBuilding.label,
     href: paths.intelligentBuilding.href,
   },
+  { label: paths.itSolutions.label, href: paths.itSolutions.href },
   { label: paths.careers.label, href: paths.careers.href },
   { label: paths.contact.label, href: paths.contact.href },
 ];
