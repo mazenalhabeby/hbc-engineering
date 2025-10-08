@@ -26,6 +26,13 @@ const intelligentBuildingImgs = [
   "/images/Soil.jpg",
 ];
 
+const itImgs = [
+  "/images/Software-Development.jpg",
+  "/images/DevOps.jpg",
+  "/images/Automation2.jpg",
+  "/images/Blockchain.jpg",
+];
+
 const chip = (t: string) => (
   <span
     key={t}
@@ -275,6 +282,28 @@ Our mission: smarter homes, greener choices, and a lifestyle built for tomorrow.
           "Soil",
         ]}
         images={intelligentBuildingImgs}
+      />
+
+      <Band
+        label="IT Solutions"
+        title="Ship Faster, Scale Smarter — Secure by Design"
+        desc={`We design and build modern digital products end-to-end: software, cloud, AI automation, and secure integrations.
+From product discovery and UX to APIs, data pipelines, and observability, we deliver measurable outcomes and long-term maintainability.`}
+        chipsTop={[
+          "Software Development",
+          "Cloud & DevOps",
+          "AI & Automation",
+          "Security & Integration",
+        ]}
+        chipsBottom={[
+          "SaaS & Platforms",
+          "CI/CD & Observability",
+          "Assistants & RAG",
+          "IAM/SSO & Compliance",
+          "Payments & Web3",
+        ]}
+        images={itImgs}
+        flip
       />
 
       {/* bottom wave */}
