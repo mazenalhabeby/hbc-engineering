@@ -19,16 +19,16 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -p 22 ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          # if you also have a DNS name, add it too:
+          # optional: if you'll also connect via a domain, add it here too
           # ssh-keyscan -p 22 your.domain.tld >> ~/.ssh/known_hosts
 
-      - name: Smoke test SSH connection
+      - name: Smoke test SSH to server
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           ssh -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=30 -o ServerAliveCountMax=6 \
-              "$SSH_USER@$SSH_HOST" 'echo "SSH_OK"'
+            "$SSH_USER@$SSH_HOST" 'echo SSH_OK'
 
       - name: Run deploy script on server
         env:
@@ -36,4 +36,4 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           ssh -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=30 -o ServerAliveCountMax=6 \
-              "$SSH_USER@$SSH_HOST" 'bash -lc "/srv/hbc-site/deploy.sh"'
+            "$SSH_USER@$SSH_HOST" 'bash -lc "/srv/hbc-site/deploy.sh"'
