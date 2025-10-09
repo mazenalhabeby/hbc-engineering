@@ -1,5 +1,4 @@
 name: Deploy HBC Site
-
 on:
   push:
     branches: [ main ]
@@ -16,15 +15,25 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Add server host key (avoid interactive yes/no)
+      - name: Trust server host key
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -p 22 ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          # if you also have a DNS name, add it too:
+          # ssh-keyscan -p 22 your.domain.tld >> ~/.ssh/known_hosts
+
+      - name: Smoke test SSH connection
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          ssh -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=30 -o ServerAliveCountMax=6 \
+              "$SSH_USER@$SSH_HOST" 'echo "SSH_OK"'
 
       - name: Run deploy script on server
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
-          ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=6 \
+          ssh -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=30 -o ServerAliveCountMax=6 \
               "$SSH_USER@$SSH_HOST" 'bash -lc "/srv/hbc-site/deploy.sh"'
