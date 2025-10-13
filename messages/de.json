@@ -576,5 +576,115 @@
       },
       "badges": ["ISO-27001 / DSGVO-Compliance","99,9 % Uptime-SLA","Security-First-Architektur","24/7 Globaler Support","Kontinuierliche Lieferung & Monitoring","Transparente Berichte","Dediziertes Account-Management","Vollständige Dokumentation & Wissens-Transfer"]
     }
+  },
+  "meeting": {
+    "badge": "Lassen Sie uns sprechen",
+    "title": "Termin vereinbaren",
+    "intro": "Sprechen Sie mit einer Ingenieurin / einem Ingenieur, um den besten Weg für industrielle Verfügbarkeit, smartes Wohnen und Sicherheit zu planen. Wir passen das Gespräch an Ihre Ziele an.",
+    "bullets": [
+      "Schnelles, unverbindliches Gespräch",
+      "Klare Optionen für Ihren Use Case",
+      "Zeitplan- & ROI-Orientierung",
+      "Expertise in Sicherheit, Brandschutz & Wartung"
+    ],
+    "chips": ["24/7 Support", "EU & USA", "Industrie & Privat"],
+    "form": {
+      "fullName": "Vollständiger Name",
+      "email": "Geschäftliche E-Mail",
+      "company": "Unternehmen",
+      "phone": "Telefonnummer",
+      "topic": "Besprechungsthema",
+      "topicOptions": [
+        "Industrielle Instandhaltung",
+        "Brand- / Sicherheitssysteme",
+        "Smart Home / Gebäude",
+        "Green Products",
+        "Sonstiges"
+      ],
+      "size": "Unternehmensgröße",
+      "sizeOptions": ["1–10", "11–50", "51–200", "201–1000", "1000+"],
+      "date": "Wunschtermin",
+      "time": "Bevorzugte Uhrzeit",
+      "message": "Was möchten Sie erreichen?",
+      "selectPlaceholder": "Auswählen…",
+      "consentHtml": "Ich stimme der <link>Datenschutzerklärung</link> zu und erlaube der HBC Group, mich zu meiner Anfrage zu kontaktieren.",
+      "submit": "Termin anfragen",
+      "sending": "Senden…",
+      "ok": "Vielen Dank! Wir melden uns in Kürze.",
+      "err": "Bitte prüfen Sie Name & E-Mail und versuchen Sie es erneut."
+    },
+    "noteHtml": "Lieber per E-Mail? Schreiben Sie uns an <link>support@hbc-engineering.com</link>.",
+    "cta": {
+      "title": "Noch nicht bereit zu buchen? Holen Sie sich eine kurze Beratung.",
+      "desc": "Teilen Sie ein paar Details, und wir empfehlen den schnellsten Weg zum Ergebnis.",
+      "button": "Vertrieb kontaktieren"
+    }
+  },
+  "contact": {
+  "hero": {
+    "eyebrow": "Kontakt HBC Group",
+    "kicker": "Wir sind für Sie da",
+    "title": "Kontaktieren Sie uns",
+    "description": "Vertrieb • Support • Partnerschaften — teilen Sie uns einige Details mit, und wir melden uns innerhalb eines Werktages."
+  },
+  "info": {
+    "address": "Adresse",
+    "hours": "Öffnungszeiten",
+    "hoursWeek": "Mo–Do · 8:00–17:00",
+    "hoursFri": "Fr · 8:00–12:00",
+    "regions": "Regionen",
+    "regionUSA": "USA",
+    "regionEU": "EU",
+    "response": "Antwortzeit",
+    "responseSla": "< 1 Werktag"
+  },
+  "buttons": {
+    "call": "anrufen {phone}"
+  },
+  "lead": {
+    "title": "Erzählen Sie uns von Ihrem Projekt",
+    "subtitle": "Wählen Sie unten einen Service und teilen Sie uns einige Details mit. Wir melden uns mit den nächsten Schritten."
+  },
+  "direct": {
+    "title": "Direkter Kontakt",
+    "subtitle": "Möchten Sie direkt sprechen? Sie erreichen uns jederzeit.",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "hq": "Hauptsitz"
+  },
+  "why": {
+    "title": "Warum HBC"
+  },
+  "whyPoints": [
+    "Zertifizierte Multi-OEM-Techniker",
+    "Schnelle Ersatzteilbeschaffung",
+    "Digitale Checklisten und Berichte",
+    "Abdeckung in EU und USA"
+  ],
+  "map": {
+    "title": "Finden Sie uns",
+    "subtitle": "Besuchen Sie unseren Hauptsitz oder vereinbaren Sie einen Vor-Ort-Termin – wir kommen zu Ihnen."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "q": "Können Sie meine vorhandenen Geräte verwenden?",
+        "a": "In vielen Fällen ja. Wir prüfen die vorhandene Ausrüstung und integrieren kompatible Geräte über KNX, Matter, Zigbee oder entsprechende Gateways."
+      },
+      {
+        "q": "Benötige ich eine Verkabelung oder geht es auch kabellos?",
+        "a": "Beides ist möglich. Neubauten bevorzugen eine kabelgebundene Infrastruktur; bei Renovierungen kann eine sichere, zuverlässige Funklösung eingesetzt werden."
+      },
+      {
+        "q": "Gibt es eine App?",
+        "a": "Ja – eine Wandpanel- und Mobil-App mit Fernzugriff, Benachrichtigungen, Szenen und Benutzerrollen."
+      },
+      {
+        "q": "Wie steht es um den Datenschutz?",
+        "a": "Lokale Steuerung, wo immer möglich, starke Verschlüsselung für Fernzugriff und transparente Einstellungen zur Datenaufbewahrung."
+      }
+    ]
+  }
   }
 }

@@ -2,17 +2,25 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function MeetingPage() {
+  const t = useTranslations("meeting");
+
   const [loading, setLoading] = useState(false);
   const [ok, setOk] = useState<null | "ok" | "err">(null);
+
+  // localized arrays
+  const bullets = t.raw("bullets") as string[];
+  const chips = t.raw("chips") as string[];
+  const topicOptions = t.raw("form.topicOptions") as string[];
+  const sizeOptions = t.raw("form.sizeOptions") as string[];
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
-    // very light client check
     if (!String(data.email || "").includes("@") || !data.name) {
       setOk("err");
       return;
@@ -22,7 +30,6 @@ export default function MeetingPage() {
     setOk(null);
 
     try {
-      // TODO: send to your API/CRM
       // await fetch("/api/meeting", { method: "POST", body: JSON.stringify(data) });
       await new Promise((r) => setTimeout(r, 900));
       setOk("ok");
@@ -53,39 +60,34 @@ export default function MeetingPage() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
           {/* LEFT – Copy + bullets + logos */}
           <div className="lg:col-span-5">
-            <Badge>Let’s talk</Badge>
+            <Badge>{t("badge")}</Badge>
 
             <h1 className="mt-3 text-balance text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-              Schedule a Meeting
+              {t("title")}
             </h1>
 
             <p className="mt-4 text-lg text-slate-600">
-              Speak with an engineer to map the best path for{" "}
-              <span className="font-semibold text-slate-800">
-                industrial uptime, smart living, and safety
-              </span>
-              . We’ll tailor the conversation to your goals.
+              {t.rich("intro", {
+                strong: (chunks) => (
+                  <span className="font-semibold text-slate-800">{chunks}</span>
+                ),
+              })}
             </p>
 
             <ul className="mt-6 space-y-3 text-slate-700">
-              {[
-                "Fast, no-pressure conversation",
-                "Clear options for your use case",
-                "Timeline & ROI guidance",
-                "Security, fire & maintenance expertise",
-              ].map((t) => (
-                <li key={t} className="flex items-start gap-3">
+              {bullets.map((text) => (
+                <li key={text} className="flex items-start gap-3">
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-[#066eb0]" />
-                  {t}
+                  {text}
                 </li>
               ))}
             </ul>
 
             {/* quick highlights */}
             <div className="mt-8 flex flex-wrap gap-3">
-              <Chip>24/7 Support</Chip>
-              <Chip>EU & USA</Chip>
-              <Chip>Industrial & Individual</Chip>
+              {chips.map((c) => (
+                <Chip key={c}>{c}</Chip>
+              ))}
             </div>
           </div>
 
@@ -97,41 +99,39 @@ export default function MeetingPage() {
                 className="grid grid-cols-1 gap-4 md:grid-cols-2"
               >
                 <Input
-                  label="Full Name"
+                  label={t("form.fullName")}
                   name="name"
                   autoComplete="name"
                   required
                 />
                 <Input
-                  label="Business Email"
+                  label={t("form.email")}
                   type="email"
                   name="email"
                   autoComplete="email"
                   required
                 />
-                <Input label="Company" name="company" />
-                <Input label="Phone Number" name="phone" autoComplete="tel" />
+                <Input label={t("form.company")} name="company" />
+                <Input
+                  label={t("form.phone")}
+                  name="phone"
+                  autoComplete="tel"
+                />
                 <Select
-                  label="Meeting Topic"
+                  label={t("form.topic")}
                   name="topic"
-                  options={[
-                    "Industrial Maintenance",
-                    "Fire / Security Systems",
-                    "Smart Home / Building",
-                    "Green Products",
-                    "Other",
-                  ]}
+                  options={topicOptions}
                 />
                 <Select
-                  label="Company Size"
+                  label={t("form.size")}
                   name="size"
-                  options={["1–10", "11–50", "51–200", "201–1000", "1000+"]}
+                  options={sizeOptions}
                 />
-                <Input label="Preferred Date" type="date" name="date" />
-                <Input label="Preferred Time" type="time" name="time" />
+                <Input label={t("form.date")} type="date" name="date" />
+                <Input label={t("form.time")} type="time" name="time" />
                 <Textarea
                   className="md:col-span-2"
-                  label="What would you like to achieve?"
+                  label={t("form.message")}
                   name="message"
                   rows={4}
                 />
@@ -144,14 +144,16 @@ export default function MeetingPage() {
                     className="mt-1 h-4 w-4 rounded border-slate-300 text-[#066eb0] focus:ring-[#066eb0]"
                   />
                   <p className="text-sm text-slate-600">
-                    I agree to the{" "}
-                    <Link
-                      href="/privacy"
-                      className="underline underline-offset-2"
-                    >
-                      Privacy Policy
-                    </Link>{" "}
-                    and allow HBC Group to contact me about my request.
+                    {t.rich("form.consentHtml", {
+                      link: (chunks) => (
+                        <Link
+                          href="/privacy"
+                          className="underline underline-offset-2"
+                        >
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
                   </p>
                 </div>
 
@@ -160,17 +162,17 @@ export default function MeetingPage() {
                     disabled={loading}
                     className="inline-flex items-center justify-center rounded-full bg-[#066eb0] px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(6,110,176,0.35)] transition hover:-translate-y-0.5 disabled:opacity-60"
                   >
-                    {loading ? "Sending…" : "Request Meeting"}
+                    {loading ? t("form.sending") : t("form.submit")}
                   </button>
 
                   {ok === "ok" && (
                     <span className="text-sm font-medium text-emerald-700">
-                      Thanks! We’ll be in touch shortly.
+                      {t("form.ok")}
                     </span>
                   )}
                   {ok === "err" && (
                     <span className="text-sm font-medium text-rose-700">
-                      Please check your name & email and try again.
+                      {t("form.err")}
                     </span>
                   )}
                 </div>
@@ -179,14 +181,16 @@ export default function MeetingPage() {
 
             {/* micro-note */}
             <p className="mt-3 text-xs text-slate-500">
-              Prefer email? Write us at{" "}
-              <a
-                href="mailto:support@hbc-engineering.com"
-                className="underline"
-              >
-                support@hbc-engineering.com
-              </a>
-              .
+              {t.rich("noteHtml", {
+                link: (chunks) => (
+                  <a
+                    href="mailto:support@hbc-engineering.com"
+                    className="underline"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
           </div>
         </div>
@@ -199,19 +203,16 @@ export default function MeetingPage() {
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-12">
               <div className="md:col-span-8">
                 <h3 className="text-2xl font-extrabold sm:text-3xl">
-                  Not ready to book? Get a quick consultation.
+                  {t("cta.title")}
                 </h3>
-                <p className="mt-2 text-white/90">
-                  Share a few details and we’ll recommend the fastest path to
-                  results.
-                </p>
+                <p className="mt-2 text-white/90">{t("cta.desc")}</p>
               </div>
               <div className="md:col-span-4 md:justify-self-end">
                 <Link
                   href="/contact"
                   className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0b2a3a] shadow-[0_10px_30px_rgba(255,255,255,0.20)] transition hover:-translate-y-0.5"
                 >
-                  Contact Sales
+                  {t("cta.button")}
                   <svg
                     width="14"
                     height="14"
@@ -277,6 +278,7 @@ function Input({
   );
 }
 
+import { useTranslations as useTForSelect } from "next-intl";
 function Select({
   label,
   name,
@@ -288,6 +290,7 @@ function Select({
   options: string[];
   className?: string;
 }) {
+  const t = useTForSelect("meeting");
   return (
     <label className={`block ${className ?? ""}`}>
       <span className="mb-1 block text-sm font-medium text-slate-700">
@@ -299,7 +302,7 @@ function Select({
         defaultValue=""
       >
         <option value="" disabled>
-          Select…
+          {t("form.selectPlaceholder")}
         </option>
         {options.map((o) => (
           <option key={o} value={o}>

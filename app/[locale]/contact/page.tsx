@@ -7,77 +7,83 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import InfoGrid from "@/components/InfoGrid";
 import ButtonsRow from "@/components/ButtonsRow";
 import { siteConfig } from "@/config/site";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("contact");
+
+  // localized chunks
+  const whyPoints = (t.raw("whyPoints") ?? []) as string[];
+  const faqItems = (t.raw("faq.items") ?? []) as { q: string; a: string }[];
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900 space-y-12 py-16">
       <Hero
-        eyebrow="Contact HBC Group"
-        kicker="We’re here to help"
-        title="Contact us"
-        description={
-          <>
-            Sales • Support • Partnerships — share a few details and we’ll get
-            back within one business day.
-          </>
-        }
+        eyebrow={t("hero.eyebrow")}
+        kicker={t("hero.kicker")}
+        title={t("hero.title")}
+        description={<>{t("hero.description")}</>}
         right={
           <div className="space-y-6">
             <InfoGrid
               items={[
                 {
-                  label: "Address",
+                  label: t("info.address"),
                   value: siteConfig.address1,
                 },
                 {
-                  label: "Hours",
+                  label: t("info.hours"),
                   value: (
                     <div className="space-y-0.5">
-                      <div>Mon–Thu · 8:00–17:00</div>
-                      <div>Fri · 8:00–12:00</div>
+                      <div>{t("info.hoursWeek")}</div>
+                      <div>{t("info.hoursFri")}</div>
                     </div>
                   ),
                 },
-                { label: "Regions", value: "USA" },
+                { label: t("info.regions"), value: t("info.regionUSA") },
                 {
-                  label: "Response",
+                  label: t("info.response"),
                   value: (
-                    <span className="tabular-nums">&lt; 1 business day</span>
+                    <span className="tabular-nums">
+                      {t("info.responseSla")}
+                    </span>
                   ),
                 },
               ]}
-              cols={{ base: 1, sm: 2, lg: 4 }} // 1 col on mobile, 2 on small, 4 on large
+              cols={{ base: 1, sm: 2, lg: 4 }}
             />
             <InfoGrid
               items={[
                 {
-                  label: "Address",
+                  label: t("info.address"),
                   value: siteConfig.address2,
                 },
                 {
-                  label: "Hours",
+                  label: t("info.hours"),
                   value: (
                     <div className="space-y-0.5">
-                      <div>Mon–Thu · 8:00–17:00</div>
-                      <div>Fri · 8:00–12:00</div>
+                      <div>{t("info.hoursWeek")}</div>
+                      <div>{t("info.hoursFri")}</div>
                     </div>
                   ),
                 },
-                { label: "Regions", value: "EU" },
+                { label: t("info.regions"), value: t("info.regionEU") },
                 {
-                  label: "Response",
+                  label: t("info.response"),
                   value: (
-                    <span className="tabular-nums">&lt; 1 business day</span>
+                    <span className="tabular-nums">
+                      {t("info.responseSla")}
+                    </span>
                   ),
                 },
               ]}
-              cols={{ base: 1, sm: 2, lg: 4 }} // 1 col on mobile, 2 on small, 4 on large
+              cols={{ base: 1, sm: 2, lg: 4 }}
             />
           </div>
         }
       >
         <ButtonsRow
-          primary={`call ${siteConfig.phone}`}
+          primary={t("buttons.call", { phone: siteConfig.phone })}
           primaryHref={`tel:${siteConfig.phone}`}
           secondary={siteConfig.officeEmail as string}
           secondaryHref={`mailto:${siteConfig.officeEmail}`}
@@ -88,41 +94,35 @@ export default function Contact() {
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              Tell us about your project
+              {t("lead.title")}
             </h2>
             <p className="mt-2 max-w-prose text-slate-600">
-              Choose a service below and share a few details. We’ll follow up
-              with the next steps.
+              {t("lead.subtitle")}
             </p>
             <ContactForm />
           </div>
           <div className="space-y-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold">Direct contact</h3>
+              <h3 className="text-lg font-semibold">{t("direct.title")}</h3>
               <p className="mt-2 text-sm text-slate-600">
-                Prefer to talk now? Reach us anytime.
+                {t("direct.subtitle")}
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-700">
                 <li>
-                  <strong>Phone:</strong> {siteConfig.phone}
+                  <strong>{t("direct.phone")}:</strong> {siteConfig.phone}
                 </li>
                 <li>
-                  <strong>Email:</strong> {siteConfig.officeEmail}
+                  <strong>{t("direct.email")}:</strong> {siteConfig.officeEmail}
                 </li>
                 <li>
-                  <strong>HQ:</strong> {siteConfig.address1}
+                  <strong>{t("direct.hq")}:</strong> {siteConfig.address1}
                 </li>
               </ul>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold">Why HBC</h3>
+              <h3 className="text-lg font-semibold">{t("why.title")}</h3>
               <ul className="mt-3 space-y-2 text-sm text-slate-700">
-                {[
-                  "Certified multi-OEM technicians",
-                  "Rapid spare part sourcing",
-                  "Digital checklists & reports",
-                  "EU & USA coverage",
-                ].map((point) => (
+                {whyPoints.map((point) => (
                   <li key={point} className="flex items-start gap-2">
                     <svg
                       className="mt-1 h-4 w-4 flex-none"
@@ -149,36 +149,17 @@ export default function Contact() {
 
       <Section>
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-          Find us
+          {t("map.title")}
         </h2>
-        <p className="mt-2 max-w-prose text-slate-600">
-          Visit our headquarters or schedule a site visit—we’ll come to you.
-        </p>
+        <p className="mt-2 max-w-prose text-slate-600">{t("map.subtitle")}</p>
         <MapCard />
       </Section>
 
       <Section className="py-0 pb-16">
-        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">FAQs</h2>
-        <FaqAccordion
-          items={[
-            {
-              q: "Can you use my existing devices?",
-              a: "In many cases yes. We audit current gear and integrate compatible devices via KNX, Matter, Zigbee or bridges.",
-            },
-            {
-              q: "Do I need wiring or can it be wireless?",
-              a: "Both are possible. New builds favor wired backbones; renovations can use secure, reliable wireless where suitable.",
-            },
-            {
-              q: "Is there an app?",
-              a: "Yes—wall panel and mobile app with remote access, notifications, scenes and user roles.",
-            },
-            {
-              q: "What about privacy?",
-              a: "Local-first control where possible, strong encryption for remote access, and clear data retention settings.",
-            },
-          ]}
-        />
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          {t("faq.title")}
+        </h2>
+        <FaqAccordion items={faqItems} />
       </Section>
     </main>
   );

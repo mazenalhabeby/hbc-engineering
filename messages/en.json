@@ -576,5 +576,115 @@
       },
       "badges": ["ISO 27001 / GDPR Compliance","99.9% Uptime SLA","Security-First Architecture","24/7 Global Support","Continuous Delivery & Monitoring","Transparent Reporting","Dedicated Account Management","Full Documentation & Knowledge Transfer"]
     }
+  },
+  "meeting": {
+    "badge": "Let’s talk",
+    "title": "Schedule a Meeting",
+    "intro": "Speak with an engineer to map the best path for industrial uptime, smart living, and safety. We’ll tailor the conversation to your goals.",
+    "bullets": [
+      "Fast, no-pressure conversation",
+      "Clear options for your use case",
+      "Timeline & ROI guidance",
+      "Security, fire & maintenance expertise"
+    ],
+    "chips": ["24/7 Support", "EU & USA", "Industrial & Individual"],
+    "form": {
+      "fullName": "Full Name",
+      "email": "Business Email",
+      "company": "Company",
+      "phone": "Phone Number",
+      "topic": "Meeting Topic",
+      "topicOptions": [
+        "Industrial Maintenance",
+        "Fire / Security Systems",
+        "Smart Home / Building",
+        "Green Products",
+        "Other"
+      ],
+      "size": "Company Size",
+      "sizeOptions": ["1–10", "11–50", "51–200", "201–1000", "1000+"],
+      "date": "Preferred Date",
+      "time": "Preferred Time",
+      "message": "What would you like to achieve?",
+      "selectPlaceholder": "Select…",
+      "consentHtml": "I agree to the <link>Privacy Policy</link> and allow HBC Group to contact me about my request.",
+      "submit": "Request Meeting",
+      "sending": "Sending…",
+      "ok": "Thanks! We’ll be in touch shortly.",
+      "err": "Please check your name & email and try again."
+    },
+    "noteHtml": "Prefer email? Write us at <link>support@hbc-engineering.com</link>.",
+    "cta": {
+      "title": "Not ready to book? Get a quick consultation.",
+      "desc": "Share a few details and we’ll recommend the fastest path to results.",
+      "button": "Contact Sales"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact HBC Group",
+      "kicker": "We’re here to help",
+      "title": "Contact us",
+      "description": "Sales • Support • Partnerships — share a few details and we’ll get back within one business day."
+    },
+    "info": {
+      "address": "Address",
+      "hours": "Hours",
+      "hoursWeek": "Mon–Thu · 8:00–17:00",
+      "hoursFri": "Fri · 8:00–12:00",
+      "regions": "Regions",
+      "regionUSA": "USA",
+      "regionEU": "EU",
+      "response": "Response",
+      "responseSla": "< 1 business day"
+    },
+    "buttons": {
+      "call": "call {phone}"
+    },
+    "lead": {
+      "title": "Tell us about your project",
+      "subtitle": "Choose a service below and share a few details. We’ll follow up with the next steps."
+    },
+    "direct": {
+      "title": "Direct contact",
+      "subtitle": "Prefer to talk now? Reach us anytime.",
+      "phone": "Phone",
+      "email": "Email",
+      "hq": "HQ"
+    },
+    "why": {
+      "title": "Why HBC"
+    },
+    "whyPoints": [
+      "Certified multi-OEM technicians",
+      "Rapid spare part sourcing",
+      "Digital checklists & reports",
+      "EU & USA coverage"
+    ],
+    "map": {
+      "title": "Find us",
+      "subtitle": "Visit our headquarters or schedule a site visit—we’ll come to you."
+    },
+    "faq": {
+      "title": "FAQs",
+      "items": [
+        {
+          "q": "Can you use my existing devices?",
+          "a": "In many cases yes. We audit current gear and integrate compatible devices via KNX, Matter, Zigbee or bridges."
+        },
+        {
+          "q": "Do I need wiring or can it be wireless?",
+          "a": "Both are possible. New builds favor wired backbones; renovations can use secure, reliable wireless where suitable."
+        },
+        {
+          "q": "Is there an app?",
+          "a": "Yes—wall panel and mobile app with remote access, notifications, scenes and user roles."
+        },
+        {
+          "q": "What about privacy?",
+          "a": "Local-first control where possible, strong encryption for remote access, and clear data retention settings."
+        }
+      ]
+    }
   }
 }
