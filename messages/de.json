@@ -686,5 +686,48 @@
       }
     ]
   }
+  },
+  "careers": {
+    "hero": {
+      "badge": "Karriere",
+      "kicker": "Werde Teil des Teams",
+      "title": "Mit der HBC Group bauen, warten und innovieren",
+      "subtitle": "Wir wachsen in den Bereichen Elektrik, Mechanik und Automatisierung. Entdecke offene Stellen und bewirb dich in wenigen Minuten."
+    },
+    "labels": {
+      "travel": "Reisetätigkeit"
+    },
+    "cta": {
+      "viewDetails": "Details ansehen"
+    },
+    "jobs": {
+      "industrial-electrician": {
+        "title": "Industrieelektriker:in – Schwerindustrie",
+        "location": "Vereinigte Staaten (bundesweite Reisetätigkeit möglich)",
+        "type": "Vollzeit",
+        "hours": "50 Stunden/Woche",
+        "travel": "Regional/National",
+        "summary": "Elektrische Diagnosen, Installation/Inbetriebnahme und vorbeugende Wartung an schweren Industrieanlagen in den Bereichen Recycling, Biomasse und Fertigung.",
+        "tags": ["Elektrik", "Kundendienst", "SPS"]
+      },
+      "industrial-mechanic": {
+        "title": "Industriemechaniker:in – Schwerindustrie",
+        "location": "Vereinigte Staaten (bundesweite Reisetätigkeit möglich)",
+        "type": "Vollzeit",
+        "hours": "50 Stunden/Woche",
+        "travel": "Regional/National",
+        "summary": "Vor-Ort-Service, Diagnose, Reparaturen und vorbeugende Wartung an schweren Industrieanlagen (mobil und stationär).",
+        "tags": ["Mechanik", "Hydraulik", "Pneumatik"]
+      },
+      "industrial-programmer": {
+        "title": "Industrieprogrammierer:in – Schwerindustrie",
+        "location": "Vereinigte Staaten (bundesweite Reisetätigkeit möglich)",
+        "type": "Vollzeit",
+        "hours": "50 Stunden/Woche",
+        "travel": "National",
+        "summary": "Programmierung, Optimierung und Inbetriebnahme von SPS-basierten Steuerungen für komplexe Schweranlagen; Fehleranalyse von Software/Kommunikation; Vor-Ort-Support.",
+        "tags": ["SPS", "Inbetriebnahme", "HMI/SCADA"]
+      }
+    }
   }
 }

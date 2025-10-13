@@ -686,5 +686,48 @@
         }
       ]
     }
+  },
+  "careers": {
+    "hero": {
+      "badge": "Careers",
+      "kicker": "Join the team",
+      "title": "Build, service, and innovate with HBC Group",
+      "subtitle": "We’re growing across electrical, mechanical, and automation roles. Explore open positions and apply in minutes."
+    },
+    "labels": {
+      "travel": "Travel"
+    },
+    "cta": {
+      "viewDetails": "View details"
+    },
+    "jobs": {
+      "industrial-electrician": {
+        "title": "Industrial Electrician – Heavy-Duty Machinery",
+        "location": "United States (Nationwide travel may be required)",
+        "type": "Full-Time",
+        "hours": "50 hours/week",
+        "travel": "Regional/National",
+        "summary": "Electrical diagnostics, installation/commissioning, and preventive maintenance on heavy-duty industrial machinery across recycling, biomass, and manufacturing.",
+        "tags": ["Electrical", "Field Service", "PLC"]
+      },
+      "industrial-mechanic": {
+        "title": "Industrial Mechanic – Heavy-Duty Machinery",
+        "location": "United States (Nationwide travel may be required)",
+        "type": "Full-Time",
+        "hours": "50 hours/week",
+        "travel": "Regional/National",
+        "summary": "Field service, diagnostics, repairs, and preventive maintenance on heavy-duty industrial machinery (mobile and stationary).",
+        "tags": ["Mechanical", "Hydraulics", "Pneumatics"]
+      },
+      "industrial-programmer": {
+        "title": "Industrial Programmer – Heavy-Duty Machinery",
+        "location": "United States (Nationwide travel may be required)",
+        "type": "Full-Time",
+        "hours": "50 hours/week",
+        "travel": "National",
+        "summary": "Program, optimize, and commission PLC-based control systems for complex heavy-duty machinery; troubleshoot software/communications; deliver on-site support.",
+        "tags": ["PLC", "Commissioning", "HMI/SCADA"]
+      }
+    }
   }
 }
