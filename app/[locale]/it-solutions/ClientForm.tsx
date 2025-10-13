@@ -25,6 +25,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 /**
  * ============================================
@@ -37,6 +38,7 @@ import { cn } from "@/lib/utils";
  */
 
 // ---------------- Schema ----------------
+// (kept messages static to avoid hook usage outside components)
 const projectSchema = z.object({
   // Step 1 — Client Info
   fullName: z.string().min(2, "Please enter your full name"),
@@ -78,38 +80,14 @@ const projectSchema = z.object({
 
 export type ProjectRequestForm = z.infer<typeof projectSchema>;
 
-// ---------------- Steps ----------------
+// ---------------- Steps (keys only; labels via t) ----------------
 const steps = [
-  {
-    key: "client",
-    title: "Client Information",
-    subtitle: "Tell us who you are and how to reach you.",
-  },
-  {
-    key: "overview",
-    title: "Project Overview",
-    subtitle: "What are we building and why now?",
-  },
-  {
-    key: "scope",
-    title: "Scope & Timeline",
-    subtitle: "Features, users, and timing.",
-  },
-  {
-    key: "budget",
-    title: "Budget & Success",
-    subtitle: "Investment range and measurable outcomes.",
-  },
-  {
-    key: "security",
-    title: "Integrations & Security",
-    subtitle: "How we’ll connect and protect.",
-  },
-  {
-    key: "review",
-    title: "Review & Submit",
-    subtitle: "Confirm all details before sending.",
-  },
+  { key: "client" },
+  { key: "overview" },
+  { key: "scope" },
+  { key: "budget" },
+  { key: "security" },
+  { key: "review" },
 ] as const;
 
 type StepKey = (typeof steps)[number]["key"];
@@ -175,7 +153,7 @@ function pickValues<T extends object, K extends readonly (keyof T)[]>(
   return out;
 }
 
-// ---------------- Presets ----------------
+// ---------------- Presets (labels via t inside components) ----------------
 const FEATURES = [
   "User Auth / SSO",
   "Admin Panel",
@@ -339,7 +317,6 @@ function SelectBlock({
       <Label>{label}</Label>
       <Select
         onValueChange={(v: string) =>
-          // no shouldValidate: we only show errors on blur or Next
           setValue(field, v as ProjectRequestForm[typeof field], {
             shouldDirty: true,
             shouldTouch: true,
@@ -364,6 +341,8 @@ function SelectBlock({
 
 // ---------------- Main Form ----------------
 export default function ClientForm() {
+  const t = useTranslations("form");
+
   const [current, setCurrent] = useState(0);
   const [canNext, setCanNext] = useState(false);
 
@@ -398,6 +377,38 @@ export default function ClientForm() {
     });
 
   const { handleSubmit, setValue, getValues, watch, trigger } = methods;
+
+  // Steps (labels from i18n)
+  const stepMeta = useMemo(
+    () =>
+      ({
+        client: {
+          title: t("steps.client.title"),
+          subtitle: t("steps.client.subtitle"),
+        },
+        overview: {
+          title: t("steps.overview.title"),
+          subtitle: t("steps.overview.subtitle"),
+        },
+        scope: {
+          title: t("steps.scope.title"),
+          subtitle: t("steps.scope.subtitle"),
+        },
+        budget: {
+          title: t("steps.budget.title"),
+          subtitle: t("steps.budget.subtitle"),
+        },
+        security: {
+          title: t("steps.security.title"),
+          subtitle: t("steps.security.subtitle"),
+        },
+        review: {
+          title: t("steps.review.title"),
+          subtitle: t("steps.review.subtitle"),
+        },
+      } as const),
+    [t]
+  );
 
   // Autosave draft
   useEffect(() => {
@@ -445,11 +456,69 @@ export default function ClientForm() {
 
   const onSubmit = (data: ProjectRequestForm) => {
     console.log("Submitted:", data);
-    alert("✅ Thank you! Your project request has been submitted.");
+    alert(t("alerts.submitted"));
     localStorage.removeItem("project-form-draft");
   };
 
   const progress = Math.round(((current + 1) / steps.length) * 100);
+
+  // Localized lists
+  const countries = [
+    "Austria",
+    "Belgium",
+    "Croatia",
+    "Czechia",
+    "Denmark",
+    "Egypt",
+    "France",
+    "Germany",
+    "Italy",
+    "Netherlands",
+    "Poland",
+    "Portugal",
+    "Qatar",
+    "Saudi Arabia",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "Turkey",
+    "UAE",
+    "UK",
+    "USA",
+  ].map((c) => t(`lists.countries.${c}`));
+
+  const projectTypes = [
+    "Website / Landing",
+    "SaaS / Platform",
+    "E-commerce",
+    "Mobile App",
+    "AI / Automation",
+    "Web3 / Payments",
+    "Data / BI",
+    "Other",
+  ].map((x) => t(`lists.projectTypes.${x}`));
+
+  const featuresLabels = FEATURES.map((x) => t(`lists.features.${x}`));
+  const integrationsLabels = INTEGRATIONS.map((x) =>
+    t(`lists.integrations.${x}`)
+  );
+  const complianceLabels = COMPLIANCE.map((x) => t(`lists.compliance.${x}`));
+
+  const tlFlex = ["strict", "target", "open"].map((x) =>
+    t(`lists.timelineFlex.${x}`)
+  );
+  const budgetOpts = ["<10k", "10–30k", "30–80k", "80–200k", ">200k"].map((x) =>
+    t(`lists.budget.${x}`)
+  );
+  const procurementOpts = ["Startup", "B2B", "Enterprise", "B2G"].map((x) =>
+    t(`lists.procurement.${x}`)
+  );
+  const authOpts = ["None", "Email/Password", "SSO/SAML", "OAuth"].map((x) =>
+    t(`lists.auth.${x}`)
+  );
+  const residencyOpts = ["EU", "US", "MENA", "Any"].map((x) =>
+    t(`lists.residency.${x}`)
+  );
 
   return (
     <FormProvider {...methods}>
@@ -475,12 +544,14 @@ export default function ClientForm() {
               <div className="flex items-center justify-between">
                 <div>
                   <h1 className="text-3xl font-semibold tracking-tight text-slate-900">
-                    Start a Project
+                    {t("title")}
                   </h1>
-                  <p className="text-slate-700">{steps[current].subtitle}</p>
+                  <p className="text-slate-700">
+                    {stepMeta[steps[current].key].subtitle}
+                  </p>
                 </div>
                 <div className="text-sm text-slate-700">
-                  Step {current + 1} of {steps.length}
+                  {t("progress", { cur: current + 1, total: steps.length })}
                 </div>
               </div>
               <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/60">
@@ -497,7 +568,7 @@ export default function ClientForm() {
             <Card className="rounded-[18px] border border-white/40 bg-white/70 shadow-[0_15px_55px_-15px_rgba(6,110,176,0.25)] backdrop-blur-xl">
               <CardHeader>
                 <CardTitle className="text-slate-800">
-                  {steps[current].title}
+                  {stepMeta[steps[current].key].title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -508,27 +579,27 @@ export default function ClientForm() {
                       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <InputBlock
                           id="fullName"
-                          label="Full name"
-                          placeholder="Jane Doe"
+                          label={t("fields.fullName.label")}
+                          placeholder={t("fields.fullName.ph")}
                         />
                         <InputBlock
                           id="company"
-                          label="Company"
-                          placeholder="Acme GmbH"
+                          label={t("fields.company.label")}
+                          placeholder={t("fields.company.ph")}
                         />
                         <InputBlock
                           id="email"
-                          label="Work email"
-                          placeholder="jane@acme.com"
+                          label={t("fields.email.label")}
+                          placeholder={t("fields.email.ph")}
                           type="email"
                         />
                         <InputBlock
                           id="phone"
-                          label="Phone"
-                          placeholder="+43 6XX XXX XXXX"
+                          label={t("fields.phone.label")}
+                          placeholder={t("fields.phone.ph")}
                         />
                         <div className="sm:col-span-2">
-                          <Label>Country</Label>
+                          <Label>{t("fields.country.label")}</Label>
                           <Select
                             onValueChange={(v) =>
                               setValue("country", v, {
@@ -538,32 +609,12 @@ export default function ClientForm() {
                             }
                           >
                             <SelectTrigger>
-                              <SelectValue placeholder="Select country" />
+                              <SelectValue
+                                placeholder={t("fields.country.ph")}
+                              />
                             </SelectTrigger>
                             <SelectContent>
-                              {[
-                                "Austria",
-                                "Belgium",
-                                "Croatia",
-                                "Czechia",
-                                "Denmark",
-                                "Egypt",
-                                "France",
-                                "Germany",
-                                "Italy",
-                                "Netherlands",
-                                "Poland",
-                                "Portugal",
-                                "Qatar",
-                                "Saudi Arabia",
-                                "Spain",
-                                "Sweden",
-                                "Switzerland",
-                                "Turkey",
-                                "UAE",
-                                "UK",
-                                "USA",
-                              ].map((c) => (
+                              {countries.map((c) => (
                                 <SelectItem key={c} value={c}>
                                   {c}
                                 </SelectItem>
@@ -581,36 +632,27 @@ export default function ClientForm() {
                     <MotionStep stepKey="overview">
                       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <SelectBlock
-                          label="Project type"
+                          label={t("fields.projectType.label")}
                           field="projectType"
-                          options={[
-                            "Website / Landing",
-                            "SaaS / Platform",
-                            "E-commerce",
-                            "Mobile App",
-                            "AI / Automation",
-                            "Web3 / Payments",
-                            "Data / BI",
-                            "Other",
-                          ]}
-                          placeholder="Choose type"
+                          options={projectTypes}
+                          placeholder={t("fields.projectType.ph")}
                         />
                         <InputBlock
                           id="expectedUsers"
-                          label="Expected users (monthly)"
-                          placeholder="e.g., 5,000"
+                          label={t("fields.expectedUsers.label")}
+                          placeholder={t("fields.expectedUsers.ph")}
                         />
                         <TextareaBlock
                           id="brief"
-                          label="Project summary"
+                          label={t("fields.brief.label")}
                           rows={4}
-                          placeholder="What are we building and why now?"
+                          placeholder={t("fields.brief.ph")}
                         />
                         <TextareaBlock
                           id="goals"
-                          label="Key goals"
+                          label={t("fields.goals.label")}
                           rows={3}
-                          placeholder="e.g., Reduce onboarding time by 30%, launch MVP in 8 weeks…"
+                          placeholder={t("fields.goals.ph")}
                         />
                       </div>
                     </MotionStep>
@@ -620,9 +662,9 @@ export default function ClientForm() {
                   {current === 2 && (
                     <MotionStep stepKey="scope">
                       <div className="space-y-4">
-                        <Label>Desired features</Label>
+                        <Label>{t("fields.features.label")}</Label>
                         <ChipSelector
-                          options={FEATURES}
+                          options={featuresLabels}
                           value={watch("features")}
                           onChange={(v) =>
                             setValue("features", v, {
@@ -635,13 +677,13 @@ export default function ClientForm() {
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                           <InputBlock
                             id="deadline"
-                            label="Target deadline"
+                            label={t("fields.deadline.label")}
                             type="date"
                           />
                           <SelectBlock
-                            label="Timeline flexibility"
+                            label={t("fields.timelineFlex.label")}
                             field="timelineFlex"
-                            options={["strict", "target", "open"]}
+                            options={tlFlex}
                           />
                         </div>
                       </div>
@@ -653,33 +695,27 @@ export default function ClientForm() {
                     <MotionStep stepKey="budget">
                       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <SelectBlock
-                          label="Budget range"
+                          label={t("fields.budget.label")}
                           field="budget"
-                          options={[
-                            "<10k",
-                            "10–30k",
-                            "30–80k",
-                            "80–200k",
-                            ">200k",
-                          ]}
-                          placeholder="Select budget"
+                          options={budgetOpts}
+                          placeholder={t("fields.budget.ph")}
                         />
                         <SelectBlock
-                          label="Engagement type"
+                          label={t("fields.procurement.label")}
                           field="procurement"
-                          options={["Startup", "B2B", "Enterprise", "B2G"]}
+                          options={procurementOpts}
                         />
                         <TextareaBlock
                           id="success"
-                          label="Success criteria"
+                          label={t("fields.success.label")}
                           rows={3}
-                          placeholder="KPIs, SLAs, performance targets…"
+                          placeholder={t("fields.success.ph")}
                         />
                         <TextareaBlock
                           id="risks"
-                          label="Risks or constraints (optional)"
+                          label={t("fields.risks.label")}
                           rows={3}
-                          placeholder="Dependencies, compliance constraints, legacy systems…"
+                          placeholder={t("fields.risks.ph")}
                         />
                       </div>
                     </MotionStep>
@@ -689,32 +725,27 @@ export default function ClientForm() {
                   {current === 4 && (
                     <MotionStep stepKey="security">
                       <div className="space-y-5">
-                        <Label>Required integrations</Label>
+                        <Label>{t("fields.integrations.label")}</Label>
                         <ChipSelector
-                          options={INTEGRATIONS}
+                          options={integrationsLabels}
                           value={watch("integrations")}
                           onChange={(v) => setValue("integrations", v)}
                         />
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                           <SelectBlock
-                            label="Authentication"
+                            label={t("fields.auth.label")}
                             field="auth"
-                            options={[
-                              "None",
-                              "Email/Password",
-                              "SSO/SAML",
-                              "OAuth",
-                            ]}
+                            options={authOpts}
                           />
                           <SelectBlock
-                            label="Data residency"
+                            label={t("fields.residency.label")}
                             field="residency"
-                            options={["EU", "US", "MENA", "Any"]}
+                            options={residencyOpts}
                           />
                         </div>
-                        <Label>Compliance requirements</Label>
+                        <Label>{t("fields.compliance.label")}</Label>
                         <ChipSelector
-                          options={COMPLIANCE}
+                          options={complianceLabels}
                           value={watch("compliance")}
                           onChange={(v) => setValue("compliance", v)}
                         />
@@ -738,7 +769,7 @@ export default function ClientForm() {
                           }
                         />
                         <Label htmlFor="consent" className="text-slate-700">
-                          I agree to the processing of my data for this request.
+                          {t("consent")}
                         </Label>
                       </div>
                       <FieldError name="consent" />
@@ -757,7 +788,7 @@ export default function ClientForm() {
                 disabled={current === 0}
                 className="rounded-full border-white/60 bg-white/40 text-slate-800 backdrop-blur hover:bg-white/60 disabled:opacity-60"
               >
-                Back
+                {t("buttons.back")}
               </Button>
               {current < steps.length - 1 ? (
                 <Button
@@ -766,21 +797,19 @@ export default function ClientForm() {
                   disabled={!canNext}
                   className="rounded-full bg-gradient-to-r from-[#2c8cc7] via-[#1b7dbb] to-[#066eb0] text-white shadow-md hover:opacity-90 disabled:opacity-60"
                 >
-                  Next
+                  {t("buttons.next")}
                 </Button>
               ) : (
                 <Button
                   type="submit"
                   className="rounded-full bg-gradient-to-r from-[#2c8cc7] via-[#1b7dbb] to-[#066eb0] text-white shadow-md hover:opacity-90"
                 >
-                  Submit Request
+                  {t("buttons.submit")}
                 </Button>
               )}
             </div>
 
-            <div className="text-xs text-slate-600">
-              Secure form • GDPR-aligned • Draft autosaved locally
-            </div>
+            <div className="text-xs text-slate-600">{t("footerNote")}</div>
           </form>
         </div>
 
@@ -799,31 +828,41 @@ export default function ClientForm() {
 
 // ---------------- Summary ----------------
 function Summary({ data }: { data: ProjectRequestForm }) {
+  const t = useTranslations("form.summary");
   const rows = useMemo(
     () =>
       [
-        { k: "Full name", v: data.fullName },
-        { k: "Company", v: data.company },
-        { k: "Email", v: data.email },
-        { k: "Phone", v: data.phone || "—" },
-        { k: "Country", v: data.country },
-        { k: "Project type", v: data.projectType },
-        { k: "Summary", v: data.brief },
-        { k: "Goals", v: data.goals },
-        { k: "Features", v: (data.features ?? []).join(", ") || "—" },
-        { k: "Expected users", v: data.expectedUsers || "—" },
-        { k: "Deadline", v: data.deadline || "—" },
-        { k: "Timeline", v: data.timelineFlex },
-        { k: "Budget", v: data.budget || "—" },
-        { k: "Engagement", v: data.procurement || "—" },
-        { k: "Success", v: data.success },
-        { k: "Risks", v: data.risks || "—" },
-        { k: "Integrations", v: (data.integrations ?? []).join(", ") || "—" },
-        { k: "Auth", v: data.auth },
-        { k: "Residency", v: data.residency },
-        { k: "Compliance", v: (data.compliance ?? []).join(", ") || "—" },
+        { k: t("fullName"), v: data.fullName },
+        { k: t("company"), v: data.company },
+        { k: t("email"), v: data.email },
+        { k: t("phone"), v: data.phone || "—" },
+        { k: t("country"), v: data.country },
+        { k: t("projectType"), v: data.projectType },
+        { k: t("summary"), v: data.brief },
+        { k: t("goals"), v: data.goals },
+        {
+          k: t("features"),
+          v: (data.features ?? []).join(", ") || "—",
+        },
+        { k: t("expectedUsers"), v: data.expectedUsers || "—" },
+        { k: t("deadline"), v: data.deadline || "—" },
+        { k: t("timeline"), v: data.timelineFlex },
+        { k: t("budget"), v: data.budget || "—" },
+        { k: t("engagement"), v: data.procurement || "—" },
+        { k: t("success"), v: data.success },
+        { k: t("risks"), v: data.risks || "—" },
+        {
+          k: t("integrations"),
+          v: (data.integrations ?? []).join(", ") || "—",
+        },
+        { k: t("auth"), v: data.auth },
+        { k: t("residency"), v: data.residency },
+        {
+          k: t("compliance"),
+          v: (data.compliance ?? []).join(", ") || "—",
+        },
       ] as const,
-    [data]
+    [data, t]
   );
 
   return (

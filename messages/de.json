@@ -105,5 +105,476 @@
     "callUs": "Rufen Sie uns an",
     "subscribe": "Abonnieren Sie unseren Newsletter",
     "send": "Schicken"
+  },
+  "industrial": {
+    "hero": {
+      "badge": "HBC Industrial",
+      "title": "Unser Service,",
+      "highlight": "Ihre Sicherheit",
+      "description": "Die HBC Group ist Ihr schneller, zuverlässiger und qualitätsorientierter Partner für industrielle Instandhaltung und Maschinenservice.\n\nWir unterstützen Sie bei Ihren anspruchsvollsten Herausforderungen.\n\nVon vorbeugender oder wiederkehrender Wartung und Diagnose bis hin zur schnellen Störungsbehebung oder der komplexen Verlagerung ganzer Produktionslinien.",
+      "chips": {
+        "hydraulics": "Hydraulik",
+        "electrical": "Elektrotechnik",
+        "mechanical": "Mechanik",
+        "programming": "Programmierung",
+        "fireProtection": "Brandschutz"
+      }
+    },
+    "slides": {
+      "common": {
+        "heading": "Industrielle Instandhaltung",
+        "tag": "Wartung"
+      },
+      "hydraulics": {
+        "title": "Hydraulik",
+        "text": "Diagnose, Pumpen-/Ventilservice, Schläuche, Abdichtung, Filtration und Kontaminationskontrolle. Wir stellen Kraft und Bewegung mit Präzision im Mikrometerbereich wieder her.",
+        "bullets": ["Aggregat", "Verteilerblöcke", "Zylinder", "Speicherbefüllung", "Spülung"]
+      },
+      "electrical": {
+        "title": "Elektrotechnik",
+        "text": "Schaltschränke, Antriebe, SPS, Sensorik, Energieverteilung. Saubere Installationen und Retrofit-Verkabelung mit Sicherheit und Klarheit.",
+        "bullets": ["SPS/Antriebstuning", "Schaltanlagen", "SCADA I/O", "Thermografie", "Kennzeichnung & Codes"]
+      },
+      "mechanical": {
+        "title": "Mechanik",
+        "text": "Getriebe, Förderer, Lager, Wellenausrichtung, Stahlbau – gebaut für harte Industrieeinsätze.",
+        "bullets": ["Präzisionsausrichtung", "Fördertechnik", "Zahnrad & Kette", "Lasermesstechnik", "Fertigung"]
+      },
+      "welding": {
+        "title": "Schweißen",
+        "text": "Zertifiziertes Schweißen und Vor-Ort-Fertigung für Produktionslinien und schwere Anlagen. Robust, sauber, geprüft.",
+        "bullets": ["Stahl & Edelstahl", "Rohrschweißen", "Reparatur & Neubau", "Vorrichtungen", "NDT-bereit"]
+      },
+      "programming": {
+        "title": "Programmierung",
+        "text": "Inbetriebnahme und Optimierung von SPS/HMI-Code. Maschinen denken smarter, Bediener arbeiten schneller.",
+        "bullets": ["Siemens/TIA", "Rockwell", "Sicherheits-SPS", "HMI/UX", "Datenlogging"]
+      }
+    },
+    "capabilities": {
+      "items": [
+        { "title": "Präventiv & Prädiktiv", "desc": "Programme, die ungeplante Ausfälle in geplante Optimierung verwandeln." },
+        { "title": "Schnelleinsatz", "desc": "Bereitschaftsteams aus Ingenieuren und Technikern mit Teilen, Werkzeugen und Checklisten." },
+        { "title": "Retrofits & Upgrades", "desc": "Alte Anlagen auf neues Niveau bringen – mechanisch, elektrisch, Steuerung." },
+        { "title": "Daten­transparenz", "desc": "Vom Sensor bis zum Dashboard: wir heben die relevanten Signale hervor." },
+        { "title": "Safety First", "desc": "Zertifizierte Verfahren und Werkzeuge für Anlagen- und Personalsicherheit." },
+        { "title": "Dokumentation", "desc": "As-Built, Verdrahtung, Namensstandards – Klarheit für das nächste Jahrzehnt." }
+      ]
+    },
+    "security": {
+      "heading": "Sicherheitssysteme",
+      "tag": "Sicherheit",
+      "fire": {
+        "title": "Brandschutz",
+        "brief": "Auslegung, Installation und Wartung robuster Brandanlagen für industrielle Risikoklassen – mit Nachverfolgbarkeit und Normenkonformität.",
+        "bullets": ["Risikobewertung", "Löschanlagen", "Regelmäßige Prüfungen", "Compliance-Berichte"],
+        "sub": {
+          "wood": { "label": "Holzschutz", "desc": "Behandlungen und Beschichtungen für Langlebigkeit." },
+          "film": { "label": "Folien­schutz", "desc": "Hochleistungs-Schutzfolien." },
+          "facades": { "label": "Fassaden", "desc": "Außensysteme für Widerstandsfähigkeit und Lebensdauer." }
+        }
+      },
+      "cameras": {
+        "title": "Kameras & Analytics",
+        "brief": "Von rauchgasfesten Kameras bis zur smarten Detektion. Visuelle Sicherheit in Werken, Höfen und Lagern.",
+        "bullets": ["Thermal & PTZ", "KI-Analytik", "NVR/Aufbewahrung", "Remote-Zugriff"]
+      },
+      "servers": {
+        "title": "Server & Storage",
+        "brief": "Gehärtete, skalierbare Infrastruktur für Sicherheits- und Industriedaten – ausgelegt für schreibintensive Workloads.",
+        "bullets": ["RAID-Strategien", "Redundante Stromversorgung", "Verschlüsselte Backups", "Monitoring"]
+      },
+      "entry": {
+        "title": "Zutritts- & Alarmsysteme",
+        "brief": "Karten, PIN, biometrische und Fahrzeug-Zutritte. Vereinheitlichte Alarme mit klaren Playbooks und Eskalation.",
+        "bullets": ["Access Control", "Perimeter", "Gegensprechanlage", "24/7-Alarmierung"],
+        "extraLabel": "Alarmsysteme"
+      }
+    },
+    "other": {
+      "heading": "Weitere Leistungen",
+      "items": [
+        {
+          "title": "Maschinen demontiert, verlagert, wieder aufgebaut",
+          "desc": "Wir bewegen Produktionsanlagen sicher: Kennzeichnung, Demontage, Transport, Ausrichtung, Wiederinbetriebnahme."
+        },
+        {
+          "title": "Neubau",
+          "desc": "Von Versorgungsmedien bis zur Endabnahme – TGA-Trassen, Kabelbühnen, Steuerungen, Sicherheitssysteme."
+        }
+      ]
+    },
+    "process": {
+      "howHeading": "So liefern wir",
+      "assuranceHeading": "Sicherheiten",
+      "steps": [
+        { "title": "Assess", "desc": "Standortanalyse, Risiko-Review und Leistungsziele." },
+        { "title": "Plan", "desc": "Scope, Phasen, Zugänge, Sicherheit und Ersatzteile." },
+        { "title": "Execute", "desc": "Qualifizierte Teams, QA-Checks und Berichte." },
+        { "title": "Optimize", "desc": "Feinabstimmung, Schulung, Dokumentation, Support." }
+      ],
+      "badges": ["24/7 Support", "Zertifizierte Techniker", "Safety First", "Gewährleistung", "As-Built-Dokumente"]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Arbeiten Sie mit unseren internen Ingenieuren zusammen?",
+      "a1": "Ja. Wir liefern häufig gemeinsam mit Werksteams und passen uns Ihren Wartungsfenstern und Standards an.",
+      "q2": "Stellen Sie As-Built-Dokumentation bereit?",
+      "a2": "Immer. Wir übergeben Schaltpläne, Namensstandards, SPS/HMI-Backups, Prüfberichte und Fotos.",
+      "q3": "Wie stellen Sie Sicherheit sicher?",
+      "a3": "Genehmigungen, Freischaltungen/LOTO, Werkzeugprüfungen und geschultes Personal. Sicherheit planen wir ab Tag Null.",
+      "q4": "Wie kann ich eine Beratung vereinbaren?",
+      "a4Rich": "Sie können ganz einfach einen Termin über unsere <link>Corporate-Meeting-Anfrage</link> Seite buchen."
+    },
+    "cta": {
+      "title": "Lassen Sie Ihre Anlage in Bewegung.",
+      "description": "Buchen Sie Zeit mit unserem Industrial-Team für den schnellsten Weg zu Verfügbarkeit, Sicherheit und Leistung."
+    }
+  },
+  "fire": {
+    "hero": {
+      "badge": "HBC Brandschutz",
+      "title": "Brandschutz",
+      "highlight": "der schützt und hält.",
+      "description": "Von Holzschutz über architektonische Fassaden bis zur Systemintegration – wir verbinden Sicherheit, Ästhetik und Compliance.",
+      "chips": {
+        "wood": "Holzschutz",
+        "film": "Folien­schutz",
+        "facades": "Fassaden",
+        "systemDesign": "Systemdesign",
+        "maintenance": "Wartung"
+      },
+      "cta": "Kontakt aufnehmen"
+    },
+    "core": {
+      "heading": "Kernleistungen im Brandschutz",
+      "wood": {
+        "title": "Holzschutz",
+        "desc": "Spezialbeschichtungen und Behandlungen reduzieren die Entflammbarkeit tragender Holzelemente, erhöhen den Feuerwiderstand und verlängern die Lebensdauer.",
+        "bullets": ["Schwelhemmende Beschichtungen", "Flammschutz-Imprägnierung", "Konform zu NFPA & EN"]
+      },
+      "film": {
+        "title": "Folien­schutz",
+        "desc": "Transparente Folien für Fenster, Wände und Türen, die die Flammenausbreitung bremsen und den Wärmeeintrag begrenzen – bei bewahrter Optik.",
+        "bullets": ["Wärmereflektierende Folie", "Rauchbarriere-Folie", "Individuelle Formate"]
+      },
+      "facade": {
+        "title": "Fassadensysteme",
+        "desc": "Brandsichere Fassadenmaterialien und -konzepte, die Flammen- und Rauchübertragung an Gebäudehüllen verhindern.",
+        "bullets": ["Feuerfeste Paneele", "Kompartmentierung", "Regelkonformität"]
+      }
+    },
+    "systems": {
+      "heading": "Systemintegration & Lebenszyklus",
+      "suppression": {
+        "name": "Löschtechnik & Feuerlöscher",
+        "desc": "Auslegung und Einbau automatischer Sprinkler-, Gas- oder Schaumlöschanlagen – zugeschnitten auf Nutzung und Gefährdung."
+      },
+      "alarm": {
+        "name": "Alarmierung & Detektion",
+        "desc": "Rauch-, Wärme- und Flammensensorik, drahtgebunden und drahtlos, integriert in Zentrale und Fernalarmierung."
+      },
+      "maintenance": {
+        "name": "Wartung & Audits",
+        "desc": "Regelmäßige Prüfungen, Inspektion und Zertifizierung der Brandschutzsysteme für Compliance und Einsatzbereitschaft."
+      }
+    },
+    "why": {
+      "heading": "Warum HBC Brandschutz",
+      "items": [
+        { "title": "Normen- & Regelwerkskompetenz", "desc": "Wir navigieren NFPA, EN, UL – damit Ihre Anlage die Abnahme besteht, nicht nur die Montage." },
+        { "title": "Ganzheitliches Sicherheitsdesign", "desc": "Wir schützen Bauwerk, Inhalte, Fluchtwege und Systeme – nicht nur die Löschtechnik." },
+        { "title": "Prädiktives Anlagenmonitoring", "desc": "Sensorik erkennt frühzeitig Leckagen, Druckabfälle oder Manipulation – bevor Fehler entstehen." },
+        { "title": "Einsatz- & Notfallintegration", "desc": "Wir vernetzen Systeme mit Leitständen, Security und Gebäudebetrieb – für schnelle Reaktion, wenn jede Sekunde zählt." }
+      ]
+    },
+    "cases": {
+      "heading": "Projekt-Highlights",
+      "items": [
+        { "name": "Holzbau-Wohnanlage", "desc": "Flammschutzbeschichtungen auf allen tragenden Holzelementen aufgebracht. Abnahme mit Reserve bestanden." },
+        { "name": "Gewerbliche Fassadenmodernisierung", "desc": "Alte Bekleidung durch brandsicheres Fassadensystem ersetzt – bei gewahrter Transparenz und Optik." }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Beeinflussen Flammschutzbeschichtungen die Holzoptik?",
+      "a1": "Moderne Beschichtungen sind transparent oder leicht getönt und verändern die Haptik nur minimal. Wir testen vor Ort vor der Applikation.",
+      "q2": "Wie oft müssen Systeme gewartet werden?",
+      "a2": "Je nach Systemtyp liegen die Prüfintervalle zwischen monatlich und jährlich. Wir unterstützen vollständige Audit-Logs und Erinnerungen.",
+      "q3": "Lassen sich Brandschutzsysteme in die Gebäudeautomation integrieren?",
+      "a3": "Ja. Wir schaffen Schnittstellen, damit Löschtechnik, Alarme und Sensorik mit Ihrem Smart Building bzw. BMS kommunizieren."
+    },
+    "cta": {
+      "title": "Erhöhen Sie Ihre Sicherheit. Schützen Sie, was zählt.",
+      "description": "Kontaktieren Sie HBC für die Auslegung oder Modernisierung Ihrer Brandschutzsysteme – intelligent, konform und langlebig."
+    }
+  },
+  "smart": {
+    "hero": {
+      "badge": "HBC Intelligent Building",
+      "title": "Intelligentere Häuser.",
+      "highlight": "Grüner wohnen.",
+      "description": "Komfort, Sicherheit und Energieintelligenz verbinden. Ihren Raum steuern, überwachen und optimieren – zuverlässig und mühelos.",
+      "chips": {
+        "automation": "Automatisierung",
+        "pv": "PV & Energie",
+        "security": "Sicherheit",
+        "monitoring": "Monitoring"
+      },
+      "cta": "Kontakt aufnehmen"
+    },
+    "grid": {
+      "heading": "Smart Home auf HBC-Art",
+      "items": [
+        { "title": "Automatisierung", "desc": "Szenen, Zeitpläne, Sprachsteuerung – Ihr Zuhause, orchestriert." },
+        { "title": "PV & Energie", "desc": "Verbrauch überwachen, intelligent speichern, Lastspitzen kappen und sparen." },
+        { "title": "Sicherheit", "desc": "Alarme, Zutritt, Kameras & Serversysteme – integriert." },
+        { "title": "Monitoring", "desc": "Gesundheitszustand von Geräten, Räumen und Subsystemen in Echtzeit." },
+        { "title": "Komfort", "desc": "Beleuchtung, Klima und Beschattung, die sich an Sie anpassen." },
+        { "title": "Einsparungen", "desc": "Datengetriebene Optimierung, die Verschwendung reduziert – nicht den Komfort." }
+      ]
+    },
+    "tags": {
+      "0": "Hydraulik",
+      "1": "Elektrotechnik",
+      "2": "Mechanik",
+      "3": "Programmierung",
+      "4": "PV & Energie",
+      "5": "Sicherheit",
+      "6": "Monitoring",
+      "7": "Zubehör",
+      "8": "Agro",
+      "9": "Beton",
+      "10": "Bau",
+      "11": "Energie",
+      "12": "Boden"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Brauche ich einen vorhandenen Smart-Home-Hub?",
+      "a1": "Nicht zwingend. Wir integrieren Ihr bestehendes Ökosystem oder setzen einen robusten, sicheren HBC-Stack ein – so, wie es am zuverlässigsten und reibungsärmsten ist.",
+      "q2": "Kann ich klein starten und später erweitern?",
+      "a2": "Ja. Starten Sie mit einer Priorität (z. B. Energiemonitoring). Wir planen modular, damit Funktionen mit Ihren Anforderungen wachsen.",
+      "q3": "Wie schützen Sie meine Daten?",
+      "a3": "Privacy-by-Default, abgesicherte Serversysteme und Least-Privilege-Zugriffe. Ihre Daten bleiben Ihre – verschlüsselt bei Übertragung und Speicherung."
+    },
+    "cta": {
+      "title": "Machen wir Ihr Gebäude intelligent – und effizient.",
+      "description": "Wir finden den besten Weg für Komfort, Sicherheit und Einsparungen – mit Fokus auf Zuverlässigkeit.",
+      "secondaryLabel": "Vertrieb kontaktieren"
+    }
+  },
+  "form": {
+    "title": "Projekt starten",
+    "progress": "Schritt {cur} von {total}",
+    "steps": {
+      "client": { "title": "Kundendaten", "subtitle": "Wer sind Sie und wie erreichen wir Sie?" },
+      "overview": { "title": "Projektüberblick", "subtitle": "Was bauen wir – und warum jetzt?" },
+      "scope": { "title": "Umfang & Zeitplan", "subtitle": "Funktionen, Nutzer und Timing." },
+      "budget": { "title": "Budget & Erfolg", "subtitle": "Investitionsrahmen und messbare Ergebnisse." },
+      "security": { "title": "Integrationen & Sicherheit", "subtitle": "Wie wir verbinden und schützen." },
+      "review": { "title": "Prüfen & Senden", "subtitle": "Bitte alle Angaben vor dem Senden bestätigen." }
+    },
+    "fields": {
+      "fullName": { "label": "Vollständiger Name", "ph": "Max Mustermann" },
+      "company": { "label": "Unternehmen", "ph": "Acme GmbH" },
+      "email": { "label": "Geschäftliche E-Mail", "ph": "max@acme.com" },
+      "phone": { "label": "Telefon", "ph": "+43 6XX XXX XXXX" },
+      "country": { "label": "Land", "ph": "Land auswählen" },
+      "projectType": { "label": "Projekttyp", "ph": "Typ wählen" },
+      "expectedUsers": { "label": "Erwartete Nutzer (monatlich)", "ph": "z. B. 5.000" },
+      "brief": { "label": "Projektzusammenfassung", "ph": "Was bauen wir – und warum jetzt?" },
+      "goals": { "label": "Hauptziele", "ph": "z. B. Onboarding um 30 % verkürzen, MVP in 8 Wochen…" },
+      "features": { "label": "Gewünschte Funktionen" },
+      "deadline": { "label": "Zieltermin" },
+      "timelineFlex": { "label": "Zeitplan-Flexibilität" },
+      "budget": { "label": "Budgetrahmen", "ph": "Budget wählen" },
+      "procurement": { "label": "Zusammenarbeitsmodell" },
+      "success": { "label": "Erfolgskriterien", "ph": "KPIs, SLAs, Performance-Ziele…" },
+      "risks": { "label": "Risiken/Restriktionen (optional)", "ph": "Abhängigkeiten, Compliance-Vorgaben, Legacy-Systeme…" },
+      "integrations": { "label": "Benötigte Integrationen" },
+      "auth": { "label": "Authentifizierung" },
+      "residency": { "label": "Datenlokation" },
+      "compliance": { "label": "Compliance-Anforderungen" }
+    },
+    "buttons": {
+      "back": "Zurück",
+      "next": "Weiter",
+      "submit": "Anfrage senden"
+    },
+    "consent": "Ich stimme der Verarbeitung meiner Daten für diese Anfrage zu.",
+    "footerNote": "Sicheres Formular • DSGVO-konform • Entwurf lokal gespeichert",
+    "alerts": {
+      "submitted": "✅ Danke! Ihre Projektanfrage wurde übermittelt."
+    },
+    "summary": {
+      "fullName": "Vollständiger Name",
+      "company": "Unternehmen",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "country": "Land",
+      "projectType": "Projekttyp",
+      "summary": "Zusammenfassung",
+      "goals": "Ziele",
+      "features": "Funktionen",
+      "expectedUsers": "Erwartete Nutzer",
+      "deadline": "Frist",
+      "timeline": "Zeitplan",
+      "budget": "Budget",
+      "engagement": "Zusammenarbeit",
+      "success": "Erfolg",
+      "risks": "Risiken",
+      "integrations": "Integrationen",
+      "auth": "Auth",
+      "residency": "Datenlokation",
+      "compliance": "Compliance"
+    },
+    "lists": {
+      "countries": {
+        "Austria": "Österreich",
+        "Belgium": "Belgien",
+        "Croatia": "Kroatien",
+        "Czechia": "Tschechien",
+        "Denmark": "Dänemark",
+        "Egypt": "Ägypten",
+        "France": "Frankreich",
+        "Germany": "Deutschland",
+        "Italy": "Italien",
+        "Netherlands": "Niederlande",
+        "Poland": "Polen",
+        "Portugal": "Portugal",
+        "Qatar": "Katar",
+        "Saudi Arabia": "Saudi-Arabien",
+        "Spain": "Spanien",
+        "Sweden": "Schweden",
+        "Switzerland": "Schweiz",
+        "Turkey": "Türkei",
+        "UAE": "VAE",
+        "UK": "UK",
+        "USA": "USA"
+      },
+      "projectTypes": {
+        "Website / Landing": "Website / Landing",
+        "SaaS / Platform": "SaaS / Plattform",
+        "E-commerce": "E-Commerce",
+        "Mobile App": "Mobile App",
+        "AI / Automation": "KI / Automatisierung",
+        "Web3 / Payments": "Web3 / Payments",
+        "Data / BI": "Daten / BI",
+        "Other": "Sonstiges"
+      },
+      "features": {
+        "User Auth / SSO": "Benutzer-Auth / SSO",
+        "Admin Panel": "Admin-Bereich",
+        "E-commerce / Payments": "E-Commerce / Zahlungen",
+        "Subscriptions / Billing": "Abos / Abrechnung",
+        "Realtime Chat / Notifications": "Echtzeit-Chat / Benachrichtigungen",
+        "Analytics Dashboard": "Analytics-Dashboard",
+        "Mobile App": "Mobile App",
+        "AI Assistant / RAG": "KI-Assistent / RAG",
+        "Web3 Wallet / Tokens": "Web3-Wallet / Tokens",
+        "3rd-party Integrations": "Drittanbieter-Integrationen"
+      },
+      "integrations": {
+        "Salesforce": "Salesforce",
+        "HubSpot": "HubSpot",
+        "SAP": "SAP",
+        "Stripe": "Stripe",
+        "PayPal": "PayPal",
+        "Plaid": "Plaid",
+        "Auth0": "Auth0",
+        "Okta": "Okta",
+        "AWS": "AWS",
+        "GCP": "GCP",
+        "Azure": "Azure"
+      },
+      "compliance": {
+        "GDPR": "DSGVO",
+        "ISO 27001": "ISO 27001",
+        "SOC 2": "SOC 2",
+        "HIPAA": "HIPAA",
+        "PCI DSS": "PCI DSS"
+      },
+      "timelineFlex": { "strict": "Streng", "target": "Zieltermin", "open": "Flexibel" },
+      "budget": { "<10k": "<10k", "10–30k": "10–30k", "30–80k": "30–80k", "80–200k": "80–200k", ">200k": ">200k" },
+      "procurement": { "Startup": "Startup", "B2B": "B2B", "Enterprise": "Enterprise", "B2G": "B2G" },
+      "auth": { "None": "Keine", "Email/Password": "E-Mail/Passwort", "SSO/SAML": "SSO/SAML", "OAuth": "OAuth" },
+      "residency": { "EU": "EU", "US": "USA", "MENA": "MENA", "Any": "Beliebig" }
+    }
+  },
+  "it": {
+    "hero": {
+      "badge": "HBC IT Solutions",
+      "title": "Entwickeln, Skalieren & Absichern",
+      "highlight": "Ihr digitales Produkt",
+      "description": "Wir konzipieren und liefern Hochleistungs-Software, Web3-Zahlungen und Cloud-Infrastrukturen – ausgelegt auf Verfügbarkeit, Sicherheit und Wachstum.\n\nVon SaaS-Plattformen und E-Commerce bis hin zu KI-Automatisierung und Blockchain liefern wir End-to-End-Lösungen mit messbarem Impact.",
+      "chips": ["Software","APIs/GraphQL","E-Commerce","UI/UX","Cloud/DevOps","CI/CD","Observability","Sicherheit","SSO/IAM","KI/Automatisierung","Daten & Analytik","Web3"]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Wie schnell kann Ihr Team mit einem Projekt starten?",
+      "a1": "In der Regel antworten wir innerhalb eines Geschäftstages. Ein Discovery-Termin kann in 48–72 Stunden stattfinden, um Umfang, Prioritäten und Meilensteine festzulegen. Nach der Abstimmung starten Onboarding und Kick-off umgehend.",
+      "q2": "Bieten Sie vollständige Frontend- und Backend-Entwicklung an?",
+      "a2": "Ja. Wir liefern Full-Stack-Lösungen über Frontend, Backend und Infrastruktur hinweg. Unsere Teams sind auf moderne Web-Frameworks, skalierbare APIs, Datenbanken und CI/CD spezialisiert – für gleichbleibende Qualität über den gesamten Produktlebenszyklus.",
+      "q3": "Können Sie neue Technologien wie KI oder Web3 in bestehende Plattformen integrieren?",
+      "a3": "Absolut. Wir entwickeln sichere, standardkonforme Integrationen, die Ihre bestehenden Systeme um KI-Automatisierung, Datenintelligenz oder Blockchain-Funktionalität erweitern. Jede Integration beinhaltet Dokumentation, Tests und Rollback-Strategien für Stabilität.",
+      "q4": "Wie organisieren Sie Kommunikation und Fortschritts-Tracking im Projekt?",
+      "a4": "Jede Kund:in erhält eine:n dedizierte:n Projektmanager:in und Zugriff auf unseren Kollaborations-Arbeitsbereich. Wir liefern transparente Wochen-Updates, Meilenstein-Reviews und Echtzeit-Dashboards zu Fortschritt, Risiken und Deliverables.",
+      "q5": "Welche Branchen bedienen Sie?",
+      "a5": "Wir arbeiten u. a. mit Finanz-, Industrie-, E-Commerce-, Bildungs- und Tech-Unternehmen. Unsere flexible Architektur ermöglicht eine schnelle Anpassung an regulierte oder daten-sensitive Umgebungen."
+    },
+    "pinned": {
+      "title": "IT-Services",
+      "software": {
+        "tag": "Services",
+        "title": "Software-Entwicklung",
+        "text": "Wir entwickeln digitale End-to-End-Produkte – von der Idee bis zum globalen Rollout. Unser Team baut skalierbare, sichere und performante Anwendungen für Web, Mobile und Desktop, mit modernen Technologien und Clean-Architecture-Prinzipien. Jede Lösung ist modular, wartbar und bereit für zukünftige Integrationen.",
+        "bullets": ["Individuelle Enterprise-Systeme","Cross-Platform-Mobile-Apps","Web-Applikationen & Portale","API- & SDK-Entwicklung","Microservices & Event-Driven-Architektur","DevSecOps-Integration"]
+      },
+      "cloud": {
+        "tag": "Services",
+        "title": "Cloud & DevOps",
+        "text": "Wir entwerfen, betreiben und warten Cloud-Infrastrukturen für hohe Verfügbarkeit, Resilienz und Compliance. Unser DevOps-Ansatz ermöglicht reibungslose Delivery-Pipelines, kontinuierliches Monitoring und kosteneffizientes Skalieren über AWS, Google Cloud und Microsoft Azure.",
+        "bullets": ["Infrastructure as Code (IaC)","Kubernetes-Orchestrierung","Multi-Cloud-Architektur (AWS, GCP, Azure)","CI/CD-Automatisierung","Monitoring, Logging & Alerting","Zero-Downtime-Deployments"]
+      },
+      "ai": {
+        "tag": "Services",
+        "title": "KI & Automatisierung",
+        "text": "Wir verwandeln Daten in intelligente Aktionen. Von Sprach-Chatbots über prädiktive Analysen bis zu automatisierten Workflows helfen unsere KI-Lösungen, bessere Entscheidungen zu treffen, Fehler zu reduzieren und Kundenerlebnisse zu verbessern.",
+        "bullets": ["Conversational-AI & Chatbots","Vorhersage & Forecasting","Geschäftsprozess-Automatisierung","Deployment eigener ML-Modelle","KI-Datenpipelines & ETL","LLM-Integration & RAG-Systeme"]
+      },
+      "web3": {
+        "tag": "Services",
+        "title": "Blockchain & Web3",
+        "text": "Wir bauen sichere, konforme und skalierbare dezentrale Systeme auf führenden Netzwerken – u. a. Ethereum, BNB Chain, Polygon und Avalanche. Unser Web3-Know-how umfasst Token-Ökosysteme, Smart Contracts und Zahlungsinfrastruktur mit realem Nutzen.",
+        "bullets": ["Smart-Contract-Architektur & Audits","Token-Ökosysteme & Staking","Cross-Chain-Interoperabilität","P2P-Zahlungen & On-Chain-Settlement","DeFi- & NFT-Marktplätze","Compliance-fähige Blockchain-Lösungen"]
+      },
+      "security": {
+        "tag": "Services",
+        "title": "Security & Integration",
+        "text": "Sicherheit ist in jeder Phase eingebaut – vom Applikations-Design bis zum Betrieb. Wir implementieren Identity-Management, Datenverschlüsselung und Compliance-Frameworks zum Schutz von Nutzer:innen und Infrastruktur – und integrieren Systeme nahtlos für Transparenz und Vertrauen.",
+        "bullets": ["Identity & Access Management (IAM/SSO)","Penetrationstests & Schwachstellen-Scans","Zero-Trust-Architektur","Regulatorische Compliance (GDPR, ISO, SOC 2)","Sichere API- & System-Integration","Kontinuierliches Security-Monitoring"]
+      }
+    },
+    "capabilities": {
+      "api": { "title": "API-first Delivery", "desc": "Saubere GraphQL/REST-Schnittstellen, SDKs und Doku für Partner." },
+      "devops": { "title": "DevOps by Default", "desc": "CI/CD, Monitoring sowie Logs/Metriken/Traces ab Tag eins." },
+      "security": { "title": "Security-Mindset", "desc": "SSO/IAM, Secret-Hygiene, Dependency-Checks, Audits." },
+      "performance": { "title": "Performance", "desc": "Edge-Caching, DB-Tuning und UX, die Lighthouse liebt." },
+      "scalability": { "title": "Skalierbarkeit", "desc": "Event-Driven-Microservices und Queues, wo sie zählen." },
+      "docs": { "title": "Dokumentation", "desc": "Playbooks, Runbooks, ADRs und saubere Übergabe-Guides." }
+    },
+    "process": {
+      "title": "Wie wir liefern",
+      "assurance": "Zusicherung",
+      "steps": {
+        "discover": { "title": "Analyse", "desc": "Wir starten mit Stakeholder-Workshops, Erfolgsmetriken und Risiko-Mapping. Ziel ist ein tiefes Verständnis für Ziele, technische Landschaft und Compliance-Rahmen." },
+        "design": { "title": "Design", "desc": "Unsere Architekt:innen und Designer:innen übersetzen Ziele in skalierbare Architekturen, UX-Flows und technische Proofs. Performance, Sicherheit und Usability sind von Anfang an gesetzt." },
+        "build": { "title": "Umsetzung", "desc": "Agile Sprints mit Continuous Integration, Test-Automatisierung und Observability. Jede Iteration liefert messbare Ergebnisse und produktionsreife Inkremente." },
+        "deploy": { "title": "Bereitstellung", "desc": "Blue/Green- und Canary-Strategien sorgen für sichere Releases ohne Downtime. Jede Lieferung kommt mit Rollback-Plänen, Monitoring-Dashboards und Dokumentation." },
+        "scale": { "title": "Skalieren & Optimieren", "desc": "Nach dem Go-Live optimieren wir Performance, Kosten und Zuverlässigkeit. Proaktives Monitoring, Incident-Response und SLA-Einhaltung sichern den Betrieb." }
+      },
+      "badges": ["ISO-27001 / DSGVO-Compliance","99,9 % Uptime-SLA","Security-First-Architektur","24/7 Globaler Support","Kontinuierliche Lieferung & Monitoring","Transparente Berichte","Dediziertes Account-Management","Vollständige Dokumentation & Wissens-Transfer"]
+    }
   }
 }

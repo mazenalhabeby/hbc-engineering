@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 
 interface FAQItem {
-  question: string;
+  question: string | React.ReactNode;
   answer: string | React.ReactNode;
   value: string;
 }

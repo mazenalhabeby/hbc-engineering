@@ -8,6 +8,7 @@ import HeroAnimated from "@/components/HeroAnimated";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Wave from "@/components/Wave";
+import { useTranslations } from "next-intl";
 
 /* ---------------------------------------------------------------- */
 /* ASSETS — replace with your real image paths in /public            */
@@ -23,56 +24,58 @@ const ASSETS = {
   cta: "/images/Consultation.jpg",
 };
 
-const faqItems = [
-  {
-    value: "faq-1",
-    question: "Do fire-retardant coatings affect wood aesthetics?",
-    answer:
-      "Modern coatings are transparent or tinted lightly and minimally alter texture. We test before applying in-situ.",
-  },
-  {
-    value: "faq-2",
-    question: "How often must systems be maintained?",
-    answer:
-      "Typical inspection cycles are monthly to annually depending on system type. We support full audit logs and reminders.",
-  },
-  {
-    value: "faq-3",
-    question: "Can I integrate fire systems with building automation?",
-    answer:
-      "Yes. We build interfaces so suppression, alarms, and sensors talk to your smart building or BMS.",
-  },
-];
-
 /* ---------------------------------------------------------------- */
 /* Page                                                             */
 /* ---------------------------------------------------------------- */
 export default function FireProtectionPage() {
+  const t = useTranslations("fire");
+
+  const faqItems = [
+    {
+      value: "faq-1",
+      question: t("faq.q1"),
+      answer: t("faq.a1"),
+    },
+    {
+      value: "faq-2",
+      question: t("faq.q2"),
+      answer: t("faq.a2"),
+    },
+    {
+      value: "faq-3",
+      question: t("faq.q3"),
+      answer: t("faq.a3"),
+    },
+  ];
+
   return (
     <PageContainser>
       <HeroAnimated
-        badge="HBC Fire Protection"
-        title="Fire Protection"
-        highlight="That Guards & Lasts."
-        description="From wood preservation to architectural facades and system integration — we bring safety, beauty, and compliance together."
+        badge={t("hero.badge")}
+        title={t("hero.title")}
+        highlight={t("hero.highlight")}
+        description={t("hero.description")}
         chips={[
-          "Wood Preservation",
-          "Film Protection",
-          "Façades",
-          "System Design",
-          "Maintenance",
+          t("hero.chips.wood"),
+          t("hero.chips.film"),
+          t("hero.chips.facades"),
+          t("hero.chips.systemDesign"),
+          t("hero.chips.maintenance"),
         ]}
-        cta={{ label: "Contact Us", href: paths.contact.href }}
+        cta={{ label: t("hero.cta"), href: paths.contact.href }}
         heroImage={ASSETS.hero}
       />
+
       <CoreServices />
       <SystemsDeepDive />
       <WhyChooseUs />
       <CaseStudies />
-      <FAQ title="Frequently Asked Questions" faqItems={faqItems} />
+
+      <FAQ title={t("faq.title")} faqItems={faqItems} />
+
       <FinalCTA
-        title="Elevate Your Safety. Protect What Matters."
-        description="Contact HBC to design or upgrade your fire protection systems with intelligence, compliance, and durability built in."
+        title={t("cta.title")}
+        description={t("cta.description")}
         primaryLabel={paths.contact.label}
         primaryHref={paths.contact.href}
         imageSrc={ASSETS.cta}
@@ -85,38 +88,32 @@ export default function FireProtectionPage() {
 /* Core Services — wood, film, facade                                */
 /* ---------------------------------------------------------------- */
 function CoreServices() {
+  const t = useTranslations("fire.core");
+
   const services = [
     {
       key: "wood",
-      title: "Wood Preservation",
-      desc: "Special coatings and treatments to reduce flammability of structural wood elements, increasing fire resistance and extending lifespan.",
+      title: t("wood.title"),
+      desc: t("wood.desc"),
       img: ASSETS.wood,
-      bullets: [
-        "Char retardant coatings",
-        "Fire-retardant impregnation",
-        "Compliance to NFPA & EN",
-      ],
+      bullets: [t("wood.bullets.0"), t("wood.bullets.1"), t("wood.bullets.2")],
     },
     {
       key: "film",
-      title: "Film Protection",
-      desc: "Transparent films for windows, walls and doors that slow flame spread and limit heat transfer, while preserving aesthetics.",
+      title: t("film.title"),
+      desc: t("film.desc"),
       img: ASSETS.film,
-      bullets: [
-        "Heat-reflective film",
-        "Smoke barrier film",
-        "Custom form factors",
-      ],
+      bullets: [t("film.bullets.0"), t("film.bullets.1"), t("film.bullets.2")],
     },
     {
-      key: "façade",
-      title: "Façade Systems",
-      desc: "Architectural fire-safe façade materials and designs that prevent flame and smoke propagation across building exteriors.",
+      key: "facade",
+      title: t("facade.title"),
+      desc: t("facade.desc"),
       img: ASSETS.facade,
       bullets: [
-        "Refractory panels",
-        "Compartmentation design",
-        "Regulatory compliance",
+        t("facade.bullets.0"),
+        t("facade.bullets.1"),
+        t("facade.bullets.2"),
       ],
     },
   ];
@@ -131,7 +128,7 @@ function CoreServices() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          Core Fire-Protection Services
+          {t("heading")}
         </motion.h2>
 
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -176,20 +173,22 @@ function CoreServices() {
 /* Systems Deep Dive — how we integrate fire-safety systems         */
 /* ---------------------------------------------------------------- */
 function SystemsDeepDive() {
+  const t = useTranslations("fire.systems");
+
   const subsystems = [
     {
-      name: "Suppression & Extinguishers",
-      desc: "Design and install automatic sprinkler, gas, or foam suppression systems tailored to use-case and hazard.",
+      name: t("suppression.name"),
+      desc: t("suppression.desc"),
       img: ASSETS.system,
     },
     {
-      name: "Alarm & Detection",
-      desc: "Smoke, heat, and flame sensors, wired and wireless, integrated with control panels and remote alerts.",
+      name: t("alarm.name"),
+      desc: t("alarm.desc"),
       img: ASSETS.controlRoom,
     },
     {
-      name: "Maintenance & Audits",
-      desc: "Regular testing, inspection and certification of fire systems to ensure compliance and readiness.",
+      name: t("maintenance.name"),
+      desc: t("maintenance.desc"),
       img: ASSETS.maintenance,
     },
   ];
@@ -204,7 +203,7 @@ function SystemsDeepDive() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          System Integration & Lifecycle
+          {t("heading")}
         </motion.h2>
 
         <div className="mt-8 space-y-16">
@@ -246,23 +245,13 @@ function SystemsDeepDive() {
 /* Why Choose Us — strengths & differentiators                       */
 /* ---------------------------------------------------------------- */
 function WhyChooseUs() {
+  const t = useTranslations("fire.why");
+
   const features = [
-    {
-      t: "Code & Standards Expertise",
-      d: "We navigate NFPA, EN, UL standards so your system passes inspection, not just installation.",
-    },
-    {
-      t: "Holistic Safety Design",
-      d: "We guard structure, contents, egress and systems — not just fire suppression.",
-    },
-    {
-      t: "Predictive Health Monitoring",
-      d: "Sensors detect early faults (leaks, pressure drops, tampering) before failure happens.",
-    },
-    {
-      t: "Emergency Response Integration",
-      d: "We tie systems into panels, security, and building operations to act fast when every second counts.",
-    },
+    { t: t("items.0.title"), d: t("items.0.desc") },
+    { t: t("items.1.title"), d: t("items.1.desc") },
+    { t: t("items.2.title"), d: t("items.2.desc") },
+    { t: t("items.3.title"), d: t("items.3.desc") },
   ];
   return (
     <section className="relative bg-white/80 pb-16 pt-12">
@@ -274,7 +263,7 @@ function WhyChooseUs() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          Why Choose HBC Fire Protection
+          {t("heading")}
         </motion.h2>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
           {features.map((f, i) => (
@@ -301,17 +290,11 @@ function WhyChooseUs() {
 /* Case Studies (testimonials / projects)                            */
 /* ---------------------------------------------------------------- */
 function CaseStudies() {
+  const t = useTranslations("fire.cases");
+
   const projects = [
-    {
-      name: "Wood-Frame Housing Complex",
-      desc: "Applied fire-retardant coatings to all timber structural elements. Passed regulatory inspection with margin.",
-      img: ASSETS.wood,
-    },
-    {
-      name: "Commercial Façade Retrofit",
-      desc: "Replaced aging cladding with fire-safe façade system while maintaining aesthetic transparency.",
-      img: ASSETS.facade,
-    },
+    { name: t("items.0.name"), desc: t("items.0.desc"), img: ASSETS.wood },
+    { name: t("items.1.name"), desc: t("items.1.desc"), img: ASSETS.facade },
   ];
   return (
     <section className="relative pb-16 pt-16">
@@ -323,7 +306,7 @@ function CaseStudies() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          Project Highlights
+          {t("heading")}
         </motion.h2>
         <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2">
           {projects.map((p, i) => (

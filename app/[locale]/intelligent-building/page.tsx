@@ -16,6 +16,7 @@ import {
 } from "@/components/Icons";
 import TiltCard from "@/components/TiltCard";
 import LiveControl from "@/components/LiveControl";
+import { useTranslations } from "next-intl";
 
 /* --------------------------------------------------------------- */
 /* Assets (replace with your real images in /public)               */
@@ -40,27 +41,6 @@ const ASSETS = {
   cta: "/images/Consultation.jpg",
 };
 
-const faqItems = [
-  {
-    value: "faq-1",
-    question: "Do I need an existing smart-home hub?",
-    answer:
-      "Not necessarily. We can integrate with your current ecosystem or deploy a robust, secure HBC stack — whichever delivers reliability with the least friction.",
-  },
-  {
-    value: "faq-2",
-    question: "Can I start small and expand later?",
-    answer:
-      "Yes. Begin with one priority (e.g., energy monitoring). We design for modular growth, so features can be added as your needs evolve.",
-  },
-  {
-    value: "faq-3",
-    question: "How do you protect my data?",
-    answer:
-      "We design with privacy-by-default, secure server systems, and least-privilege access. Your data stays yours, encrypted in motion and at rest.",
-  },
-];
-
 /* If you already have a shared 'paths' helper, swap these */
 const paths = {
   contact: { href: "/contact", label: "Contact" },
@@ -72,27 +52,43 @@ const paths = {
 /* Page                                                            */
 /* --------------------------------------------------------------- */
 export default function IntelligentBuildingPage() {
+  const t = useTranslations("smart");
+
+  const faqItems = [
+    { value: "faq-1", question: t("faq.q1"), answer: t("faq.a1") },
+    { value: "faq-2", question: t("faq.q2"), answer: t("faq.a2") },
+    { value: "faq-3", question: t("faq.q3"), answer: t("faq.a3") },
+  ];
+
   return (
     <PageContainser>
       <HeroAnimated
-        badge="HBC Intelligent Building"
-        title="Smarter Homes."
-        highlight="Greener Living."
-        description="Connect comfort, security and energy intelligence. Control, monitor and optimize your space — reliably and effortlessly."
-        chips={["Automation", "PV & Energy", "Security", "Monitoring"]}
-        cta={{ label: "Conect Us", href: paths.contact.href }}
+        badge={t("hero.badge")}
+        title={t("hero.title")}
+        highlight={t("hero.highlight")}
+        description={t("hero.description")}
+        chips={[
+          t("hero.chips.automation"),
+          t("hero.chips.pv"),
+          t("hero.chips.security"),
+          t("hero.chips.monitoring"),
+        ]}
+        cta={{ label: t("hero.cta"), href: paths.contact.href }}
         heroImage={ASSETS.hero}
       />
+
       <SmartHomeFeatureGrid />
       <LiveControl />
       <BadgesMarquee />
-      <FAQ title="Frequently Asked Questions" faqItems={faqItems} />
+
+      <FAQ title={t("faq.title")} faqItems={faqItems} />
+
       <FinalCTA
-        title="Let’s make your building intelligent — and efficient."
-        description="We’ll map the best path for comfort, safety and savings with a focus on reliability."
+        title={t("cta.title")}
+        description={t("cta.description")}
         imageSrc={ASSETS.cta}
         secondaryHref={paths.contact.href}
-        secondaryLabel={"Contact Sales"}
+        secondaryLabel={t("cta.secondaryLabel")}
       />
     </PageContainser>
   );
@@ -102,40 +98,42 @@ export default function IntelligentBuildingPage() {
 /* Smart Home – Feature Grid                                       */
 /* --------------------------------------------------------------- */
 function SmartHomeFeatureGrid() {
+  const t = useTranslations("smart.grid");
+
   const items = [
     {
-      t: "Automation",
-      d: "Scenes, schedules, voice control — your home, orchestrated.",
+      t: t("items.0.title"),
+      d: t("items.0.desc"),
       img: ASSETS.automation,
       I: IconSpark,
     },
     {
-      t: "PV & Energy",
-      d: "Monitor usage, store intelligently, shave peaks & save.",
+      t: t("items.1.title"),
+      d: t("items.1.desc"),
       img: ASSETS.energy,
       I: IconEnergy,
     },
     {
-      t: "Security",
-      d: "Alarms, entry, cameras & server systems — integrated.",
+      t: t("items.2.title"),
+      d: t("items.2.desc"),
       img: ASSETS.security,
       I: IconShield,
     },
     {
-      t: "Monitoring",
-      d: "Real-time health of devices, rooms and subsystems.",
+      t: t("items.3.title"),
+      d: t("items.3.desc"),
       img: ASSETS.monitoring,
       I: IconTarget,
     },
     {
-      t: "Comfort",
-      d: "Lighting, climate and shading that adapts to you.",
+      t: t("items.4.title"),
+      d: t("items.4.desc"),
       img: ASSETS.comfort,
       I: IconRibbon,
     },
     {
-      t: "Savings",
-      d: "Data-driven optimization that cuts waste, not comfort.",
+      t: t("items.5.title"),
+      d: t("items.5.desc"),
       img: ASSETS.savings,
       I: IconSavings,
     },
@@ -150,7 +148,7 @@ function SmartHomeFeatureGrid() {
           viewport={{ once: true, amount: 0.4 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          Smart Home, the HBC Way
+          {t("heading")}
         </motion.h2>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -184,21 +182,23 @@ function SmartHomeFeatureGrid() {
 /* Badges marquee                                                   */
 /* --------------------------------------------------------------- */
 function BadgesMarquee() {
+  const t = useTranslations("smart.tags");
   const tags = [
-    "Hydraulics",
-    "Electrical",
-    "Mechanical",
-    "Programming",
-    "PV & Energy",
-    "Security",
-    "Monitoring",
-    "Accessories",
-    "Agro",
-    "Concrete",
-    "Construction",
-    "Energy",
-    "Soil",
+    t("0"),
+    t("1"),
+    t("2"),
+    t("3"),
+    t("4"),
+    t("5"),
+    t("6"),
+    t("7"),
+    t("8"),
+    t("9"),
+    t("10"),
+    t("11"),
+    t("12"),
   ];
+
   return (
     <section className="relative py-10">
       <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[#eaf3ff] to-transparent" />

@@ -4,12 +4,12 @@ import { DynamicAccordion } from "./DynamicAccordion";
 type faqItems =
   | {
       value: string;
-      question: string;
-      answer: string;
+      question: React.ReactNode;
+      answer: React.ReactNode;
     }
   | {
       value: string;
-      question: string;
+      question: React.ReactNode;
       answer: React.JSX.Element;
     };
 

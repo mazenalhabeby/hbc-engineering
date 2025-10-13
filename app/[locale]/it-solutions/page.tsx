@@ -18,6 +18,7 @@ import Wave from "@/components/Wave";
 import ChipKinetic from "@/components/ChipKinetic";
 import MultiStepProjectForm from "./ClientForm";
 import GradientBackdrop from "@/components/GradientBackdrop";
+import { useTranslations } from "next-intl";
 
 /**
  * =========================
@@ -34,76 +35,32 @@ const ASSETS = {
   cta: "/images/Consultation.jpg",
 };
 
-const faqItems = [
-  {
-    value: "faq-1",
-    question: "How soon can your team begin a project?",
-    answer:
-      "Our team typically responds within one business day. A discovery meeting can be scheduled within 48–72 hours to define scope, priorities, and expected milestones. Once aligned, onboarding and kickoff begin immediately.",
-  },
-  {
-    value: "faq-2",
-    question: "Do you provide complete frontend and backend development?",
-    answer:
-      "Yes. We deliver full-stack solutions covering frontend, backend, and infrastructure. Our teams specialize in modern web frameworks, scalable APIs, databases, and CI/CD pipelines—ensuring consistent quality across the entire product lifecycle.",
-  },
-  {
-    value: "faq-3",
-    question:
-      "Can you integrate emerging technologies such as AI or Web3 into existing platforms?",
-    answer:
-      "Absolutely. We design secure, standards-compliant integrations that extend your current systems with AI automation, data intelligence, or blockchain functionality. Each integration includes documentation, testing, and rollback strategies to ensure stability.",
-  },
-  {
-    value: "faq-4",
-    question: "How do you manage project communication and progress tracking?",
-    answer:
-      "Each client receives a dedicated project manager and access to our collaboration workspace. We provide transparent weekly updates, milestone reviews, and real-time dashboards for progress, risks, and deliverables.",
-  },
-  {
-    value: "faq-5",
-    question: "What industries do you serve?",
-    answer:
-      "We work with clients across finance, manufacturing, e-commerce, education, and technology. Our flexible architecture approach allows us to adapt quickly to any regulated or data-sensitive environment.",
-  },
-];
-
-/**
- * =========================
- *   PAGE
- * =========================
- */
 export default function ITSolutionsPage() {
+  const t = useTranslations("it");
+
+  const faqItems = [
+    { value: "faq-1", question: t("faq.q1"), answer: t("faq.a1") },
+    { value: "faq-2", question: t("faq.q2"), answer: t("faq.a2") },
+    { value: "faq-3", question: t("faq.q3"), answer: t("faq.a3") },
+    { value: "faq-4", question: t("faq.q4"), answer: t("faq.a4") },
+    { value: "faq-5", question: t("faq.q5"), answer: t("faq.a5") },
+  ];
+
   return (
     <PageContainser>
       {" "}
       <HeroAnimated
-        badge="HBC IT Solutions"
-        title="Build,Scale & Secure"
-        highlight="Your Digital Product"
-        description={`We design and ship high-performance software, Web3 payments, and cloud infrastructure—engineered for uptime, security, and growth.
-
-From SaaS platforms and e-commerce to AI automation and blockchain, we deliver end-to-end solutions with measurable impact.`}
-        chips={[
-          "Software",
-          "APIs/GraphQL",
-          "E-commerce",
-          "UI/UX",
-          "Cloud/DevOps",
-          "CI/CD",
-          "Observability",
-          "Security",
-          "SSO/IAM",
-          "AI/Automation",
-          "Data & Analytics",
-          "Web3",
-        ]}
+        badge={t("hero.badge")}
+        title={t("hero.title")}
+        highlight={t("hero.highlight")}
+        description={t("hero.description")}
+        chips={t.raw("hero.chips")}
         heroImage={ASSETS.hero}
       />
       <PinnedShowcase /> {/* Services spotlight (your pinned pattern) */}
       <Capabilities /> {/* Quick capability grid */}
       <ProcessAndAssurance /> {/* Timeline + badges */}
-      <FAQ title="Frequently Asked Questions" faqItems={faqItems} />
+      <FAQ title={t("faq.title")} faqItems={faqItems} />
       <GradientBackdrop>
         <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:py-14">
           <MultiStepProjectForm />
@@ -117,95 +74,52 @@ From SaaS platforms and e-commerce to AI automation and blockchain, we deliver e
  * PINNED SHOWCASE — IT Services (reusing your pattern)
  * ========================================================= */
 function PinnedShowcase() {
+  const t = useTranslations("it.pinned");
+
   const slides = useMemo(
     () => [
       {
         key: "software",
-        tag: "Services",
-        title: "Software Development",
-        text: `We engineer end-to-end digital products — from concept to global rollout. 
-Our team builds scalable, secure, and high-performance applications for web, mobile, and desktop, 
-using modern technologies and clean architecture principles. We ensure every solution is modular, maintainable, 
-and ready for future integrations.`,
+        tag: t("software.tag"),
+        title: t("software.title"),
+        text: t("software.text"),
         img: ASSETS.dev,
-        bullets: [
-          "Custom enterprise systems",
-          "Cross-platform mobile apps",
-          "Web applications & portals",
-          "API & SDK development",
-          "Microservices & event-driven architecture",
-          "DevSecOps integration",
-        ],
+        bullets: t.raw("software.bullets"),
       },
       {
         key: "cloud",
-        tag: "Services",
-        title: "Cloud & DevOps",
-        text: `We design, deploy, and maintain cloud infrastructures built for high availability, resilience, 
-and compliance. Our DevOps approach ensures smooth delivery pipelines, continuous monitoring, and cost-efficient scaling 
-across major global providers such as AWS, Google Cloud, and Microsoft Azure.`,
+        tag: t("cloud.tag"),
+        title: t("cloud.title"),
+        text: t("cloud.text"),
         img: ASSETS.cloud,
-        bullets: [
-          "Infrastructure as Code (IaC)",
-          "Kubernetes orchestration",
-          "Multi-cloud architecture (AWS, GCP, Azure)",
-          "CI/CD automation",
-          "Monitoring, logging, and alerting",
-          "Zero-downtime deployments",
-        ],
+        bullets: t.raw("cloud.bullets"),
       },
       {
         key: "ai",
-        tag: "Services",
-        title: "AI & Automation",
-        text: `We transform data into intelligent action. From natural-language chatbots to predictive analytics and automated workflows, 
-our AI solutions help organizations make smarter decisions, reduce human error, and enhance customer experiences.`,
+        tag: t("ai.tag"),
+        title: t("ai.title"),
+        text: t("ai.text"),
         img: ASSETS.ai,
-        bullets: [
-          "Conversational AI & chatbots",
-          "Predictive analytics & forecasting",
-          "Business process automation",
-          "Custom ML model deployment",
-          "AI data pipelines & ETL",
-          "LLM integration & RAG systems",
-        ],
+        bullets: t.raw("ai.bullets"),
       },
       {
         key: "web3",
-        tag: "Services",
-        title: "Blockchain & Web3",
-        text: `We build secure, compliant, and scalable decentralized systems across the strongest blockchain networks — 
-including Ethereum, BNB Chain, Polygon, and Avalanche. Our Web3 expertise spans token ecosystems, smart contracts, 
-and payment infrastructures that merge blockchain innovation with real-world utility.`,
+        tag: t("web3.tag"),
+        title: t("web3.title"),
+        text: t("web3.text"),
         img: ASSETS.web3,
-        bullets: [
-          "Smart contract architecture & audits",
-          "Token ecosystems & staking systems",
-          "Cross-chain interoperability",
-          "P2P payment rails & on-chain settlement",
-          "DeFi & NFT marketplace development",
-          "Compliance-ready blockchain solutions",
-        ],
+        bullets: t.raw("web3.bullets"),
       },
       {
         key: "security",
-        tag: "Services",
-        title: "Security & Integration",
-        text: `Security is built into every layer of our process — from application design to production operations. 
-We implement advanced identity management, data encryption, and compliance frameworks to protect both users and infrastructure, 
-while seamlessly integrating your systems for operational clarity and trust.`,
+        tag: t("security.tag"),
+        title: t("security.title"),
+        text: t("security.text"),
         img: ASSETS.security,
-        bullets: [
-          "Identity & Access Management (IAM/SSO)",
-          "Penetration testing & vulnerability scans",
-          "Zero-Trust architecture",
-          "Regulatory compliance (GDPR, ISO, SOC 2)",
-          "Secure API & system integration",
-          "Continuous security monitoring",
-        ],
+        bullets: t.raw("security.bullets"),
       },
     ],
-    []
+    [t]
   );
 
   const [active, setActive] = useState(0);
@@ -221,7 +135,7 @@ while seamlessly integrating your systems for operational clarity and trust.`,
           viewport={{ once: true, amount: 0.4 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          IT Services
+          {t("title")}
         </motion.h2>
 
         <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
@@ -262,7 +176,7 @@ while seamlessly integrating your systems for operational clarity and trust.`,
                 <p className="mt-2 text-slate-600">{s.text}</p>
                 <div className="flex flex-1 items-end">
                   <div className="flex flex-row flex-wrap gap-2">
-                    {s.bullets.map((b) => (
+                    {s.bullets.map((b: string) => (
                       <ChipGhost key={b}>{b}</ChipGhost>
                     ))}
                   </div>
@@ -460,31 +374,14 @@ function FixedVisualizer({
  * CAPABILITIES — quick overview
  * ========================================================= */
 function Capabilities() {
+  const t = useTranslations("it.capabilities");
   const items = [
-    {
-      t: "API-first Delivery",
-      d: "Clean GraphQL/REST contracts, SDKs, and docs for partners.",
-    },
-    {
-      t: "DevOps by Default",
-      d: "CI/CD, monitoring, logs/metrics/traces from day one.",
-    },
-    {
-      t: "Security Mindset",
-      d: "SSO/IAM, secrets hygiene, dependency checks, audits.",
-    },
-    {
-      t: "Performance",
-      d: "Edge-ready caching, DB tuning, and Lighthouse-friendly UX.",
-    },
-    {
-      t: "Scalability",
-      d: "Event-driven microservices and message queues where they matter.",
-    },
-    {
-      t: "Documentation",
-      d: "Playbooks, runbooks, ADRs, and handover guides.",
-    },
+    { t: t("api.title"), d: t("api.desc") },
+    { t: t("devops.title"), d: t("devops.desc") },
+    { t: t("security.title"), d: t("security.desc") },
+    { t: t("performance.title"), d: t("performance.desc") },
+    { t: t("scalability.title"), d: t("scalability.desc") },
+    { t: t("docs.title"), d: t("docs.desc") },
   ];
 
   return (
@@ -508,43 +405,16 @@ function Capabilities() {
  * PROCESS + ASSURANCE (timeline + badges)
  * ========================================================= */
 function ProcessAndAssurance() {
+  const t = useTranslations("it.process");
+
   const steps = [
-    {
-      n: 1,
-      t: "Discover",
-      d: "We begin with stakeholder workshops, success metrics, and risk mapping. Every engagement starts with a deep understanding of your business objectives, technical landscape, and compliance boundaries.",
-    },
-    {
-      n: 2,
-      t: "Design",
-      d: "Our architects and designers translate goals into scalable architectures, UX flows, and technical proofs of concept. We emphasize performance, security, and usability from day one.",
-    },
-    {
-      n: 3,
-      t: "Build",
-      d: "We execute through agile sprints with continuous integration, test automation, and observability. Each iteration delivers measurable outcomes and production-ready increments.",
-    },
-    {
-      n: 4,
-      t: "Deploy",
-      d: "Blue/green and canary strategies ensure safe, zero-downtime releases. Every deployment includes rollback policies, monitoring dashboards, and documentation.",
-    },
-    {
-      n: 5,
-      t: "Scale & Optimize",
-      d: "After go-live, we refine performance, cost, and reliability. Proactive monitoring, incident response, and SLA adherence guarantee long-term operational excellence.",
-    },
+    { n: 1, t: t("steps.discover.title"), d: t("steps.discover.desc") },
+    { n: 2, t: t("steps.design.title"), d: t("steps.design.desc") },
+    { n: 3, t: t("steps.build.title"), d: t("steps.build.desc") },
+    { n: 4, t: t("steps.deploy.title"), d: t("steps.deploy.desc") },
+    { n: 5, t: t("steps.scale.title"), d: t("steps.scale.desc") },
   ];
-  const badges = [
-    "ISO 27001 / GDPR Compliance",
-    "99.9% Uptime SLA",
-    "Security-First Architecture",
-    "24/7 Global Support",
-    "Continuous Delivery & Monitoring",
-    "Transparent Reporting",
-    "Dedicated Account Management",
-    "Full Documentation & Knowledge Transfer",
-  ];
+  const badges: string[] = t.raw("badges");
 
   return (
     <section className="relative">
@@ -557,7 +427,7 @@ function ProcessAndAssurance() {
               viewport={{ once: true, amount: 0.4 }}
               className="text-3xl font-extrabold text-slate-900"
             >
-              How We Deliver
+              {t("title")}
             </motion.h3>
             <ul className="mt-6 space-y-4">
               {steps.map((s, i) => (
@@ -588,11 +458,11 @@ function ProcessAndAssurance() {
               viewport={{ once: true, amount: 0.4 }}
               className="text-3xl font-extrabold text-slate-900"
             >
-              Assurance
+              {t("assurance")}
             </motion.h3>
             <div className="mt-6 flex flex-wrap gap-3">
               {badges.map((b, i) => (
-                <ChipKinetic key={b} delay={i * 0.05}>
+                <ChipKinetic key={`${b}-${i}`} delay={i * 0.05}>
                   {b}
                 </ChipKinetic>
               ))}

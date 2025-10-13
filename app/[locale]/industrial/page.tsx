@@ -26,6 +26,7 @@ import {
   Welding,
 } from "@/assets";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 /**
  * =========================
@@ -50,67 +51,60 @@ const ASSETS = {
   other: "/images/other-services.png", // dismantle/rebuild/relocation/new-construction
 };
 
-const faqItems = [
-  {
-    value: "faq-1",
-    question: "Can you work alongside our in-house engineers?",
-    answer:
-      "Yes. We frequently co-deliver with plant teams and adapt to your maintenance windows and standards.",
-  },
-  {
-    value: "faq-2",
-    question: "Do you provide as-built documentation?",
-    answer:
-      "Always. We hand over wiring diagrams, naming standards, PLC/HMI backups, test reports, and photos.",
-  },
-  {
-    value: "faq-3",
-    question: "How do you ensure safety?",
-    answer:
-      "Permits, isolation/LOTO, tooling checks, and trained personnel. We plan safety from day zero.",
-  },
-  {
-    value: "faq-4",
-    question: "How can I schedule a consultation?",
-    answer: (
-      <p>
-        You can easily schedule a meeting through our{" "}
-        <Link
-          href="/corporate"
-          className="text-[#066eb0] underline hover:text-[#044f80]"
-        >
-          Corporate Meeting Request
-        </Link>{" "}
-        page.
-      </p>
-    ),
-  },
-];
-
 /**
  * =========================
  *   PAGE
  * =========================
  */
 export default function IndustrialPage() {
+  const t = useTranslations("industrial");
+
+  // FAQ with translations (includes a rich translation for the Link)
+  const faqItems = [
+    {
+      value: "faq-1",
+      question: t("faq.q1"),
+      answer: t("faq.a1"),
+    },
+    {
+      value: "faq-2",
+      question: t("faq.q2"),
+      answer: t("faq.a2"),
+    },
+    {
+      value: "faq-3",
+      question: t("faq.q3"),
+      answer: t("faq.a3"),
+    },
+    {
+      value: "faq-4",
+      question: t("faq.q4"),
+      answer: t.rich("faq.a4Rich", {
+        link: (chunks) => (
+          <Link
+            href="/corporate"
+            className="text-[#066eb0] underline hover:text-[#044f80]"
+          >
+            {chunks}
+          </Link>
+        ),
+      }),
+    },
+  ];
+
   return (
     <PageContainser>
       <HeroAnimated
-        badge="HBC Industrial"
-        title="Our Service,"
-        highlight="Your Peace of Mind"
-        description="HBC Group is your fast, reliable and quality oriented partner for industrial maintenance and machinery service. 
-
-We help you with your most demanding challenges. 
-
-From preventive or recurring maintenance and diagnostic to  fast responds trouble-shooting or complex relocation of assembly lines.
-"
+        badge={t("hero.badge")}
+        title={t("hero.title")}
+        highlight={t("hero.highlight")}
+        description={t("hero.description")}
         chips={[
-          "Hydraulics",
-          "Electrical",
-          "Mechanical",
-          "Programming",
-          "Fire Protection",
+          t("hero.chips.hydraulics"),
+          t("hero.chips.electrical"),
+          t("hero.chips.mechanical"),
+          t("hero.chips.programming"),
+          t("hero.chips.fireProtection"),
         ]}
         cta={{ label: paths.corporate.label, href: paths.corporate.href }}
         heroImage={ASSETS.hero}
@@ -120,10 +114,10 @@ From preventive or recurring maintenance and diagnostic to  fast responds troubl
       <SecuritySuite />
       <OtherServices />
       <ProcessAndAssurance />
-      <FAQ title="Frequently Asked Questions" faqItems={faqItems} />
+      <FAQ title={t("faq.title")} faqItems={faqItems} />
       <FinalCTA
-        title="Let’s keep your plant moving."
-        description="Book time with our industrial team to map the quickest path to uptime, safety, and performance."
+        title={t("cta.title")}
+        description={t("cta.description")}
         primaryLabel={paths.corporate.label}
         primaryHref={paths.corporate.href}
         imageSrc={ASSETS.cta}
@@ -134,88 +128,84 @@ From preventive or recurring maintenance and diagnostic to  fast responds troubl
 
 /* =========================================================
  * PINNED SHOWCASE (Lenis-safe)
- * =========================================================
- * Left column is "pinned" without relying on CSS sticky. We use a section
- * taller than viewport and interpolate the current slide by tracking card
- * intersections on the right. This works with Lenis because there’s no
- * `position: sticky` (which Lenis can mis-handle).
- */
-
+ * ========================================================= */
 function PinnedShowcase() {
+  const t = useTranslations("industrial.slides");
+
   const slides = useMemo(
     () => [
       {
         key: "hydraulics",
-        tag: "Maintenance",
-        title: "Hydraulics",
-        text: "Diagnostics, pump/valve service, hoses, sealing, filtration, and contamination control. We restore force and motion with micron-level precision.",
+        tag: t("common.tag"),
+        title: t("hydraulics.title"),
+        text: t("hydraulics.text"),
         img: Hydraulics,
         bullets: [
-          "Power units",
-          "Manifolds",
-          "Cylinders",
-          "Accumulator charging",
-          "Flushing",
+          t("hydraulics.bullets.0"),
+          t("hydraulics.bullets.1"),
+          t("hydraulics.bullets.2"),
+          t("hydraulics.bullets.3"),
+          t("hydraulics.bullets.4"),
         ],
       },
       {
         key: "electrical",
-        tag: "Maintenance",
-        title: "Electrical",
-        text: "Control panels, drives, PLCs, sensors, power routing. We do clean installs and retrofit wiring with safety and clarity.",
+        tag: t("common.tag"),
+        title: t("electrical.title"),
+        text: t("electrical.text"),
         img: Electrical,
         bullets: [
-          "PLC/Drive tuning",
-          "Switchgear",
-          "SCADA I/O",
-          "Thermal scans",
-          "Code & labels",
+          t("electrical.bullets.0"),
+          t("electrical.bullets.1"),
+          t("electrical.bullets.2"),
+          t("electrical.bullets.3"),
+          t("electrical.bullets.4"),
         ],
       },
       {
         key: "mechanical",
-        tag: "Maintenance",
-        title: "Mechanical",
-        text: "Gearboxes, conveyors, bearings, shaft alignment, structural fabrication—built to take industrial punishment.",
+        tag: t("common.tag"),
+        title: t("mechanical.title"),
+        text: t("mechanical.text"),
         img: Mechanical,
         bullets: [
-          "Precision alignment",
-          "Conveyors",
-          "Gear & chain",
-          "Laser metrology",
-          "Fabrication",
+          t("mechanical.bullets.0"),
+          t("mechanical.bullets.1"),
+          t("mechanical.bullets.2"),
+          t("mechanical.bullets.3"),
+          t("mechanical.bullets.4"),
         ],
       },
       {
         key: "welding",
-        tag: "Maintenance",
-        title: "Welding",
-        text: "Certified welding and on-site fabrication for production lines and heavy assets. Strong, clean, inspected.",
+        tag: t("common.tag"),
+        title: t("welding.title"),
+        text: t("welding.text"),
         img: Welding,
         bullets: [
-          "Steel & SS",
-          "Pipe welding",
-          "Repair & build",
-          "Fixtures",
-          "NDT-ready",
+          t("welding.bullets.0"),
+          t("welding.bullets.1"),
+          t("welding.bullets.2"),
+          t("welding.bullets.3"),
+          t("welding.bullets.4"),
         ],
       },
       {
         key: "programming",
-        tag: "Maintenance",
-        title: "Programming",
-        text: "Commissioning and optimization of PLC/HMI code. We make machines think smarter and operators work faster.",
+        tag: t("common.tag"),
+        title: t("programming.title"),
+        text: t("programming.text"),
         img: Programming,
         bullets: [
-          "Siemens/TIA",
-          "Rockwell",
-          "Safety PLC",
-          "HMI/UX",
-          "Data logging",
+          t("programming.bullets.0"),
+          t("programming.bullets.1"),
+          t("programming.bullets.2"),
+          t("programming.bullets.3"),
+          t("programming.bullets.4"),
         ],
       },
     ],
-    []
+    [t]
   );
 
   const [active, setActive] = useState(0);
@@ -232,16 +222,14 @@ function PinnedShowcase() {
           viewport={{ once: true, amount: 0.4 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          Industrial Maintenance
+          {t("common.heading")}
         </motion.h2>
 
         <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
-          {/* LEFT: anchor column (used for alignment); mobile shows a simple visual */}
+          {/* LEFT: anchor column */}
           <div className="lg:col-span-6 lg:self-start">
-            {/* 👇 This is the measurable anchor for the fixed visual (desktop only) */}
             <div className="fixed-anchor-left hidden lg:block h-[56vh] min-h-[360px]" />
-
-            {/* Mobile visual (non-fixed) */}
+            {/* Mobile visual */}
             <div className="relative block lg:hidden">
               <div className="relative mb-6 h-[240px] overflow-hidden rounded-2xl bg-white/60 shadow-md ring-1 ring-black/5">
                 {slides.map((s, i) => (
@@ -262,7 +250,7 @@ function PinnedShowcase() {
             </div>
           </div>
 
-          {/* RIGHT: scrolling cards (drives active) */}
+          {/* RIGHT: scrolling cards */}
           <div className="lg:col-span-6 space-y-8">
             {slides.map((s, i) => (
               <TrackCard key={s.key} index={i} onActive={onActive}>
@@ -275,7 +263,6 @@ function PinnedShowcase() {
                 <p className="mt-2 text-slate-600">{s.text}</p>
                 <div className="flex flex-1 items-end ">
                   <div className="flex flex-row flex-wrap gap-2 ">
-                    {" "}
                     {s.bullets.map((b) => (
                       <ChipGhost key={b}>{b}</ChipGhost>
                     ))}
@@ -333,9 +320,9 @@ function FixedVisualizer({
   slides,
   active,
   sectionRef,
-  topOffset = 112, // where the box wants to sit while scrolling
-  insetTop = 120, // keep this many px below the section top
-  insetBottom = 45, // keep this many px above the section bottom
+  topOffset = 112,
+  insetTop = 120,
+  insetBottom = 45,
 }: {
   slides: { img: StaticImageData; title: string }[];
   active: number;
@@ -345,21 +332,18 @@ function FixedVisualizer({
   insetBottom?: number;
 }) {
   const [box, setBox] = useState<{ left: number; width: number } | null>(null);
-  const [fixedTop, setFixedTop] = useState<number>(topOffset); // computed top in px
+  const [fixedTop, setFixedTop] = useState<number>(topOffset);
   const [visible, setVisible] = useState(false);
 
-  // refs for measurements
   const anchorRef = useRef<HTMLDivElement | null>(null);
-  const probeRef = useRef<HTMLDivElement | null>(null); // inside the fixed card to measure its height
+  const probeRef = useRef<HTMLDivElement | null>(null);
   const boundsRef = useRef<{ top: number; bottom: number } | null>(null);
   const cardHRef = useRef<number>(0);
 
-  // Re-measure everything on layout/resize
   useLayoutEffect(() => {
     const measure = () => {
       if (!sectionRef.current) return;
 
-      // left-align using the anchor in the left column
       const anchor = sectionRef.current.querySelector(
         ".fixed-anchor-left"
       ) as HTMLDivElement | null;
@@ -373,14 +357,12 @@ function FixedVisualizer({
         });
       }
 
-      // section bounds
       const sr = sectionRef.current.getBoundingClientRect();
       boundsRef.current = {
         top: sr.top + window.scrollY,
         bottom: sr.bottom + window.scrollY,
       };
 
-      // measure card height
       if (probeRef.current) {
         cardHRef.current = probeRef.current.getBoundingClientRect().height;
       }
@@ -397,7 +379,6 @@ function FixedVisualizer({
     };
   }, [sectionRef]);
 
-  // Compute visibility + clamped top each scroll
   useEffect(() => {
     const update = () => {
       if (!boundsRef.current) return;
@@ -407,24 +388,19 @@ function FixedVisualizer({
       const scrollY = window.scrollY;
       const boxH = cardHRef.current || 0;
 
-      // Desired viewport top for the box while we are within the section
       const desiredViewportTop = topOffset;
 
-      // Convert section bounds to viewport coordinates:
       const sectionTopInViewport = sectionTopAbs - scrollY;
       const sectionBottomInViewport = sectionBottomAbs - scrollY;
 
-      // The box must stay within the section with insets:
       const minTop = sectionTopInViewport + insetTop;
       const maxTop = sectionBottomInViewport - insetBottom - boxH;
 
-      // If section is smaller than box (edge case), just stick to minTop
       const clampedTop = Math.min(
         Math.max(desiredViewportTop, minTop),
         Math.max(minTop, maxTop)
       );
 
-      // visible when box would intersect the section
       const willShow = clampedTop >= minTop - 1 && clampedTop <= maxTop + 1;
       setVisible(willShow);
       setFixedTop(clampedTop);
@@ -441,7 +417,6 @@ function FixedVisualizer({
     };
   }, [topOffset, insetTop, insetBottom]);
 
-  // Desktop only
   return (
     <div className="pointer-events-none hidden lg:block">
       {box && (
@@ -456,7 +431,6 @@ function FixedVisualizer({
           }}
           transition={{ duration: 0.25 }}
         >
-          {/* Probe to measure height */}
           <div
             ref={probeRef}
             className="relative h-[56vh] min-h-[360px] overflow-hidden rounded-3xl bg-white/60 shadow-xl ring-1 ring-black/5"
@@ -494,30 +468,32 @@ function FixedVisualizer({
  * CAPABILITIES GRID (quick overview)
  * ========================================================= */
 function Capabilities() {
+  const t = useTranslations("industrial.capabilities");
+
   const items = [
     {
-      t: "Preventive & Predictive",
-      d: "Programs that turn unplanned downtime into scheduled optimization.",
+      t: t("items.0.title"),
+      d: t("items.0.desc"),
     },
     {
-      t: "Rapid Response",
-      d: "On-call engineers and techs with parts, tools, and checklists.",
+      t: t("items.1.title"),
+      d: t("items.1.desc"),
     },
     {
-      t: "Retrofits & Upgrades",
-      d: "Make old assets compete like new—mechanical, electrical, controls.",
+      t: t("items.2.title"),
+      d: t("items.2.desc"),
     },
     {
-      t: "Data Visibility",
-      d: "From sensor to dashboard: we surface signals that matter.",
+      t: t("items.3.title"),
+      d: t("items.3.desc"),
     },
     {
-      t: "Safety First",
-      d: "Certified procedures and tooling for plant & personnel safety.",
+      t: t("items.4.title"),
+      d: t("items.4.desc"),
     },
     {
-      t: "Documentation",
-      d: "As-builts, wiring, naming standards—clarity for the next decade.",
+      t: t("items.5.title"),
+      d: t("items.5.desc"),
     },
   ];
 
@@ -542,71 +518,74 @@ function Capabilities() {
  * SECURITY SUITE (deep-dive cards)
  * ========================================================= */
 function SecuritySuite() {
+  const t = useTranslations("industrial.security");
+
   const blocks = [
     {
-      tag: "Security",
-      title: "Fire Protection",
+      tag: t("tag"),
+      title: t("fire.title"),
       img: ASSETS.fire,
-      brief:
-        "Design, install, and maintain robust fire systems for industrial risk categories with traceability and standards compliance.",
+      brief: t("fire.brief"),
       bullets: [
-        "Risk analysis",
-        "Suppression systems",
-        "Routine testing",
-        "Compliance reports",
+        t("fire.bullets.0"),
+        t("fire.bullets.1"),
+        t("fire.bullets.2"),
+        t("fire.bullets.3"),
       ],
       sub: [
         {
-          label: "Wood Preservation",
+          label: t("fire.sub.wood.label"),
           img: ASSETS.wood,
-          d: "Treatments and coatings for durability.",
+          d: t("fire.sub.wood.desc"),
         },
         {
-          label: "Film Protection",
+          label: t("fire.sub.film.label"),
           img: ASSETS.film,
-          d: "High-performance protective films.",
+          d: t("fire.sub.film.desc"),
         },
         {
-          label: "Facades",
+          label: t("fire.sub.facades.label"),
           img: ASSETS.facades,
-          d: "Exterior systems for resistance and longevity.",
+          d: t("fire.sub.facades.desc"),
         },
       ],
     },
     {
-      tag: "Security",
-      title: "Cameras & Analytics",
+      tag: t("tag"),
+      title: t("cameras.title"),
       img: ASSETS.cameras,
-      brief:
-        "From harsh-environment cameras to smart detection. Gain visual certainty across plants, yards, and warehouses.",
+      brief: t("cameras.brief"),
       bullets: [
-        "Thermal & PTZ",
-        "AI analytics",
-        "NVR/Retention",
-        "Remote access",
+        t("cameras.bullets.0"),
+        t("cameras.bullets.1"),
+        t("cameras.bullets.2"),
+        t("cameras.bullets.3"),
       ],
     },
     {
-      tag: "Security",
-      title: "Server & Storage",
+      tag: t("tag"),
+      title: t("servers.title"),
       img: ASSETS.servers,
-      brief:
-        "Hardened, scalable infrastructure for security and industrial data—designed for write-heavy workloads.",
+      brief: t("servers.brief"),
       bullets: [
-        "RAID strategies",
-        "Redundant power",
-        "Encrypted backups",
-        "Monitoring",
+        t("servers.bullets.0"),
+        t("servers.bullets.1"),
+        t("servers.bullets.2"),
+        t("servers.bullets.3"),
       ],
     },
     {
-      tag: "Security",
-      title: "Entry & Alarm Systems",
+      tag: t("tag"),
+      title: t("entry.title"),
       img: ASSETS.entry,
-      brief:
-        "Card, PIN, biometric, and vehicle entry solutions. Unified alarms with clear playbooks and escalation.",
-      bullets: ["Access control", "Perimeter", "Intercom", "24/7 alerting"],
-      extra: { img: ASSETS.alarms, label: "Alarm Systems" },
+      brief: t("entry.brief"),
+      bullets: [
+        t("entry.bullets.0"),
+        t("entry.bullets.1"),
+        t("entry.bullets.2"),
+        t("entry.bullets.3"),
+      ],
+      extra: { img: ASSETS.alarms, label: t("entry.extraLabel") },
     },
   ];
 
@@ -619,7 +598,7 @@ function SecuritySuite() {
           viewport={{ once: true, amount: 0.4 }}
           className="text-3xl font-extrabold text-slate-900 sm:text-4xl"
         >
-          Security Systems
+          {t("heading")}
         </motion.h2>
 
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -706,14 +685,16 @@ function SecuritySuite() {
  * OTHER SERVICES
  * ========================================================= */
 function OtherServices() {
+  const t = useTranslations("industrial.other");
+
   const items = [
     {
-      t: "Machines dismantled, relocated, rebuilt",
-      d: "We move production assets safely: labeling, disassembly, transport, alignment, recommissioning.",
+      t: t("items.0.title"),
+      d: t("items.0.desc"),
     },
     {
-      t: "New Construction",
-      d: "From utilities to final commissioning—MEP routing, cable trays, controls, safety systems.",
+      t: t("items.1.title"),
+      d: t("items.1.desc"),
     },
   ];
   return (
@@ -723,7 +704,7 @@ function OtherServices() {
           <div className="grid grid-cols-1 items-center gap-6 p-6 sm:p-8 md:grid-cols-12">
             <div className="md:col-span-7">
               <h3 className="text-2xl font-extrabold sm:text-3xl">
-                Other Services
+                {t("heading")}
               </h3>
               <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {items.map((x) => (
@@ -759,22 +740,24 @@ function OtherServices() {
  * PROCESS + ASSURANCE (timeline + badges)
  * ========================================================= */
 function ProcessAndAssurance() {
+  const t = useTranslations("industrial.process");
+
   const steps = [
     {
       n: 1,
-      t: "Assess",
-      d: "Site study, risk review, and performance targets.",
+      t: t("steps.0.title"),
+      d: t("steps.0.desc"),
     },
-    { n: 2, t: "Plan", d: "Scope, phases, access, safety, and spares." },
-    { n: 3, t: "Execute", d: "Qualified teams, QA checks, and reporting." },
-    { n: 4, t: "Optimize", d: "Tuning, training, documentation, support." },
+    { n: 2, t: t("steps.1.title"), d: t("steps.1.desc") },
+    { n: 3, t: t("steps.2.title"), d: t("steps.2.desc") },
+    { n: 4, t: t("steps.3.title"), d: t("steps.3.desc") },
   ];
   const badges = [
-    "24/7 Support",
-    "Certified Techs",
-    "Safety First",
-    "Warranty",
-    "As-built Docs",
+    t("badges.0"),
+    t("badges.1"),
+    t("badges.2"),
+    t("badges.3"),
+    t("badges.4"),
   ];
 
   return (
@@ -788,7 +771,7 @@ function ProcessAndAssurance() {
               viewport={{ once: true, amount: 0.4 }}
               className="text-3xl font-extrabold text-slate-900"
             >
-              How We Deliver
+              {t("howHeading")}
             </motion.h3>
             <ul className="mt-6 space-y-4">
               {steps.map((s, i) => (
@@ -819,7 +802,7 @@ function ProcessAndAssurance() {
               viewport={{ once: true, amount: 0.4 }}
               className="text-3xl font-extrabold text-slate-900"
             >
-              Assurance
+              {t("assuranceHeading")}
             </motion.h3>
             <div className="mt-6 flex flex-wrap gap-3">
               {badges.map((b, i) => (
