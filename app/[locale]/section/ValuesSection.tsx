@@ -10,6 +10,7 @@ import {
   Experience,
   Partnership,
 } from "@/assets";
+import { useTranslations } from "next-intl";
 
 const features = [
   {
@@ -51,12 +52,13 @@ const features = [
 ];
 
 export default function ValuesSection() {
+  const t = useTranslations("home");
   return (
     <section className="bg-background py-16 pb-16 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Why Choose HBC Group
+            {t("value.title")}
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             Our foundation is built on expertise, trust, and innovation — here

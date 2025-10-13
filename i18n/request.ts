@@ -1,24 +1,17 @@
-// src/i18n/request.ts (or wherever your file lives)
-import {getRequestConfig} from "next-intl/server";
-import {hasLocale} from "next-intl";
-import {routing} from "./routing";
-import fs from "node:fs";
-import path from "node:path";
+// i18n/request.ts
+import {getRequestConfig} from 'next-intl/server';
+import {hasLocale} from 'next-intl';
+import {routing} from './routing';
 
 export default getRequestConfig(async ({requestLocale}) => {
   const requested = await requestLocale;
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const filePath = path.join(process.cwd(), "messages", `${locale}.json`);
 
-  let messages: Record<string, unknown>;
-  try {
-    messages = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  } catch  {
-    const fallbackPath = path.join(process.cwd(), "messages", `${routing.defaultLocale}.json`);
-    messages = JSON.parse(fs.readFileSync(fallbackPath, "utf8"));
-  }
+  // ✅ Works on Edge: bundle-time dynamic import of a single JSON file
+  // Make sure you have: /messages/en.json and /messages/de.json
+  const messages = (await import(`../messages/${locale}.json`)).default;
 
-  return { locale, messages };
+  return {locale, messages};
 });

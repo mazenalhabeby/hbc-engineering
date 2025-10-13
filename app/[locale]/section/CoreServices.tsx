@@ -3,8 +3,11 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { ArrowRight, ArrowRightFromLine } from "lucide-react";
 
 export type ServiceItem = {
+  id: number;
   title: string;
   description: string;
   image: string;
@@ -14,25 +17,25 @@ export type ServiceItem = {
 
 const DEFAULT_ITEMS: ServiceItem[] = [
   {
-    title: "Fire Protection",
-    description:
-      "From wood preservation to architectural facades and system integration — we bring safety, beauty, and compliance together.",
+    id: 1,
+    title: "service.fireProdaction.title",
+    description: "service.fireProdaction.des",
     image: "/images/fire1.jpeg",
     accent: "#ef4444",
     href: "/fire-protection",
   },
   {
-    title: "Industrial Maintenance and Services",
-    description:
-      "From preventive or recurring maintenance and diagnostic to fast-response troubleshooting or complex relocation of assembly lines.",
+    id: 2,
+    title: "service.industrial.title",
+    description: "service.industrial.dec",
     image: "/images/Electrical.jpg",
     accent: "#0ea5e9",
     href: "/industrial",
   },
   {
-    title: "Intelligent Building",
-    description:
-      "Connect comfort, security and energy intelligence. Control, monitor and optimize your space — reliably and effortlessly.",
+    id: 3,
+    title: "service.intelligent.title",
+    description: "service.intelligent.des",
     image: "/images/Security.jpg",
     accent: "#22c55e",
     href: "/intelligent-building",
@@ -41,8 +44,8 @@ const DEFAULT_ITEMS: ServiceItem[] = [
 
 export default function ServicesSection({
   items = DEFAULT_ITEMS,
-  heading = "Our Core Services",
-  subheading = "Reliable Maintenance, Fire Safety, and Intelligent Building Solutions You Can Trust",
+  heading = "service.heading",
+  subheading = "service.subheading",
 }: {
   items?: ServiceItem[];
   heading?: string;
@@ -52,14 +55,13 @@ export default function ServicesSection({
     () => items.map((i) => i.accent ?? "#60a5fa"),
     [items]
   );
+  const t = useTranslations("home");
 
-  // Mobile: Industrial first
-  // Desktop: Industrial centered and larger
-  const desktopOrder = (title: string) => {
-    if (/industrial/i.test(title))
-      return "order-1 lg:order-2 lg:scale-110 lg:z-10"; // mobile first, desktop center
-    if (/fire protection/i.test(title)) return "order-2 lg:order-1"; // fire second on mobile, left on desktop
-    if (/intelligent building/i.test(title)) return "order-3 lg:order-3"; // stays last
+  const orderById = (id: number) => {
+    if (id === 2) return "order-1 lg:order-2 lg:scale-110 lg:z-10";
+    if (id === 1) return "order-2 lg:order-1";
+    if (id === 3) return "order-3 lg:order-3";
+    // Fallback: keep natural flow
     return "";
   };
 
@@ -78,13 +80,13 @@ export default function ServicesSection({
         <div className="mx-auto mb-12 md:mb-16 max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-xs font-medium text-slate-600 shadow-sm backdrop-blur dark:border-slate-700/60 dark:bg-slate-900/40 dark:text-slate-300">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-500" />
-            What we do
+            {t("service.section.point")}
           </span>
           <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 md:text-4xl dark:text-slate-50">
-            {heading}
+            {t(heading)}
           </h2>
           <p className="mt-3 text-base text-slate-600 md:text-lg dark:text-slate-300">
-            {subheading}
+            {t(subheading)}
           </p>
         </div>
 
@@ -95,7 +97,7 @@ export default function ServicesSection({
               item={item}
               accent={palette[idx]}
               index={idx}
-              className={desktopOrder(item.title)}
+              className={orderById(item.id)}
             />
           ))}
         </div>
@@ -115,6 +117,7 @@ function ServiceCard({
   index: number;
   className?: string;
 }) {
+  const t = useTranslations("home");
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -165,7 +168,7 @@ function ServiceCard({
                 className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold text-white/90 shadow-lg"
                 style={{ background: accent }}
               >
-                {item.title}
+                {t(item.title)}
               </span>
             </div>
           </div>
@@ -173,10 +176,10 @@ function ServiceCard({
           {/* Content */}
           <div className="space-y-3 p-5 md:p-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">
-              {item.title}
+              {t(item.title)}
             </h3>
             <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-              {item.description}
+              {t(item.description)}
             </p>
 
             {/* CTAs */}
@@ -186,15 +189,8 @@ function ServiceCard({
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-200/70 bg-white px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700/60 dark:bg-slate-800/70 dark:text-slate-100"
                 style={{ boxShadow: `0 6px 20px -10px ${accent}80` }}
               >
-                Learn more
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-4 w-4"
-                >
-                  <path d="M13.5 4.5a1 1 0 10-2 0v9.586l-3.293-3.293a1 1 0 10-1.414 1.414l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414L13.5 14.086V4.5z" />
-                </svg>
+                {t("service.learnMore")}
+                <ArrowRight size={14} />
               </a>
             </div>
           </div>

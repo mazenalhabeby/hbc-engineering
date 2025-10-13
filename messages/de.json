@@ -18,6 +18,34 @@
   },
   "home": {
     "midTitle": "die Zukunft,",
-    "tailTitle": "Service, Sicherheit"
+    "tailTitle": "Service, Sicherheit",
+    "service": {
+      "fireProdaction": {
+        "title": "Brandschutz",
+        "des": "Vom Holzschutz über architektonische Fassaden bis hin zur Systemintegration – wir bringen Sicherheit, Schönheit und Compliance zusammen."
+      },
+      "industrial": {
+        "title": "Industrielle Wartung und Dienstleistungen",
+        "dec": "Von der vorbeugenden oder wiederkehrenden Wartung und Diagnose bis hin zur schnellen Fehlerbehebung oder komplexen Verlagerung von Montagelinien."
+      },
+      "intelligent": {
+        "title": "Intelligentes Gebäude",
+        "des": "Verbinden Sie Komfort, Sicherheit und Energieintelligenz. \nSteuern, überwachen und optimieren Sie Ihren Raum – zuverlässig und mühelos."
+      },
+      "heading": "Unsere Kernleistungen",
+      "subheading": "Zuverlässige Wartung, Brandschutz und intelligente Gebäudelösungen, denen Sie vertrauen können",
+      "section": {
+        "point": "Was wir tun"
+      },
+      "learnMore": "Erfahren Sie mehr"
+    },
+    "about": {
+      "heading": "Ingenieursstärke.",
+      "subheading": "Vertrauen vermitteln.",
+      "des": "Die HBC Group bietet fachmännische Wartung und Maschinen für die Industrie\n              \nService und Werksverlagerungen in den USA und Europa. \nWir kombinieren\n              \nEuropäische Ingenieurskunst mit lokaler Unterstützung rund um die Uhr\n              \nLösungen, die den Betrieb zuverlässig am Laufen halten. \nUnsere Dienstleistungen umfassen\n              \nvorbeugende Wartung, Diagnose, Überholung, Brandschutz,\n              \nund intelligente Gebäudelösungen, die Kunden dabei helfen, die Betriebszeit zu maximieren,\n              \nVerlängern Sie die Lebensdauer Ihrer Anlagen und arbeiten Sie mit Zuversicht.",
+      "subdes": "Mehr als nur Service – wir sind Ihr Partner beim Schutz\n                  \nInvestitionen, Gewährleistung der Sicherheit und Förderung des Fortschritts.",
+      "client": "Zufriedene Kunden",
+      "project": "Projekte abgeschlossen"
+    }
   }
 }

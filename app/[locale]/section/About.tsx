@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { qutation } from "@/assets";
+import { useTranslations } from "next-intl";
 
 export default function AboutSection() {
+  const t = useTranslations("home");
   return (
     <section aria-labelledby="about-heading" className="relative bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-14">
@@ -13,19 +15,13 @@ export default function AboutSection() {
               id="about-heading"
               className="text-5xl font-semibold tracking-tight text-slate-900"
             >
-              Engineering Strength.
+              {t("about.heading")}
               <br />
-              Delivering Confidence.
+              {t("about.subheading")}
             </h2>
 
             <p className=" text-slate-600 text-lg leading-loose tracking-wider">
-              HBC Group provides expert industrial maintenance, machinery
-              service, and plant relocation across the US and Europe. We combine
-              European engineering excellence with local support to deliver 24/7
-              solutions that keep operations running reliably. Our services span
-              preventive maintenance, diagnostics, overhauls, fire protection,
-              and smart building solutions—helping clients maximize uptime,
-              extend asset life, and operate with confidence.
+              {t("about.des")}
             </p>
           </div>
           <div className="relative rounded-bl-[72px] rounded-tr-[72px] rounded-tl-lg  rounded-br-lg text-white shadow-xl min-h-[624px] flex flex-col justify-between px-8 py-10 overflow-hidden">
@@ -46,10 +42,7 @@ export default function AboutSection() {
                   width={32}
                   height={32}
                 />
-                <p className="text-2xl font-medium">
-                  More than service — we’re your partner in protecting
-                  investments, ensuring safety, and powering progress.
-                </p>
+                <p className="text-2xl font-medium">{t("about.subdes")}</p>
               </div>
             </div>
 
@@ -61,7 +54,7 @@ export default function AboutSection() {
                     2,000<span className="align-super text-2xl">+</span>
                   </div>
                   <div className="mt-1 text-sm/5 text-white/80">
-                    Satisfied Clients
+                    {t("about.client")}
                   </div>
                 </div>
                 <div>
@@ -69,7 +62,7 @@ export default function AboutSection() {
                     750<span className="align-super text-2xl">+</span>
                   </div>
                   <div className="mt-1 text-sm/5 text-white/80">
-                    Projects Completed
+                    {t("about.project")}
                   </div>
                 </div>
               </div>

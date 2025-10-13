@@ -8,16 +8,44 @@
   "navbar": {
     "company": "Company",
     "home": "Home",
-    "industrial": "ndustrial Services",
+    "industrial": "Industrial",
     "fireProtection": "Fire Protection",
-    "intelligent": "Intelligent Building",
+    "intelligent": "Intelligent",
     "contact": "Contact",
     "careers": "Careers",
     "scheduleMeeting": "Schedule a Meeting",
     "itSolutions": "IT Solutions"
   },
   "home": {
-    "midTitle": "the Future,",
-    "tailTitle": "Service, Safety & Industrial Innovation."
+    "midTitle": "the future,",
+    "tailTitle": "Service, Safety",
+    "service": {
+      "fireProdaction": {
+        "title": "Fire Protection",
+        "des": "From wood preservation to architectural facades and system integration — we bring safety, beauty, and compliance together."
+      },
+      "industrial": {
+        "title": "Industrial Maintenance and Services",
+        "dec": "From preventive or recurring maintenance and diagnostics to rapid troubleshooting or complex relocation of assembly lines."
+      },
+      "intelligent": {
+        "title": "Intelligent Building",
+        "des": "Connect comfort, security, and energy intelligence.\nControl, monitor, and optimize your space — reliably and effortlessly."
+      },
+      "heading": "Our Core Services",
+      "subheading": "Reliable maintenance, fire protection, and intelligent building solutions you can trust",
+      "section": {
+        "point": "What we do"
+      },
+      "learnMore": "Learn more"
+    },
+    "about": {
+      "heading": "Engineering Strength.",
+      "subheading": "Inspiring Confidence.",
+      "des": "HBC Group provides expert industrial maintenance, machinery\n              service, and plant relocation across the US and Europe. We combine\n              European engineering excellence with local support to deliver 24/7\n              solutions that keep operations running reliably. Our services span\n              preventive maintenance, diagnostics, overhauls, fire protection,\n              and smart building solutions—helping clients maximize uptime,\n              extend asset life, and operate with confidence.",
+      "subdes": "    More than service — we’re your partner in protecting\n                  investments, ensuring safety, and powering progress.",
+      "client": "Satisfied Clients",
+      "project": "Projects Completed"
+    }
   }
 }
