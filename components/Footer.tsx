@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
+import { useTranslations } from "next-intl";
 
 /* ========= EDIT THESE ========= */
 const EMAIL_LOCAL_PARTS = ["office", "careers"]; // first item is default
@@ -12,6 +13,7 @@ const PANEL_IMAGES = ["/hbc-logo.svg"]; // put files in /public
 /* ================================= */
 
 export default function CinematicFooter() {
+  const t = useTranslations("footer");
   return (
     <section
       className="
@@ -49,14 +51,14 @@ export default function CinematicFooter() {
 
           <div className="space-y-4">
             <div className="text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] text-white/60">
-              Write to us
+              {t("writeUs")}
             </div>
             <HoverEmails locals={EMAIL_LOCAL_PARTS} domain={EMAIL_DOMAIN} />
           </div>
 
           <div>
             <div className="text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] text-white/60">
-              Call us
+              {t("callUs")}
             </div>
             <div className="mt-2 text-2xl sm:text-3xl font-extrabold">
               <a href={`tel:${siteConfig.phone}`} className="hover:underline">
@@ -67,7 +69,7 @@ export default function CinematicFooter() {
 
           <form className="w-full max-w-md">
             <label className="text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] text-white/60">
-              Subscribe to our newsletter
+              {t("subscribe")}
             </label>
             <div className="mt-2 flex gap-3">
               <input
@@ -87,7 +89,7 @@ export default function CinematicFooter() {
                   font-semibold text-black transition hover:bg-white/90
                 "
               >
-                Send
+                {t("send")}
               </button>
             </div>
           </form>

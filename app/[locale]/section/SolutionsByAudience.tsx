@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 /* replace these with your real images */
 const industrialImgs = [
@@ -201,6 +202,7 @@ function Band({
 }
 
 export default function SolutionsShowcaseAnimated() {
+  const t = useTranslations("home");
   return (
     <div className="relative isolate">
       {/* top wave */}
@@ -217,14 +219,9 @@ export default function SolutionsShowcaseAnimated() {
 
       {/* INDUSTRIAL */}
       <Band
-        label="Industrial"
-        title="From Uptime to Upgrades — We’ve Got You Covered"
-        desc={`Precision maintenance, integrated security, and complex relocations engineered for uptime.
-At HBC Group, we go beyond simple repairs — we deliver complete lifecycle care for heavy industries. From hydraulic and electrical systems to mechanical structures, welding, and programming, our expertise ensures every machine runs at peak performance.
-
-We also safeguard operations with advanced fire protection, camera networks, servers, entry systems, and alarms, tailored for industrial scale. And when it comes to growth, our teams handle dismantling, relocation, rebuilding, and new construction projects — seamlessly and with minimal downtime.
-
-Our promise: less disruption, more productivity, and reliability without compromise.`}
+        label={t("solution.industrial.label")}
+        title={t("solution.industrial.title")}
+        desc={t(`solution.industrial.des`)}
         chipsTop={[
           "Hydraulics",
           "Electrical",
@@ -247,11 +244,9 @@ Our promise: less disruption, more productivity, and reliability without comprom
 
       {/* FIRE PROTECTION (NEW) */}
       <Band
-        label="Fire Protection"
-        title="Advanced Fire Protection"
-        desc={`Engineered coatings and treatments that shield structures against extreme fire conditions.
-          
-Our solutions form a protective barrier that resists ignition, slows spread, and preserves structural integrity. From wood preservation for natural materials to film technologies that protect facades and exteriors, we deliver long-lasting defense with minimal maintenance — a new standard in resilience, safety, and sustainability.`}
+        label={t("solution.Fire.label")}
+        title={t("solution.Fire.title")}
+        desc={t(`solution.Fire.des`)}
         chipsTop={["Wood Preservation", "Film Protection"]}
         chipsBottom={[
           "Facade Shielding",
@@ -264,14 +259,9 @@ Our solutions form a protective barrier that resists ignition, slows spread, and
 
       {/* intelligent Building */}
       <Band
-        label="Intelligent Building"
-        title="Smarter Homes, Greener Living"
-        desc={`Comfort, security, and energy intelligence — beautifully connected.
-At HBC Group, we transform houses into smart living spaces that think ahead. From automation systems that adapt to your daily routines, to solar integration, energy monitoring, and home security, we make modern living effortless and secure.
-
-But our vision doesn’t stop at homes. With our Shop Green Products, individuals and small businesses can access sustainable solutions across accessories, agriculture, concrete, construction, energy, and soil management. Every product is designed to be durable, eco-conscious, and future-ready.
-
-Our mission: smarter homes, greener choices, and a lifestyle built for tomorrow.`}
+        label={t("solution.intelligent.label")}
+        title={t("solution.intelligent.title")}
+        desc={t(`solution.intelligent.des`)}
         chipsTop={["Smart Automation", "PV & Energy", "Security"]}
         chipsBottom={[
           "Accessories",
@@ -285,10 +275,9 @@ Our mission: smarter homes, greener choices, and a lifestyle built for tomorrow.
       />
 
       <Band
-        label="IT Solutions"
-        title="Ship Faster, Scale Smarter — Secure by Design"
-        desc={`We design and build modern digital products end-to-end: software, cloud, AI automation, and secure integrations.
-From product discovery and UX to APIs, data pipelines, and observability, we deliver measurable outcomes and long-term maintainability.`}
+        label={t("solution.it.label")}
+        title={t("solution.it.title")}
+        desc={t(`solution.it.des`)}
         chipsTop={[
           "Software Development",
           "Cloud & DevOps",

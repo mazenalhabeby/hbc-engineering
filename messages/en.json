@@ -46,6 +46,64 @@
       "subdes": "    More than service — we’re your partner in protecting\n                  investments, ensuring safety, and powering progress.",
       "client": "Satisfied Clients",
       "project": "Projects Completed"
+    },
+    "value": {
+      "title": "Why Choose HBC Group",
+      "des": "Our foundation is built on expertise, trust, and innovation — here\n            are the values that define us.",
+      "fearure": {
+        "experience": {
+          "title": "Proven Experience",
+          "des": "Over a decade of hands-on expertise in industrial maintenance, relocation, and smart technology integration — delivering precision and reliability across Europe and the USA."
+        },
+        "partnership": {
+          "title": "Trusted Partnership",
+          "des": "Recognized as a dependable partner for both global corporations and individuals, built on long-term relationships, transparency, and delivering on promises."
+        },
+        "innovation": {
+          "title": "Innovation-Driven",
+          "des": "Combining engineering excellence with the latest smart solutions and green technologies, ensuring clients stay ahead in efficiency and sustainability."
+        },
+        "reliability": {
+          "title": "End-to-End Reliability",
+          "des": "From diagnostics and preventive maintenance to complete relocations and smart home solutions — we provide 24/7 support that guarantees continuity and peace of mind."
+        },
+        "flexibility": {
+          "title": "Tailored Flexibility",
+          "des": "Customized strategies for every client — whether large-scale industrial operations or individual smart homes — ensuring unique needs are met with precision."
+        },
+        "commitment": {
+          "title": "Unwavering Commitment",
+          "des": "Dedicated to every project with integrity, accountability, and excellence — we stand by our clients from start to finish, no matter the challenge."
+        }
+      }
+    },
+    "solution": {
+      "industrial": {
+        "label": "Industrial",
+        "title": "From Uptime to Upgrades — We’ve Got You Covered",
+        "des": "Precision maintenance, integrated security, and complex relocations engineered for uptime.\nAt HBC Group, we go beyond simple repairs — we deliver complete lifecycle care for heavy industries. From hydraulic and electrical systems to mechanical structures, welding, and programming, our expertise ensures every machine runs at peak performance.\n\nWe also safeguard operations with advanced fire protection, camera networks, servers, entry systems, and alarms, tailored for industrial scale. And when it comes to growth, our teams handle dismantling, relocation, rebuilding, and new construction projects — seamlessly and with minimal downtime.\n\nOur promise: less disruption, more productivity, and reliability without compromise."
+      },
+      "Fire": {
+        "label": "Fire Protection",
+        "title": "Advanced Fire Protection",
+        "des": "Engineered coatings and treatments that shield structures against extreme fire conditions.\n          \nOur solutions form a protective barrier that resists ignition, slows spread, and preserves structural integrity. From wood preservation for natural materials to film technologies that protect facades and exteriors, we deliver long-lasting defense with minimal maintenance — a new standard in resilience, safety, and sustainability."
+      },
+      "intelligent": {
+        "title": "Smarter Homes, Greener Living",
+        "label": "Intelligent Building",
+        "des": "Comfort, security, and energy intelligence — beautifully connected.\nAt HBC Group, we transform houses into smart living spaces that think ahead. From automation systems that adapt to your daily routines, to solar integration, energy monitoring, and home security, we make modern living effortless and secure.\n\nBut our vision doesn’t stop at homes. With our Shop Green Products, individuals and small businesses can access sustainable solutions across accessories, agriculture, concrete, construction, energy, and soil management. Every product is designed to be durable, eco-conscious, and future-ready.\n\nOur mission: smarter homes, greener choices, and a lifestyle built for tomorrow."
+      },
+      "it": {
+        "label": "IT Solutions",
+        "title": "Ship Faster, Scale Smarter — Secure by Design",
+        "des": "We design and build modern digital products end-to-end: software, cloud, AI automation, and secure integrations.\nFrom product discovery and UX to APIs, data pipelines, and observability, we deliver measurable outcomes and long-term maintainability."
+      }
     }
+  },
+  "footer": {
+    "writeUs": "Write to us",
+    "callUs": "Call us",
+    "subscribe": "Subscribe to our newsletter",
+    "send": "Send"
   }
 }

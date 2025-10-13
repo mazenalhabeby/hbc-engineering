@@ -14,45 +14,40 @@ import { useTranslations } from "next-intl";
 
 const features = [
   {
-    title: "Proven Experience",
-    description:
-      "Over a decade of hands-on expertise in industrial maintenance, relocation, and smart technology integration — delivering precision and reliability across Europe and the USA.",
+    title: "value.fearure.experience.title",
+    description: "value.fearure.experience.des",
     icon: Experience,
   },
   {
-    title: "Trusted Partnership",
-    description:
-      "Recognized as a dependable partner for both global corporations and individuals, built on long-term relationships, transparency, and delivering on promises.",
+    title: "value.fearure.partnership.title",
+    description: "value.fearure.partnership.des",
     icon: Partnership,
   },
   {
-    title: "Innovation-Driven",
-    description:
-      "Combining engineering excellence with the latest smart solutions and green technologies, ensuring clients stay ahead in efficiency and sustainability.",
+    title: "value.fearure.innovation.title",
+    description: "value.fearure.innovation.des",
     icon: Innovation,
   },
   {
-    title: "End-to-End Reliability",
-    description:
-      "From diagnostics and preventive maintenance to complete relocations and smart home solutions — we provide 24/7 support that guarantees continuity and peace of mind.",
+    title: "value.fearure.reliability.title",
+    description: "value.fearure.reliability.des",
     icon: Reliability,
   },
   {
-    title: "Tailored Flexibility",
-    description:
-      "Customized strategies for every client — whether large-scale industrial operations or individual smart homes — ensuring unique needs are met with precision.",
+    title: "value.fearure.flexibility.title",
+    description: "value.fearure.flexibility.des",
     icon: Flexibility,
   },
   {
-    title: "Unwavering Commitment",
-    description:
-      "Dedicated to every project with integrity, accountability, and excellence — we stand by our clients from start to finish, no matter the challenge.",
+    title: "value.fearure.commitment.title",
+    description: "value.fearure.commitment.des",
     icon: Commitment,
   },
 ];
 
 export default function ValuesSection() {
   const t = useTranslations("home");
+
   return (
     <section className="bg-background py-16 pb-16 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -60,10 +55,7 @@ export default function ValuesSection() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {t("value.title")}
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Our foundation is built on expertise, trust, and innovation — here
-            are the values that define us.
-          </p>
+          <p className="mt-4 text-lg text-gray-600">{t("value.des")}</p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -82,9 +74,11 @@ export default function ValuesSection() {
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">
-                {feature.title}
+                {t(feature.title)}
               </h3>
-              <p className="text-base text-gray-600">{feature.description}</p>
+              <p className="text-base text-gray-600">
+                {t(feature.description)}
+              </p>
             </div>
           ))}
         </div>

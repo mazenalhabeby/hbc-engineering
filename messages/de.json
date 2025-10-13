@@ -13,7 +13,7 @@
     "intelligent": "Intelligentes",
     "contact": "Kontakt",
     "careers": "Karrieren",
-    "scheduleMeeting": "Planen ein Meeting",
+    "scheduleMeeting": "Plane eine Besprechung",
     "itSolutions": "IT-Lösungen"
   },
   "home": {
@@ -46,6 +46,64 @@
       "subdes": "Mehr als nur Service – wir sind Ihr Partner beim Schutz\n                  \nInvestitionen, Gewährleistung der Sicherheit und Förderung des Fortschritts.",
       "client": "Zufriedene Kunden",
       "project": "Projekte abgeschlossen"
+    },
+    "value": {
+      "title": "Warum sollten Sie sich für die HBC Group entscheiden?",
+      "des": "Unser Fundament basiert auf Fachwissen, Vertrauen und Innovation – hier\n            \nsind die Werte, die uns definieren.",
+      "fearure": {
+        "experience": {
+          "title": "Nachgewiesene Erfahrung",
+          "des": "Über ein Jahrzehnt praktische Erfahrung in der industriellen Wartung, Verlagerung und Integration intelligenter Technologie – für Präzision und Zuverlässigkeit in ganz Europa und den USA."
+        },
+        "partnership": {
+          "title": "Vertrauenswürdige Partnerschaft",
+          "des": "Anerkannt als zuverlässiger Partner sowohl für globale Unternehmen als auch für Einzelpersonen, der auf langfristigen Beziehungen, Transparenz und der Einhaltung von Versprechen aufbaut."
+        },
+        "innovation": {
+          "title": "Innovationsgetrieben",
+          "des": "Durch die Kombination von technischer Exzellenz mit den neuesten intelligenten Lösungen und umweltfreundlichen Technologien stellen wir sicher, dass unsere Kunden in puncto Effizienz und Nachhaltigkeit die Nase vorn haben."
+        },
+        "reliability": {
+          "title": "End-to-End-Zuverlässigkeit",
+          "des": "Von der Diagnose und vorbeugenden Wartung bis hin zu kompletten Umzügen und Smart-Home-Lösungen – wir bieten 24/7-Support, der Kontinuität und Sicherheit garantiert."
+        },
+        "flexibility": {
+          "title": "Maßgeschneiderte Flexibilität",
+          "des": "Maßgeschneiderte Strategien für jeden Kunden – ob große Industriebetriebe oder einzelne Smart Homes – stellen sicher, dass individuelle Bedürfnisse präzise erfüllt werden."
+        },
+        "commitment": {
+          "title": "Unerschütterliches Engagement",
+          "des": "Wir widmen uns jedem Projekt mit Integrität, Verantwortungsbewusstsein und Exzellenz – wir stehen unseren Kunden von Anfang bis Ende zur Seite, unabhängig von der Herausforderung."
+        }
+      }
+    },
+    "solution": {
+      "industrial": {
+        "label": "Industriell",
+        "title": "Von der Betriebszeit bis zu Upgrades – wir sind für Sie da",
+        "des": "Präzise Wartung, integrierte Sicherheit und komplexe Umzüge, die auf Verfügbarkeit ausgelegt sind.\n\nBei der HBC Group gehen wir über einfache Reparaturen hinaus – wir bieten komplette Lebenszyklusbetreuung für die Schwerindustrie. \nVon hydraulischen und elektrischen Systemen bis hin zu mechanischen Strukturen, Schweißen und Programmierung – unser Fachwissen stellt sicher, dass jede Maschine mit Höchstleistung läuft.\n\n\nDarüber hinaus schützen wir den Betrieb mit fortschrittlichem Brandschutz, Kameranetzwerken, Servern, Zugangssystemen und Alarmen, die auf den industriellen Maßstab zugeschnitten sind. \nUnd wenn es um Wachstum geht, wickeln unsere Teams Demontage-, Umzugs-, Umbau- und Neubauprojekte ab – reibungslos und mit minimalen Ausfallzeiten.\n\n\nUnser Versprechen: weniger Störungen, mehr Produktivität und kompromisslose Zuverlässigkeit."
+      },
+      "Fire": {
+        "label": "Brandschutz",
+        "title": "Erweiterter Brandschutz",
+        "des": "Technische Beschichtungen und Behandlungen, die Strukturen vor extremen Brandbedingungen schützen.\n          \n\nUnsere Lösungen bilden eine Schutzbarriere, die Entzündungen widersteht, die Ausbreitung verlangsamt und die strukturelle Integrität bewahrt. \nVon der Holzkonservierung für Naturmaterialien bis hin zu Folientechnologien zum Schutz von Fassaden und Außenbereichen bieten wir dauerhaften Schutz bei minimalem Wartungsaufwand – ein neuer Standard in Sachen Widerstandsfähigkeit, Sicherheit und Nachhaltigkeit."
+      },
+      "intelligent": {
+        "title": "Intelligentere Häuser, umweltfreundlicheres Leben",
+        "label": "Intelligentes Gebäude",
+        "des": "Komfort, Sicherheit und Energieintelligenz – wunderbar verbunden.\n\nBei der HBC Group verwandeln wir Häuser in intelligente Wohnräume, die vorausdenken. \nVon Automatisierungssystemen, die sich an Ihre täglichen Abläufe anpassen, bis hin zur Solarintegration, Energieüberwachung und Haussicherheit machen wir modernes Leben mühelos und sicher.\n\n\nAber unsere Vision hört nicht bei den Häusern auf. \nMit unserem Shop Green Products können Einzelpersonen und kleine Unternehmen auf nachhaltige Lösungen in den Bereichen Zubehör, Landwirtschaft, Beton, Bauwesen, Energie und Bodenmanagement zugreifen. \nJedes Produkt ist so konzipiert, dass es langlebig, umweltbewusst und zukunftssicher ist.\n\n\nUnsere Mission: intelligentere Häuser, umweltfreundlichere Entscheidungen und ein Lebensstil für morgen."
+      },
+      "it": {
+        "label": "IT-Lösungen",
+        "title": "Schneller versenden, intelligenter skalieren – Secure by Design",
+        "des": "Wir entwerfen und bauen moderne digitale Produkte durchgängig: Software, Cloud, KI-Automatisierung und sichere Integrationen.\n\nVon der Produkterkennung und UX bis hin zu APIs, Datenpipelines und Observability liefern wir messbare Ergebnisse und langfristige Wartbarkeit."
+      }
     }
+  },
+  "footer": {
+    "writeUs": "Schreiben Sie uns",
+    "callUs": "Rufen Sie uns an",
+    "subscribe": "Abonnieren Sie unseren Newsletter",
+    "send": "Schicken"
   }
 }
