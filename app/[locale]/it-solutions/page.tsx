@@ -76,6 +76,7 @@ const faqItems = [
 export default function ITSolutionsPage() {
   return (
     <PageContainser>
+      {" "}
       <HeroAnimated
         badge="HBC IT Solutions"
         title="Build,Scale & Secure"

@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+// Initialize the next-intl plugin (it automatically looks for src/i18n/request.ts)
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
@@ -15,8 +18,8 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // or: domains: ['assets.aceternity.com'],
+    // Alternative: domains: ['assets.aceternity.com', 'images.unsplash.com']
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

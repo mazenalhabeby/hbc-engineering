@@ -5,6 +5,7 @@ import { OrbitControls } from "@react-three/drei";
 import ThreeCanvas from "@/components/3d_logo/ThreeCanvas";
 import LogoStage from "@/components/3d_logo/LogoStage";
 import { Boxes } from "@/components/ui/background-boxes";
+import { useTranslations } from "next-intl";
 
 type HeroProps = {
   title?: {
@@ -17,10 +18,12 @@ type HeroProps = {
 export default function Hero({
   title = {
     highlight: "Engineering",
-    mid: "the Future,",
-    tail: "Service, Safety & Industrial Innovation.",
+    mid: "midTitle",
+    tail: "tailTitle",
   },
 }: HeroProps) {
+  const t = useTranslations("home");
+
   return (
     <section
       aria-labelledby="hero-heading"
@@ -56,10 +59,10 @@ export default function Hero({
               {title.highlight}
             </span>
             <span className=" block text-[clamp(2rem,4.5vw,3.5rem)] font-semibold">
-              {title.mid}
+              {t(title.mid as string)}
             </span>
             <span className="mt-2 block text-[clamp(1.5rem,3.8vw,3rem)] font-light">
-              {title.tail}
+              {t(title.tail as string)}
             </span>
           </h1>
         </div>

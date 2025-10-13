@@ -21,7 +21,7 @@ export type ContactInfo = {
 export const siteConfig: ContactInfo = {
     company: "HBC Engineering",
     domain: "hbc-engineering.com",
-    phone: "+1 (252) 557-6443",
+    phone: "+1 (404) 703-3649",
 
     email: "hello@hbc-engineering.com",
     supportEmail: "support@hbc-engineering.com",

@@ -25,6 +25,7 @@ import {
   Programming,
   Welding,
 } from "@/assets";
+import Link from "next/link";
 
 /**
  * =========================
@@ -74,12 +75,12 @@ const faqItems = [
     answer: (
       <p>
         You can easily schedule a meeting through our{" "}
-        <a
+        <Link
           href="/corporate"
           className="text-[#066eb0] underline hover:text-[#044f80]"
         >
           Corporate Meeting Request
-        </a>{" "}
+        </Link>{" "}
         page.
       </p>
     ),

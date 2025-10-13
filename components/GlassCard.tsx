@@ -1,23 +1,35 @@
 import Image from "next/image";
+import * as React from "react";
+
+type GlassCardProps = {
+  src: string;
+  alt?: string;
+  priority?: boolean;
+  className?: string;
+  onLoaded?: () => void;
+};
 
 export default function GlassCard({
   src,
-  priority = false,
-}: {
-  src: string;
-  priority?: boolean;
-}) {
+  alt = "",
+  priority,
+  className,
+  onLoaded,
+}: GlassCardProps) {
   return (
-    <div className="relative h-full overflow-hidden rounded-[32px] bg-white/50 shadow-[0_30px_80px_-20px_rgba(6,110,176,0.25)] ring-1 ring-black/5">
+    <div
+      className={`relative h-full w-full rounded-3xl bg-white/70 shadow-xl backdrop-blur ${
+        className ?? ""
+      }`}
+    >
       <Image
         src={src}
-        alt=""
+        alt={alt}
         fill
-        sizes="(max-width: 768px) 90vw, 560px"
-        className="object-cover"
         priority={priority}
+        className="object-cover rounded-3xl"
+        onLoadingComplete={() => onLoaded?.()}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(160px_160px_at_0%_0%,rgba(255,255,255,0.5),transparent_60%)]" />
     </div>
   );
 }

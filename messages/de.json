@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Hello, world!"
+  },
+  "nav": {
+    "changeLanguage": "Change language"
+  },
+  "navbar": {
+    "company": "Unternehmen",
+    "home": "Startseite",
+    "industrial": "Industrielle",
+    "fireProtection": "Brandschutz",
+    "intelligent": "Intelligentes",
+    "contact": "Kontakt",
+    "careers": "Karrieren",
+    "scheduleMeeting": "Planen ein Meeting",
+    "itSolutions": "IT-Lösungen"
+  },
+  "home": {
+    "midTitle": "die Zukunft,",
+    "tailTitle": "Service, Sicherheit"
+  }
+}

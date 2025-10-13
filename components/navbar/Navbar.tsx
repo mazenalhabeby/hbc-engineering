@@ -2,10 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { paths } from "@/lib/urls";
+import { useTranslations } from "next-intl";
+
+const LanguageDialog = dynamic(
+  () => import("../../components/LanguageDialog").then((m) => m.LanguageDialog),
+  { ssr: false }
+);
 
 export type NavItem = {
   label: string;
@@ -48,6 +55,8 @@ function useIsScrolled(offset = 8) {
 }
 
 export default function Navbar() {
+  const t = useTranslations("navbar");
+
   const pathname = usePathname();
   const scrolled = useIsScrolled(10);
 
@@ -104,17 +113,17 @@ export default function Navbar() {
               <MenuItem key={item.label} item={item} activeRoot={activeRoot} />
             ))}
           </div>
-
+          <LanguageDialog />
           {/* CTA */}
           <Link
             href={paths.corporate.href}
-            className="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2"
+            className="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 hidden md:inline-block"
             style={{
               background:
                 "linear-gradient(90deg, rgba(6,110,176,1) 0%, rgba(0,118,192,1) 35%, rgba(0,121,196,1) 100%)",
             }}
           >
-            {paths.corporate.label}
+            {t(paths.corporate.label)}
           </Link>
 
           {/* mobile drawer */}
@@ -132,6 +141,7 @@ function MenuItem({
   item: NavItem;
   activeRoot?: string;
 }) {
+  const t = useTranslations("navbar");
   const isActive = activeRoot === item.label;
 
   if (!item.children) {
@@ -147,7 +157,7 @@ function MenuItem({
             : "text-slate-800"
         )}
       >
-        {item.label}
+        {t(item.label)}
       </Link>
     );
   }

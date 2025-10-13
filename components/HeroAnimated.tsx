@@ -2,23 +2,25 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import GlassCard from "./GlassCard";
 import Marquee from "./Marquee";
 import ChipKinetic from "./ChipKinetic";
 import CTA from "./CTA";
-import GlassCard from "./GlassCard";
 import Wave from "./Wave";
 
-type HeroAnimatedProps = {
-  marquee?: string; // scrolling text
-  badge?: string; // top-left badge
-  title: string; // main headline
-  highlight?: string; // colored word
-  description: string; // subtext
-  chips?: string[]; // kinetic tags
-  cta?: { label: string; href: string }; // main button
-  secondaryCta?: { label: string; href: string }; // optional second button
-  heroImage: string; // big card image
-  miniStack?: string[]; // optional mini stacked images
+export type HeroAnimatedProps = {
+  marquee?: string;
+  badge?: string;
+  title: string;
+  highlight?: string;
+  description: string;
+  chips?: string[];
+  cta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+  heroImage: string;
+  miniStack?: string[];
+  /** Called when the hero image finishes loading */
+  onHeroLoaded?: () => void;
 };
 
 export default function HeroAnimated({
@@ -31,6 +33,7 @@ export default function HeroAnimated({
   cta,
   secondaryCta,
   heroImage,
+  onHeroLoaded,
 }: HeroAnimatedProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -42,13 +45,12 @@ export default function HeroAnimated({
 
   return (
     <section ref={ref} className="relative pt-28 sm:pt-32">
-      {/* Moving marquee */}
       <div className="absolute inset-x-0 top-6 z-0 select-none">
         <Marquee word={marquee} />
       </div>
 
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 sm:px-6 md:grid-cols-12 lg:px-8">
-        {/* Left Content */}
+        {/* Left */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -95,16 +97,17 @@ export default function HeroAnimated({
           </div>
         </motion.div>
 
-        {/* Right Content */}
+        {/* Right */}
         <div className="relative md:col-span-6">
           <motion.div
             style={{ y: yA, rotate: rot }}
             className="relative mx-auto h-[420px] max-w-[560px]"
           >
-            <GlassCard src={heroImage} priority />
+            <GlassCard src={heroImage} priority onLoaded={onHeroLoaded} />
           </motion.div>
         </div>
       </div>
+
       <Wave className="text-[#cfe4ff]" />
     </section>
   );

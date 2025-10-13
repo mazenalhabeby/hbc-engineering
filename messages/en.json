@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Hello, world!"
+  },
+  "nav": {
+    "changeLanguage": "Change language"
+  },
+  "navbar": {
+    "company": "Company",
+    "home": "Home",
+    "industrial": "ndustrial Services",
+    "fireProtection": "Fire Protection",
+    "intelligent": "Intelligent Building",
+    "contact": "Contact",
+    "careers": "Careers",
+    "scheduleMeeting": "Schedule a Meeting",
+    "itSolutions": "IT Solutions"
+  },
+  "home": {
+    "midTitle": "the Future,",
+    "tailTitle": "Service, Safety & Industrial Innovation."
+  }
+}
