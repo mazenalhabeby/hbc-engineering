@@ -3,6 +3,7 @@
 import * as React from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type Corner = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
@@ -25,10 +26,11 @@ export default function HBCGrandLoaderFull({
   minShowMs = 5000,
   revealFrom = "bottom-right",
   title = "HBC Engineering",
-  subtitle = "Preparing your experience…",
+  subtitle = "subtitle",
   initialShow = true,
   showOnHashChange = false,
 }: Props) {
+  const t = useTranslations("preload");
   const pathname = usePathname(); // App Router path (no hash)
   const [visible, setVisible] = React.useState<boolean>(initialShow);
   const [phase, setPhase] = React.useState<
@@ -145,17 +147,16 @@ export default function HBCGrandLoaderFull({
           <div className="relative z-10 grid h-full place-items-center">
             <div className="px-6 text-center">
               <AnimatedHeadline text={title} phase={phase} />
-              {subtitle && (
-                <motion.p
-                  className="mt-4 text-base sm:text-lg text-white/75"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: phase === "lettersOut" ? 0 : 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.35 }}
-                >
-                  {subtitle}
-                </motion.p>
-              )}
+
+              <motion.p
+                className="mt-4 text-base sm:text-lg text-white/75"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: phase === "lettersOut" ? 0 : 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.35 }}
+              >
+                {t("subtitle")}
+              </motion.p>
             </div>
           </div>
 

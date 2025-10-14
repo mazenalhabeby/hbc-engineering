@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/command";
 import { Separator } from "@/components/ui/separator";
 import { Globe } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Locale = "en" | "de";
 
@@ -50,6 +51,7 @@ function buildLocaleHref(currentPath: string, next: Locale): string {
 }
 
 export function LanguageDialog() {
+  const t = useTranslations("translatorBn");
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false); // ⭐ client-only label guard
   const pathname = usePathname() || "/";
@@ -95,9 +97,6 @@ export function LanguageDialog() {
           <span suppressHydrationWarning className="hidden sm:inline">
             {mounted ? (currentLocale === "en" ? "English" : "Deutsch") : ""}
           </span>
-          <span className="opacity-60 text-xs hidden md:inline">
-            ⌘/Ctrl + L
-          </span>
         </Button>
       </DialogTrigger>
 
@@ -107,21 +106,19 @@ export function LanguageDialog() {
       >
         <div className="h-1 w-full bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500" />
         <DialogHeader className="px-5 pt-5">
-          <DialogTitle className="text-xl">Switch language</DialogTitle>
-          <p className="text-sm text-muted-foreground">
-            Choose your preferred language.
-          </p>
+          <DialogTitle className="text-xl">{t("switchL")}</DialogTitle>
+          <p className="text-sm text-muted-foreground">{t("langSubTitle")}</p>
         </DialogHeader>
 
         <div className="px-5 pb-5">
           <div className="rounded-2xl border">
             <Command shouldFilter>
               <div className="p-3">
-                <CommandInput placeholder="Type to search languages..." />
+                <CommandInput placeholder={t("placholder")} />
               </div>
               <Separator />
               <CommandList>
-                <CommandEmpty>No language found.</CommandEmpty>
+                <CommandEmpty>{t("notFound")}</CommandEmpty>
                 <CommandGroup heading="Available">
                   {LOCALES.map((it) => (
                     <CommandItem
@@ -138,7 +135,7 @@ export function LanguageDialog() {
                           {it.label}
                           {currentLocale === it.code && (
                             <span className="ml-2 text-xs rounded-full bg-primary/10 px-2 py-0.5">
-                              Current
+                              {t("current")}
                             </span>
                           )}
                         </span>

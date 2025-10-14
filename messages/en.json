@@ -128,37 +128,85 @@
       "hydraulics": {
         "title": "Hydraulics",
         "text": "Diagnostics, pump/valve service, hoses, sealing, filtration, and contamination control. We restore force and motion with micron-level precision.",
-        "bullets": ["Power units", "Manifolds", "Cylinders", "Accumulator charging", "Flushing"]
+        "bullets": [
+          "Power units",
+          "Manifolds",
+          "Cylinders",
+          "Accumulator charging",
+          "Flushing"
+        ]
       },
       "electrical": {
         "title": "Electrical",
         "text": "Control panels, drives, PLCs, sensors, power routing. We do clean installs and retrofit wiring with safety and clarity.",
-        "bullets": ["PLC/Drive tuning", "Switchgear", "SCADA I/O", "Thermal scans", "Code & labels"]
+        "bullets": [
+          "PLC/Drive tuning",
+          "Switchgear",
+          "SCADA I/O",
+          "Thermal scans",
+          "Code & labels"
+        ]
       },
       "mechanical": {
         "title": "Mechanical",
         "text": "Gearboxes, conveyors, bearings, shaft alignment, structural fabrication—built to take industrial punishment.",
-        "bullets": ["Precision alignment", "Conveyors", "Gear & chain", "Laser metrology", "Fabrication"]
+        "bullets": [
+          "Precision alignment",
+          "Conveyors",
+          "Gear & chain",
+          "Laser metrology",
+          "Fabrication"
+        ]
       },
       "welding": {
         "title": "Welding",
         "text": "Certified welding and on-site fabrication for production lines and heavy assets. Strong, clean, inspected.",
-        "bullets": ["Steel & SS", "Pipe welding", "Repair & build", "Fixtures", "NDT-ready"]
+        "bullets": [
+          "Steel & SS",
+          "Pipe welding",
+          "Repair & build",
+          "Fixtures",
+          "NDT-ready"
+        ]
       },
       "programming": {
         "title": "Programming",
         "text": "Commissioning and optimization of PLC/HMI code. We make machines think smarter and operators work faster.",
-        "bullets": ["Siemens/TIA", "Rockwell", "Safety PLC", "HMI/UX", "Data logging"]
+        "bullets": [
+          "Siemens/TIA",
+          "Rockwell",
+          "Safety PLC",
+          "HMI/UX",
+          "Data logging"
+        ]
       }
     },
     "capabilities": {
       "items": [
-        { "title": "Preventive & Predictive", "desc": "Programs that turn unplanned downtime into scheduled optimization." },
-        { "title": "Rapid Response", "desc": "On-call engineers and techs with parts, tools, and checklists." },
-        { "title": "Retrofits & Upgrades", "desc": "Make old assets compete like new—mechanical, electrical, controls." },
-        { "title": "Data Visibility", "desc": "From sensor to dashboard: we surface signals that matter." },
-        { "title": "Safety First", "desc": "Certified procedures and tooling for plant & personnel safety." },
-        { "title": "Documentation", "desc": "As-builts, wiring, naming standards—clarity for the next decade." }
+        {
+          "title": "Preventive & Predictive",
+          "desc": "Programs that turn unplanned downtime into scheduled optimization."
+        },
+        {
+          "title": "Rapid Response",
+          "desc": "On-call engineers and techs with parts, tools, and checklists."
+        },
+        {
+          "title": "Retrofits & Upgrades",
+          "desc": "Make old assets compete like new—mechanical, electrical, controls."
+        },
+        {
+          "title": "Data Visibility",
+          "desc": "From sensor to dashboard: we surface signals that matter."
+        },
+        {
+          "title": "Safety First",
+          "desc": "Certified procedures and tooling for plant & personnel safety."
+        },
+        {
+          "title": "Documentation",
+          "desc": "As-builts, wiring, naming standards—clarity for the next decade."
+        }
       ]
     },
     "security": {
@@ -167,27 +215,56 @@
       "fire": {
         "title": "Fire Protection",
         "brief": "Design, install, and maintain robust fire systems for industrial risk categories with traceability and standards compliance.",
-        "bullets": ["Risk analysis", "Suppression systems", "Routine testing", "Compliance reports"],
+        "bullets": [
+          "Risk analysis",
+          "Suppression systems",
+          "Routine testing",
+          "Compliance reports"
+        ],
         "sub": {
-          "wood": { "label": "Wood Preservation", "desc": "Treatments and coatings for durability." },
-          "film": { "label": "Film Protection", "desc": "High-performance protective films." },
-          "facades": { "label": "Facades", "desc": "Exterior systems for resistance and longevity." }
+          "wood": {
+            "label": "Wood Preservation",
+            "desc": "Treatments and coatings for durability."
+          },
+          "film": {
+            "label": "Film Protection",
+            "desc": "High-performance protective films."
+          },
+          "facades": {
+            "label": "Facades",
+            "desc": "Exterior systems for resistance and longevity."
+          }
         }
       },
       "cameras": {
         "title": "Cameras & Analytics",
         "brief": "From harsh-environment cameras to smart detection. Gain visual certainty across plants, yards, and warehouses.",
-        "bullets": ["Thermal & PTZ", "AI analytics", "NVR/Retention", "Remote access"]
+        "bullets": [
+          "Thermal & PTZ",
+          "AI analytics",
+          "NVR/Retention",
+          "Remote access"
+        ]
       },
       "servers": {
         "title": "Server & Storage",
         "brief": "Hardened, scalable infrastructure for security and industrial data—designed for write-heavy workloads.",
-        "bullets": ["RAID strategies", "Redundant power", "Encrypted backups", "Monitoring"]
+        "bullets": [
+          "RAID strategies",
+          "Redundant power",
+          "Encrypted backups",
+          "Monitoring"
+        ]
       },
       "entry": {
         "title": "Entry & Alarm Systems",
         "brief": "Card, PIN, biometric, and vehicle entry solutions. Unified alarms with clear playbooks and escalation.",
-        "bullets": ["Access control", "Perimeter", "Intercom", "24/7 alerting"],
+        "bullets": [
+          "Access control",
+          "Perimeter",
+          "Intercom",
+          "24/7 alerting"
+        ],
         "extraLabel": "Alarm Systems"
       }
     },
@@ -208,12 +285,30 @@
       "howHeading": "How We Deliver",
       "assuranceHeading": "Assurance",
       "steps": [
-        { "title": "Assess", "desc": "Site study, risk review, and performance targets." },
-        { "title": "Plan", "desc": "Scope, phases, access, safety, and spares." },
-        { "title": "Execute", "desc": "Qualified teams, QA checks, and reporting." },
-        { "title": "Optimize", "desc": "Tuning, training, documentation, support." }
+        {
+          "title": "Assess",
+          "desc": "Site study, risk review, and performance targets."
+        },
+        {
+          "title": "Plan",
+          "desc": "Scope, phases, access, safety, and spares."
+        },
+        {
+          "title": "Execute",
+          "desc": "Qualified teams, QA checks, and reporting."
+        },
+        {
+          "title": "Optimize",
+          "desc": "Tuning, training, documentation, support."
+        }
       ],
-      "badges": ["24/7 Support", "Certified Techs", "Safety First", "Warranty", "As-built Docs"]
+      "badges": [
+        "24/7 Support",
+        "Certified Techs",
+        "Safety First",
+        "Warranty",
+        "As-built Docs"
+      ]
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -251,17 +346,29 @@
       "wood": {
         "title": "Wood Preservation",
         "desc": "Special coatings and treatments to reduce flammability of structural wood elements, increasing fire resistance and extending lifespan.",
-        "bullets": ["Char retardant coatings", "Fire-retardant impregnation", "Compliance to NFPA & EN"]
+        "bullets": [
+          "Char retardant coatings",
+          "Fire-retardant impregnation",
+          "Compliance to NFPA & EN"
+        ]
       },
       "film": {
         "title": "Film Protection",
         "desc": "Transparent films for windows, walls and doors that slow flame spread and limit heat transfer, while preserving aesthetics.",
-        "bullets": ["Heat-reflective film", "Smoke barrier film", "Custom form factors"]
+        "bullets": [
+          "Heat-reflective film",
+          "Smoke barrier film",
+          "Custom form factors"
+        ]
       },
       "facade": {
         "title": "Façade Systems",
         "desc": "Architectural fire-safe façade materials and designs that prevent flame and smoke propagation across building exteriors.",
-        "bullets": ["Refractory panels", "Compartmentation design", "Regulatory compliance"]
+        "bullets": [
+          "Refractory panels",
+          "Compartmentation design",
+          "Regulatory compliance"
+        ]
       }
     },
     "systems": {
@@ -282,17 +389,35 @@
     "why": {
       "heading": "Why Choose HBC Fire Protection",
       "items": [
-        { "title": "Code & Standards Expertise", "desc": "We navigate NFPA, EN, UL standards so your system passes inspection, not just installation." },
-        { "title": "Holistic Safety Design", "desc": "We guard structure, contents, egress and systems — not just fire suppression." },
-        { "title": "Predictive Health Monitoring", "desc": "Sensors detect early faults (leaks, pressure drops, tampering) before failure happens." },
-        { "title": "Emergency Response Integration", "desc": "We tie systems into panels, security, and building operations to act fast when every second counts." }
+        {
+          "title": "Code & Standards Expertise",
+          "desc": "We navigate NFPA, EN, UL standards so your system passes inspection, not just installation."
+        },
+        {
+          "title": "Holistic Safety Design",
+          "desc": "We guard structure, contents, egress and systems — not just fire suppression."
+        },
+        {
+          "title": "Predictive Health Monitoring",
+          "desc": "Sensors detect early faults (leaks, pressure drops, tampering) before failure happens."
+        },
+        {
+          "title": "Emergency Response Integration",
+          "desc": "We tie systems into panels, security, and building operations to act fast when every second counts."
+        }
       ]
     },
     "cases": {
       "heading": "Project Highlights",
       "items": [
-        { "name": "Wood-Frame Housing Complex", "desc": "Applied fire-retardant coatings to all timber structural elements. Passed regulatory inspection with margin." },
-        { "name": "Commercial Façade Retrofit", "desc": "Replaced aging cladding with fire-safe façade system while maintaining aesthetic transparency." }
+        {
+          "name": "Wood-Frame Housing Complex",
+          "desc": "Applied fire-retardant coatings to all timber structural elements. Passed regulatory inspection with margin."
+        },
+        {
+          "name": "Commercial Façade Retrofit",
+          "desc": "Replaced aging cladding with fire-safe façade system while maintaining aesthetic transparency."
+        }
       ]
     },
     "faq": {
@@ -326,12 +451,30 @@
     "grid": {
       "heading": "Smart Home, the HBC Way",
       "items": [
-        { "title": "Automation", "desc": "Scenes, schedules, voice control — your home, orchestrated." },
-        { "title": "PV & Energy", "desc": "Monitor usage, store intelligently, shave peaks & save." },
-        { "title": "Security", "desc": "Alarms, entry, cameras & server systems — integrated." },
-        { "title": "Monitoring", "desc": "Real-time health of devices, rooms and subsystems." },
-        { "title": "Comfort", "desc": "Lighting, climate and shading that adapts to you." },
-        { "title": "Savings", "desc": "Data-driven optimization that cuts waste, not comfort." }
+        {
+          "title": "Automation",
+          "desc": "Scenes, schedules, voice control — your home, orchestrated."
+        },
+        {
+          "title": "PV & Energy",
+          "desc": "Monitor usage, store intelligently, shave peaks & save."
+        },
+        {
+          "title": "Security",
+          "desc": "Alarms, entry, cameras & server systems — integrated."
+        },
+        {
+          "title": "Monitoring",
+          "desc": "Real-time health of devices, rooms and subsystems."
+        },
+        {
+          "title": "Comfort",
+          "desc": "Lighting, climate and shading that adapts to you."
+        },
+        {
+          "title": "Savings",
+          "desc": "Data-driven optimization that cuts waste, not comfort."
+        }
       ]
     },
     "tags": {
@@ -368,34 +511,104 @@
     "title": "Start a Project",
     "progress": "Step {cur} of {total}",
     "steps": {
-      "client": { "title": "Client Information", "subtitle": "Tell us who you are and how to reach you." },
-      "overview": { "title": "Project Overview", "subtitle": "What are we building and why now?" },
-      "scope": { "title": "Scope & Timeline", "subtitle": "Features, users, and timing." },
-      "budget": { "title": "Budget & Success", "subtitle": "Investment range and measurable outcomes." },
-      "security": { "title": "Integrations & Security", "subtitle": "How we’ll connect and protect." },
-      "review": { "title": "Review & Submit", "subtitle": "Confirm all details before sending." }
+      "client": {
+        "title": "Client Information",
+        "subtitle": "Tell us who you are and how to reach you."
+      },
+      "overview": {
+        "title": "Project Overview",
+        "subtitle": "What are we building and why now?"
+      },
+      "scope": {
+        "title": "Scope & Timeline",
+        "subtitle": "Features, users, and timing."
+      },
+      "budget": {
+        "title": "Budget & Success",
+        "subtitle": "Investment range and measurable outcomes."
+      },
+      "security": {
+        "title": "Integrations & Security",
+        "subtitle": "How we’ll connect and protect."
+      },
+      "review": {
+        "title": "Review & Submit",
+        "subtitle": "Confirm all details before sending."
+      }
     },
     "fields": {
-      "fullName": { "label": "Full name", "ph": "Jane Doe" },
-      "company": { "label": "Company", "ph": "Acme GmbH" },
-      "email": { "label": "Work email", "ph": "jane@acme.com" },
-      "phone": { "label": "Phone", "ph": "+43 6XX XXX XXXX" },
-      "country": { "label": "Country", "ph": "Select country" },
-      "projectType": { "label": "Project type", "ph": "Choose type" },
-      "expectedUsers": { "label": "Expected users (monthly)", "ph": "e.g., 5,000" },
-      "brief": { "label": "Project summary", "ph": "What are we building and why now?" },
-      "goals": { "label": "Key goals", "ph": "e.g., Reduce onboarding time by 30%, launch MVP in 8 weeks…" },
-      "features": { "label": "Desired features" },
-      "deadline": { "label": "Target deadline" },
-      "timelineFlex": { "label": "Timeline flexibility" },
-      "budget": { "label": "Budget range", "ph": "Select budget" },
-      "procurement": { "label": "Engagement type" },
-      "success": { "label": "Success criteria", "ph": "KPIs, SLAs, performance targets…" },
-      "risks": { "label": "Risks or constraints (optional)", "ph": "Dependencies, compliance constraints, legacy systems…" },
-      "integrations": { "label": "Required integrations" },
-      "auth": { "label": "Authentication" },
-      "residency": { "label": "Data residency" },
-      "compliance": { "label": "Compliance requirements" }
+      "fullName": {
+        "label": "Full name",
+        "ph": "Jane Doe"
+      },
+      "company": {
+        "label": "Company",
+        "ph": "Acme GmbH"
+      },
+      "email": {
+        "label": "Work email",
+        "ph": "jane@acme.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "ph": "+43 6XX XXX XXXX"
+      },
+      "country": {
+        "label": "Country",
+        "ph": "Select country"
+      },
+      "projectType": {
+        "label": "Project type",
+        "ph": "Choose type"
+      },
+      "expectedUsers": {
+        "label": "Expected users (monthly)",
+        "ph": "e.g., 5,000"
+      },
+      "brief": {
+        "label": "Project summary",
+        "ph": "What are we building and why now?"
+      },
+      "goals": {
+        "label": "Key goals",
+        "ph": "e.g., Reduce onboarding time by 30%, launch MVP in 8 weeks…"
+      },
+      "features": {
+        "label": "Desired features"
+      },
+      "deadline": {
+        "label": "Target deadline"
+      },
+      "timelineFlex": {
+        "label": "Timeline flexibility"
+      },
+      "budget": {
+        "label": "Budget range",
+        "ph": "Select budget"
+      },
+      "procurement": {
+        "label": "Engagement type"
+      },
+      "success": {
+        "label": "Success criteria",
+        "ph": "KPIs, SLAs, performance targets…"
+      },
+      "risks": {
+        "label": "Risks or constraints (optional)",
+        "ph": "Dependencies, compliance constraints, legacy systems…"
+      },
+      "integrations": {
+        "label": "Required integrations"
+      },
+      "auth": {
+        "label": "Authentication"
+      },
+      "residency": {
+        "label": "Data residency"
+      },
+      "compliance": {
+        "label": "Compliance requirements"
+      }
     },
     "buttons": {
       "back": "Back",
@@ -495,20 +708,58 @@
         "HIPAA": "HIPAA",
         "PCI DSS": "PCI DSS"
       },
-      "timelineFlex": { "strict": "Strict", "target": "Target", "open": "Open" },
-      "budget": { "<10k": "<10k", "10–30k": "10–30k", "30–80k": "30–80k", "80–200k": "80–200k", ">200k": ">200k" },
-      "procurement": { "Startup": "Startup", "B2B": "B2B", "Enterprise": "Enterprise", "B2G": "B2G" },
-      "auth": { "None": "None", "Email/Password": "Email/Password", "SSO/SAML": "SSO/SAML", "OAuth": "OAuth" },
-      "residency": { "EU": "EU", "US": "US", "MENA": "MENA", "Any": "Any" }
+      "timelineFlex": {
+        "strict": "Strict",
+        "target": "Target",
+        "open": "Open"
+      },
+      "budget": {
+        "<10k": "<10k",
+        "10–30k": "10–30k",
+        "30–80k": "30–80k",
+        "80–200k": "80–200k",
+        ">200k": ">200k"
+      },
+      "procurement": {
+        "Startup": "Startup",
+        "B2B": "B2B",
+        "Enterprise": "Enterprise",
+        "B2G": "B2G"
+      },
+      "auth": {
+        "None": "None",
+        "Email/Password": "Email/Password",
+        "SSO/SAML": "SSO/SAML",
+        "OAuth": "OAuth"
+      },
+      "residency": {
+        "EU": "EU",
+        "US": "US",
+        "MENA": "MENA",
+        "Any": "Any"
+      }
     }
-},
+  },
   "it": {
     "hero": {
       "badge": "HBC IT Solutions",
       "title": "Build,Scale & Secure",
       "highlight": "Your Digital Product",
       "description": "We design and ship high-performance software, Web3 payments, and cloud infrastructure—engineered for uptime, security, and growth.\n\nFrom SaaS platforms and e-commerce to AI automation and blockchain, we deliver end-to-end solutions with measurable impact.",
-      "chips": ["Software","APIs/GraphQL","E-commerce","UI/UX","Cloud/DevOps","CI/CD","Observability","Security","SSO/IAM","AI/Automation","Data & Analytics","Web3"]
+      "chips": [
+        "Software",
+        "APIs/GraphQL",
+        "E-commerce",
+        "UI/UX",
+        "Cloud/DevOps",
+        "CI/CD",
+        "Observability",
+        "Security",
+        "SSO/IAM",
+        "AI/Automation",
+        "Data & Analytics",
+        "Web3"
+      ]
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -529,52 +780,129 @@
         "tag": "Services",
         "title": "Software Development",
         "text": "We engineer end-to-end digital products — from concept to global rollout. Our team builds scalable, secure, and high-performance applications for web, mobile, and desktop, using modern technologies and clean architecture principles. We ensure every solution is modular, maintainable, and ready for future integrations.",
-        "bullets": ["Custom enterprise systems","Cross-platform mobile apps","Web applications & portals","API & SDK development","Microservices & event-driven architecture","DevSecOps integration"]
+        "bullets": [
+          "Custom enterprise systems",
+          "Cross-platform mobile apps",
+          "Web applications & portals",
+          "API & SDK development",
+          "Microservices & event-driven architecture",
+          "DevSecOps integration"
+        ]
       },
       "cloud": {
         "tag": "Services",
         "title": "Cloud & DevOps",
         "text": "We design, deploy, and maintain cloud infrastructures built for high availability, resilience, and compliance. Our DevOps approach ensures smooth delivery pipelines, continuous monitoring, and cost-efficient scaling across major global providers such as AWS, Google Cloud, and Microsoft Azure.",
-        "bullets": ["Infrastructure as Code (IaC)","Kubernetes orchestration","Multi-cloud architecture (AWS, GCP, Azure)","CI/CD automation","Monitoring, logging, and alerting","Zero-downtime deployments"]
+        "bullets": [
+          "Infrastructure as Code (IaC)",
+          "Kubernetes orchestration",
+          "Multi-cloud architecture (AWS, GCP, Azure)",
+          "CI/CD automation",
+          "Monitoring, logging, and alerting",
+          "Zero-downtime deployments"
+        ]
       },
       "ai": {
         "tag": "Services",
         "title": "AI & Automation",
         "text": "We transform data into intelligent action. From natural-language chatbots to predictive analytics and automated workflows, our AI solutions help organizations make smarter decisions, reduce human error, and enhance customer experiences.",
-        "bullets": ["Conversational AI & chatbots","Predictive analytics & forecasting","Business process automation","Custom ML model deployment","AI data pipelines & ETL","LLM integration & RAG systems"]
+        "bullets": [
+          "Conversational AI & chatbots",
+          "Predictive analytics & forecasting",
+          "Business process automation",
+          "Custom ML model deployment",
+          "AI data pipelines & ETL",
+          "LLM integration & RAG systems"
+        ]
       },
       "web3": {
         "tag": "Services",
         "title": "Blockchain & Web3",
         "text": "We build secure, compliant, and scalable decentralized systems across the strongest blockchain networks — including Ethereum, BNB Chain, Polygon, and Avalanche. Our Web3 expertise spans token ecosystems, smart contracts, and payment infrastructures that merge blockchain innovation with real-world utility.",
-        "bullets": ["Smart contract architecture & audits","Token ecosystems & staking systems","Cross-chain interoperability","P2P payment rails & on-chain settlement","DeFi & NFT marketplace development","Compliance-ready blockchain solutions"]
+        "bullets": [
+          "Smart contract architecture & audits",
+          "Token ecosystems & staking systems",
+          "Cross-chain interoperability",
+          "P2P payment rails & on-chain settlement",
+          "DeFi & NFT marketplace development",
+          "Compliance-ready blockchain solutions"
+        ]
       },
       "security": {
         "tag": "Services",
         "title": "Security & Integration",
         "text": "Security is built into every layer of our process — from application design to production operations. We implement advanced identity management, data encryption, and compliance frameworks to protect both users and infrastructure, while seamlessly integrating your systems for operational clarity and trust.",
-        "bullets": ["Identity & Access Management (IAM/SSO)","Penetration testing & vulnerability scans","Zero-Trust architecture","Regulatory compliance (GDPR, ISO, SOC 2)","Secure API & system integration","Continuous security monitoring"]
+        "bullets": [
+          "Identity & Access Management (IAM/SSO)",
+          "Penetration testing & vulnerability scans",
+          "Zero-Trust architecture",
+          "Regulatory compliance (GDPR, ISO, SOC 2)",
+          "Secure API & system integration",
+          "Continuous security monitoring"
+        ]
       }
     },
     "capabilities": {
-      "api": { "title": "API-first Delivery", "desc": "Clean GraphQL/REST contracts, SDKs, and docs for partners." },
-      "devops": { "title": "DevOps by Default", "desc": "CI/CD, monitoring, logs/metrics/traces from day one." },
-      "security": { "title": "Security Mindset", "desc": "SSO/IAM, secrets hygiene, dependency checks, audits." },
-      "performance": { "title": "Performance", "desc": "Edge-ready caching, DB tuning, and Lighthouse-friendly UX." },
-      "scalability": { "title": "Scalability", "desc": "Event-driven microservices and message queues where they matter." },
-      "docs": { "title": "Documentation", "desc": "Playbooks, runbooks, ADRs, and handover guides." }
+      "api": {
+        "title": "API-first Delivery",
+        "desc": "Clean GraphQL/REST contracts, SDKs, and docs for partners."
+      },
+      "devops": {
+        "title": "DevOps by Default",
+        "desc": "CI/CD, monitoring, logs/metrics/traces from day one."
+      },
+      "security": {
+        "title": "Security Mindset",
+        "desc": "SSO/IAM, secrets hygiene, dependency checks, audits."
+      },
+      "performance": {
+        "title": "Performance",
+        "desc": "Edge-ready caching, DB tuning, and Lighthouse-friendly UX."
+      },
+      "scalability": {
+        "title": "Scalability",
+        "desc": "Event-driven microservices and message queues where they matter."
+      },
+      "docs": {
+        "title": "Documentation",
+        "desc": "Playbooks, runbooks, ADRs, and handover guides."
+      }
     },
     "process": {
       "title": "How We Deliver",
       "assurance": "Assurance",
       "steps": {
-        "discover": { "title": "Discover", "desc": "We begin with stakeholder workshops, success metrics, and risk mapping. Every engagement starts with a deep understanding of your business objectives, technical landscape, and compliance boundaries." },
-        "design": { "title": "Design", "desc": "Our architects and designers translate goals into scalable architectures, UX flows, and technical proofs of concept. We emphasize performance, security, and usability from day one." },
-        "build": { "title": "Build", "desc": "We execute through agile sprints with continuous integration, test automation, and observability. Each iteration delivers measurable outcomes and production-ready increments." },
-        "deploy": { "title": "Deploy", "desc": "Blue/green and canary strategies ensure safe, zero-downtime releases. Every deployment includes rollback policies, monitoring dashboards, and documentation." },
-        "scale": { "title": "Scale & Optimize", "desc": "After go-live, we refine performance, cost, and reliability. Proactive monitoring, incident response, and SLA adherence guarantee long-term operational excellence." }
+        "discover": {
+          "title": "Discover",
+          "desc": "We begin with stakeholder workshops, success metrics, and risk mapping. Every engagement starts with a deep understanding of your business objectives, technical landscape, and compliance boundaries."
+        },
+        "design": {
+          "title": "Design",
+          "desc": "Our architects and designers translate goals into scalable architectures, UX flows, and technical proofs of concept. We emphasize performance, security, and usability from day one."
+        },
+        "build": {
+          "title": "Build",
+          "desc": "We execute through agile sprints with continuous integration, test automation, and observability. Each iteration delivers measurable outcomes and production-ready increments."
+        },
+        "deploy": {
+          "title": "Deploy",
+          "desc": "Blue/green and canary strategies ensure safe, zero-downtime releases. Every deployment includes rollback policies, monitoring dashboards, and documentation."
+        },
+        "scale": {
+          "title": "Scale & Optimize",
+          "desc": "After go-live, we refine performance, cost, and reliability. Proactive monitoring, incident response, and SLA adherence guarantee long-term operational excellence."
+        }
       },
-      "badges": ["ISO 27001 / GDPR Compliance","99.9% Uptime SLA","Security-First Architecture","24/7 Global Support","Continuous Delivery & Monitoring","Transparent Reporting","Dedicated Account Management","Full Documentation & Knowledge Transfer"]
+      "badges": [
+        "ISO 27001 / GDPR Compliance",
+        "99.9% Uptime SLA",
+        "Security-First Architecture",
+        "24/7 Global Support",
+        "Continuous Delivery & Monitoring",
+        "Transparent Reporting",
+        "Dedicated Account Management",
+        "Full Documentation & Knowledge Transfer"
+      ]
     }
   },
   "meeting": {
@@ -587,7 +915,11 @@
       "Timeline & ROI guidance",
       "Security, fire & maintenance expertise"
     ],
-    "chips": ["24/7 Support", "EU & USA", "Industrial & Individual"],
+    "chips": [
+      "24/7 Support",
+      "EU & USA",
+      "Industrial & Individual"
+    ],
     "form": {
       "fullName": "Full Name",
       "email": "Business Email",
@@ -602,7 +934,13 @@
         "Other"
       ],
       "size": "Company Size",
-      "sizeOptions": ["1–10", "11–50", "51–200", "201–1000", "1000+"],
+      "sizeOptions": [
+        "1–10",
+        "11–50",
+        "51–200",
+        "201–1000",
+        "1000+"
+      ],
       "date": "Preferred Date",
       "time": "Preferred Time",
       "message": "What would you like to achieve?",
@@ -708,7 +1046,11 @@
         "hours": "50 hours/week",
         "travel": "Regional/National",
         "summary": "Electrical diagnostics, installation/commissioning, and preventive maintenance on heavy-duty industrial machinery across recycling, biomass, and manufacturing.",
-        "tags": ["Electrical", "Field Service", "PLC"]
+        "tags": [
+          "Electrical",
+          "Field Service",
+          "PLC"
+        ]
       },
       "industrial-mechanic": {
         "title": "Industrial Mechanic – Heavy-Duty Machinery",
@@ -717,7 +1059,11 @@
         "hours": "50 hours/week",
         "travel": "Regional/National",
         "summary": "Field service, diagnostics, repairs, and preventive maintenance on heavy-duty industrial machinery (mobile and stationary).",
-        "tags": ["Mechanical", "Hydraulics", "Pneumatics"]
+        "tags": [
+          "Mechanical",
+          "Hydraulics",
+          "Pneumatics"
+        ]
       },
       "industrial-programmer": {
         "title": "Industrial Programmer – Heavy-Duty Machinery",
@@ -726,8 +1072,22 @@
         "hours": "50 hours/week",
         "travel": "National",
         "summary": "Program, optimize, and commission PLC-based control systems for complex heavy-duty machinery; troubleshoot software/communications; deliver on-site support.",
-        "tags": ["PLC", "Commissioning", "HMI/SCADA"]
+        "tags": [
+          "PLC",
+          "Commissioning",
+          "HMI/SCADA"
+        ]
       }
     }
+  },
+  "translatorBn": {
+    "switchL": "Switch language",
+    "langSubTitle": "Choose your preferred language.",
+    "notFound": "No language found.",
+    "current": "Current",
+    "placholder": "Type to search languages..."
+  },
+  "preload": {
+    "subtitle": "Preparing your experience…"
   }
 }
