@@ -1,0 +1,991 @@
+{"hero": {
+  "title": "Hei, verden!"
+},
+"nav": {
+  "changeLanguage": "Bytt språk"
+},
+"navbar": {
+  "company": "Selskap",
+  "home": "Hjem",
+  "industrial": "Industriell",
+  "fireProtection": "Brannsikring",
+  "intelligent": "Intelligent",
+  "contact": "Kontakt",
+  "careers": "Karriere",
+  "scheduleMeeting": "Planlegg et møte",
+  "itSolutions": "IT-løsninger"
+},
+"home": {
+  "midTitle": "fremtiden,",
+  "tailTitle": "Service, Sikkerhet",
+  "service": {
+    "fireProdaction": {
+      "title": "Brannsikring",
+      "des": "Fra trebeskyttelse til arkitektoniske fasader og systemintegrasjon — vi kombinerer sikkerhet, skjønnhet og samsvar."
+    },
+    "industrial": {
+      "title": "Industrielt Vedlikehold og Tjenester",
+      "dec": "Fra forebyggende eller gjentakende vedlikehold og diagnostikk til rask feilsøking eller komplekse flyttinger av produksjonslinjer."
+    },
+    "intelligent": {
+      "title": "Intelligent Bygning",
+      "des": "Koble sammen komfort, sikkerhet og energiintelligens.\nKontroller, overvåk og optimaliser plassen din — pålitelig og uten anstrengelse."
+    },
+    "heading": "Våre Kjerne­tjenester",
+    "subheading": "Pålitelig vedlikehold, brannsikring og intelligente bygningsløsninger du kan stole på",
+    "section": {
+      "point": "Hva vi gjør"
+    },
+    "learnMore": "Lær mer"
+  },
+  "about": {
+    "heading": "Ingeniørstyrke.",
+    "subheading": "Inspirerer tillit.",
+    "des": "HBC Group leverer ekspertise innen industrielt vedlikehold, maskinservice og fabrikkflytting i USA og Europa. Vi kombinerer europeisk ingeniørkvalitet med lokal støtte for å tilby 24/7 løsninger som holder driften i gang pålitelig.",
+    "subdes": "Mer enn en tjeneste — vi er din partner for å beskytte investeringer, sikre trygghet og drive fremgang.",
+    "client": "Fornøyde Kunder",
+    "project": "Fullførte Prosjekter"
+  },
+  "value": {
+    "title": "Hvorfor Velge HBC Group",
+    "des": "Vårt fundament er bygget på ekspertise, tillit og innovasjon — her er verdiene som definerer oss.",
+    "fearure": {
+      "experience": {
+        "title": "Dokumentert Erfaring",
+        "des": "Over et tiår med praktisk erfaring innen industrielt vedlikehold, flytting og smart teknologi — leverer presisjon og pålitelighet i hele Europa og USA."
+      },
+      "partnership": {
+        "title": "Tillitsfullt Partnerskap",
+        "des": "Anerkjent som en pålitelig partner for både globale selskaper og enkeltpersoner — bygget på langsiktige relasjoner, åpenhet og løfter som holdes."
+      },
+      "innovation": {
+        "title": "Drevet av Innovasjon",
+        "des": "Vi kombinerer ingeniørmessig ekspertise med de nyeste smarte løsningene og grønn teknologi for å sikre effektivitet og bærekraft for våre kunder."
+      },
+      "reliability": {
+        "title": "Pålitelighet fra Start til Slutt",
+        "des": "Fra diagnostikk og forebyggende vedlikehold til komplette flyttinger og smarthusløsninger — vi tilbyr 24/7 støtte som sikrer kontinuitet og trygghet."
+      },
+      "flexibility": {
+        "title": "Skreddersydd Fleksibilitet",
+        "des": "Tilpassede strategier for hver kunde — fra store industrielle operasjoner til individuelle smarthus — for å møte unike behov med presisjon."
+      },
+      "commitment": {
+        "title": "Ufravikelig Forpliktelse",
+        "des": "Dedikert til hvert prosjekt med integritet, ansvar og kvalitet — vi står ved våre kunder fra start til slutt, uansett utfordring."
+      }
+    }
+  },
+  "solution": {
+    "industrial": {
+      "label": "Industriell",
+      "title": "Fra Oppetid til Oppgraderinger — Vi Har Deg Dekket",
+      "des": "Presis vedlikehold, integrert sikkerhet og komplekse flyttinger designet for maksimal oppetid."
+    },
+    "Fire": {
+      "label": "Brannsikring",
+      "title": "Avansert Brannsikring",
+      "des": "Utviklede belegg og behandlinger som beskytter konstruksjoner mot ekstreme brannforhold."
+    },
+    "intelligent": {
+      "title": "Smartere Hjem, Grønnere Liv",
+      "label": "Intelligent Bygning",
+      "des": "Komfort, sikkerhet og energiintelligens — vakkert forbundet."
+    },
+    "it": {
+      "label": "IT-løsninger",
+      "title": "Lever Raskere, Skaler Smartere — Sikret fra Design",
+      "des": "Vi designer og bygger moderne digitale produkter fra start til slutt: programvare, sky, AI-automatisering og sikre integrasjoner."
+    }
+  }
+},
+"footer": {
+  "writeUs": "Skriv til oss",
+  "callUs": "Ring oss",
+  "subscribe": "Abonner på vårt nyhetsbrev",
+  "send": "Send"
+},
+"industrial": {
+  "hero": {
+    "badge": "HBC Industriell",
+    "title": "Vår tjeneste,",
+    "highlight": "Din trygghet",
+    "description": "HBC Group er din raske, pålitelige og kvalitetsfokuserte partner for industrielt vedlikehold og maskinservice.\n\nVi hjelper deg med dine mest krevende utfordringer.\n\nFra forebyggende eller gjentakende vedlikehold og diagnostikk til rask feilsøking eller komplekse flyttinger av produksjonslinjer.",
+    "chips": {
+      "hydraulics": "Hydraulikk",
+      "electrical": "Elektrisk",
+      "mechanical": "Mekanisk",
+      "programming": "Programmering",
+      "fireProtection": "Brannsikring"
+    }
+  },
+  "slides": {
+    "common": {
+      "heading": "Industrielt vedlikehold",
+      "tag": "Vedlikehold"
+    },
+    "hydraulics": {
+      "title": "Hydraulikk",
+      "text": "Diagnostikk, pumpe-/ventilservice, slanger, tetning, filtrering og forurensningskontroll. Vi gjenoppretter kraft og bevegelse med mikronpresisjon.",
+      "bullets": ["Kraftenheter", "Manifolder", "Sylindere", "Lading av akkumulator", "Spyling"]
+    },
+    "electrical": {
+      "title": "Elektrisk",
+      "text": "Kontrollpaneler, drivsystemer, PLC-er, sensorer, strømfordeling. Vi leverer rene installasjoner og oppgraderinger med fokus på sikkerhet og tydelighet.",
+      "bullets": ["PLC/Drive-justering", "Koblingsutstyr", "SCADA I/O", "Termiske skanninger", "Koder og etiketter"]
+    },
+    "mechanical": {
+      "title": "Mekanisk",
+      "text": "Girkasser, transportbånd, lagre, akseljustering, stålkonstruksjoner — bygget for å tåle industriell bruk.",
+      "bullets": ["Presisjonsjustering", "Transportbånd", "Tannhjul og kjede", "Lasermetrologi", "Produksjon"]
+    },
+    "welding": {
+      "title": "Sveising",
+      "text": "Sertifisert sveising og produksjon på stedet for produksjonslinjer og tunge maskiner. Sterkt, rent og inspisert.",
+      "bullets": ["Stål og rustfritt stål", "Rørsveising", "Reparasjon og bygging", "Fester", "Klar for NDT"]
+    },
+    "programming": {
+      "title": "Programmering",
+      "text": "Igangkjøring og optimalisering av PLC/HMI-kode. Vi får maskiner til å tenke smartere og operatører til å jobbe raskere.",
+      "bullets": ["Siemens/TIA", "Rockwell", "Sikkerhets-PLC", "HMI/UX", "Datainnsamling"]
+    }
+  },
+  "capabilities": {
+    "items": [
+      { "title": "Forebyggende og Prediktivt", "desc": "Programmer som gjør uforutsett nedetid om til planlagt optimalisering." },
+      { "title": "Rask Respons", "desc": "Ingeniører og teknikere på vakt med deler, verktøy og sjekklister." },
+      { "title": "Ettermontering og Oppgraderinger", "desc": "Få gamle anlegg til å yte som nye — mekanisk, elektrisk og styringsmessig." },
+      { "title": "Datagjennomsiktighet", "desc": "Fra sensor til dashbord: vi løfter frem signalene som betyr mest." },
+      { "title": "Sikkerhet Først", "desc": "Sertifiserte prosedyrer og verktøy for sikkerhet på anlegg og for ansatte." },
+      { "title": "Dokumentasjon", "desc": "Som-bygget-tegninger, kabling og navnestandarder — klarhet for fremtiden." }
+    ]
+  },
+  "security": {
+    "heading": "Sikkerhetssystemer",
+    "tag": "Sikkerhet",
+    "fire": {
+      "title": "Brannsikring",
+      "brief": "Design, installasjon og vedlikehold av robuste brannsystemer for industrielle risikokategorier med sporbarhet og samsvar.",
+      "bullets": ["Risikoberegning", "Slukkesystemer", "Rutinemessig testing", "Samsvarsrapporter"],
+      "sub": {
+        "wood": { "label": "Trebeskyttelse", "desc": "Behandlinger og belegg for holdbarhet." },
+        "film": { "label": "Filmbeskyttelse", "desc": "Beskyttende filmer med høy ytelse." },
+        "facades": { "label": "Fasader", "desc": "Utvendige systemer for styrke og levetid." }
+      }
+    },
+    "cameras": {
+      "title": "Kameraer og Analyse",
+      "brief": "Fra kameraer for tøffe miljøer til smart deteksjon. Få visuell kontroll på fabrikker, områder og lagre.",
+      "bullets": ["Termisk og PTZ", "AI-analyse", "NVR/Lagring", "Fjernaksess"]
+    },
+    "servers": {
+      "title": "Server og Lagring",
+      "brief": "Forsterket, skalerbar infrastruktur for sikkerhets- og industridata — designet for skriveintensive belastninger.",
+      "bullets": ["RAID-strategier", "Redundant strøm", "Krypterte sikkerhetskopier", "Overvåking"]
+    },
+    "entry": {
+      "title": "Adgangs- og Alarmsystemer",
+      "brief": "Løsninger for kort, PIN, biometrisk og kjøretøysadgang. Samlede alarmer med klare prosedyrer og opptrapping.",
+      "bullets": ["Adgangskontroll", "Perimeter", "Intercom", "24/7 varsling"],
+      "extraLabel": "Alarmsystemer"
+    }
+  },
+  "other": {
+    "heading": "Andre Tjenester",
+    "items": [
+      { "title": "Maskiner demontert, flyttet, gjenoppbygd", "desc": "Vi flytter produksjonsutstyr trygt: merking, demontering, transport, justering, oppstart." },
+      { "title": "Nybygg", "desc": "Fra installasjoner til endelig igangkjøring — MEP-ruting, kabelsystemer, styring og sikkerhetssystemer." }
+    ]
+  },
+  "process": {
+    "howHeading": "Hvordan vi leverer",
+    "assuranceHeading": "Kvalitetssikring",
+    "steps": [
+      { "title": "Vurdere", "desc": "Stedsstudie, risikovurdering og ytelsesmål." },
+      { "title": "Planlegge", "desc": "Omfang, faser, sikkerhet og reservedeler." },
+      { "title": "Utføre", "desc": "Kvalifiserte team, kvalitetskontroller og rapportering." },
+      { "title": "Optimalisere", "desc": "Finjustering, opplæring, dokumentasjon og støtte." }
+    ],
+    "badges": ["24/7 Støtte", "Sertifiserte Teknikere", "Sikkerhet Først", "Garanti", "Som-bygget Dokumentasjon"]
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "q1": "Kan dere samarbeide med våre interne ingeniører?",
+    "a1": "Ja. Vi samarbeider ofte med fabrikkteam og tilpasser oss deres vedlikeholdsrutiner og standarder.",
+    "q2": "Leverer dere som-bygget dokumentasjon?",
+    "a2": "Alltid. Vi leverer koblingsskjemaer, navnestandarder, PLC/HMI-sikkerhetskopier, testrapporter og bilder.",
+    "q3": "Hvordan sikrer dere sikkerheten?",
+    "a3": "Tillatelser, isolasjon/LOTO, verktøykontroller og opplært personell. Sikkerhet planlegges fra dag én.",
+    "q4": "Hvordan kan jeg avtale en konsultasjon?",
+    "a4Rich": "Du kan enkelt avtale et møte via vår side <link>Bedriftsmøteforespørsel</link>."
+  },
+  "cta": {
+    "title": "La oss holde fabrikken din i gang.",
+    "description": "Bestill tid med vårt industrielle team for å finne den raskeste veien til oppetid, sikkerhet og ytelse."
+  }
+},
+"fire": {
+  "hero": {
+    "badge": "HBC Brannsikring",
+    "title": "Brannsikring",
+    "highlight": "Som Beskytter og Varer.",
+    "description": "Fra trebeskyttelse til arkitektoniske fasader og systemintegrasjon — vi kombinerer sikkerhet, estetikk og samsvar.",
+    "chips": {
+      "wood": "Trebeskyttelse",
+      "film": "Filmbeskyttelse",
+      "facades": "Fasader",
+      "systemDesign": "Systemdesign",
+      "maintenance": "Vedlikehold"
+    },
+    "cta": "Kontakt oss"
+  },
+  "core": {
+    "heading": "Kjerne­tjenester innen Brannsikring",
+    "wood": {
+      "title": "Trebeskyttelse",
+      "desc": "Spesielle belegg og behandlinger som reduserer brennbarheten til bærende treelementer, øker brannmotstanden og forlenger levetiden.",
+      "bullets": [
+        "Brannhemmende belegg",
+        "Impregnering mot flammer",
+        "Samsvar med NFPA og EN"
+      ]
+    },
+    "film": {
+      "title": "Filmbeskyttelse",
+      "desc": "Gjennomsiktige filmer for vinduer, vegger og dører som reduserer flamme­spredning og varmeoverføring samtidig som estetikken beholdes.",
+      "bullets": [
+        "Varme­reflekterende film",
+        "Røykbarrierefilm",
+        "Tilpassede formater"
+      ]
+    },
+    "facade": {
+      "title": "Fasadesystemer",
+      "desc": "Arkitektoniske, brannsikre fasadematerialer og design som hindrer flamme- og røykspredning over bygningers utside.",
+      "bullets": [
+        "Ildfaste paneler",
+        "Kompartimenteringsdesign",
+        "Myndighetsgodkjent samsvar"
+      ]
+    }
+  },
+  "systems": {
+    "heading": "Systemintegrasjon og Livssyklus",
+    "suppression": {
+      "name": "Slokke- og Slukkesystemer",
+      "desc": "Utvikling og installasjon av automatiske sprinkler-, gass- eller skumbaserte slokkesystemer tilpasset risiko og bruksområde."
+    },
+    "alarm": {
+      "name": "Alarm og Deteksjon",
+      "desc": "Røyk-, varme- og flammesensorer, både kablet og trådløst, integrert med kontrollpaneler og fjernvarsling."
+    },
+    "maintenance": {
+      "name": "Vedlikehold og Revisjoner",
+      "desc": "Regelmessig testing, inspeksjon og sertifisering av brannsystemer for å sikre samsvar og beredskap."
+    }
+  },
+  "why": {
+    "heading": "Hvorfor Velge HBC Brannsikring",
+    "items": [
+      {
+        "title": "Ekspertise på Koder og Standarder",
+        "desc": "Vi navigerer i NFPA-, EN- og UL-standarder slik at systemet ditt består inspeksjonen, ikke bare installasjonen."
+      },
+      {
+        "title": "Helhetlig Sikkerhetsdesign",
+        "desc": "Vi beskytter struktur, innhold, rømningsveier og systemer — ikke bare brannslokkingen."
+      },
+      {
+        "title": "Prediktiv Tilstands­overvåking",
+        "desc": "Sensorer oppdager tidlige feil (lekkasjer, trykkfall, manipulering) før de fører til svikt."
+      },
+      {
+        "title": "Integrasjon med Nødrespons",
+        "desc": "Vi kobler systemene til paneler, sikkerhet og bygningsdrift for rask respons når hvert sekund teller."
+      }
+    ]
+  },
+  "cases": {
+    "heading": "Prosjekthøydepunkter",
+    "items": [
+      {
+        "name": "Boligkompleks i Treverk",
+        "desc": "Påførte brannhemmende belegg på alle bærende treelementer. Bestod myndighets­inspeksjonen med god margin."
+      },
+      {
+        "name": "Kommersiell Fasaderenovering",
+        "desc": "Erstattet eldre kledning med et brannsikkert fasadesystem, samtidig som den arkitektoniske estetikken ble bevart."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte Stilte Spørsmål",
+    "q1": "Påvirker brannhemmende belegg treets utseende?",
+    "a1": "Moderne belegg er gjennomsiktige eller svakt tonet og endrer lite på strukturen. Vi tester alltid før påføring på stedet.",
+    "q2": "Hvor ofte må systemene vedlikeholdes?",
+    "a2": "Vanlige inspeksjonsintervaller er fra månedlig til årlig avhengig av systemtype. Vi tilbyr full loggføring og automatiske påminnelser.",
+    "q3": "Kan brannsystemer integreres med bygningsautomatisering?",
+    "a3": "Ja. Vi utvikler grensesnitt slik at slokke-, alarm- og sensorsystemer kan kommunisere med ditt smarthus eller BMS."
+  },
+  "cta": {
+    "title": "Øk sikkerheten. Beskytt det som betyr mest.",
+    "description": "Kontakt HBC for å designe eller oppgradere dine brannbeskyttelsessystemer med innebygd intelligens, samsvar og holdbarhet."
+  }
+},
+"smart": {
+  "hero": {
+    "badge": "HBC Intelligent Bygg",
+    "title": "Smartere hjem.",
+    "highlight": "Grønnere liv.",
+    "description": "Koble sammen komfort, sikkerhet og energiintelligens. Kontroller, overvåk og optimaliser rommet ditt — pålitelig og enkelt.",
+    "chips": {
+      "automation": "Automatisering",
+      "pv": "PV og Energi",
+      "security": "Sikkerhet",
+      "monitoring": "Overvåking"
+    },
+    "cta": "Kontakt oss"
+  },
+  "grid": {
+    "heading": "Smart Home — HBC-stilen",
+    "items": [
+      {
+        "title": "Automatisering",
+        "desc": "Scenarier, tidsplaner, stemmestyring — ditt hjem, perfekt samordnet."
+      },
+      {
+        "title": "PV og Energi",
+        "desc": "Overvåk forbruk, lagre effektivt, reduser topper og spar energi."
+      },
+      {
+        "title": "Sikkerhet",
+        "desc": "Alarmer, adgang, kameraer og serversystemer — integrert."
+      },
+      {
+        "title": "Overvåking",
+        "desc": "Sanntidsstatus for enheter, rom og undersystemer."
+      },
+      {
+        "title": "Komfort",
+        "desc": "Belysning, klima og solskjerming som tilpasser seg deg."
+      },
+      {
+        "title": "Besparelser",
+        "desc": "Datadrevet optimalisering som reduserer sløsing, ikke komfort."
+      }
+    ]
+  },
+  "tags": {
+    "0": "Hydraulikk",
+    "1": "Elektrisk",
+    "2": "Mekanisk",
+    "3": "Programmering",
+    "4": "PV og Energi",
+    "5": "Sikkerhet",
+    "6": "Overvåking",
+    "7": "Tilbehør",
+    "8": "Landbruk",
+    "9": "Betong",
+    "10": "Bygg",
+    "11": "Energi",
+    "12": "Jord"
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "q1": "Trenger jeg en eksisterende smart-hub?",
+    "a1": "Ikke nødvendigvis. Vi kan integrere med ditt nåværende økosystem eller installere en robust, sikker HBC-løsning — den som gir best pålitelighet med minst mulig friksjon.",
+    "q2": "Kan jeg starte i liten skala og utvide senere?",
+    "a2": "Ja. Start med én prioritet (for eksempel energiovervåking). Vi designer modulære systemer slik at du kan utvide etter hvert som behovene utvikler seg.",
+    "q3": "Hvordan beskytter dere dataene mine?",
+    "a3": "Vi designer med personvern som standard, sikre servere og minst mulig tilgang. Dine data forblir dine, kryptert både under overføring og lagring."
+  },
+  "cta": {
+    "title": "La oss gjøre bygningen din intelligent — og effektiv.",
+    "description": "Vi finner den beste veien for komfort, sikkerhet og besparelser, med fokus på pålitelighet.",
+    "secondaryLabel": "Kontakt salg"
+  }
+},
+"form": {
+  "title": "Start et prosjekt",
+  "progress": "Trinn {cur} av {total}",
+  "steps": {
+    "client": {
+      "title": "Kundeinformasjon",
+      "subtitle": "Fortell oss hvem du er, og hvordan vi kan nå deg."
+    },
+    "overview": {
+      "title": "Prosjektoversikt",
+      "subtitle": "Hva bygger vi, og hvorfor nå?"
+    },
+    "scope": {
+      "title": "Omfang og tidsplan",
+      "subtitle": "Funksjoner, brukere og tidslinje."
+    },
+    "budget": {
+      "title": "Budsjett og suksess",
+      "subtitle": "Investeringsnivå og målbare resultater."
+    },
+    "security": {
+      "title": "Integrasjoner og sikkerhet",
+      "subtitle": "Hvordan vi kobler til og beskytter systemet."
+    },
+    "review": {
+      "title": "Gjennomgå og send inn",
+      "subtitle": "Bekreft alle detaljer før du sender inn."
+    }
+  },
+  "fields": {
+    "fullName": {
+      "label": "Fullt navn",
+      "ph": "Jane Doe"
+    },
+    "company": {
+      "label": "Firma",
+      "ph": "Acme GmbH"
+    },
+    "email": {
+      "label": "Arbeids-e-post",
+      "ph": "jane@acme.com"
+    },
+    "phone": {
+      "label": "Telefon",
+      "ph": "+47 4XX XX XXX"
+    },
+    "country": {
+      "label": "Land",
+      "ph": "Velg land"
+    },
+    "projectType": {
+      "label": "Prosjekttype",
+      "ph": "Velg type"
+    },
+    "expectedUsers": {
+      "label": "Forventede brukere (månedlig)",
+      "ph": "f.eks. 5 000"
+    },
+    "brief": {
+      "label": "Prosjektsammendrag",
+      "ph": "Hva bygger vi, og hvorfor nå?"
+    },
+    "goals": {
+      "label": "Viktigste mål",
+      "ph": "f.eks. Redusere onboarding-tid med 30 %, lansere MVP på 8 uker…"
+    },
+    "features": {
+      "label": "Ønskede funksjoner"
+    },
+    "deadline": {
+      "label": "Måldato"
+    },
+    "timelineFlex": {
+      "label": "Fleksibilitet i tidsplan"
+    },
+    "budget": {
+      "label": "Budsjettområde",
+      "ph": "Velg budsjett"
+    },
+    "procurement": {
+      "label": "Type samarbeid"
+    },
+    "success": {
+      "label": "Suksesskriterier",
+      "ph": "KPI-er, SLA-er, ytelsesmål…"
+    },
+    "risks": {
+      "label": "Risikoer eller begrensninger (valgfritt)",
+      "ph": "Avhengigheter, krav til samsvar, eldre systemer…"
+    },
+    "integrations": {
+      "label": "Nødvendige integrasjoner"
+    },
+    "auth": {
+      "label": "Autentisering"
+    },
+    "residency": {
+      "label": "Datalagring"
+    },
+    "compliance": {
+      "label": "Samsvarskrav"
+    }
+  },
+  "buttons": {
+    "back": "Tilbake",
+    "next": "Neste",
+    "submit": "Send forespørsel"
+  },
+  "consent": "Jeg godtar behandlingen av mine data for denne forespørselen.",
+  "footerNote": "Sikkert skjema • GDPR-kompatibelt • Utkast lagret lokalt",
+  "alerts": {
+    "submitted": "✅ Takk! Prosjektforespørselen din er sendt."
+  },
+  "summary": {
+    "fullName": "Fullt navn",
+    "company": "Firma",
+    "email": "E-post",
+    "phone": "Telefon",
+    "country": "Land",
+    "projectType": "Prosjekttype",
+    "summary": "Sammendrag",
+    "goals": "Mål",
+    "features": "Funksjoner",
+    "expectedUsers": "Forventede brukere",
+    "deadline": "Frist",
+    "timeline": "Tidslinje",
+    "budget": "Budsjett",
+    "engagement": "Samarbeid",
+    "success": "Suksess",
+    "risks": "Risikoer",
+    "integrations": "Integrasjoner",
+    "auth": "Autentisering",
+    "residency": "Datalagring",
+    "compliance": "Samsvar"
+  },
+  "lists": {
+    "countries": {
+      "Austria": "Østerrike",
+      "Belgium": "Belgia",
+      "Croatia": "Kroatia",
+      "Czechia": "Tsjekkia",
+      "Denmark": "Danmark",
+      "Egypt": "Egypt",
+      "France": "Frankrike",
+      "Germany": "Tyskland",
+      "Italy": "Italia",
+      "Netherlands": "Nederland",
+      "Poland": "Polen",
+      "Portugal": "Portugal",
+      "Qatar": "Qatar",
+      "Saudi Arabia": "Saudi-Arabia",
+      "Spain": "Spania",
+      "Sweden": "Sverige",
+      "Switzerland": "Sveits",
+      "Turkey": "Tyrkia",
+      "UAE": "De forente arabiske emirater",
+      "UK": "Storbritannia",
+      "USA": "USA"
+    },
+    "projectTypes": {
+      "Website / Landing": "Nettsted / Landingsside",
+      "SaaS / Platform": "SaaS / Plattform",
+      "E-commerce": "E-handel",
+      "Mobile App": "Mobilapp",
+      "AI / Automation": "AI / Automatisering",
+      "Web3 / Payments": "Web3 / Betalinger",
+      "Data / BI": "Data / BI",
+      "Other": "Annet"
+    },
+    "features": {
+      "User Auth / SSO": "Brukerautentisering / SSO",
+      "Admin Panel": "Adminpanel",
+      "E-commerce / Payments": "E-handel / Betalinger",
+      "Subscriptions / Billing": "Abonnement / Fakturering",
+      "Realtime Chat / Notifications": "Sanntidschat / Varsler",
+      "Analytics Dashboard": "Analyseoversikt",
+      "Mobile App": "Mobilapp",
+      "AI Assistant / RAG": "AI-assistent / RAG",
+      "Web3 Wallet / Tokens": "Web3-lommebok / Tokens",
+      "3rd-party Integrations": "Tredjepartsintegrasjoner"
+    },
+    "integrations": {
+      "Salesforce": "Salesforce",
+      "HubSpot": "HubSpot",
+      "SAP": "SAP",
+      "Stripe": "Stripe",
+      "PayPal": "PayPal",
+      "Plaid": "Plaid",
+      "Auth0": "Auth0",
+      "Okta": "Okta",
+      "AWS": "AWS",
+      "GCP": "GCP",
+      "Azure": "Azure"
+    },
+    "compliance": {
+      "GDPR": "GDPR",
+      "ISO 27001": "ISO 27001",
+      "SOC 2": "SOC 2",
+      "HIPAA": "HIPAA",
+      "PCI DSS": "PCI DSS"
+    },
+    "timelineFlex": {
+      "strict": "Streng",
+      "target": "Mål",
+      "open": "Åpen"
+    },
+    "budget": {
+      "<10k": "<10k",
+      "10–30k": "10–30k",
+      "30–80k": "30–80k",
+      "80–200k": "80–200k",
+      ">200k": ">200k"
+    },
+    "procurement": {
+      "Startup": "Oppstartsbedrift",
+      "B2B": "B2B",
+      "Enterprise": "Enterprise",
+      "B2G": "B2G"
+    },
+    "auth": {
+      "None": "Ingen",
+      "Email/Password": "E-post/Passord",
+      "SSO/SAML": "SSO/SAML",
+      "OAuth": "OAuth"
+    },
+    "residency": {
+      "EU": "EU",
+      "US": "USA",
+      "MENA": "MENA",
+      "Any": "Valgfritt"
+    }
+  }
+},
+"it": {
+  "hero": {
+    "badge": "HBC IT-løsninger",
+    "title": "Bygg, Skaler og Sikre",
+    "highlight": "Ditt Digitale Produkt",
+    "description": "Vi designer og leverer programvare med høy ytelse, Web3-betalinger og skytjenesteinfrastruktur — utviklet for oppetid, sikkerhet og vekst.\n\nFra SaaS-plattformer og e-handel til AI-automatisering og blockchain tilbyr vi komplette end-to-end-løsninger med målbare resultater.",
+    "chips": [
+      "Programvare",
+      "APIs/GraphQL",
+      "E-handel",
+      "UI/UX",
+      "Cloud/DevOps",
+      "CI/CD",
+      "Observability",
+      "Sikkerhet",
+      "SSO/IAM",
+      "AI/Automatisering",
+      "Data & Analyse",
+      "Web3"
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "q1": "Hvor raskt kan teamet deres starte et prosjekt?",
+    "a1": "Vårt team svarer vanligvis innen én arbeidsdag. Et oppstartsmøte kan planlegges innen 48–72 timer for å definere omfang, prioriteringer og forventede milepæler. Når alt er avklart, starter onboarding og oppstart umiddelbart.",
+    "q2": "Leverer dere komplett frontend- og backend-utvikling?",
+    "a2": "Ja. Vi leverer fullstack-løsninger som dekker frontend, backend og infrastruktur. Våre team er spesialiserte på moderne web-rammeverk, skalerbare API-er, databaser og CI/CD-pipelines — for å sikre jevn kvalitet gjennom hele produktets livssyklus.",
+    "q3": "Kan dere integrere ny teknologi som AI eller Web3 i eksisterende plattformer?",
+    "a3": "Absolutt. Vi designer sikre og standardkompatible integrasjoner som utvider dine eksisterende systemer med AI-automatisering, datainnsikt eller blockchain-funksjonalitet. Hver integrasjon inkluderer dokumentasjon, testing og rollback-strategier for stabilitet.",
+    "q4": "Hvordan håndterer dere prosjektkommunikasjon og fremdrift?",
+    "a4": "Hver kunde får en dedikert prosjektleder og tilgang til vårt samarbeidsrom. Vi leverer transparente ukentlige oppdateringer, milepælvurderinger og sanntidsdashbord for fremdrift, risikoer og leveranser.",
+    "q5": "Hvilke bransjer jobber dere med?",
+    "a5": "Vi jobber med kunder innen finans, industri, e-handel, utdanning og teknologi. Vår fleksible arkitekturtilnærming gjør at vi raskt kan tilpasse oss alle regulerte eller datasensitive miljøer."
+  },
+  "pinned": {
+    "title": "IT-tjenester",
+    "software": {
+      "tag": "Tjenester",
+      "title": "Programvareutvikling",
+      "text": "Vi utvikler digitale produkter fra start til slutt — fra idé til global lansering. Teamet vårt bygger skalerbare, sikre og høyytende applikasjoner for web, mobil og desktop ved hjelp av moderne teknologi og prinsipper for ren arkitektur. Hver løsning er modulær, vedlikeholdbar og klar for fremtidige integrasjoner.",
+      "bullets": [
+        "Tilpassede bedriftsløsninger",
+        "Tverrplattform mobilapper",
+        "Webapplikasjoner og portaler",
+        "Utvikling av API-er og SDK-er",
+        "Mikrotjenester og hendelsesdrevet arkitektur",
+        "DevSecOps-integrasjon"
+      ]
+    },
+    "cloud": {
+      "tag": "Tjenester",
+      "title": "Cloud & DevOps",
+      "text": "Vi designer, distribuerer og vedlikeholder skytjenesteinfrastruktur bygget for høy tilgjengelighet, robusthet og samsvar. Vår DevOps-tilnærming sikrer jevne leveringspipelines, kontinuerlig overvåking og kostnadseffektiv skalering på plattformer som AWS, Google Cloud og Microsoft Azure.",
+      "bullets": [
+        "Infrastructure as Code (IaC)",
+        "Kubernetes-orchestrering",
+        "Multi-cloud-arkitektur (AWS, GCP, Azure)",
+        "CI/CD-automatisering",
+        "Overvåking, logging og varsling",
+        "Utrullinger uten nedetid"
+      ]
+    },
+    "ai": {
+      "tag": "Tjenester",
+      "title": "AI & Automatisering",
+      "text": "Vi forvandler data til intelligent handling. Fra chatboter til prediktiv analyse og automatiserte arbeidsflyter hjelper våre AI-løsninger bedrifter med å ta smartere beslutninger, redusere menneskelige feil og forbedre kundeopplevelsen.",
+      "bullets": [
+        "Konversasjons-AI & chatboter",
+        "Prediktiv analyse & prognoser",
+        "Automatisering av forretningsprosesser",
+        "Distribusjon av tilpassede ML-modeller",
+        "AI-datapipelines & ETL",
+        "LLM-integrasjon & RAG-systemer"
+      ]
+    },
+    "web3": {
+      "tag": "Tjenester",
+      "title": "Blockchain & Web3",
+      "text": "Vi bygger sikre, kompatible og skalerbare desentraliserte systemer på ledende blokkjeder — inkludert Ethereum, BNB Chain, Polygon og Avalanche. Vår Web3-ekspertise dekker tokens, smartkontrakter og betalingsinfrastruktur som kombinerer blockchain-innovasjon med praktisk nytte.",
+      "bullets": [
+        "Arkitektur & revisjon av smartkontrakter",
+        "Tokenøkosystemer & staking-systemer",
+        "Krysskjede-interoperabilitet",
+        "P2P-betalinger & on-chain-oppgjør",
+        "Utvikling av DeFi & NFT-markedsplasser",
+        "Blockchain-løsninger klare for samsvar"
+      ]
+    },
+    "security": {
+      "tag": "Tjenester",
+      "title": "Sikkerhet & Integrasjon",
+      "text": "Sikkerhet er innebygd i alle trinn — fra applikasjonsdesign til drift. Vi implementerer avansert identitetsstyring, datakryptering og samsvarsrammeverk for å beskytte brukere og infrastruktur, samtidig som vi integrerer systemene dine sømløst.",
+      "bullets": [
+        "Identitets- og tilgangsstyring (IAM/SSO)",
+        "Penetrasjonstesting & sårbarhetsanalyser",
+        "Zero-Trust-arkitektur",
+        "Regulatorisk samsvar (GDPR, ISO, SOC 2)",
+        "Sikker API- & systemintegrasjon",
+        "Kontinuerlig sikkerhetsovervåking"
+      ]
+    }
+  },
+  "capabilities": {
+    "api": {
+      "title": "API-first Leveranse",
+      "desc": "Rene GraphQL/REST-kontrakter, SDK-er og dokumentasjon for partnere."
+    },
+    "devops": {
+      "title": "DevOps som Standard",
+      "desc": "CI/CD, overvåking, logger/metrics/traces fra dag én."
+    },
+    "security": {
+      "title": "Sikkerhet i Fokus",
+      "desc": "SSO/IAM, håndtering av hemmeligheter, avhengighetskontroll, revisjoner."
+    },
+    "performance": {
+      "title": "Ytelse",
+      "desc": "Edge-caching, databaseoptimalisering og UX optimalisert for Lighthouse."
+    },
+    "scalability": {
+      "title": "Skalerbarhet",
+      "desc": "Hendelsesdrevne mikrotjenester og meldingskøer der det er nødvendig."
+    },
+    "docs": {
+      "title": "Dokumentasjon",
+      "desc": "Playbooks, runbooks, ADR-er og overføringsguider."
+    }
+  },
+  "process": {
+    "title": "Hvordan Vi Leverer",
+    "assurance": "Kvalitetssikring",
+    "steps": {
+      "discover": {
+        "title": "Oppdage",
+        "desc": "Vi starter med workshops, suksessmålinger og risikovurderinger. Hvert prosjekt begynner med en dyp forståelse av dine forretningsmål, tekniske landskap og samsvarskrav."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Våre arkitekter og designere oversetter målene til skalerbare arkitekturer, UX-flyter og tekniske proof-of-concepts. Vi fokuserer på ytelse, sikkerhet og brukervennlighet fra dag én."
+      },
+      "build": {
+        "title": "Utvikle",
+        "desc": "Vi jobber i agile sprinter med kontinuerlig integrasjon, testautomatisering og observabilitet. Hver iterasjon leverer målbare resultater og produksjonsklare komponenter."
+      },
+      "deploy": {
+        "title": "Distribuere",
+        "desc": "Blue/green- og canary-strategier sikrer trygge utrullinger uten nedetid. Hver distribusjon inkluderer rollback-politikk, overvåkingsdashbord og dokumentasjon."
+      },
+      "scale": {
+        "title": "Skalere & Optimalisere",
+        "desc": "Etter lansering forbedrer vi ytelse, kostnader og pålitelighet. Proaktiv overvåking, hendelseshåndtering og SLA-overholdelse sikrer varig operasjonell kvalitet."
+      }
+    },
+    "badges": [
+      "ISO 27001 / GDPR-samsvar",
+      "99,9% oppetid SLA",
+      "Security-First-arkitektur",
+      "Global 24/7-support",
+      "Kontinuerlig levering & overvåking",
+      "Transparent rapportering",
+      "Dedikert kontoadministrasjon",
+      "Full dokumentasjon & kunnskapsoverføring"
+    ]
+  }
+},
+"meeting": {
+  "badge": "La oss snakke sammen",
+  "title": "Bestill et møte",
+  "intro": "Snakk med en ingeniør for å finne den beste veien mot industriell driftssikkerhet, smart livsstil og sikkerhet. Vi tilpasser samtalen til dine mål.",
+  "bullets": [
+    "Rask og uforpliktende samtale",
+    "Klare alternativer for ditt behov",
+    "Veiledning om tidslinje og avkastning",
+    "Ekspertise innen sikkerhet, brann og vedlikehold"
+  ],
+  "chips": [
+    "24/7 Support",
+    "EU & USA",
+    "Industriell & Privat"
+  ],
+  "form": {
+    "fullName": "Fullt navn",
+    "email": "Forretnings-e-post",
+    "company": "Firma",
+    "phone": "Telefonnummer",
+    "topic": "Møtetema",
+    "topicOptions": [
+      "Industrielt vedlikehold",
+      "Brann- / sikkerhetssystemer",
+      "Smart hjem / bygg",
+      "Grønne produkter",
+      "Annet"
+    ],
+    "size": "Bedriftsstørrelse",
+    "sizeOptions": [
+      "1–10",
+      "11–50",
+      "51–200",
+      "201–1000",
+      "1000+"
+    ],
+    "date": "Foretrukket dato",
+    "time": "Foretrukket tidspunkt",
+    "message": "Hva ønsker du å oppnå?",
+    "selectPlaceholder": "Velg…",
+    "consentHtml": "Jeg godtar <link>personvernerklæringen</link> og gir HBC Group tillatelse til å kontakte meg angående forespørselen min.",
+    "submit": "Be om møte",
+    "sending": "Sender…",
+    "ok": "Takk! Vi tar kontakt snart.",
+    "err": "Vennligst sjekk navn og e-post og prøv igjen."
+  },
+  "noteHtml": "Foretrekker du e-post? Skriv til oss på <link>support@hbc-engineering.com</link>.",
+  "cta": {
+    "title": "Ikke klar til å bestille? Få en rask konsultasjon.",
+    "desc": "Del noen detaljer, så anbefaler vi den raskeste veien til resultater.",
+    "button": "Kontakt salg"
+  }
+},
+"contact": {
+  "hero": {
+    "eyebrow": "Kontakt HBC Group",
+    "kicker": "Vi er her for å hjelpe",
+    "title": "Kontakt oss",
+    "description": "Salg • Support • Partnerskap — del noen detaljer, så svarer vi innen én arbeidsdag."
+  },
+  "info": {
+    "address": "Adresse",
+    "hours": "Åpningstider",
+    "hoursWeek": "Man–Tor · 8:00–17:00",
+    "hoursFri": "Fre · 8:00–12:00",
+    "regions": "Regioner",
+    "regionUSA": "USA",
+    "regionEU": "EU",
+    "response": "Responstid",
+    "responseSla": "< 1 arbeidsdag"
+  },
+  "buttons": {
+    "call": "ring {phone}"
+  },
+  "lead": {
+    "title": "Fortell oss om prosjektet ditt",
+    "subtitle": "Velg en tjeneste nedenfor og del noen detaljer. Vi følger opp med neste steg."
+  },
+  "direct": {
+    "title": "Direkte kontakt",
+    "subtitle": "Vil du snakke nå? Kontakt oss når som helst.",
+    "phone": "Telefon",
+    "email": "E-post",
+    "hq": "Hovedkontor"
+  },
+  "why": {
+    "title": "Hvorfor HBC"
+  },
+  "whyPoints": [
+    "Sertifiserte multi-OEM-teknikere",
+    "Rask levering av reservedeler",
+    "Digitale sjekklister og rapporter",
+    "Dekning i EU & USA"
+  ],
+  "map": {
+    "title": "Finn oss",
+    "subtitle": "Besøk hovedkontoret vårt eller planlegg et stedbesøk — vi kommer til deg."
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "items": [
+      {
+        "q": "Kan dere bruke mitt eksisterende utstyr?",
+        "a": "I mange tilfeller, ja. Vi vurderer eksisterende utstyr og integrerer kompatible enheter via KNX, Matter, Zigbee eller broer."
+      },
+      {
+        "q": "Trengs det kabler, eller kan det være trådløst?",
+        "a": "Begge deler er mulig. Nye bygg foretrekker kablet struktur; renoveringer kan bruke sikker og stabil trådløs løsning der det passer."
+      },
+      {
+        "q": "Finnes det en app?",
+        "a": "Ja — veggpanel og mobilapp med fjernstyring, varsler, scener og brukerroller."
+      },
+      {
+        "q": "Hva med personvern?",
+        "a": "Lokal styring der det er mulig, sterk kryptering for fjernadgang og tydelige innstillinger for datalagring."
+      }
+    ]
+  }
+},
+"careers": {
+  "hero": {
+    "badge": "Karriere",
+    "kicker": "Bli med i teamet",
+    "title": "Bygg, tjen og innovér med HBC Group",
+    "subtitle": "Vi vokser innen elektriske, mekaniske og automasjonsroller. Utforsk ledige stillinger og søk på få minutter."
+  },
+  "labels": {
+    "travel": "Reiseaktivitet"
+  },
+  "cta": {
+    "viewDetails": "Se detaljer"
+  },
+  "jobs": {
+    "industrial-electrician": {
+      "title": "Industrielektriker – Tungt maskineri",
+      "location": "USA (nasjonale reiser kan være nødvendig)",
+      "type": "Fulltid",
+      "hours": "50 timer/uke",
+      "travel": "Regionalt/Nasjonalt",
+      "summary": "Elektrisk feilsøking, installasjon/igangkjøring og forebyggende vedlikehold av tungt industrielt maskineri innen gjenvinning, biomasse og produksjon.",
+      "tags": [
+        "Elektrisk",
+        "Felttjeneste",
+        "PLC"
+      ]
+    },
+    "industrial-mechanic": {
+      "title": "Industrimekaniker – Tungt maskineri",
+      "location": "USA (nasjonale reiser kan være nødvendig)",
+      "type": "Fulltid",
+      "hours": "50 timer/uke",
+      "travel": "Regionalt/Nasjonalt",
+      "summary": "Felttjeneste, diagnostikk, reparasjoner og forebyggende vedlikehold av tungt industrielt maskineri (mobilt og stasjonært).",
+      "tags": [
+        "Mekanisk",
+        "Hydraulikk",
+        "Pneumatikk"
+      ]
+    },
+    "industrial-programmer": {
+      "title": "Industriprogrammerer – Tungt maskineri",
+      "location": "USA (nasjonale reiser kan være nødvendig)",
+      "type": "Fulltid",
+      "hours": "50 timer/uke",
+      "travel": "Nasjonalt",
+      "summary": "Programmering, optimalisering og igangkjøring av PLC-baserte kontrollsystemer for komplekse maskiner; feilsøking av programvare/kommunikasjon; støtte på stedet.",
+      "tags": [
+        "PLC",
+        "Igangkjøring",
+        "HMI/SCADA"
+      ]
+    }
+  }
+},
+"translatorBn": {
+  "switchL": "Bytt språk",
+  "langSubTitle": "Velg ditt foretrukne språk.",
+  "notFound": "Ingen språk funnet.",
+  "current": "Nåværende",
+  "placholder": "Skriv for å søke etter språk..."
+},
+"preload": {
+  "subtitle": "Forbereder opplevelsen din…"
+}
+}

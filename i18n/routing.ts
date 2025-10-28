@@ -1,7 +1,8 @@
 // i18n/routing.ts
 import {createNavigation} from 'next-intl/navigation';
 
-export const locales = ['en', 'de'] as const;
+export const locales = ['en', 'de', 'fr', 'it', 'da', 'no', 'nl'] as const;
+
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'en';

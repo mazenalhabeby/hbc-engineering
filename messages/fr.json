@@ -1,0 +1,992 @@
+{
+"hero": {
+  "title": "Bonjour, le monde !"
+},
+"nav": {
+  "changeLanguage": "Changer la langue"
+},
+"navbar": {
+  "company": "Entreprise",
+  "home": "Accueil",
+  "industrial": "Industriel",
+  "fireProtection": "Protection Incendie",
+  "intelligent": "Intelligent",
+  "contact": "Contact",
+  "careers": "Carrières",
+  "scheduleMeeting": "Planifier une réunion",
+  "itSolutions": "Solutions informatiques"
+},
+"home": {
+  "midTitle": "le futur,",
+  "tailTitle": "Service, Sécurité",
+  "service": {
+    "fireProdaction": {
+      "title": "Protection Incendie",
+      "des": "De la préservation du bois aux façades architecturales et à l’intégration des systèmes — nous réunissons sécurité, esthétique et conformité."
+    },
+    "industrial": {
+      "title": "Maintenance et Services Industriels",
+      "dec": "De la maintenance préventive ou récurrente et des diagnostics aux dépannages rapides ou aux relocalisations complexes de lignes d’assemblage."
+    },
+    "intelligent": {
+      "title": "Bâtiment Intelligent",
+      "des": "Alliez confort, sécurité et intelligence énergétique.\nContrôlez, surveillez et optimisez votre espace — de manière fiable et sans effort."
+    },
+    "heading": "Nos Services Principaux",
+    "subheading": "Maintenance fiable, protection incendie et solutions de bâtiment intelligent en qui vous pouvez avoir confiance",
+    "section": {
+      "point": "Ce que nous faisons"
+    },
+    "learnMore": "En savoir plus"
+  },
+  "about": {
+    "heading": "Force d’Ingénierie.",
+    "subheading": "Inspirer la Confiance.",
+    "des": "HBC Group fournit une maintenance industrielle experte, un service de machinerie et des relocalisations d’usine aux États-Unis et en Europe. Nous combinons l’excellence de l’ingénierie européenne avec un soutien local pour offrir des solutions 24/7 fiables et durables.",
+    "subdes": "Plus qu’un service — nous sommes votre partenaire pour protéger vos investissements, assurer votre sécurité et stimuler votre progrès.",
+    "client": "Clients Satisfaits",
+    "project": "Projets Réalisés"
+  },
+  "value": {
+    "title": "Pourquoi Choisir HBC Group",
+    "des": "Notre fondation repose sur l’expertise, la confiance et l’innovation — voici les valeurs qui nous définissent.",
+    "fearure": {
+      "experience": {
+        "title": "Expérience Prouvée",
+        "des": "Plus d’une décennie d’expertise pratique en maintenance industrielle, relocalisation et intégration technologique — assurant précision et fiabilité en Europe et aux États-Unis."
+      },
+      "partnership": {
+        "title": "Partenariat Fiable",
+        "des": "Reconnu comme un partenaire de confiance pour les entreprises mondiales et les particuliers — basé sur la transparence et la fiabilité."
+      },
+      "innovation": {
+        "title": "Axé sur l’Innovation",
+        "des": "Nous allions excellence en ingénierie et technologies vertes pour une efficacité et une durabilité accrues."
+      },
+      "reliability": {
+        "title": "Fiabilité Totale",
+        "des": "De la maintenance préventive aux relocalisations complètes et solutions intelligentes — assistance 24/7 assurant continuité et tranquillité d’esprit."
+      },
+      "flexibility": {
+        "title": "Flexibilité Sur Mesure",
+        "des": "Des stratégies personnalisées pour chaque client — des opérations industrielles à grande échelle aux maisons intelligentes individuelles."
+      },
+      "commitment": {
+        "title": "Engagement Inébranlable",
+        "des": "Dévoués à chaque projet avec intégrité et excellence — nous accompagnons nos clients du début à la fin."
+      }
+    }
+  },
+  "solution": {
+    "industrial": {
+      "label": "Industriel",
+      "title": "De la disponibilité aux améliorations — nous vous couvrons",
+      "des": "Maintenance de précision, sécurité intégrée et relocalisations complexes conçues pour la performance."
+    },
+    "Fire": {
+      "label": "Protection Incendie",
+      "title": "Protection Incendie Avancée",
+      "des": "Revêtements et traitements conçus pour protéger contre des conditions de feu extrêmes."
+    },
+    "intelligent": {
+      "title": "Maisons plus Intelligentes, Vie plus Verte",
+      "label": "Bâtiment Intelligent",
+      "des": "Confort, sécurité et intelligence énergétique — magnifiquement connectés."
+    },
+    "it": {
+      "label": "Solutions IT",
+      "title": "Livrez Plus Vite, Développez Plus Intelligemment — Sécurisé par Conception",
+      "des": "Nous concevons et développons des produits numériques modernes de bout en bout : logiciels, cloud, automatisation IA et intégrations sécurisées."
+    }
+  }
+},
+"footer": {
+  "writeUs": "Écrivez-nous",
+  "callUs": "Appelez-nous",
+  "subscribe": "Abonnez-vous à notre newsletter",
+  "send": "Envoyer"
+},
+"industrial": {
+  "hero": {
+    "badge": "HBC Industriel",
+    "title": "Notre Service,",
+    "highlight": "Votre tranquillité d’esprit",
+    "description": "HBC Group est votre partenaire rapide, fiable et axé sur la qualité pour la maintenance industrielle et le service de machines.\n\nNous vous aidons à relever vos défis les plus exigeants.\n\nDe la maintenance préventive ou récurrente et du diagnostic à la résolution rapide de problèmes ou à la relocalisation complexe de lignes d’assemblage.",
+    "chips": {
+      "hydraulics": "Hydraulique",
+      "electrical": "Électrique",
+      "mechanical": "Mécanique",
+      "programming": "Programmation",
+      "fireProtection": "Protection incendie"
+    }
+  },
+  "slides": {
+    "common": {
+      "heading": "Maintenance industrielle",
+      "tag": "Maintenance"
+    },
+    "hydraulics": {
+      "title": "Hydraulique",
+      "text": "Diagnostics, service de pompe/valve, tuyaux, étanchéité, filtration et contrôle de contamination. Nous restaurons la force et le mouvement avec une précision micrométrique.",
+      "bullets": ["Unités de puissance", "Collecteurs", "Cylindres", "Chargement d'accumulateurs", "Rinçage"]
+    },
+    "electrical": {
+      "title": "Électrique",
+      "text": "Tableaux de commande, variateurs, PLC, capteurs, distribution d’énergie. Installations propres et modernisation avec sécurité et clarté.",
+      "bullets": ["Réglage PLC/variateur", "Équipements de commutation", "SCADA I/O", "Scans thermiques", "Codes et étiquettes"]
+    },
+    "mechanical": {
+      "title": "Mécanique",
+      "text": "Réducteurs, convoyeurs, roulements, alignement d’arbres, fabrication structurelle — conçus pour résister aux exigences industrielles.",
+      "bullets": ["Alignement de précision", "Convoyeurs", "Engrenages et chaînes", "Métrologie laser", "Fabrication"]
+    },
+    "welding": {
+      "title": "Soudage",
+      "text": "Soudage certifié et fabrication sur site pour lignes de production et équipements lourds. Solide, propre, inspecté.",
+      "bullets": ["Acier et inox", "Soudage de tuyaux", "Réparation et construction", "Dispositifs", "Prêt pour NDT"]
+    },
+    "programming": {
+      "title": "Programmation",
+      "text": "Mise en service et optimisation du code PLC/HMI. Nous rendons les machines plus intelligentes et les opérateurs plus efficaces.",
+      "bullets": ["Siemens/TIA", "Rockwell", "PLC de sécurité", "HMI/UX", "Journalisation des données"]
+    }
+  },
+  "capabilities": {
+    "items": [
+      { "title": "Préventif et Prédictif", "desc": "Des programmes qui transforment les arrêts imprévus en optimisations planifiées." },
+      { "title": "Réponse rapide", "desc": "Ingénieurs et techniciens disponibles avec pièces, outils et listes de contrôle." },
+      { "title": "Rétrofit et Amélioration", "desc": "Rendez les anciens équipements compétitifs à nouveau — mécanique, électrique, contrôle." },
+      { "title": "Visibilité des données", "desc": "Du capteur au tableau de bord : nous mettons en avant les signaux importants." },
+      { "title": "Sécurité avant tout", "desc": "Procédures certifiées et outillage pour la sécurité du personnel et des installations." },
+      { "title": "Documentation", "desc": "Plans, câblage, normes de nommage — clarté pour la prochaine décennie." }
+    ]
+  },
+  "security": {
+    "heading": "Systèmes de sécurité",
+    "tag": "Sécurité",
+    "fire": {
+      "title": "Protection incendie",
+      "brief": "Concevoir, installer et entretenir des systèmes incendie robustes pour les environnements industriels avec traçabilité et conformité.",
+      "bullets": ["Analyse des risques", "Systèmes de suppression", "Tests de routine", "Rapports de conformité"],
+      "sub": {
+        "wood": { "label": "Protection du bois", "desc": "Traitements et revêtements pour la durabilité." },
+        "film": { "label": "Protection par film", "desc": "Films protecteurs haute performance." },
+        "facades": { "label": "Façades", "desc": "Systèmes extérieurs résistants et durables." }
+      }
+    },
+    "cameras": {
+      "title": "Caméras et analyse",
+      "brief": "Des caméras adaptées à tous les environnements aux systèmes de détection intelligente. Obtenez une visibilité complète des sites et entrepôts.",
+      "bullets": ["Thermiques et PTZ", "Analyse IA", "NVR/Rétention", "Accès à distance"]
+    },
+    "servers": {
+      "title": "Serveurs et stockage",
+      "brief": "Infrastructure renforcée et évolutive pour la sécurité et les données industrielles — conçue pour des charges d’écriture intensives.",
+      "bullets": ["Stratégies RAID", "Alimentation redondante", "Sauvegardes chiffrées", "Surveillance"]
+    },
+    "entry": {
+      "title": "Systèmes d’accès et d’alarme",
+      "brief": "Solutions d’accès par carte, code, biométrie et véhicule. Alarmes unifiées avec protocoles clairs.",
+      "bullets": ["Contrôle d’accès", "Périmètre", "Interphone", "Alerte 24/7"],
+      "extraLabel": "Systèmes d’alarme"
+    }
+  },
+  "other": {
+    "heading": "Autres services",
+    "items": [
+      { "title": "Machines démontées, déplacées, reconstruites", "desc": "Nous déplaçons vos équipements de production en toute sécurité : étiquetage, démontage, transport, alignement, remise en service." },
+      { "title": "Nouvelles constructions", "desc": "Des services publics à la mise en service finale — câblage, MEP, contrôle, sécurité." }
+    ]
+  },
+  "process": {
+    "howHeading": "Comment nous livrons",
+    "assuranceHeading": "Assurance",
+    "steps": [
+      { "title": "Évaluer", "desc": "Étude de site, analyse des risques et objectifs de performance." },
+      { "title": "Planifier", "desc": "Portée, phases, sécurité et pièces de rechange." },
+      { "title": "Exécuter", "desc": "Équipes qualifiées, contrôles qualité et rapports." },
+      { "title": "Optimiser", "desc": "Réglage, formation, documentation, support." }
+    ],
+    "badges": ["Support 24/7", "Techniciens certifiés", "Sécurité d’abord", "Garantie", "Plans as-built"]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Pouvez-vous travailler avec nos ingénieurs internes ?",
+    "a1": "Oui. Nous collaborons souvent avec les équipes sur site et respectons vos horaires et normes.",
+    "q2": "Fournissez-vous une documentation as-built ?",
+    "a2": "Toujours. Nous remettons les schémas de câblage, les sauvegardes PLC/HMI, les rapports et photos.",
+    "q3": "Comment garantissez-vous la sécurité ?",
+    "a3": "Permis, isolement/LOTO, vérification des outils et personnel formé. La sécurité est planifiée dès le premier jour.",
+    "q4": "Comment planifier une consultation ?",
+    "a4Rich": "Vous pouvez facilement planifier une réunion via notre page <link>Demande de réunion d’entreprise</link>."
+  },
+  "cta": {
+    "title": "Gardons votre usine en mouvement.",
+    "description": "Prenez rendez-vous avec notre équipe industrielle pour planifier la voie la plus rapide vers la disponibilité, la sécurité et la performance."
+  }
+},
+"fire": {
+  "hero": {
+    "badge": "HBC Protection Incendie",
+    "title": "Protection Incendie",
+    "highlight": "Qui Protège et Dure.",
+    "description": "De la préservation du bois aux façades architecturales et à l’intégration des systèmes — nous réunissons sécurité, esthétique et conformité.",
+    "chips": {
+      "wood": "Préservation du bois",
+      "film": "Protection par film",
+      "facades": "Façades",
+      "systemDesign": "Conception du système",
+      "maintenance": "Maintenance"
+    },
+    "cta": "Contactez-nous"
+  },
+  "core": {
+    "heading": "Services Principaux de Protection Incendie",
+    "wood": {
+      "title": "Préservation du bois",
+      "desc": "Revêtements et traitements spéciaux pour réduire l’inflammabilité des éléments structurels en bois, augmentant la résistance au feu et la durée de vie.",
+      "bullets": [
+        "Revêtements ignifuges",
+        "Imprégnation retardatrice de flamme",
+        "Conformité NFPA & EN"
+      ]
+    },
+    "film": {
+      "title": "Protection par film",
+      "desc": "Films transparents pour fenêtres, murs et portes qui ralentissent la propagation des flammes et limitent la chaleur, tout en préservant l’esthétique.",
+      "bullets": [
+        "Film réfléchissant la chaleur",
+        "Film pare-fumée",
+        "Formats personnalisés"
+      ]
+    },
+    "facade": {
+      "title": "Systèmes de Façade",
+      "desc": "Matériaux et conceptions architecturaux résistants au feu qui empêchent la propagation des flammes et de la fumée sur les façades extérieures.",
+      "bullets": [
+        "Panneaux réfractaires",
+        "Conception de compartimentage",
+        "Conformité réglementaire"
+      ]
+    }
+  },
+  "systems": {
+    "heading": "Intégration et Cycle de Vie du Système",
+    "suppression": {
+      "name": "Extinction et Suppression",
+      "desc": "Conception et installation de systèmes automatiques à sprinklers, gaz ou mousse adaptés au risque et à l’utilisation."
+    },
+    "alarm": {
+      "name": "Alarme et Détection",
+      "desc": "Capteurs de fumée, de chaleur et de flamme, filaires ou sans fil, intégrés aux panneaux de commande et alertes à distance."
+    },
+    "maintenance": {
+      "name": "Maintenance et Audits",
+      "desc": "Tests, inspections et certifications réguliers des systèmes incendie pour garantir conformité et disponibilité."
+    }
+  },
+  "why": {
+    "heading": "Pourquoi Choisir HBC Fire Protection",
+    "items": [
+      {
+        "title": "Expertise en Normes et Codes",
+        "desc": "Nous maîtrisons les normes NFPA, EN, UL afin que votre système réussisse les inspections, pas seulement l’installation."
+      },
+      {
+        "title": "Conception de Sécurité Globale",
+        "desc": "Nous protégeons la structure, le contenu, les issues et les systèmes — pas seulement la suppression du feu."
+      },
+      {
+        "title": "Surveillance Préventive et Prédictive",
+        "desc": "Les capteurs détectent les fuites, baisses de pression ou manipulations avant qu’une panne ne survienne."
+      },
+      {
+        "title": "Intégration avec les Services d’Urgence",
+        "desc": "Nous relions les systèmes aux panneaux, à la sécurité et à l’exploitation du bâtiment pour agir rapidement quand chaque seconde compte."
+      }
+    ]
+  },
+  "cases": {
+    "heading": "Projets en Vedette",
+    "items": [
+      {
+        "name": "Complexe résidentiel en structure bois",
+        "desc": "Application de revêtements ignifuges sur tous les éléments en bois structurel. Inspection réglementaire réussie avec marge."
+      },
+      {
+        "name": "Rénovation de Façade Commerciale",
+        "desc": "Remplacement des anciens revêtements par un système de façade ignifuge tout en conservant la transparence esthétique."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "q1": "Les revêtements ignifuges altèrent-ils l’apparence du bois ?",
+    "a1": "Les revêtements modernes sont transparents ou légèrement teintés et modifient très peu la texture. Nous testons avant application sur site.",
+    "q2": "À quelle fréquence les systèmes doivent-ils être entretenus ?",
+    "a2": "Les cycles d’inspection varient de mensuels à annuels selon le type de système. Nous offrons des journaux d’audit complets et des rappels.",
+    "q3": "Puis-je intégrer les systèmes incendie à la domotique du bâtiment ?",
+    "a3": "Oui. Nous développons des interfaces pour que les systèmes d’alarme, de détection et de suppression communiquent avec votre bâtiment intelligent ou BMS."
+  },
+  "cta": {
+    "title": "Élevez votre sécurité. Protégez ce qui compte.",
+    "description": "Contactez HBC pour concevoir ou moderniser vos systèmes de protection incendie avec intelligence, conformité et durabilité intégrées."
+  }
+},
+"smart": {
+  "hero": {
+    "badge": "HBC Bâtiment Intelligent",
+    "title": "Des Maisons Plus Intelligentes.",
+    "highlight": "Une Vie Plus Verte.",
+    "description": "Connectez confort, sécurité et intelligence énergétique. Contrôlez, surveillez et optimisez votre espace — de manière fiable et sans effort.",
+    "chips": {
+      "automation": "Automatisation",
+      "pv": "PV et Énergie",
+      "security": "Sécurité",
+      "monitoring": "Surveillance"
+    },
+    "cta": "Contactez-nous"
+  },
+  "grid": {
+    "heading": "Maison Intelligente, à la Façon HBC",
+    "items": [
+      {
+        "title": "Automatisation",
+        "desc": "Scénarios, horaires, commande vocale — votre maison, orchestrée."
+      },
+      {
+        "title": "PV et Énergie",
+        "desc": "Surveillez la consommation, stockez intelligemment, réduisez les pics et économisez."
+      },
+      {
+        "title": "Sécurité",
+        "desc": "Alarmes, accès, caméras et serveurs — intégrés."
+      },
+      {
+        "title": "Surveillance",
+        "desc": "État en temps réel des appareils, pièces et sous-systèmes."
+      },
+      {
+        "title": "Confort",
+        "desc": "Éclairage, climat et stores qui s’adaptent à vous."
+      },
+      {
+        "title": "Économies",
+        "desc": "Optimisation basée sur les données qui réduit le gaspillage, pas le confort."
+      }
+    ]
+  },
+  "tags": {
+    "0": "Hydraulique",
+    "1": "Électrique",
+    "2": "Mécanique",
+    "3": "Programmation",
+    "4": "PV et Énergie",
+    "5": "Sécurité",
+    "6": "Surveillance",
+    "7": "Accessoires",
+    "8": "Agriculture",
+    "9": "Béton",
+    "10": "Construction",
+    "11": "Énergie",
+    "12": "Sol"
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "q1": "Ai-je besoin d’un hub domotique existant ?",
+    "a1": "Pas nécessairement. Nous pouvons intégrer votre écosystème actuel ou déployer une pile HBC robuste et sécurisée — celle qui offre la meilleure fiabilité avec le moins de friction.",
+    "q2": "Puis-je commencer petit et développer plus tard ?",
+    "a2": "Oui. Commencez avec une priorité (par ex. : la surveillance énergétique). Nous concevons des systèmes modulaires pour une évolution facile selon vos besoins.",
+    "q3": "Comment protégez-vous mes données ?",
+    "a3": "Nous appliquons une conception axée sur la confidentialité, des serveurs sécurisés et un accès à privilèges minimaux. Vos données restent les vôtres, chiffrées en transit et au repos."
+  },
+  "cta": {
+    "title": "Faisons de votre bâtiment un espace intelligent et efficace.",
+    "description": "Nous tracerons la meilleure voie pour le confort, la sécurité et les économies, avec un accent sur la fiabilité.",
+    "secondaryLabel": "Contacter le service commercial"
+  }
+},
+"form": {
+  "title": "Démarrer un Projet",
+  "progress": "Étape {cur} sur {total}",
+  "steps": {
+    "client": {
+      "title": "Informations Client",
+      "subtitle": "Dites-nous qui vous êtes et comment vous contacter."
+    },
+    "overview": {
+      "title": "Aperçu du Projet",
+      "subtitle": "Que construisons-nous et pourquoi maintenant ?"
+    },
+    "scope": {
+      "title": "Portée et Calendrier",
+      "subtitle": "Fonctionnalités, utilisateurs et délais."
+    },
+    "budget": {
+      "title": "Budget et Succès",
+      "subtitle": "Fourchette d’investissement et résultats mesurables."
+    },
+    "security": {
+      "title": "Intégrations et Sécurité",
+      "subtitle": "Comment nous connecterons et protégerons vos données."
+    },
+    "review": {
+      "title": "Vérification et Envoi",
+      "subtitle": "Confirmez tous les détails avant l’envoi."
+    }
+  },
+  "fields": {
+    "fullName": {
+      "label": "Nom complet",
+      "ph": "Jane Doe"
+    },
+    "company": {
+      "label": "Entreprise",
+      "ph": "Acme GmbH"
+    },
+    "email": {
+      "label": "Email professionnel",
+      "ph": "jane@acme.com"
+    },
+    "phone": {
+      "label": "Téléphone",
+      "ph": "+33 6XX XXX XXXX"
+    },
+    "country": {
+      "label": "Pays",
+      "ph": "Sélectionnez un pays"
+    },
+    "projectType": {
+      "label": "Type de projet",
+      "ph": "Choisissez le type"
+    },
+    "expectedUsers": {
+      "label": "Utilisateurs attendus (mensuel)",
+      "ph": "ex. : 5 000"
+    },
+    "brief": {
+      "label": "Résumé du projet",
+      "ph": "Que construisons-nous et pourquoi maintenant ?"
+    },
+    "goals": {
+      "label": "Objectifs clés",
+      "ph": "ex. : Réduire le temps d’intégration de 30 %, lancer le MVP en 8 semaines…"
+    },
+    "features": {
+      "label": "Fonctionnalités souhaitées"
+    },
+    "deadline": {
+      "label": "Date limite cible"
+    },
+    "timelineFlex": {
+      "label": "Flexibilité du calendrier"
+    },
+    "budget": {
+      "label": "Fourchette budgétaire",
+      "ph": "Sélectionnez un budget"
+    },
+    "procurement": {
+      "label": "Type de collaboration"
+    },
+    "success": {
+      "label": "Critères de réussite",
+      "ph": "KPI, SLA, objectifs de performance…"
+    },
+    "risks": {
+      "label": "Risques ou contraintes (facultatif)",
+      "ph": "Dépendances, conformité, systèmes existants…"
+    },
+    "integrations": {
+      "label": "Intégrations requises"
+    },
+    "auth": {
+      "label": "Authentification"
+    },
+    "residency": {
+      "label": "Résidence des données"
+    },
+    "compliance": {
+      "label": "Exigences de conformité"
+    }
+  },
+  "buttons": {
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre la demande"
+  },
+  "consent": "J’accepte le traitement de mes données pour cette demande.",
+  "footerNote": "Formulaire sécurisé • Conforme au RGPD • Brouillon enregistré localement",
+  "alerts": {
+    "submitted": "✅ Merci ! Votre demande de projet a été soumise."
+  },
+  "summary": {
+    "fullName": "Nom complet",
+    "company": "Entreprise",
+    "email": "Email",
+    "phone": "Téléphone",
+    "country": "Pays",
+    "projectType": "Type de projet",
+    "summary": "Résumé",
+    "goals": "Objectifs",
+    "features": "Fonctionnalités",
+    "expectedUsers": "Utilisateurs attendus",
+    "deadline": "Date limite",
+    "timeline": "Calendrier",
+    "budget": "Budget",
+    "engagement": "Engagement",
+    "success": "Succès",
+    "risks": "Risques",
+    "integrations": "Intégrations",
+    "auth": "Authentification",
+    "residency": "Résidence",
+    "compliance": "Conformité"
+  },
+  "lists": {
+    "countries": {
+      "Austria": "Autriche",
+      "Belgium": "Belgique",
+      "Croatia": "Croatie",
+      "Czechia": "Tchéquie",
+      "Denmark": "Danemark",
+      "Egypt": "Égypte",
+      "France": "France",
+      "Germany": "Allemagne",
+      "Italy": "Italie",
+      "Netherlands": "Pays-Bas",
+      "Poland": "Pologne",
+      "Portugal": "Portugal",
+      "Qatar": "Qatar",
+      "Saudi Arabia": "Arabie Saoudite",
+      "Spain": "Espagne",
+      "Sweden": "Suède",
+      "Switzerland": "Suisse",
+      "Turkey": "Turquie",
+      "UAE": "Émirats Arabes Unis",
+      "UK": "Royaume-Uni",
+      "USA": "États-Unis"
+    },
+    "projectTypes": {
+      "Website / Landing": "Site Web / Page d’accueil",
+      "SaaS / Platform": "SaaS / Plateforme",
+      "E-commerce": "E-commerce",
+      "Mobile App": "Application mobile",
+      "AI / Automation": "IA / Automatisation",
+      "Web3 / Payments": "Web3 / Paiements",
+      "Data / BI": "Données / BI",
+      "Other": "Autre"
+    },
+    "features": {
+      "User Auth / SSO": "Authentification Utilisateur / SSO",
+      "Admin Panel": "Panneau d’administration",
+      "E-commerce / Payments": "E-commerce / Paiements",
+      "Subscriptions / Billing": "Abonnements / Facturation",
+      "Realtime Chat / Notifications": "Chat en temps réel / Notifications",
+      "Analytics Dashboard": "Tableau de bord analytique",
+      "Mobile App": "Application mobile",
+      "AI Assistant / RAG": "Assistant IA / RAG",
+      "Web3 Wallet / Tokens": "Portefeuille Web3 / Tokens",
+      "3rd-party Integrations": "Intégrations tierces"
+    },
+    "integrations": {
+      "Salesforce": "Salesforce",
+      "HubSpot": "HubSpot",
+      "SAP": "SAP",
+      "Stripe": "Stripe",
+      "PayPal": "PayPal",
+      "Plaid": "Plaid",
+      "Auth0": "Auth0",
+      "Okta": "Okta",
+      "AWS": "AWS",
+      "GCP": "GCP",
+      "Azure": "Azure"
+    },
+    "compliance": {
+      "GDPR": "RGPD",
+      "ISO 27001": "ISO 27001",
+      "SOC 2": "SOC 2",
+      "HIPAA": "HIPAA",
+      "PCI DSS": "PCI DSS"
+    },
+    "timelineFlex": {
+      "strict": "Strict",
+      "target": "Cible",
+      "open": "Ouvert"
+    },
+    "budget": {
+      "<10k": "<10k",
+      "10–30k": "10–30k",
+      "30–80k": "30–80k",
+      "80–200k": "80–200k",
+      ">200k": ">200k"
+    },
+    "procurement": {
+      "Startup": "Startup",
+      "B2B": "B2B",
+      "Enterprise": "Entreprise",
+      "B2G": "B2G"
+    },
+    "auth": {
+      "None": "Aucune",
+      "Email/Password": "Email/Mot de passe",
+      "SSO/SAML": "SSO/SAML",
+      "OAuth": "OAuth"
+    },
+    "residency": {
+      "EU": "UE",
+      "US": "États-Unis",
+      "MENA": "MENA",
+      "Any": "Tous"
+    }
+  }
+},
+"it": {
+  "hero": {
+    "badge": "HBC Solutions Informatiques",
+    "title": "Construisez, Faites Évoluer et Sécurisez",
+    "highlight": "Votre Produit Numérique",
+    "description": "Nous concevons et livrons des logiciels haute performance, des paiements Web3 et des infrastructures cloud — conçus pour la disponibilité, la sécurité et la croissance.\n\nDes plateformes SaaS et e-commerce à l’automatisation IA et à la blockchain, nous fournissons des solutions complètes avec un impact mesurable.",
+    "chips": [
+      "Logiciel",
+      "APIs/GraphQL",
+      "E-commerce",
+      "UI/UX",
+      "Cloud/DevOps",
+      "CI/CD",
+      "Observabilité",
+      "Sécurité",
+      "SSO/IAM",
+      "IA/Automatisation",
+      "Données & Analytique",
+      "Web3"
+    ]
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "q1": "Quand votre équipe peut-elle commencer un projet ?",
+    "a1": "Notre équipe répond généralement sous un jour ouvrable. Une réunion de découverte peut être planifiée sous 48–72 heures pour définir le périmètre, les priorités et les jalons attendus. Une fois l’accord établi, l’onboarding et le démarrage commencent immédiatement.",
+    "q2": "Fournissez-vous le développement complet front-end et back-end ?",
+    "a2": "Oui. Nous livrons des solutions full-stack couvrant le frontend, le backend et l’infrastructure. Nos équipes sont spécialisées dans les frameworks web modernes, les API évolutives, les bases de données et les pipelines CI/CD — garantissant une qualité constante sur tout le cycle de vie du produit.",
+    "q3": "Pouvez-vous intégrer des technologies émergentes telles que l’IA ou le Web3 dans des plateformes existantes ?",
+    "a3": "Absolument. Nous concevons des intégrations sécurisées et conformes aux normes qui étendent vos systèmes existants avec l’automatisation IA, l’intelligence des données ou les fonctionnalités blockchain. Chaque intégration comprend documentation, tests et stratégies de retour arrière pour garantir la stabilité.",
+    "q4": "Comment gérez-vous la communication et le suivi de projet ?",
+    "a4": "Chaque client dispose d’un chef de projet dédié et d’un accès à notre espace de collaboration. Nous fournissons des mises à jour hebdomadaires transparentes, des revues de jalons et des tableaux de bord en temps réel pour le suivi des progrès, risques et livrables.",
+    "q5": "Quels secteurs servez-vous ?",
+    "a5": "Nous travaillons avec des clients dans la finance, la fabrication, l’e-commerce, l’éducation et la technologie. Notre approche architecturale flexible nous permet de nous adapter rapidement à tout environnement réglementé ou sensible aux données."
+  },
+  "pinned": {
+    "title": "Services Informatiques",
+    "software": {
+      "tag": "Services",
+      "title": "Développement Logiciel",
+      "text": "Nous concevons des produits numériques de bout en bout — du concept au déploiement mondial. Notre équipe crée des applications web, mobiles et desktop évolutives, sécurisées et performantes, en s’appuyant sur des technologies modernes et des principes d’architecture propre. Chaque solution est modulaire, maintenable et prête pour les intégrations futures.",
+      "bullets": [
+        "Systèmes d’entreprise personnalisés",
+        "Applications mobiles multiplateformes",
+        "Applications et portails web",
+        "Développement d’API & SDK",
+        "Architecture microservices & événementielle",
+        "Intégration DevSecOps"
+      ]
+    },
+    "cloud": {
+      "tag": "Services",
+      "title": "Cloud & DevOps",
+      "text": "Nous concevons, déployons et maintenons des infrastructures cloud conçues pour la haute disponibilité, la résilience et la conformité. Notre approche DevOps garantit des pipelines fluides, une surveillance continue et une mise à l’échelle rentable sur les principaux fournisseurs mondiaux tels qu’AWS, Google Cloud et Microsoft Azure.",
+      "bullets": [
+        "Infrastructure as Code (IaC)",
+        "Orchestration Kubernetes",
+        "Architecture multi-cloud (AWS, GCP, Azure)",
+        "Automatisation CI/CD",
+        "Surveillance, journalisation et alertes",
+        "Déploiements sans interruption"
+      ]
+    },
+    "ai": {
+      "tag": "Services",
+      "title": "IA & Automatisation",
+      "text": "Nous transformons les données en actions intelligentes. Des chatbots conversationnels à l’analyse prédictive et aux flux de travail automatisés, nos solutions IA aident les entreprises à prendre de meilleures décisions, réduire les erreurs humaines et améliorer l’expérience client.",
+      "bullets": [
+        "IA conversationnelle & chatbots",
+        "Analytique prédictive & prévisions",
+        "Automatisation des processus métiers",
+        "Déploiement de modèles ML personnalisés",
+        "Pipelines de données & ETL pour l’IA",
+        "Intégration LLM & systèmes RAG"
+      ]
+    },
+    "web3": {
+      "tag": "Services",
+      "title": "Blockchain & Web3",
+      "text": "Nous construisons des systèmes décentralisés sécurisés, conformes et évolutifs sur les meilleures blockchains — dont Ethereum, BNB Chain, Polygon et Avalanche. Notre expertise Web3 couvre les écosystèmes de jetons, les smart contracts et les infrastructures de paiement qui allient innovation blockchain et utilité réelle.",
+      "bullets": [
+        "Architecture & audit de smart contracts",
+        "Écosystèmes de jetons & systèmes de staking",
+        "Interopérabilité inter-chaînes",
+        "Paiements P2P & règlements on-chain",
+        "Développement DeFi & marketplace NFT",
+        "Solutions blockchain conformes"
+      ]
+    },
+    "security": {
+      "tag": "Services",
+      "title": "Sécurité & Intégration",
+      "text": "La sécurité est intégrée à chaque étape — de la conception de l’application aux opérations de production. Nous mettons en œuvre la gestion des identités, le chiffrement des données et les cadres de conformité avancés pour protéger les utilisateurs et les infrastructures, tout en intégrant vos systèmes de manière fluide et transparente.",
+      "bullets": [
+        "Gestion des identités & des accès (IAM/SSO)",
+        "Tests d’intrusion & analyses de vulnérabilité",
+        "Architecture Zero-Trust",
+        "Conformité réglementaire (RGPD, ISO, SOC 2)",
+        "Intégration d’API & systèmes sécurisés",
+        "Surveillance continue de la sécurité"
+      ]
+    }
+  },
+  "capabilities": {
+    "api": {
+      "title": "API-First",
+      "desc": "Contrats GraphQL/REST propres, SDKs et documentation pour les partenaires."
+    },
+    "devops": {
+      "title": "DevOps par Défaut",
+      "desc": "CI/CD, surveillance, journaux/métriques/traces dès le premier jour."
+    },
+    "security": {
+      "title": "Mentalité Sécurité",
+      "desc": "SSO/IAM, gestion des secrets, vérification des dépendances, audits."
+    },
+    "performance": {
+      "title": "Performance",
+      "desc": "Mise en cache Edge, optimisation DB et UX adaptée à Lighthouse."
+    },
+    "scalability": {
+      "title": "Scalabilité",
+      "desc": "Microservices orientés événements et files de messages là où c’est nécessaire."
+    },
+    "docs": {
+      "title": "Documentation",
+      "desc": "Playbooks, runbooks, ADRs et guides de transfert."
+    }
+  },
+  "process": {
+    "title": "Notre Processus de Livraison",
+    "assurance": "Garantie",
+    "steps": {
+      "discover": {
+        "title": "Découverte",
+        "desc": "Nous commençons par des ateliers, des indicateurs de succès et une analyse des risques. Chaque projet débute par une compréhension approfondie de vos objectifs commerciaux, du contexte technique et des contraintes de conformité."
+      },
+      "design": {
+        "title": "Conception",
+        "desc": "Nos architectes et designers traduisent vos objectifs en architectures évolutives, flux UX et preuves de concept techniques. Nous mettons l’accent sur la performance, la sécurité et l’utilisabilité dès le premier jour."
+      },
+      "build": {
+        "title": "Construction",
+        "desc": "Nous travaillons en sprints agiles avec intégration continue, automatisation des tests et observabilité. Chaque itération livre des résultats mesurables et des incréments prêts pour la production."
+      },
+      "deploy": {
+        "title": "Déploiement",
+        "desc": "Les stratégies blue/green et canary garantissent des mises en production sûres et sans interruption. Chaque déploiement inclut des politiques de retour arrière, des tableaux de bord et une documentation complète."
+      },
+      "scale": {
+        "title": "Évoluer & Optimiser",
+        "desc": "Après la mise en production, nous affinons la performance, les coûts et la fiabilité. Une surveillance proactive, une réponse rapide aux incidents et le respect des SLA assurent une excellence opérationnelle à long terme."
+      }
+    },
+    "badges": [
+      "Conformité ISO 27001 / RGPD",
+      "SLA de 99,9 % de disponibilité",
+      "Architecture Sécurité d’Abord",
+      "Support Mondial 24/7",
+      "Livraison & Surveillance Continue",
+      "Rapports Transparents",
+      "Gestion de Compte Dédiée",
+      "Documentation & Transfert de Connaissances Complets"
+    ]
+  }
+},
+"meeting": {
+  "badge": "Discutons",
+  "title": "Planifier une réunion",
+  "intro": "Parlez avec un ingénieur pour définir la meilleure approche en matière de performance industrielle, de vie intelligente et de sécurité. Nous adapterons la conversation à vos objectifs.",
+  "bullets": [
+    "Discussion rapide et sans pression",
+    "Options claires pour votre cas d’utilisation",
+    "Conseils sur le calendrier et le retour sur investissement",
+    "Expertise en sécurité, incendie et maintenance"
+  ],
+  "chips": [
+    "Assistance 24/7",
+    "UE & USA",
+    "Industriel & Particulier"
+  ],
+  "form": {
+    "fullName": "Nom complet",
+    "email": "Email professionnel",
+    "company": "Entreprise",
+    "phone": "Numéro de téléphone",
+    "topic": "Sujet de la réunion",
+    "topicOptions": [
+      "Maintenance industrielle",
+      "Systèmes incendie / sécurité",
+      "Maison / bâtiment intelligent",
+      "Produits écologiques",
+      "Autre"
+    ],
+    "size": "Taille de l’entreprise",
+    "sizeOptions": [
+      "1–10",
+      "11–50",
+      "51–200",
+      "201–1000",
+      "1000+"
+    ],
+    "date": "Date préférée",
+    "time": "Heure préférée",
+    "message": "Que souhaitez-vous accomplir ?",
+    "selectPlaceholder": "Sélectionner…",
+    "consentHtml": "J’accepte la <link>politique de confidentialité</link> et j’autorise HBC Group à me contacter concernant ma demande.",
+    "submit": "Demander une réunion",
+    "sending": "Envoi…",
+    "ok": "Merci ! Nous vous contacterons sous peu.",
+    "err": "Veuillez vérifier votre nom et votre e-mail, puis réessayer."
+  },
+  "noteHtml": "Vous préférez envoyer un e-mail ? Écrivez-nous à <link>support@hbc-engineering.com</link>.",
+  "cta": {
+    "title": "Pas encore prêt à réserver ? Obtenez une consultation rapide.",
+    "desc": "Partagez quelques détails et nous vous recommanderons la solution la plus rapide.",
+    "button": "Contacter les ventes"
+  }
+},
+"contact": {
+  "hero": {
+    "eyebrow": "Contacter HBC Group",
+    "kicker": "Nous sommes là pour vous aider",
+    "title": "Contactez-nous",
+    "description": "Ventes • Support • Partenariats — partagez quelques informations et nous vous répondrons sous un jour ouvrable."
+  },
+  "info": {
+    "address": "Adresse",
+    "hours": "Horaires",
+    "hoursWeek": "Lun–Jeu · 8:00–17:00",
+    "hoursFri": "Ven · 8:00–12:00",
+    "regions": "Régions",
+    "regionUSA": "États-Unis",
+    "regionEU": "Union Européenne",
+    "response": "Délai de réponse",
+    "responseSla": "< 1 jour ouvrable"
+  },
+  "buttons": {
+    "call": "appeler {phone}"
+  },
+  "lead": {
+    "title": "Parlez-nous de votre projet",
+    "subtitle": "Choisissez un service ci-dessous et partagez quelques détails. Nous vous recontacterons avec les prochaines étapes."
+  },
+  "direct": {
+    "title": "Contact direct",
+    "subtitle": "Vous préférez parler maintenant ? Contactez-nous à tout moment.",
+    "phone": "Téléphone",
+    "email": "Email",
+    "hq": "Siège"
+  },
+  "why": {
+    "title": "Pourquoi HBC"
+  },
+  "whyPoints": [
+    "Techniciens certifiés multi-OEM",
+    "Approvisionnement rapide en pièces détachées",
+    "Listes de contrôle et rapports numériques",
+    "Couverture UE & USA"
+  ],
+  "map": {
+    "title": "Nous trouver",
+    "subtitle": "Visitez notre siège ou planifiez une visite sur site — nous venons à vous."
+  },
+  "faq": {
+    "title": "FAQs",
+    "items": [
+      {
+        "q": "Pouvez-vous utiliser mes appareils existants ?",
+        "a": "Dans de nombreux cas, oui. Nous auditons votre équipement actuel et intégrons les appareils compatibles via KNX, Matter, Zigbee ou des passerelles."
+      },
+      {
+        "q": "Faut-il un câblage ou est-ce sans fil ?",
+        "a": "Les deux sont possibles. Les nouvelles constructions privilégient le câblage, tandis que les rénovations peuvent utiliser du sans fil sécurisé et fiable lorsque c’est approprié."
+      },
+      {
+        "q": "Y a-t-il une application ?",
+        "a": "Oui — panneau mural et application mobile avec accès à distance, notifications, scènes et gestion des rôles utilisateurs."
+      },
+      {
+        "q": "Et la confidentialité ?",
+        "a": "Contrôle local prioritaire, chiffrement fort pour l’accès distant et paramètres clairs de conservation des données."
+      }
+    ]
+  }
+},
+"careers": {
+  "hero": {
+    "badge": "Carrières",
+    "kicker": "Rejoignez l’équipe",
+    "title": "Construisez, entretenez et innovez avec HBC Group",
+    "subtitle": "Nous recrutons dans les domaines électrique, mécanique et automatisation. Découvrez les postes ouverts et postulez en quelques minutes."
+  },
+  "labels": {
+    "travel": "Déplacements"
+  },
+  "cta": {
+    "viewDetails": "Voir les détails"
+  },
+  "jobs": {
+    "industrial-electrician": {
+      "title": "Électricien industriel – Machines lourdes",
+      "location": "États-Unis (déplacements nationaux possibles)",
+      "type": "Temps plein",
+      "hours": "50 heures/semaine",
+      "travel": "Régional/National",
+      "summary": "Diagnostics électriques, installation/mise en service et maintenance préventive de machines industrielles lourdes dans les secteurs du recyclage, de la biomasse et de la fabrication.",
+      "tags": [
+        "Électrique",
+        "Service sur site",
+        "PLC"
+      ]
+    },
+    "industrial-mechanic": {
+      "title": "Mécanicien industriel – Machines lourdes",
+      "location": "États-Unis (déplacements nationaux possibles)",
+      "type": "Temps plein",
+      "hours": "50 heures/semaine",
+      "travel": "Régional/National",
+      "summary": "Service sur site, diagnostics, réparations et maintenance préventive sur des machines industrielles lourdes (mobiles et stationnaires).",
+      "tags": [
+        "Mécanique",
+        "Hydraulique",
+        "Pneumatique"
+      ]
+    },
+    "industrial-programmer": {
+      "title": "Programmeur industriel – Machines lourdes",
+      "location": "États-Unis (déplacements nationaux possibles)",
+      "type": "Temps plein",
+      "hours": "50 heures/semaine",
+      "travel": "National",
+      "summary": "Programmer, optimiser et mettre en service des systèmes de contrôle basés sur PLC pour des machines industrielles complexes ; dépanner logiciels/communications ; assurer le support sur site.",
+      "tags": [
+        "PLC",
+        "Mise en service",
+        "HMI/SCADA"
+      ]
+    }
+  }
+},
+"translatorBn": {
+  "switchL": "Changer de langue",
+  "langSubTitle": "Choisissez votre langue préférée.",
+  "notFound": "Aucune langue trouvée.",
+  "current": "Actuelle",
+  "placholder": "Tapez pour rechercher une langue..."
+},
+"preload": {
+  "subtitle": "Préparation de votre expérience…"
+}
+}

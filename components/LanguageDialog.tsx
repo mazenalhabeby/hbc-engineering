@@ -24,14 +24,7 @@ import { Separator } from "@/components/ui/separator";
 import { Globe } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-type Locale = "en" | "de";
-
-const LOCALES: Array<{
-  code: Locale;
-  label: string;
-  sub: string;
-  flag: string;
-}> = [
+const LOCALES = [
   { code: "en", label: "English", sub: "International", flag: "🇬🇧" },
   {
     code: "de",
@@ -39,32 +32,80 @@ const LOCALES: Array<{
     sub: "Deutschland • Österreich • Schweiz",
     flag: "🇩🇪",
   },
-];
+  {
+    code: "fr",
+    label: "Français",
+    sub: "France • Belgique • Suisse",
+    flag: "🇫🇷",
+  },
+  {
+    code: "it",
+    label: "Italiano",
+    sub: "Italia • Svizzera • San Marino",
+    flag: "🇮🇹",
+  },
+  {
+    code: "da",
+    label: "Dansk",
+    sub: "Danmark • Grønland • Færøerne",
+    flag: "🇩🇰",
+  },
+  {
+    code: "no",
+    label: "Norsk",
+    sub: "Norge • Svalbard • Jan Mayen",
+    flag: "🇳🇴",
+  },
+  {
+    code: "nl",
+    label: "Nederlands",
+    sub: "Nederland • België • Suriname",
+    flag: "🇳🇱",
+  },
+] as const;
 
-/** localePrefix: 'as-needed' */
+type Locale = (typeof LOCALES)[number]["code"];
+const DEFAULT_LOCALE: Locale = "en";
+
+const LOCALE_SET = new Set<Locale>(LOCALES.map((l) => l.code));
+
+function parsePathLocale(pathname: string): {
+  locale: Locale;
+  barePath: string;
+} {
+  const path = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  const [, firstSegment = ""] = path.split("/");
+  const candidate = firstSegment as Locale;
+  if (LOCALE_SET.has(candidate)) {
+    const bare = path.replace(new RegExp(`^/${candidate}(?=/|$)`), "") || "/";
+    return { locale: candidate, barePath: bare };
+  }
+  return { locale: DEFAULT_LOCALE, barePath: path || "/" };
+}
+
 function buildLocaleHref(currentPath: string, next: Locale): string {
-  const path = currentPath.startsWith("/") ? currentPath : `/${currentPath}`;
-  const isDe = path === "/de" || path.startsWith("/de/");
-  const base = isDe ? path.replace(/^\/de(\/|$)/, "/") : path;
-  if (next === "en") return base === "" ? "/" : base;
-  return base === "/" ? "/de" : `/de${base}`;
+  const { barePath } = parsePathLocale(currentPath);
+  if (next === DEFAULT_LOCALE) return barePath === "" ? "/" : barePath;
+  return barePath === "/" ? `/${next}` : `/${next}${barePath}`;
+}
+
+function getLocaleMeta(code: Locale) {
+  return LOCALES.find((l) => l.code === code)!;
 }
 
 export function LanguageDialog() {
   const t = useTranslations("translatorBn");
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false); // ⭐ client-only label guard
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname() || "/";
 
-  // Infer locale from path
   const currentLocale: Locale = useMemo(
-    () => (pathname === "/de" || pathname.startsWith("/de/") ? "de" : "en"),
+    () => parsePathLocale(pathname).locale,
     [pathname]
   );
+  const currentLocaleLabel = getLocaleMeta(currentLocale).label;
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   const onPick = (next: Locale) => {
     if (next === currentLocale) {
@@ -75,13 +116,11 @@ export function LanguageDialog() {
     document.cookie = `NEXT_LOCALE=${next}; Path=/; Max-Age=${
       60 * 60 * 24 * 365
     }; SameSite=Lax`;
-
-    // Hard refresh to the new locale (prevents any reopen flicker)
     const baseHref = buildLocaleHref(pathname, next);
     const qs = typeof window !== "undefined" ? window.location.search : "";
     const hash = typeof window !== "undefined" ? window.location.hash : "";
-    const href = `${baseHref}${qs}${hash}`;
-    if (typeof window !== "undefined") window.location.replace(href);
+    if (typeof window !== "undefined")
+      window.location.replace(`${baseHref}${qs}${hash}`);
   };
 
   return (
@@ -93,15 +132,18 @@ export function LanguageDialog() {
           aria-label="Change language"
         >
           <Globe className="h-4 w-4" />
-          {/* ⭐ Client-only text; avoid hydration mismatch */}
           <span suppressHydrationWarning className="hidden sm:inline">
-            {mounted ? (currentLocale === "en" ? "English" : "Deutsch") : ""}
+            {mounted ? currentLocaleLabel : ""}
           </span>
         </Button>
       </DialogTrigger>
 
+      {/* GRID LAYOUT so the list can scroll; row 3 gets minmax(0,1fr) + min-h-0 */}
       <DialogContent
-        className="sm:max-w-[520px] rounded-3xl p-0 overflow-hidden"
+        className="
+          sm:max-w-[520px] max-h-[85vh] rounded-3xl p-0 overflow-hidden
+          grid grid-rows-[auto_auto_minmax(0,1fr)]
+        "
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
         <div className="h-1 w-full bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500" />
@@ -110,37 +152,40 @@ export function LanguageDialog() {
           <p className="text-sm text-muted-foreground">{t("langSubTitle")}</p>
         </DialogHeader>
 
-        <div className="px-5 pb-5">
-          <div className="rounded-2xl border">
-            <Command shouldFilter>
+        {/* Row 3: scroll container MUST have min-h-0 so the child can overflow */}
+        <div className="px-5 pb-5 min-h-0">
+          <div className="rounded-2xl border min-h-0 overflow-hidden">
+            {/* Make the list itself scrollable */}
+            <Command shouldFilter className="h-full">
               <div className="p-3">
                 <CommandInput placeholder={t("placholder")} />
               </div>
               <Separator />
-              <CommandList>
+              {/* This is the scrollable element */}
+              <CommandList className="max-h-[60vh] h-full overflow-y-auto overscroll-contain">
                 <CommandEmpty>{t("notFound")}</CommandEmpty>
                 <CommandGroup heading="Available">
-                  {LOCALES.map((it) => (
+                  {LOCALES.map((loc) => (
                     <CommandItem
-                      key={it.code}
-                      value={`${it.code} ${it.label}`}
-                      onSelect={() => onPick(it.code)}
+                      key={loc.code}
+                      value={`${loc.code} ${loc.label}`}
+                      onSelect={() => onPick(loc.code)}
                       className="cursor-pointer"
                     >
                       <span className="mr-3 text-xl leading-none">
-                        {it.flag}
+                        {loc.flag}
                       </span>
                       <div className="flex flex-col">
                         <span className="font-medium">
-                          {it.label}
-                          {currentLocale === it.code && (
+                          {loc.label}
+                          {currentLocale === loc.code && (
                             <span className="ml-2 text-xs rounded-full bg-primary/10 px-2 py-0.5">
                               {t("current")}
                             </span>
                           )}
                         </span>
                         <span className="text-xs text-muted-foreground">
-                          {it.sub}
+                          {loc.sub}
                         </span>
                       </div>
                     </CommandItem>
