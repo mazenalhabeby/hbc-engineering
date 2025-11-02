@@ -22,6 +22,20 @@ const ASSETS = {
   controlRoom: "/images/control-room.jpg",
   maintenance: "/images/maintenance.jpg",
   cta: "/images/Consultation.jpg",
+  textile: "/images/textile-fire-protection.jpg",
+
+  textile_vehicle: "/images/textile-vehicle.webp",
+  g_vehicle_1: "/images/vehicle-1.jpg",
+  g_vehicle_2: "/images/vehicle-2.jpg",
+  g_vehicle_3: "/images/vehicle-3.jpg",
+  g_emobility_1: "/images/em-1.webp",
+  g_emobility_2: "/images/em-2.webp",
+  g_emobility_3: "/images/em-3.webp",
+  textile_bag: "/images/textile_bag.webp",
+  g_bag_1: "/images/bag-1.webp",
+  g_bag_2: "/images/bag-2.webp",
+  g_pallet_1: "/images/pallet-1.jpg",
+  g_pallet_2: "/images/pallet-2.jpg",
 };
 
 /* ---------------------------------------------------------------- */
@@ -68,6 +82,7 @@ export default function FireProtectionPage() {
 
       <CoreServices />
       <SystemsDeepDive />
+      <TextileCatalogSection />
       <WhyChooseUs />
       <CaseStudies />
 
@@ -116,6 +131,17 @@ function CoreServices() {
         t("facade.bullets.2"),
       ],
     },
+    {
+      key: "textile",
+      title: t("textile.title"),
+      desc: t("textile.desc"),
+      img: ASSETS.textile,
+      bullets: [
+        t("textile.bullets.0"),
+        t("textile.bullets.1"),
+        t("textile.bullets.2"),
+      ],
+    },
   ];
 
   return (
@@ -131,7 +157,7 @@ function CoreServices() {
           {t("heading")}
         </motion.h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3justify-center max-w-6xl mx-auto">
           {services.map((s, i) => (
             <motion.article
               key={s.key}
@@ -328,6 +354,186 @@ function CaseStudies() {
                 <p className="mt-2 text-slate-600">{p.desc}</p>
               </div>
             </motion.div>
+          ))}
+        </div>
+      </div>
+      <Wave className="text-[#eef8ff]" />
+    </section>
+  );
+}
+
+/* ---------------------------------------------------------------- */
+/* Textile Catalog — multiple products with gallery & specs          */
+/* ---------------------------------------------------------------- */
+function TextileCatalogSection() {
+  const t = useTranslations("fire.textileCatalog");
+
+  type Product = {
+    key: string;
+    title: string;
+    summary: string;
+    hero: string;
+    bullets: string[];
+    specs: { k: string; v: string }[];
+    gallery: string[];
+  };
+
+  const items: Product[] = [
+    {
+      key: "vehicle",
+      title: t("vehicle.title"),
+      summary: t("vehicle.summary"),
+      hero: ASSETS.textile_vehicle,
+      bullets: [
+        t("vehicle.bullets.0"),
+        t("vehicle.bullets.1"),
+        t("vehicle.bullets.2"),
+      ],
+      specs: [
+        { k: t("specs.size"), v: t("vehicle.specs.size") },
+        { k: t("specs.temp"), v: t("vehicle.specs.temp") },
+        { k: t("specs.weight"), v: t("vehicle.specs.weight") },
+      ],
+      gallery: [ASSETS.g_vehicle_1, ASSETS.g_vehicle_2, ASSETS.g_vehicle_3],
+    },
+    {
+      key: "emobility",
+      title: t("emobility.title"),
+      summary: t("emobility.summary"),
+      hero: ASSETS.g_emobility_1,
+      bullets: [
+        t("emobility.bullets.0"),
+        t("emobility.bullets.1"),
+        t("emobility.bullets.2"),
+      ],
+      specs: [
+        { k: t("specs.size"), v: t("emobility.specs.size") },
+        { k: t("specs.temp"), v: t("emobility.specs.temp") },
+        { k: t("specs.weight"), v: t("emobility.specs.weight") },
+      ],
+      gallery: [ASSETS.g_emobility_1, ASSETS.g_emobility_2],
+    },
+    {
+      key: "bag",
+      title: t("bag.title"),
+      summary: t("bag.summary"),
+      hero: ASSETS.textile_bag,
+      bullets: [t("bag.bullets.0"), t("bag.bullets.1"), t("bag.bullets.2")],
+      specs: [
+        { k: t("specs.size"), v: t("bag.specs.size") },
+        { k: t("specs.temp"), v: t("bag.specs.temp") },
+        { k: t("specs.closure"), v: t("bag.specs.closure") },
+      ],
+      gallery: [ASSETS.g_bag_1, ASSETS.g_bag_2],
+    },
+  ];
+
+  return (
+    <section id="textile-catalog" className="relative bg-white/90 py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
+        >
+          <span className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 ring-1 ring-blue-100">
+            {t("badge")}
+          </span>
+          <h2 className="mt-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            {t("heading")}
+          </h2>
+          <p className="mt-3 text-slate-600">{t("intro")}</p>
+        </motion.div>
+
+        <div className="mt-10 space-y-16">
+          {items.map((p, idx) => (
+            <motion.article
+              key={p.key}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.05 * idx }}
+              className="rounded-3xl border border-white/60 bg-white/70 p-6 shadow-sm backdrop-blur"
+            >
+              {/* top row: hero + text */}
+              <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+                <div className={idx % 2 ? "md:order-2" : ""}>
+                  <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-white/60 shadow flex items-center justify-center">
+                    <Image
+                      src={p.hero}
+                      alt={p.title}
+                      width={900}
+                      height={600}
+                      className="object-cover max-h-[22rem] w-auto rounded-2xl"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-slate-600">{p.summary}</p>
+
+                  <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {p.bullets.map((b) => (
+                      <li
+                        key={b}
+                        className="flex items-start gap-2 rounded-xl border border-white/60 bg-white/70 p-3 text-slate-700 shadow-sm"
+                      >
+                        <span className="mt-1 inline-block h-2 w-2 shrink-0 rounded-full bg-blue-500" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* specs chips */}
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {p.specs.map((s) => (
+                      <div
+                        key={s.k + s.v}
+                        className="rounded-xl border border-white/60 bg-white/80 px-3 py-2 text-sm text-slate-700 shadow-sm"
+                      >
+                        <span className="font-medium text-slate-900">
+                          {s.k}:
+                        </span>{" "}
+                        {s.v}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* gallery */}
+              {!!p.gallery.length && (
+                <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+                  {p.gallery.map((g) => (
+                    <div
+                      key={g}
+                      className="relative h-32 w-full overflow-hidden rounded-xl border border-white/60 bg-white/60 shadow"
+                    >
+                      <Image
+                        src={g}
+                        alt={`${p.title} image`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* learn more CTA */}
+              <div className="mt-6 flex items-center justify-end">
+                <a
+                  href={paths.contact.href}
+                  className="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-blue-700"
+                >
+                  {t("cta")}
+                </a>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>

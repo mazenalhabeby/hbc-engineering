@@ -369,6 +369,15 @@
           "Compartmentation design",
           "Regulatory compliance"
         ]
+      },
+      "textile": {
+        "title": "Textile Fire Protection",
+        "desc": "Non-invasive, silicone-coated glass-fiber barriers that help contain flames and reduce heat and smoke around building exteriors—ideal near charging areas, workshops, or parking zones where Li-ion risks exist. Developed with European, maintenance-free materials and proven battery-fire practices.",
+        "bullets": {
+          "0": "Silicone-coated glass-fiber fabric: high heat resistance and durable outdoors.",
+          "1": "Reduces smoke and radiated heat; works without water or foam.",
+          "2": "Built on certified EV-blanket know-how (e.g., DIN SPEC 91489 methods), Made in Europe."
+        }
       }
     },
     "systems": {
@@ -432,6 +441,90 @@
     "cta": {
       "title": "Elevate Your Safety. Protect What Matters.",
       "description": "Contact HBC to design or upgrade your fire protection systems with intelligence, compliance, and durability built in."
+    },
+    "textileCatalog": {
+      "badge": "Product Line",
+      "heading": "Textile Fire-Protection Catalog",
+      "intro": "A modular family of high-temperature textile solutions: from large vehicle covers to compact battery bags and pallet or container covers. All options are flexible, water-free, and designed to reduce flame spread, radiant heat, and smoke.",
+      "specs": {
+        "size": "Size / coverage",
+        "temp": "Thermal performance",
+        "weight": "Handling",
+        "ip": "Weather rating",
+        "closure": "Closure",
+        "fixation": "Fixation"
+      },
+      "cta": "Request now",
+      "vehicle": {
+        "title": "Vehicle Fire Blanket",
+        "summary": "Large-format cover to encapsulate passenger cars and vans in parking structures, workshops, and charging areas.",
+        "bullets": [
+          "Blocks radiant heat and helps limit smoke release.",
+          "Deployable by two people; residue-free.",
+          "Reusable textile with reinforced edge seams."
+        ],
+        "specs": {
+          "size": "Typical 6×8 m; custom on request",
+          "temp": "High radiant-heat blocking",
+          "weight": "Lightweight, foldable carry"
+        }
+      },
+      "emobility": {
+        "title": "E-Mobility Blanket (E-bike/Scooter)",
+        "summary": "Compact blanket for smaller vehicles and repair bays—ideal for showrooms, hotels, and service stations.",
+        "bullets": [
+          "Fast cover for charging or storage zones.",
+          "Minimal space requirement; quick stowage.",
+          "Use standalone or as a secondary barrier."
+        ],
+        "specs": {
+          "size": "Around 3×3 m; variants available",
+          "temp": "High-temp resistance for extended exposure",
+          "weight": "Single-person handling"
+        }
+      },
+      "container": {
+        "title": "Container / Cage Cover",
+        "summary": "Textile lid/cover for mesh containers or battery cages to confine heat and smoke during incidents.",
+        "bullets": [
+          "Fits industrial bins, roll-cages, or trolleys.",
+          "Optional straps for secure, quick fixation.",
+          "Weather-resistant silicone-coated fabric."
+        ],
+        "specs": {
+          "size": "Common cage sizes; custom patterns",
+          "temp": "Radiant-heat blocking textile stack",
+          "ip": "Outdoor-capable fabrics"
+        }
+      },
+      "bag": {
+        "title": "Battery Safety Bag / Box Liner",
+        "summary": "Portable bag/liner for modules, tool packs, and small battery storage. Limits particles, heat, and smoke.",
+        "bullets": [
+          "Zipper/Velcro closure options.",
+          "Stackable storage; clear labeling windows.",
+          "Ideal for transport between work areas."
+        ],
+        "specs": {
+          "size": "Multiple volumes (tool, e-bike, module)",
+          "temp": "High-temperature resistant inner layer",
+          "closure": "Zipper / Velcro variants"
+        }
+      },
+      "pallet": {
+        "title": "Pallet / IBC Cover",
+        "summary": "Full-pallet cover to separate risky loads in logistics and warehouses and reduce chain-reaction events.",
+        "bullets": [
+          "Quick top-down throw and strap-down.",
+          "Compatible with stretch-wrap workflows.",
+          "Reusable for recurring shipments."
+        ],
+        "specs": {
+          "size": "EU/US pallet footprints; custom heights",
+          "temp": "Heat/radiation shielding fabric",
+          "fixation": "Straps / hooks depending on model"
+        }
+      }
     }
   },
   "smart": {

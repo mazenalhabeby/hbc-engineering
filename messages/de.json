@@ -369,6 +369,15 @@
           "Kompartmentierung",
           "Regelkonformität"
         ]
+      },
+      "textile": {
+        "title": "Textiler Brandschutz",
+        "desc": "Nichtinvasive, silikonbeschichtete Glasfaserbarrieren, die dazu beitragen, Flammen einzudämmen und Hitze und Rauch im Außenbereich von Gebäuden zu reduzieren – ideal in der Nähe von Ladebereichen, Werkstätten oder Parkzonen, in denen Li-Ionen-Risiken bestehen. \nEntwickelt mit europäischen, wartungsfreien Materialien und bewährten Batteriefeuerpraktiken.",
+        "bullets": {
+          "0": "Silikonbeschichtetes Glasfasergewebe: hohe Hitzebeständigkeit und langlebig im Außenbereich.",
+          "1": "Reduziert Rauch und Strahlungswärme; \nFunktioniert ohne Wasser oder Schaum.",
+          "2": "Basierend auf zertifiziertem EV-Decken-Know-how (z. B. DIN SPEC 91489-Methoden), hergestellt in Europa."
+        }
       }
     },
     "systems": {
@@ -432,7 +441,91 @@
     "cta": {
       "title": "Erhöhen Sie Ihre Sicherheit. Schützen Sie, was zählt.",
       "description": "Kontaktieren Sie HBC für die Auslegung oder Modernisierung Ihrer Brandschutzsysteme – intelligent, konform und langlebig."
+    },
+"textileCatalog": {
+  "badge": "Produktlinie",
+  "heading": "Textiler Brandschutzkatalog",
+  "intro": "Eine modulare Familie von Hochtemperatur-Textillösungen – von großformatigen Fahrzeugabdeckungen bis hin zu kompakten Batterietaschen sowie Paletten- und Containerabdeckungen. Alle Varianten sind flexibel, wasserfrei und darauf ausgelegt, Flammenausbreitung, Wärmestrahlung und Rauchentwicklung zu reduzieren.",
+  "specs": {
+    "size": "Größe / Abdeckung",
+    "temp": "Thermische Leistung",
+    "weight": "Handhabung",
+    "ip": "Witterungsbeständigkeit",
+    "closure": "Verschluss",
+    "fixation": "Befestigung"
+  },
+  "cta": "Jetzt anfragen",
+  "vehicle": {
+    "title": "Fahrzeug-Feuerschutzdecke",
+    "summary": "Großformatige Abdeckung zur Einkapselung von Pkw und Transportern in Parkhäusern, Werkstätten und Ladebereichen.",
+    "bullets": [
+      "Blockiert Wärmestrahlung und hilft, Rauchentwicklung zu reduzieren.",
+      "Kann von zwei Personen eingesetzt werden; rückstandsfrei.",
+      "Wiederverwendbares Textil mit verstärkten Nähten."
+    ],
+    "specs": {
+      "size": "Typisch 6×8 m; Sondergrößen auf Anfrage",
+      "temp": "Hohe Wärmestrahlungsbeständigkeit",
+      "weight": "Leicht, faltbar und einfach zu handhaben"
     }
+  },
+  "emobility": {
+    "title": "E-Mobility-Decke (E-Bike/Scooter)",
+    "summary": "Kompakte Decke für kleinere Fahrzeuge und Werkstätten – ideal für Ausstellungsräume, Hotels und Servicestationen.",
+    "bullets": [
+      "Schnelle Abdeckung für Lade- oder Lagerbereiche.",
+      "Benötigt wenig Platz; einfach zu verstauen.",
+      "Kann einzeln oder als sekundäre Barriere verwendet werden."
+    ],
+    "specs": {
+      "size": "Ca. 3×3 m; verschiedene Varianten verfügbar",
+      "temp": "Hitzebeständig bei längerer Einwirkung",
+      "weight": "Von einer Person bedienbar"
+    }
+  },
+  "container": {
+    "title": "Container- / Käfigabdeckung",
+    "summary": "Textile Abdeckung für Gittercontainer oder Batteriekäfige zur Eindämmung von Wärme und Rauch im Brandfall.",
+    "bullets": [
+      "Passend für Industriebehälter, Rollwagen oder Transportkörbe.",
+      "Optionale Gurte für schnelle und sichere Befestigung.",
+      "Witterungsbeständiges, silikonbeschichtetes Gewebe."
+    ],
+    "specs": {
+      "size": "Standard-Containergrößen; Sondermaße möglich",
+      "temp": "Textilaufbau zur Blockierung von Wärmestrahlung",
+      "ip": "Für den Außenbereich geeignet"
+    }
+  },
+  "bag": {
+    "title": "Batteriesicherheitstasche / Boxeinsatz",
+    "summary": "Tragbare Tasche oder Einlage für Module, Werkzeugakkus und kleine Batteriespeicher. Reduziert Partikel, Wärme und Rauch.",
+    "bullets": [
+      "Verschluss mit Reißverschluss oder Klett.",
+      "Stapelfähige Aufbewahrung mit Sichtfenster zur Beschriftung.",
+      "Ideal für den Transport zwischen Arbeitsbereichen."
+    ],
+    "specs": {
+      "size": "Mehrere Größen (Werkzeug, E-Bike, Modul)",
+      "temp": "Hitzebeständige Innenlage",
+      "closure": "Reißverschluss / Klettvarianten"
+    }
+  },
+  "pallet": {
+    "title": "Paletten- / IBC-Abdeckung",
+    "summary": "Vollständige Palettenabdeckung zur Trennung von risikobehafteten Gütern in Logistik und Lager und zur Verringerung von Kettenreaktionen im Brandfall.",
+    "bullets": [
+      "Schnell von oben aufzulegen und mit Gurten zu befestigen.",
+      "Kompatibel mit Stretchfolien-Prozessen.",
+      "Wiederverwendbar für den regelmäßigen Einsatz."
+    ],
+    "specs": {
+      "size": "EU-/US-Palettenmaße; individuelle Höhen möglich",
+      "temp": "Hitze- und strahlungsabschirmendes Gewebe",
+      "fixation": "Gurte / Haken je nach Modell"
+    }
+  }
+}
   },
   "smart": {
     "hero": {

@@ -1,992 +1,1187 @@
 {
+  "hero": {
+    "title": "Hallo, wereld!"
+  },
+  "nav": {
+    "changeLanguage": "Taal wijzigen"
+  },
+  "navbar": {
+    "company": "Bedrijf",
+    "home": "Home",
+    "industrial": "Industrieel",
+    "fireProtection": "Brandbeveiliging",
+    "intelligent": "Intelligent",
+    "contact": "Contact",
+    "careers": "Carrières",
+    "scheduleMeeting": "Plan een afspraak",
+    "itSolutions": "IT-oplossingen"
+  },
+  "home": {
+    "midTitle": "de toekomst,",
+    "tailTitle": "Service, Veiligheid",
+    "service": {
+      "fireProdaction": {
+        "title": "Brandbeveiliging",
+        "des": "Van houtbescherming tot architectonische gevels en systeemintegratie — wij brengen veiligheid, schoonheid en naleving samen."
+      },
+      "industrial": {
+        "title": "Industriële Onderhoud en Diensten",
+        "dec": "Van preventief of terugkerend onderhoud en diagnose tot snelle probleemoplossing of complexe verplaatsing van productielijnen."
+      },
+      "intelligent": {
+        "title": "Intelligent Gebouw",
+        "des": "Verbind comfort, veiligheid en energie-intelligentie.\nBeheer, bewaak en optimaliseer uw ruimte — betrouwbaar en moeiteloos."
+      },
+      "heading": "Onze Kernservices",
+      "subheading": "Betrouwbaar onderhoud, brandbeveiliging en intelligente gebouwoplossingen waarop u kunt vertrouwen",
+      "section": {
+        "point": "Wat wij doen"
+      },
+      "learnMore": "Lees meer"
+    },
+    "about": {
+      "heading": "Ingenieurskracht.",
+      "subheading": "Vertrouwen inspireren.",
+      "des": "HBC Group levert deskundig industrieel onderhoud, machine­service en fabriek­verplaatsing in de VS en Europa. Wij combineren Europese ingenieurskwaliteit met lokale ondersteuning om 24/7 oplossingen te bieden die de bedrijfsvoering betrouwbaar draaiende houden.",
+      "subdes": "Meer dan service — wij zijn uw partner bij het beschermen van investeringen, het waarborgen van veiligheid en het stimuleren van vooruitgang.",
+      "client": "Tevreden Klanten",
+      "project": "Voltooide Projecten"
+    },
+    "value": {
+      "title": "Waarom Kiezen voor HBC Group",
+      "des": "Onze basis is gebouwd op expertise, vertrouwen en innovatie — dit zijn de waarden die ons definiëren.",
+      "fearure": {
+        "experience": {
+          "title": "Bewezen Ervaring",
+          "des": "Meer dan tien jaar praktijkervaring in industrieel onderhoud, verplaatsing en slimme technologie — met precisie en betrouwbaarheid in Europa en de VS."
+        },
+        "partnership": {
+          "title": "Betrouwbaar Partnerschap",
+          "des": "Erkend als betrouwbare partner voor zowel wereldwijde bedrijven als particulieren — gebaseerd op langdurige relaties, transparantie en het nakomen van beloften."
+        },
+        "innovation": {
+          "title": "Innovatiegedreven",
+          "des": "Wij combineren technische uitmuntendheid met de nieuwste slimme oplossingen en groene technologieën om klanten efficiëntie en duurzaamheid te bieden."
+        },
+        "reliability": {
+          "title": "Betrouwbaarheid van Begin tot Eind",
+          "des": "Van diagnose en preventief onderhoud tot volledige verplaatsingen en slimme woningoplossingen — wij bieden 24/7 ondersteuning voor continuïteit en gemoedsrust."
+        },
+        "flexibility": {
+          "title": "Aangepaste Flexibiliteit",
+          "des": "Op maat gemaakte strategieën voor elke klant — van grootschalige industriële operaties tot individuele slimme woningen — om unieke behoeften met precisie te vervullen."
+        },
+        "commitment": {
+          "title": "Onwankelbare Toewijding",
+          "des": "Toegewijd aan elk project met integriteit, verantwoordelijkheid en uitmuntendheid — wij staan onze klanten bij van begin tot eind, ongeacht de uitdaging."
+        }
+      }
+    },
+    "solution": {
+      "industrial": {
+        "label": "Industrieel",
+        "title": "Van Uptime tot Upgrades — Wij Hebben Het Gedekt",
+        "des": "Precisieonderhoud, geïntegreerde beveiliging en complexe verplaatsingen ontworpen voor maximale bedrijfszekerheid."
+      },
+      "Fire": {
+        "label": "Brandbeveiliging",
+        "title": "Geavanceerde Brandbeveiliging",
+        "des": "Ontworpen coatings en behandelingen die structuren beschermen tegen extreme brandomstandigheden."
+      },
+      "intelligent": {
+        "title": "Slimmere Huizen, Groenere Levensstijl",
+        "label": "Intelligent Gebouw",
+        "des": "Comfort, veiligheid en energie-intelligentie — prachtig verbonden."
+      },
+      "it": {
+        "label": "IT-oplossingen",
+        "title": "Sneller Leveren, Slimmer Schalen — Veilig Ontworpen",
+        "des": "Wij ontwerpen en bouwen moderne digitale producten van begin tot eind: software, cloud, AI-automatisering en veilige integraties."
+      }
+    }
+  },
+  "footer": {
+    "writeUs": "Schrijf ons",
+    "callUs": "Bel ons",
+    "subscribe": "Abonneer je op onze nieuwsbrief",
+    "send": "Verzenden"
+  },
+  "industrial": {
     "hero": {
-  "title": "Hallo, wereld!"
-},
-"nav": {
-  "changeLanguage": "Taal wijzigen"
-},
-"navbar": {
-  "company": "Bedrijf",
-  "home": "Home",
-  "industrial": "Industrieel",
-  "fireProtection": "Brandbeveiliging",
-  "intelligent": "Intelligent",
-  "contact": "Contact",
-  "careers": "Carrières",
-  "scheduleMeeting": "Plan een afspraak",
-  "itSolutions": "IT-oplossingen"
-},
-"home": {
-  "midTitle": "de toekomst,",
-  "tailTitle": "Service, Veiligheid",
-  "service": {
-    "fireProdaction": {
+      "badge": "HBC Industrieel",
+      "title": "Onze service,",
+      "highlight": "Uw gemoedsrust",
+      "description": "HBC Group is uw snelle, betrouwbare en kwaliteitsgerichte partner voor industrieel onderhoud en machineonderhoud.\n\nWij helpen u met uw meest veeleisende uitdagingen.\n\nVan preventief of terugkerend onderhoud en diagnose tot snelle probleemoplossing of complexe verplaatsing van assemblagelijnen.",
+      "chips": {
+        "hydraulics": "Hydraulisch",
+        "electrical": "Elektrisch",
+        "mechanical": "Mechanisch",
+        "programming": "Programmering",
+        "fireProtection": "Brandbeveiliging"
+      }
+    },
+    "slides": {
+      "common": {
+        "heading": "Industrieel onderhoud",
+        "tag": "Onderhoud"
+      },
+      "hydraulics": {
+        "title": "Hydraulisch",
+        "text": "Diagnose, pomp-/klepservice, slangen, afdichting, filtratie en vervuilingscontrole. Wij herstellen kracht en beweging met micronprecisie.",
+        "bullets": [
+          "Krachtunits",
+          "Manifolds",
+          "Cilinders",
+          "Acculading",
+          "Doorspoelen"
+        ]
+      },
+      "electrical": {
+        "title": "Elektrisch",
+        "text": "Bedieningspanelen, aandrijvingen, PLC’s, sensoren, stroomverdeling. Wij verzorgen nette installaties en retrofits met veiligheid en overzicht.",
+        "bullets": [
+          "PLC/Drive-afstemming",
+          "Schakelapparatuur",
+          "SCADA I/O",
+          "Thermische scans",
+          "Codes en labels"
+        ]
+      },
+      "mechanical": {
+        "title": "Mechanisch",
+        "text": "Versnellingsbakken, transportbanden, lagers, uitlijning van assen, staalconstructies — gebouwd om industriële belasting te weerstaan.",
+        "bullets": [
+          "Precisie-uitlijning",
+          "Transportbanden",
+          "Tandwiel en ketting",
+          "Lasermetrologie",
+          "Fabricage"
+        ]
+      },
+      "welding": {
+        "title": "Lassen",
+        "text": "Gecertificeerd lassen en on-site fabricage voor productielijnen en zware installaties. Sterk, schoon en geïnspecteerd.",
+        "bullets": [
+          "Staal en RVS",
+          "Pijplassen",
+          "Reparatie en constructie",
+          "Armaturen",
+          "NDT-klaar"
+        ]
+      },
+      "programming": {
+        "title": "Programmering",
+        "text": "Inbedrijfstelling en optimalisatie van PLC/HMI-code. Wij laten machines slimmer denken en operators sneller werken.",
+        "bullets": [
+          "Siemens/TIA",
+          "Rockwell",
+          "Veiligheids-PLC",
+          "HMI/UX",
+          "Datalogging"
+        ]
+      }
+    },
+    "capabilities": {
+      "items": [
+        {
+          "title": "Preventief en Voorspellend",
+          "desc": "Programma’s die ongeplande uitvaltijd omzetten in geplande optimalisatie."
+        },
+        {
+          "title": "Snelle Respons",
+          "desc": "Ingenieurs en technici met onderdelen, gereedschap en checklists."
+        },
+        {
+          "title": "Retrofits en Upgrades",
+          "desc": "Laat oude installaties presteren als nieuw — mechanisch, elektrisch en besturingstechnisch."
+        },
+        {
+          "title": "Datatransparantie",
+          "desc": "Van sensor tot dashboard: wij tonen de signalen die ertoe doen."
+        },
+        {
+          "title": "Veiligheid Eerst",
+          "desc": "Gecertificeerde procedures en gereedschap voor de veiligheid van fabriek en personeel."
+        },
+        {
+          "title": "Documentatie",
+          "desc": "As-built schema’s, bekabeling en naamconventies — duidelijkheid voor de komende jaren."
+        }
+      ]
+    },
+    "security": {
+      "heading": "Beveiligingssystemen",
+      "tag": "Beveiliging",
+      "fire": {
+        "title": "Brandbeveiliging",
+        "brief": "Ontwerp, installatie en onderhoud van robuuste brandsystemen voor industriële risicocategorieën met traceerbaarheid en naleving van normen.",
+        "bullets": [
+          "Risicoanalyse",
+          "Blussystemen",
+          "Regelmatige tests",
+          "Conformiteitsrapporten"
+        ],
+        "sub": {
+          "wood": {
+            "label": "Houtbescherming",
+            "desc": "Behandelingen en coatings voor duurzaamheid."
+          },
+          "film": {
+            "label": "Filmbescherming",
+            "desc": "Hoogwaardige beschermfilms."
+          },
+          "facades": {
+            "label": "Gevels",
+            "desc": "Buitensystemen voor weerstand en levensduur."
+          }
+        }
+      },
+      "cameras": {
+        "title": "Camera’s en Analyse",
+        "brief": "Van camera’s voor zware omgevingen tot slimme detectie. Krijg visuele zekerheid in fabrieken, terreinen en magazijnen.",
+        "bullets": [
+          "Thermisch en PTZ",
+          "AI-analyse",
+          "NVR/Opslag",
+          "Toegang op afstand"
+        ]
+      },
+      "servers": {
+        "title": "Server en Opslag",
+        "brief": "Versterkte, schaalbare infrastructuur voor beveiligings- en industriële data — ontworpen voor schrijfintensieve werklasten.",
+        "bullets": [
+          "RAID-strategieën",
+          "Redundante voeding",
+          "Versleutelde back-ups",
+          "Bewaking"
+        ]
+      },
+      "entry": {
+        "title": "Toegangs- en Alarmsystemen",
+        "brief": "Kaart-, PIN-, biometrische- en voertuigtoegang. Geïntegreerde alarmen met duidelijke procedures en escalaties.",
+        "bullets": [
+          "Toegangscontrole",
+          "Perimeter",
+          "Intercom",
+          "24/7 meldingen"
+        ],
+        "extraLabel": "Alarmsystemen"
+      }
+    },
+    "other": {
+      "heading": "Andere Diensten",
+      "items": [
+        {
+          "title": "Machines gedemonteerd, verplaatst, opnieuw opgebouwd",
+          "desc": "Wij verplaatsen productieapparatuur veilig: etikettering, demontage, transport, uitlijning en heropstart."
+        },
+        {
+          "title": "Nieuwbouw",
+          "desc": "Van nutsvoorzieningen tot eindoplevering — MEP-routing, kabelgoten, besturing en veiligheidssystemen."
+        }
+      ]
+    },
+    "process": {
+      "howHeading": "Hoe wij leveren",
+      "assuranceHeading": "Kwaliteitsborging",
+      "steps": [
+        {
+          "title": "Beoordelen",
+          "desc": "Locatiestudie, risicobeoordeling en prestatiedoelen."
+        },
+        {
+          "title": "Plannen",
+          "desc": "Omvang, fasen, veiligheid en reserveonderdelen."
+        },
+        {
+          "title": "Uitvoeren",
+          "desc": "Gekwalificeerde teams, kwaliteitscontroles en rapportage."
+        },
+        {
+          "title": "Optimaliseren",
+          "desc": "Fijnregeling, training, documentatie en ondersteuning."
+        }
+      ],
+      "badges": [
+        "24/7 Ondersteuning",
+        "Gecertificeerde Technici",
+        "Veiligheid Eerst",
+        "Garantie",
+        "As-built Documentatie"
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Kunt u samenwerken met onze interne ingenieurs?",
+      "a1": "Ja. Wij werken vaak samen met fabrieksteams en passen ons aan uw onderhoudsschema’s en normen aan.",
+      "q2": "Levert u as-built documentatie?",
+      "a2": "Altijd. Wij leveren bedradingsschema’s, naamconventies, PLC/HMI-back-ups, testrapporten en foto’s.",
+      "q3": "Hoe garandeert u de veiligheid?",
+      "a3": "Vergunningen, isolatie/LOTO, gereedschapscontroles en getraind personeel. Veiligheid wordt vanaf dag één gepland.",
+      "q4": "Hoe kan ik een consultatie plannen?",
+      "a4Rich": "U kunt eenvoudig een afspraak plannen via onze <link>Zakelijke Vergaderaanvraag</link> pagina."
+    },
+    "cta": {
+      "title": "Laten we uw fabriek draaiende houden.",
+      "description": "Plan een afspraak met ons industriële team om de snelste weg naar uptime, veiligheid en prestaties te bepalen."
+    }
+  },
+  "fire": {
+    "hero": {
+      "badge": "HBC Brandbeveiliging",
       "title": "Brandbeveiliging",
-      "des": "Van houtbescherming tot architectonische gevels en systeemintegratie — wij brengen veiligheid, schoonheid en naleving samen."
-    },
-    "industrial": {
-      "title": "Industriële Onderhoud en Diensten",
-      "dec": "Van preventief of terugkerend onderhoud en diagnose tot snelle probleemoplossing of complexe verplaatsing van productielijnen."
-    },
-    "intelligent": {
-      "title": "Intelligent Gebouw",
-      "des": "Verbind comfort, veiligheid en energie-intelligentie.\nBeheer, bewaak en optimaliseer uw ruimte — betrouwbaar en moeiteloos."
-    },
-    "heading": "Onze Kernservices",
-    "subheading": "Betrouwbaar onderhoud, brandbeveiliging en intelligente gebouwoplossingen waarop u kunt vertrouwen",
-    "section": {
-      "point": "Wat wij doen"
-    },
-    "learnMore": "Lees meer"
-  },
-  "about": {
-    "heading": "Ingenieurskracht.",
-    "subheading": "Vertrouwen inspireren.",
-    "des": "HBC Group levert deskundig industrieel onderhoud, machine­service en fabriek­verplaatsing in de VS en Europa. Wij combineren Europese ingenieurskwaliteit met lokale ondersteuning om 24/7 oplossingen te bieden die de bedrijfsvoering betrouwbaar draaiende houden.",
-    "subdes": "Meer dan service — wij zijn uw partner bij het beschermen van investeringen, het waarborgen van veiligheid en het stimuleren van vooruitgang.",
-    "client": "Tevreden Klanten",
-    "project": "Voltooide Projecten"
-  },
-  "value": {
-    "title": "Waarom Kiezen voor HBC Group",
-    "des": "Onze basis is gebouwd op expertise, vertrouwen en innovatie — dit zijn de waarden die ons definiëren.",
-    "fearure": {
-      "experience": {
-        "title": "Bewezen Ervaring",
-        "des": "Meer dan tien jaar praktijkervaring in industrieel onderhoud, verplaatsing en slimme technologie — met precisie en betrouwbaarheid in Europa en de VS."
+      "highlight": "Die Beschermt en Blijft.",
+      "description": "Van houtbescherming tot architectonische gevels en systeemintegratie — wij combineren veiligheid, esthetiek en naleving.",
+      "chips": {
+        "wood": "Houtbescherming",
+        "film": "Filmbescherming",
+        "facades": "Gevels",
+        "systemDesign": "Systeemontwerp",
+        "maintenance": "Onderhoud"
       },
-      "partnership": {
-        "title": "Betrouwbaar Partnerschap",
-        "des": "Erkend als betrouwbare partner voor zowel wereldwijde bedrijven als particulieren — gebaseerd op langdurige relaties, transparantie en het nakomen van beloften."
+      "cta": "Neem contact met ons op"
+    },
+    "core": {
+      "heading": "Kern­diensten voor Brandbeveiliging",
+      "wood": {
+        "title": "Houtbescherming",
+        "desc": "Speciale coatings en behandelingen die de ontvlambaarheid van houten constructie­elementen verminderen, de brandweerstand verhogen en de levensduur verlengen.",
+        "bullets": [
+          "Brandvertragende coatings",
+          "Vlamvertragende impregnatie",
+          "Conform NFPA & EN"
+        ]
       },
-      "innovation": {
-        "title": "Innovatiegedreven",
-        "des": "Wij combineren technische uitmuntendheid met de nieuwste slimme oplossingen en groene technologieën om klanten efficiëntie en duurzaamheid te bieden."
+      "film": {
+        "title": "Filmbescherming",
+        "desc": "Transparante films voor ramen, muren en deuren die de verspreiding van vlammen vertragen en warmteoverdracht beperken, terwijl de esthetiek behouden blijft.",
+        "bullets": [
+          "Warmte­reflecterende film",
+          "Rookbarrière­film",
+          "Aangepaste formaten"
+        ]
       },
-      "reliability": {
-        "title": "Betrouwbaarheid van Begin tot Eind",
-        "des": "Van diagnose en preventief onderhoud tot volledige verplaatsingen en slimme woningoplossingen — wij bieden 24/7 ondersteuning voor continuïteit en gemoedsrust."
+      "facade": {
+        "title": "Gevelsystemen",
+        "desc": "Architectonische brandveilige gevelmaterialen en ontwerpen die de verspreiding van vlammen en rook over buitenoppervlakken voorkomen.",
+        "bullets": [
+          "Vuurvaste panelen",
+          "Compartimenteringsontwerp",
+          "Wettelijke naleving"
+        ]
       },
-      "flexibility": {
-        "title": "Aangepaste Flexibiliteit",
-        "des": "Op maat gemaakte strategieën voor elke klant — van grootschalige industriële operaties tot individuele slimme woningen — om unieke behoeften met precisie te vervullen."
-      },
-      "commitment": {
-        "title": "Onwankelbare Toewijding",
-        "des": "Toegewijd aan elk project met integriteit, verantwoordelijkheid en uitmuntendheid — wij staan onze klanten bij van begin tot eind, ongeacht de uitdaging."
-      }
-    }
-  },
-  "solution": {
-    "industrial": {
-      "label": "Industrieel",
-      "title": "Van Uptime tot Upgrades — Wij Hebben Het Gedekt",
-      "des": "Precisieonderhoud, geïntegreerde beveiliging en complexe verplaatsingen ontworpen voor maximale bedrijfszekerheid."
-    },
-    "Fire": {
-      "label": "Brandbeveiliging",
-      "title": "Geavanceerde Brandbeveiliging",
-      "des": "Ontworpen coatings en behandelingen die structuren beschermen tegen extreme brandomstandigheden."
-    },
-    "intelligent": {
-      "title": "Slimmere Huizen, Groenere Levensstijl",
-      "label": "Intelligent Gebouw",
-      "des": "Comfort, veiligheid en energie-intelligentie — prachtig verbonden."
-    },
-    "it": {
-      "label": "IT-oplossingen",
-      "title": "Sneller Leveren, Slimmer Schalen — Veilig Ontworpen",
-      "des": "Wij ontwerpen en bouwen moderne digitale producten van begin tot eind: software, cloud, AI-automatisering en veilige integraties."
-    }
-  }
-},
-"footer": {
-  "writeUs": "Schrijf ons",
-  "callUs": "Bel ons",
-  "subscribe": "Abonneer je op onze nieuwsbrief",
-  "send": "Verzenden"
-},
-"industrial": {
-  "hero": {
-    "badge": "HBC Industrieel",
-    "title": "Onze service,",
-    "highlight": "Uw gemoedsrust",
-    "description": "HBC Group is uw snelle, betrouwbare en kwaliteitsgerichte partner voor industrieel onderhoud en machineonderhoud.\n\nWij helpen u met uw meest veeleisende uitdagingen.\n\nVan preventief of terugkerend onderhoud en diagnose tot snelle probleemoplossing of complexe verplaatsing van assemblagelijnen.",
-    "chips": {
-      "hydraulics": "Hydraulisch",
-      "electrical": "Elektrisch",
-      "mechanical": "Mechanisch",
-      "programming": "Programmering",
-      "fireProtection": "Brandbeveiliging"
-    }
-  },
-  "slides": {
-    "common": {
-      "heading": "Industrieel onderhoud",
-      "tag": "Onderhoud"
-    },
-    "hydraulics": {
-      "title": "Hydraulisch",
-      "text": "Diagnose, pomp-/klepservice, slangen, afdichting, filtratie en vervuilingscontrole. Wij herstellen kracht en beweging met micronprecisie.",
-      "bullets": ["Krachtunits", "Manifolds", "Cilinders", "Acculading", "Doorspoelen"]
-    },
-    "electrical": {
-      "title": "Elektrisch",
-      "text": "Bedieningspanelen, aandrijvingen, PLC’s, sensoren, stroomverdeling. Wij verzorgen nette installaties en retrofits met veiligheid en overzicht.",
-      "bullets": ["PLC/Drive-afstemming", "Schakelapparatuur", "SCADA I/O", "Thermische scans", "Codes en labels"]
-    },
-    "mechanical": {
-      "title": "Mechanisch",
-      "text": "Versnellingsbakken, transportbanden, lagers, uitlijning van assen, staalconstructies — gebouwd om industriële belasting te weerstaan.",
-      "bullets": ["Precisie-uitlijning", "Transportbanden", "Tandwiel en ketting", "Lasermetrologie", "Fabricage"]
-    },
-    "welding": {
-      "title": "Lassen",
-      "text": "Gecertificeerd lassen en on-site fabricage voor productielijnen en zware installaties. Sterk, schoon en geïnspecteerd.",
-      "bullets": ["Staal en RVS", "Pijplassen", "Reparatie en constructie", "Armaturen", "NDT-klaar"]
-    },
-    "programming": {
-      "title": "Programmering",
-      "text": "Inbedrijfstelling en optimalisatie van PLC/HMI-code. Wij laten machines slimmer denken en operators sneller werken.",
-      "bullets": ["Siemens/TIA", "Rockwell", "Veiligheids-PLC", "HMI/UX", "Datalogging"]
-    }
-  },
-  "capabilities": {
-    "items": [
-      { "title": "Preventief en Voorspellend", "desc": "Programma’s die ongeplande uitvaltijd omzetten in geplande optimalisatie." },
-      { "title": "Snelle Respons", "desc": "Ingenieurs en technici met onderdelen, gereedschap en checklists." },
-      { "title": "Retrofits en Upgrades", "desc": "Laat oude installaties presteren als nieuw — mechanisch, elektrisch en besturingstechnisch." },
-      { "title": "Datatransparantie", "desc": "Van sensor tot dashboard: wij tonen de signalen die ertoe doen." },
-      { "title": "Veiligheid Eerst", "desc": "Gecertificeerde procedures en gereedschap voor de veiligheid van fabriek en personeel." },
-      { "title": "Documentatie", "desc": "As-built schema’s, bekabeling en naamconventies — duidelijkheid voor de komende jaren." }
-    ]
-  },
-  "security": {
-    "heading": "Beveiligingssystemen",
-    "tag": "Beveiliging",
-    "fire": {
-      "title": "Brandbeveiliging",
-      "brief": "Ontwerp, installatie en onderhoud van robuuste brandsystemen voor industriële risicocategorieën met traceerbaarheid en naleving van normen.",
-      "bullets": ["Risicoanalyse", "Blussystemen", "Regelmatige tests", "Conformiteitsrapporten"],
-      "sub": {
-        "wood": { "label": "Houtbescherming", "desc": "Behandelingen en coatings voor duurzaamheid." },
-        "film": { "label": "Filmbescherming", "desc": "Hoogwaardige beschermfilms." },
-        "facades": { "label": "Gevels", "desc": "Buitensystemen voor weerstand en levensduur." }
+      "textile": {
+        "title": "Textielbrandbeveiliging",
+        "desc": "Niet-invasieve, met siliconen gecoate glasvezelbarrières die helpen vlammen te beperken en hitte en rook rond de buitenkant van gebouwen te verminderen – ideaal in de buurt van oplaadgebieden, werkplaatsen of parkeerzones waar Li-ion-risico's bestaan. \nOntwikkeld met Europese, onderhoudsvrije materialen en bewezen batterijbrandpraktijken.",
+        "bullets": {
+          "0": "Glasvezelstof met siliconencoating: hoge hittebestendigheid en duurzaam buitenshuis.",
+          "1": "Vermindert rook en uitgestraalde hitte; \nwerkt zonder water of schuim.",
+          "2": "Gebouwd op gecertificeerde EV-deken-knowhow (bijv. DIN SPEC 91489-methoden), gemaakt in Europa."
+        }
       }
     },
-    "cameras": {
-      "title": "Camera’s en Analyse",
-      "brief": "Van camera’s voor zware omgevingen tot slimme detectie. Krijg visuele zekerheid in fabrieken, terreinen en magazijnen.",
-      "bullets": ["Thermisch en PTZ", "AI-analyse", "NVR/Opslag", "Toegang op afstand"]
+    "systems": {
+      "heading": "Systeemintegratie en Levenscyclus",
+      "suppression": {
+        "name": "Blus- en Onderdrukkingssystemen",
+        "desc": "Ontwerp en installatie van automatische sprinkler-, gas- of schuimsystemen, afgestemd op gebruik en risicocategorie."
+      },
+      "alarm": {
+        "name": "Alarm- en Detectiesystemen",
+        "desc": "Rook-, hitte- en vlam­sensoren, bedraad of draadloos, geïntegreerd met besturingspanelen en externe meldingen."
+      },
+      "maintenance": {
+        "name": "Onderhoud en Audits",
+        "desc": "Regelmatig testen, inspecteren en certificeren van brandbeveiligingssystemen om naleving en paraatheid te garanderen."
+      }
     },
-    "servers": {
-      "title": "Server en Opslag",
-      "brief": "Versterkte, schaalbare infrastructuur voor beveiligings- en industriële data — ontworpen voor schrijfintensieve werklasten.",
-      "bullets": ["RAID-strategieën", "Redundante voeding", "Versleutelde back-ups", "Bewaking"]
+    "why": {
+      "heading": "Waarom Kiezen voor HBC Brandbeveiliging",
+      "items": [
+        {
+          "title": "Kennis van Normen en Voorschriften",
+          "desc": "Wij kennen de NFPA-, EN- en UL-normen zodat uw systeem de inspectie doorstaat, niet alleen de installatie."
+        },
+        {
+          "title": "Holistisch Veiligheidsontwerp",
+          "desc": "Wij beschermen structuur, inhoud, vluchtwegen en systemen — niet alleen brandblussing."
+        },
+        {
+          "title": "Voorspellende Systeembewaking",
+          "desc": "Sensoren detecteren vroegtijdige fouten (lekken, drukverlies, manipulatie) nog vóórdat storingen optreden."
+        },
+        {
+          "title": "Integratie met Noodrespons",
+          "desc": "Wij koppelen systemen aan panelen, beveiliging en gebouwbeheer zodat er snel gehandeld wordt wanneer elke seconde telt."
+        }
+      ]
     },
-    "entry": {
-      "title": "Toegangs- en Alarmsystemen",
-      "brief": "Kaart-, PIN-, biometrische- en voertuigtoegang. Geïntegreerde alarmen met duidelijke procedures en escalaties.",
-      "bullets": ["Toegangscontrole", "Perimeter", "Intercom", "24/7 meldingen"],
-      "extraLabel": "Alarmsystemen"
-    }
+    "cases": {
+      "heading": "Projecthoogtepunten",
+      "items": [
+        {
+          "name": "Houten Appartementencomplex",
+          "desc": "Brandvertragende coatings aangebracht op alle houten constructie­elementen. Regelgevende inspectie succesvol doorstaan met marge."
+        },
+        {
+          "name": "Commerciële Gevelrenovatie",
+          "desc": "Verouderde bekleding vervangen door een brandveilig gevelsysteem met behoud van esthetische transparantie."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "q1": "Beïnvloeden brandvertragende coatings het uiterlijk van hout?",
+      "a1": "Moderne coatings zijn transparant of licht getint en veranderen de textuur minimaal. Wij testen altijd vooraf ter plaatse.",
+      "q2": "Hoe vaak moeten de systemen worden onderhouden?",
+      "a2": "Typische inspectie­intervallen zijn maandelijks tot jaarlijks, afhankelijk van het systeemtype. Wij bieden volledige auditlogboeken en herinneringen.",
+      "q3": "Kan ik brandbeveiligingssystemen integreren met gebouwautomatisering?",
+      "a3": "Ja. Wij ontwikkelen interfaces zodat blus-, alarm- en sensorsystemen kunnen communiceren met uw slimme gebouw of BMS."
+    },
+    "cta": {
+      "title": "Verhoog uw veiligheid. Bescherm wat belangrijk is.",
+      "description": "Neem contact op met HBC om uw brandbeveiligingssystemen te ontwerpen of te upgraden met ingebouwde intelligentie, naleving en duurzaamheid."
+    },
+    "textileCatalog": {
+  "badge": "Productlijn",
+  "heading": "Textiel brandbeveiligingscatalogus",
+  "intro": "Een modulaire reeks textieloplossingen voor hoge temperaturen – van grote voertuigafdekkingen tot compacte batterijveiligheidstassen en afdekkingen voor pallets en containers. Alle varianten zijn flexibel, waterloos en ontworpen om vlamverspreiding, warmtestraling en rookontwikkeling te beperken.",
+  "specs": {
+    "size": "Afmeting / dekking",
+    "temp": "Thermische prestaties",
+    "weight": "Hanteerbaarheid",
+    "ip": "Weerbestendigheid",
+    "closure": "Sluiting",
+    "fixation": "Bevestiging"
   },
-  "other": {
-    "heading": "Andere Diensten",
-    "items": [
-      { "title": "Machines gedemonteerd, verplaatst, opnieuw opgebouwd", "desc": "Wij verplaatsen productieapparatuur veilig: etikettering, demontage, transport, uitlijning en heropstart." },
-      { "title": "Nieuwbouw", "desc": "Van nutsvoorzieningen tot eindoplevering — MEP-routing, kabelgoten, besturing en veiligheidssystemen." }
-    ]
-  },
-  "process": {
-    "howHeading": "Hoe wij leveren",
-    "assuranceHeading": "Kwaliteitsborging",
-    "steps": [
-      { "title": "Beoordelen", "desc": "Locatiestudie, risicobeoordeling en prestatiedoelen." },
-      { "title": "Plannen", "desc": "Omvang, fasen, veiligheid en reserveonderdelen." },
-      { "title": "Uitvoeren", "desc": "Gekwalificeerde teams, kwaliteitscontroles en rapportage." },
-      { "title": "Optimaliseren", "desc": "Fijnregeling, training, documentatie en ondersteuning." }
+  "cta": "Nu aanvragen",
+  "vehicle": {
+    "title": "Voertuig-branddeken",
+    "summary": "Grote afdekking om auto’s en bestelwagens in parkeergarages, werkplaatsen en laadzones in te kapselen.",
+    "bullets": [
+      "Blokkeert warmtestraling en helpt rookvorming te verminderen.",
+      "Kan door twee personen worden gebruikt; laat geen residu achter.",
+      "Herbruikbare textieldeken met versterkte naden."
     ],
-    "badges": ["24/7 Ondersteuning", "Gecertificeerde Technici", "Veiligheid Eerst", "Garantie", "As-built Documentatie"]
-  },
-  "faq": {
-    "title": "Veelgestelde vragen",
-    "q1": "Kunt u samenwerken met onze interne ingenieurs?",
-    "a1": "Ja. Wij werken vaak samen met fabrieksteams en passen ons aan uw onderhoudsschema’s en normen aan.",
-    "q2": "Levert u as-built documentatie?",
-    "a2": "Altijd. Wij leveren bedradingsschema’s, naamconventies, PLC/HMI-back-ups, testrapporten en foto’s.",
-    "q3": "Hoe garandeert u de veiligheid?",
-    "a3": "Vergunningen, isolatie/LOTO, gereedschapscontroles en getraind personeel. Veiligheid wordt vanaf dag één gepland.",
-    "q4": "Hoe kan ik een consultatie plannen?",
-    "a4Rich": "U kunt eenvoudig een afspraak plannen via onze <link>Zakelijke Vergaderaanvraag</link> pagina."
-  },
-  "cta": {
-    "title": "Laten we uw fabriek draaiende houden.",
-    "description": "Plan een afspraak met ons industriële team om de snelste weg naar uptime, veiligheid en prestaties te bepalen."
-  }
-},
-"fire": {
-  "hero": {
-    "badge": "HBC Brandbeveiliging",
-    "title": "Brandbeveiliging",
-    "highlight": "Die Beschermt en Blijft.",
-    "description": "Van houtbescherming tot architectonische gevels en systeemintegratie — wij combineren veiligheid, esthetiek en naleving.",
-    "chips": {
-      "wood": "Houtbescherming",
-      "film": "Filmbescherming",
-      "facades": "Gevels",
-      "systemDesign": "Systeemontwerp",
-      "maintenance": "Onderhoud"
-    },
-    "cta": "Neem contact met ons op"
-  },
-  "core": {
-    "heading": "Kern­diensten voor Brandbeveiliging",
-    "wood": {
-      "title": "Houtbescherming",
-      "desc": "Speciale coatings en behandelingen die de ontvlambaarheid van houten constructie­elementen verminderen, de brandweerstand verhogen en de levensduur verlengen.",
-      "bullets": [
-        "Brandvertragende coatings",
-        "Vlamvertragende impregnatie",
-        "Conform NFPA & EN"
-      ]
-    },
-    "film": {
-      "title": "Filmbescherming",
-      "desc": "Transparante films voor ramen, muren en deuren die de verspreiding van vlammen vertragen en warmteoverdracht beperken, terwijl de esthetiek behouden blijft.",
-      "bullets": [
-        "Warmte­reflecterende film",
-        "Rookbarrière­film",
-        "Aangepaste formaten"
-      ]
-    },
-    "facade": {
-      "title": "Gevelsystemen",
-      "desc": "Architectonische brandveilige gevelmaterialen en ontwerpen die de verspreiding van vlammen en rook over buitenoppervlakken voorkomen.",
-      "bullets": [
-        "Vuurvaste panelen",
-        "Compartimenteringsontwerp",
-        "Wettelijke naleving"
-      ]
+    "specs": {
+      "size": "Ongeveer 6×8 m; aangepaste maten op aanvraag",
+      "temp": "Hoge weerstand tegen warmtestraling",
+      "weight": "Lichtgewicht, opvouwbaar en gemakkelijk te hanteren"
     }
   },
-  "systems": {
-    "heading": "Systeemintegratie en Levenscyclus",
-    "suppression": {
-      "name": "Blus- en Onderdrukkingssystemen",
-      "desc": "Ontwerp en installatie van automatische sprinkler-, gas- of schuimsystemen, afgestemd op gebruik en risicocategorie."
-    },
-    "alarm": {
-      "name": "Alarm- en Detectiesystemen",
-      "desc": "Rook-, hitte- en vlam­sensoren, bedraad of draadloos, geïntegreerd met besturingspanelen en externe meldingen."
-    },
-    "maintenance": {
-      "name": "Onderhoud en Audits",
-      "desc": "Regelmatig testen, inspecteren en certificeren van brandbeveiligingssystemen om naleving en paraatheid te garanderen."
-    }
-  },
-  "why": {
-    "heading": "Waarom Kiezen voor HBC Brandbeveiliging",
-    "items": [
-      {
-        "title": "Kennis van Normen en Voorschriften",
-        "desc": "Wij kennen de NFPA-, EN- en UL-normen zodat uw systeem de inspectie doorstaat, niet alleen de installatie."
-      },
-      {
-        "title": "Holistisch Veiligheidsontwerp",
-        "desc": "Wij beschermen structuur, inhoud, vluchtwegen en systemen — niet alleen brandblussing."
-      },
-      {
-        "title": "Voorspellende Systeembewaking",
-        "desc": "Sensoren detecteren vroegtijdige fouten (lekken, drukverlies, manipulatie) nog vóórdat storingen optreden."
-      },
-      {
-        "title": "Integratie met Noodrespons",
-        "desc": "Wij koppelen systemen aan panelen, beveiliging en gebouwbeheer zodat er snel gehandeld wordt wanneer elke seconde telt."
-      }
-    ]
-  },
-  "cases": {
-    "heading": "Projecthoogtepunten",
-    "items": [
-      {
-        "name": "Houten Appartementencomplex",
-        "desc": "Brandvertragende coatings aangebracht op alle houten constructie­elementen. Regelgevende inspectie succesvol doorstaan met marge."
-      },
-      {
-        "name": "Commerciële Gevelrenovatie",
-        "desc": "Verouderde bekleding vervangen door een brandveilig gevelsysteem met behoud van esthetische transparantie."
-      }
-    ]
-  },
-  "faq": {
-    "title": "Veelgestelde Vragen",
-    "q1": "Beïnvloeden brandvertragende coatings het uiterlijk van hout?",
-    "a1": "Moderne coatings zijn transparant of licht getint en veranderen de textuur minimaal. Wij testen altijd vooraf ter plaatse.",
-    "q2": "Hoe vaak moeten de systemen worden onderhouden?",
-    "a2": "Typische inspectie­intervallen zijn maandelijks tot jaarlijks, afhankelijk van het systeemtype. Wij bieden volledige auditlogboeken en herinneringen.",
-    "q3": "Kan ik brandbeveiligingssystemen integreren met gebouwautomatisering?",
-    "a3": "Ja. Wij ontwikkelen interfaces zodat blus-, alarm- en sensorsystemen kunnen communiceren met uw slimme gebouw of BMS."
-  },
-  "cta": {
-    "title": "Verhoog uw veiligheid. Bescherm wat belangrijk is.",
-    "description": "Neem contact op met HBC om uw brandbeveiligingssystemen te ontwerpen of te upgraden met ingebouwde intelligentie, naleving en duurzaamheid."
-  }
-},
-"smart": {
-  "hero": {
-    "badge": "HBC Intelligent Gebouw",
-    "title": "Slimmere huizen.",
-    "highlight": "Groener leven.",
-    "description": "Verbind comfort, veiligheid en energie-intelligentie. Beheer, bewaak en optimaliseer je ruimte — betrouwbaar en moeiteloos.",
-    "chips": {
-      "automation": "Automatisering",
-      "pv": "PV & Energie",
-      "security": "Beveiliging",
-      "monitoring": "Monitoring"
-    },
-    "cta": "Neem contact met ons op"
-  },
-  "grid": {
-    "heading": "Slimme woning, op de HBC-manier",
-    "items": [
-      {
-        "title": "Automatisering",
-        "desc": "Scènes, schema’s, spraakbesturing — jouw huis, perfect afgestemd."
-      },
-      {
-        "title": "PV & Energie",
-        "desc": "Houd het verbruik in de gaten, sla slim op, verlaag pieken en bespaar."
-      },
-      {
-        "title": "Beveiliging",
-        "desc": "Alarmen, toegang, camera’s en serversystemen — volledig geïntegreerd."
-      },
-      {
-        "title": "Monitoring",
-        "desc": "Realtime status van apparaten, kamers en subsystemen."
-      },
-      {
-        "title": "Comfort",
-        "desc": "Verlichting, klimaat en zonwering die zich aan jou aanpassen."
-      },
-      {
-        "title": "Besparingen",
-        "desc": "Datagestuurde optimalisatie die verspilling vermindert — niet het comfort."
-      }
-    ]
-  },
-  "tags": {
-    "0": "Hydraulisch",
-    "1": "Elektrisch",
-    "2": "Mechanisch",
-    "3": "Programmering",
-    "4": "PV & Energie",
-    "5": "Beveiliging",
-    "6": "Monitoring",
-    "7": "Accessoires",
-    "8": "Landbouw",
-    "9": "Beton",
-    "10": "Bouw",
-    "11": "Energie",
-    "12": "Grond"
-  },
-  "faq": {
-    "title": "Veelgestelde vragen",
-    "q1": "Heb ik een bestaande smart-home hub nodig?",
-    "a1": "Niet noodzakelijk. We kunnen integreren met je huidige ecosysteem of een robuust, veilig HBC-systeem implementeren — wat het meest betrouwbaar werkt met de minste moeite.",
-    "q2": "Kan ik klein beginnen en later uitbreiden?",
-    "a2": "Ja. Begin met één prioriteit (bijv. energie­monitoring). We ontwerpen modulaire systemen zodat functies eenvoudig kunnen worden toegevoegd naarmate je behoeften groeien.",
-    "q3": "Hoe beschermen jullie mijn gegevens?",
-    "a3": "We ontwerpen met privacy-by-default, veilige servers en minimale toegangsrechten. Jouw gegevens blijven van jou, versleuteld tijdens overdracht en opslag."
-  },
-  "cta": {
-    "title": "Laten we je gebouw slim en efficiënt maken.",
-    "description": "We bepalen de beste weg voor comfort, veiligheid en besparingen, met de nadruk op betrouwbaarheid.",
-    "secondaryLabel": "Contact verkoop"
-  }
-},
-"form": {
-  "title": "Start een project",
-  "progress": "Stap {cur} van {total}",
-  "steps": {
-    "client": {
-      "title": "Klantinformatie",
-      "subtitle": "Vertel ons wie je bent en hoe we contact kunnen opnemen."
-    },
-    "overview": {
-      "title": "Projectoverzicht",
-      "subtitle": "Wat bouwen we en waarom nu?"
-    },
-    "scope": {
-      "title": "Omvang en Tijdlijn",
-      "subtitle": "Functies, gebruikers en planning."
-    },
-    "budget": {
-      "title": "Budget en Succes",
-      "subtitle": "Investeringsrange en meetbare resultaten."
-    },
-    "security": {
-      "title": "Integraties en Beveiliging",
-      "subtitle": "Hoe we verbinden en beschermen."
-    },
-    "review": {
-      "title": "Controleren en Verzenden",
-      "subtitle": "Bevestig alle gegevens voordat je verzendt."
-    }
-  },
-  "fields": {
-    "fullName": {
-      "label": "Volledige naam",
-      "ph": "Jane Doe"
-    },
-    "company": {
-      "label": "Bedrijf",
-      "ph": "Acme GmbH"
-    },
-    "email": {
-      "label": "Zakelijk e-mailadres",
-      "ph": "jane@acme.com"
-    },
-    "phone": {
-      "label": "Telefoon",
-      "ph": "+31 6XX XXX XXX"
-    },
-    "country": {
-      "label": "Land",
-      "ph": "Selecteer land"
-    },
-    "projectType": {
-      "label": "Projecttype",
-      "ph": "Kies type"
-    },
-    "expectedUsers": {
-      "label": "Verwachte gebruikers (maandelijks)",
-      "ph": "bijv. 5.000"
-    },
-    "brief": {
-      "label": "Projectbeschrijving",
-      "ph": "Wat bouwen we en waarom nu?"
-    },
-    "goals": {
-      "label": "Belangrijkste doelen",
-      "ph": "bijv. Onboarding-tijd met 30% verminderen, MVP lanceren in 8 weken…"
-    },
-    "features": {
-      "label": "Gewenste functies"
-    },
-    "deadline": {
-      "label": "Gewenste deadline"
-    },
-    "timelineFlex": {
-      "label": "Tijdlijn­flexibiliteit"
-    },
-    "budget": {
-      "label": "Budgetbereik",
-      "ph": "Selecteer budget"
-    },
-    "procurement": {
-      "label": "Samenwerkingstype"
-    },
-    "success": {
-      "label": "Succescriteria",
-      "ph": "KPI’s, SLA’s, prestatiedoelen…"
-    },
-    "risks": {
-      "label": "Risico’s of beperkingen (optioneel)",
-      "ph": "Afhankelijkheden, compliance-eisen, legacy-systemen…"
-    },
-    "integrations": {
-      "label": "Vereiste integraties"
-    },
-    "auth": {
-      "label": "Authenticatie"
-    },
-    "residency": {
-      "label": "Dataopslaglocatie"
-    },
-    "compliance": {
-      "label": "Compliance-eisen"
-    }
-  },
-  "buttons": {
-    "back": "Terug",
-    "next": "Volgende",
-    "submit": "Verzoek indienen"
-  },
-  "consent": "Ik ga akkoord met de verwerking van mijn gegevens voor dit verzoek.",
-  "footerNote": "Beveiligd formulier • GDPR-conform • Concept lokaal opgeslagen",
-  "alerts": {
-    "submitted": "✅ Dank je! Je projectverzoek is verzonden."
-  },
-  "summary": {
-    "fullName": "Volledige naam",
-    "company": "Bedrijf",
-    "email": "E-mail",
-    "phone": "Telefoon",
-    "country": "Land",
-    "projectType": "Projecttype",
-    "summary": "Samenvatting",
-    "goals": "Doelen",
-    "features": "Functies",
-    "expectedUsers": "Verwachte gebruikers",
-    "deadline": "Deadline",
-    "timeline": "Tijdlijn",
-    "budget": "Budget",
-    "engagement": "Samenwerking",
-    "success": "Succes",
-    "risks": "Risico’s",
-    "integrations": "Integraties",
-    "auth": "Authenticatie",
-    "residency": "Dataopslaglocatie",
-    "compliance": "Compliance"
-  },
-  "lists": {
-    "countries": {
-      "Austria": "Oostenrijk",
-      "Belgium": "België",
-      "Croatia": "Kroatië",
-      "Czechia": "Tsjechië",
-      "Denmark": "Denemarken",
-      "Egypt": "Egypte",
-      "France": "Frankrijk",
-      "Germany": "Duitsland",
-      "Italy": "Italië",
-      "Netherlands": "Nederland",
-      "Poland": "Polen",
-      "Portugal": "Portugal",
-      "Qatar": "Qatar",
-      "Saudi Arabia": "Saoedi-Arabië",
-      "Spain": "Spanje",
-      "Sweden": "Zweden",
-      "Switzerland": "Zwitserland",
-      "Turkey": "Turkije",
-      "UAE": "VAE",
-      "UK": "Verenigd Koninkrijk",
-      "USA": "Verenigde Staten"
-    },
-    "projectTypes": {
-      "Website / Landing": "Website / Landingspagina",
-      "SaaS / Platform": "SaaS / Platform",
-      "E-commerce": "E-commerce",
-      "Mobile App": "Mobiele app",
-      "AI / Automation": "AI / Automatisering",
-      "Web3 / Payments": "Web3 / Betalingen",
-      "Data / BI": "Data / BI",
-      "Other": "Anders"
-    },
-    "features": {
-      "User Auth / SSO": "Gebruikersauthenticatie / SSO",
-      "Admin Panel": "Beheerpaneel",
-      "E-commerce / Payments": "E-commerce / Betalingen",
-      "Subscriptions / Billing": "Abonnementen / Facturatie",
-      "Realtime Chat / Notifications": "Realtime chat / Meldingen",
-      "Analytics Dashboard": "Analyse-dashboard",
-      "Mobile App": "Mobiele app",
-      "AI Assistant / RAG": "AI-assistent / RAG",
-      "Web3 Wallet / Tokens": "Web3 Wallet / Tokens",
-      "3rd-party Integrations": "Integraties van derden"
-    },
-    "integrations": {
-      "Salesforce": "Salesforce",
-      "HubSpot": "HubSpot",
-      "SAP": "SAP",
-      "Stripe": "Stripe",
-      "PayPal": "PayPal",
-      "Plaid": "Plaid",
-      "Auth0": "Auth0",
-      "Okta": "Okta",
-      "AWS": "AWS",
-      "GCP": "GCP",
-      "Azure": "Azure"
-    },
-    "compliance": {
-      "GDPR": "AVG",
-      "ISO 27001": "ISO 27001",
-      "SOC 2": "SOC 2",
-      "HIPAA": "HIPAA",
-      "PCI DSS": "PCI DSS"
-    },
-    "timelineFlex": {
-      "strict": "Strikt",
-      "target": "Doelgericht",
-      "open": "Open"
-    },
-    "budget": {
-      "<10k": "<10k",
-      "10–30k": "10–30k",
-      "30–80k": "30–80k",
-      "80–200k": "80–200k",
-      ">200k": ">200k"
-    },
-    "procurement": {
-      "Startup": "Startup",
-      "B2B": "B2B",
-      "Enterprise": "Enterprise",
-      "B2G": "B2G"
-    },
-    "auth": {
-      "None": "Geen",
-      "Email/Password": "E-mail/Wachtwoord",
-      "SSO/SAML": "SSO/SAML",
-      "OAuth": "OAuth"
-    },
-    "residency": {
-      "EU": "EU",
-      "US": "VS",
-      "MENA": "MENA",
-      "Any": "Alle"
-    }
-  }
-},
-"it": {
-  "hero": {
-    "badge": "HBC IT-oplossingen",
-    "title": "Bouw, Schaal & Beveilig",
-    "highlight": "Jouw Digitale Product",
-    "description": "Wij ontwerpen en leveren high-performance software, Web3-betalingen en cloudinfrastructuur — ontwikkeld voor uptime, veiligheid en groei.\n\nVan SaaS-platformen en e-commerce tot AI-automatisering en blockchain: wij leveren end-to-end oplossingen met meetbare impact.",
-    "chips": [
-      "Software",
-      "APIs/GraphQL",
-      "E-commerce",
-      "UI/UX",
-      "Cloud/DevOps",
-      "CI/CD",
-      "Observability",
-      "Beveiliging",
-      "SSO/IAM",
-      "AI/Automatisering",
-      "Data & Analyse",
-      "Web3"
-    ]
-  },
-  "faq": {
-    "title": "Veelgestelde vragen",
-    "q1": "Hoe snel kan jullie team aan een project beginnen?",
-    "a1": "Ons team reageert meestal binnen één werkdag. Binnen 48–72 uur kan een kennismakingsgesprek worden ingepland om de scope, prioriteiten en mijlpalen te bepalen. Zodra alles is afgestemd, beginnen onboarding en kick-off direct.",
-    "q2": "Bieden jullie volledige frontend- en backend-ontwikkeling aan?",
-    "a2": "Ja. Wij leveren full-stack oplossingen die frontend, backend en infrastructuur dekken. Onze teams zijn gespecialiseerd in moderne webframeworks, schaalbare API’s, databases en CI/CD-pijplijnen — met consistente kwaliteit gedurende de hele levenscyclus van het product.",
-    "q3": "Kunnen jullie nieuwe technologieën zoals AI of Web3 integreren in bestaande platforms?",
-    "a3": "Zeker. Wij ontwerpen veilige en standaardconforme integraties die je bestaande systemen uitbreiden met AI-automatisering, data-analyse of blockchain-functionaliteit. Elke integratie omvat documentatie, testen en rollback-strategieën voor maximale stabiliteit.",
-    "q4": "Hoe beheren jullie projectcommunicatie en voortgang?",
-    "a4": "Elke klant krijgt een toegewijde projectmanager en toegang tot onze samenwerkingsomgeving. We bieden transparante wekelijkse updates, mijlpaalreviews en realtime dashboards voor voortgang, risico’s en resultaten.",
-    "q5": "In welke sectoren zijn jullie actief?",
-    "a5": "Wij werken met klanten in de financiële sector, productie, e-commerce, onderwijs en technologie. Onze flexibele architectuurbenadering stelt ons in staat snel aan te passen aan elk gereguleerd of gegevensgevoelig domein."
-  },
-  "pinned": {
-    "title": "IT-diensten",
-    "software": {
-      "tag": "Diensten",
-      "title": "Softwareontwikkeling",
-      "text": "Wij ontwikkelen digitale producten van begin tot eind — van concept tot wereldwijde lancering. Ons team bouwt schaalbare, veilige en krachtige applicaties voor web, mobiel en desktop, met moderne technologieën en een schone architectuur. Elke oplossing is modulair, onderhoudsvriendelijk en klaar voor toekomstige integraties.",
-      "bullets": [
-        "Aangepaste bedrijfssoftware",
-        "Cross-platform mobiele apps",
-        "Webapplicaties en portals",
-        "Ontwikkeling van API’s & SDK’s",
-        "Microservices & event-driven architectuur",
-        "DevSecOps-integratie"
-      ]
-    },
-    "cloud": {
-      "tag": "Diensten",
-      "title": "Cloud & DevOps",
-      "text": "Wij ontwerpen, implementeren en onderhouden cloudinfrastructuren die zijn gebouwd voor hoge beschikbaarheid, veerkracht en naleving. Onze DevOps-aanpak zorgt voor soepele leveringspijplijnen, continue monitoring en kostenefficiënte schaalbaarheid bij grote providers zoals AWS, Google Cloud en Microsoft Azure.",
-      "bullets": [
-        "Infrastructure as Code (IaC)",
-        "Kubernetes-orchestratie",
-        "Multi-cloud architectuur (AWS, GCP, Azure)",
-        "CI/CD-automatisering",
-        "Monitoring, logging en waarschuwingen",
-        "Implementaties zonder downtime"
-      ]
-    },
-    "ai": {
-      "tag": "Diensten",
-      "title": "AI & Automatisering",
-      "text": "Wij veranderen data in intelligente actie. Van natuurlijke taalchatbots tot voorspellende analyses en geautomatiseerde workflows — onze AI-oplossingen helpen organisaties slimmer te beslissen, menselijke fouten te verminderen en de klantervaring te verbeteren.",
-      "bullets": [
-        "Conversational AI & chatbots",
-        "Voorspellende analyse & forecasting",
-        "Automatisering van bedrijfsprocessen",
-        "Implementatie van op maat gemaakte ML-modellen",
-        "AI-datapijplijnen & ETL",
-        "LLM-integratie & RAG-systemen"
-      ]
-    },
-    "web3": {
-      "tag": "Diensten",
-      "title": "Blockchain & Web3",
-      "text": "Wij bouwen veilige, conforme en schaalbare gedecentraliseerde systemen op toonaangevende blockchain-netwerken — waaronder Ethereum, BNB Chain, Polygon en Avalanche. Onze Web3-expertise omvat tokens, smart contracts en betaalinfrastructuur die blockchain-innovatie koppelt aan echte waarde.",
-      "bullets": [
-        "Architectuur & audit van smart contracts",
-        "Token-ecosystemen & staking-systemen",
-        "Cross-chain interoperabiliteit",
-        "P2P-betalingen & on-chain settlements",
-        "Ontwikkeling van DeFi & NFT-marktplaatsen",
-        "Blockchain-oplossingen met naleving"
-      ]
-    },
-    "security": {
-      "tag": "Diensten",
-      "title": "Beveiliging & Integratie",
-      "text": "Beveiliging is ingebouwd in elk stadium — van applicatieontwerp tot productie. We implementeren geavanceerd identiteitsbeheer, gegevensversleuteling en compliance-frameworks om gebruikers en infrastructuur te beschermen, terwijl we je systemen naadloos integreren.",
-      "bullets": [
-        "Identity & Access Management (IAM/SSO)",
-        "Penetratietests & kwetsbaarheidsscans",
-        "Zero-Trust-architectuur",
-        "Regelgevingsnaleving (AVG, ISO, SOC 2)",
-        "Veilige API- & systeemintegratie",
-        "Continue beveiligingsmonitoring"
-      ]
-    }
-  },
-  "capabilities": {
-    "api": {
-      "title": "API-first Levering",
-      "desc": "Schone GraphQL/REST-contracten, SDK’s en documentatie voor partners."
-    },
-    "devops": {
-      "title": "DevOps Standaard",
-      "desc": "CI/CD, monitoring, logboeken/metingen/traces vanaf dag één."
-    },
-    "security": {
-      "title": "Beveiligingsmentaliteit",
-      "desc": "SSO/IAM, geheimbeheer, afhankelijkheidscontroles en audits."
-    },
-    "performance": {
-      "title": "Prestaties",
-      "desc": "Edge-caching, database-optimalisatie en Lighthouse-vriendelijke UX."
-    },
-    "scalability": {
-      "title": "Schaalbaarheid",
-      "desc": "Event-driven microservices en message queues waar dat relevant is."
-    },
-    "docs": {
-      "title": "Documentatie",
-      "desc": "Playbooks, runbooks, ADR’s en overdrachtsgidsen."
-    }
-  },
-  "process": {
-    "title": "Hoe Wij Leveren",
-    "assurance": "Kwaliteitsgarantie",
-    "steps": {
-      "discover": {
-        "title": "Ontdekken",
-        "desc": "We beginnen met workshops, succesindicatoren en risicobeoordelingen. Elk project start met een diepgaand begrip van je bedrijfsdoelen, technische landschap en nalevingsvereisten."
-      },
-      "design": {
-        "title": "Ontwerpen",
-        "desc": "Onze architecten en ontwerpers vertalen doelen naar schaalbare architecturen, UX-stromen en technische proof-of-concepts. We focussen vanaf het begin op prestaties, veiligheid en gebruiksgemak."
-      },
-      "build": {
-        "title": "Bouwen",
-        "desc": "We werken in agile sprints met continue integratie, testautomatisering en observability. Elke iteratie levert meetbare resultaten en productierijpe onderdelen."
-      },
-      "deploy": {
-        "title": "Implementeren",
-        "desc": "Blue/green- en canary-strategieën zorgen voor veilige releases zonder downtime. Elke implementatie bevat rollback-beleid, monitoringdashboards en documentatie."
-      },
-      "scale": {
-        "title": "Schalen & Optimaliseren",
-        "desc": "Na de livegang verbeteren we prestaties, kosten en betrouwbaarheid. Proactieve monitoring, incidentrespons en naleving van SLA’s garanderen langdurige operationele excellentie."
-      }
-    },
-    "badges": [
-      "ISO 27001 / AVG-naleving",
-      "99,9% uptime SLA",
-      "Security-First Architectuur",
-      "Wereldwijde 24/7 ondersteuning",
-      "Continue levering & monitoring",
-      "Transparante rapportage",
-      "Toegewijd accountbeheer",
-      "Volledige documentatie & kennisoverdracht"
-    ]
-  }
-},
-"meeting": {
-  "badge": "Laten we praten",
-  "title": "Plan een afspraak",
-  "intro": "Praat met een ingenieur om de beste aanpak te bepalen voor industriële efficiëntie, slim wonen en veiligheid. We stemmen het gesprek af op jouw doelen.",
-  "bullets": [
-    "Snel en vrijblijvend gesprek",
-    "Duidelijke opties voor jouw situatie",
-    "Advies over planning en ROI",
-    "Expertise in veiligheid, brand en onderhoud"
-  ],
-  "chips": [
-    "24/7 Ondersteuning",
-    "EU & VS",
-    "Industrieel & Particulier"
-  ],
-  "form": {
-    "fullName": "Volledige naam",
-    "email": "Zakelijk e-mailadres",
-    "company": "Bedrijf",
-    "phone": "Telefoonnummer",
-    "topic": "Onderwerp van de afspraak",
-    "topicOptions": [
-      "Industriel onderhoud",
-      "Brand- / beveiligingssystemen",
-      "Slim huis / gebouw",
-      "Groene producten",
-      "Anders"
+  "emobility": {
+    "title": "E-Mobility-deken (E-bike / Scooter)",
+    "summary": "Compacte deken voor kleinere voertuigen en onderhoudsruimtes – ideaal voor showrooms, hotels en servicestations.",
+    "bullets": [
+      "Snelle afdekking voor laad- of opslagzones.",
+      "Neemt weinig ruimte in beslag; eenvoudig op te bergen.",
+      "Te gebruiken als zelfstandige of secundaire barrière."
     ],
-    "size": "Bedrijfsgrootte",
-    "sizeOptions": [
-      "1–10",
-      "11–50",
-      "51–200",
-      "201–1000",
-      "1000+"
+    "specs": {
+      "size": "Circa 3×3 m; verschillende varianten beschikbaar",
+      "temp": "Hoge temperatuurbestendigheid bij langdurige blootstelling",
+      "weight": "Door één persoon te bedienen"
+    }
+  },
+  "container": {
+    "title": "Container- / Kooihoes",
+    "summary": "Textiele afdekking voor draadcontainers of batterijkooien om warmte en rook tijdens incidenten te beperken.",
+    "bullets": [
+      "Geschikt voor industriële bakken, rolkooien of trolleys.",
+      "Optionele riemen voor snelle en veilige bevestiging.",
+      "Weerbestendige siliconen-gecoate stof."
     ],
-    "date": "Voorkeursdatum",
-    "time": "Voorkeurstijd",
-    "message": "Wat wil je bereiken?",
-    "selectPlaceholder": "Selecteren…",
-    "consentHtml": "Ik ga akkoord met het <link>privacybeleid</link> en geef HBC Group toestemming om contact met mij op te nemen over mijn aanvraag.",
-    "submit": "Afspraak aanvragen",
-    "sending": "Verzenden…",
-    "ok": "Bedankt! We nemen binnenkort contact met je op.",
-    "err": "Controleer je naam en e-mailadres en probeer het opnieuw."
+    "specs": {
+      "size": "Standaard containerformaten; maatwerk mogelijk",
+      "temp": "Textiellaag die warmtestraling blokkeert",
+      "ip": "Geschikt voor buitengebruik"
+    }
   },
-  "noteHtml": "Liever via e-mail? Schrijf ons op <link>support@hbc-engineering.com</link>.",
-  "cta": {
-    "title": "Nog niet klaar om te boeken? Vraag een snel consult aan.",
-    "desc": "Deel een paar details en wij adviseren de snelste weg naar resultaat.",
-    "button": "Contact verkoop"
-  }
-},
-"contact": {
-  "hero": {
-    "eyebrow": "Neem contact op met HBC Group",
-    "kicker": "Wij staan klaar om te helpen",
-    "title": "Neem contact met ons op",
-    "description": "Verkoop • Support • Partnerschappen — deel enkele gegevens en we nemen binnen één werkdag contact op."
+  "bag": {
+    "title": "Batterijveiligheidstas / Boxvoering",
+    "summary": "Draagbare tas of voering voor modules, gereedschapsaccu’s en kleine batterijopslag. Beperkt de verspreiding van deeltjes, warmte en rook.",
+    "bullets": [
+      "Sluiting met rits of klittenband.",
+      "Stapelaar opslag met labelvenster.",
+      "Ideaal voor transport tussen werkzones."
+    ],
+    "specs": {
+      "size": "Diverse maten (gereedschap, e-bike, module)",
+      "temp": "Hittesbestendige binnenlaag",
+      "closure": "Rits- / klittenbandvarianten"
+    }
   },
-  "info": {
-    "address": "Adres",
-    "hours": "Openingstijden",
-    "hoursWeek": "Ma–Do · 8:00–17:00",
-    "hoursFri": "Vr · 8:00–12:00",
-    "regions": "Regio’s",
-    "regionUSA": "VS",
-    "regionEU": "EU",
-    "response": "Responstijd",
-    "responseSla": "< 1 werkdag"
-  },
-  "buttons": {
-    "call": "bel {phone}"
-  },
-  "lead": {
-    "title": "Vertel ons over je project",
-    "subtitle": "Kies hieronder een dienst en deel enkele details. Wij nemen contact op met de volgende stappen."
-  },
-  "direct": {
-    "title": "Direct contact",
-    "subtitle": "Wil je nu praten? Neem op elk moment contact met ons op.",
-    "phone": "Telefoon",
-    "email": "E-mail",
-    "hq": "Hoofdkantoor"
-  },
-  "why": {
-    "title": "Waarom HBC"
-  },
-  "whyPoints": [
-    "Gecertificeerde multi-OEM technici",
-    "Snelle levering van reserveonderdelen",
-    "Digitale checklists en rapporten",
-    "Dekking in EU & VS"
-  ],
-  "map": {
-    "title": "Vind ons",
-    "subtitle": "Bezoek ons hoofdkantoor of plan een locatiebezoek — wij komen naar jou toe."
-  },
-  "faq": {
-    "title": "Veelgestelde vragen",
-    "items": [
-      {
-        "q": "Kunnen jullie mijn bestaande apparaten gebruiken?",
-        "a": "In veel gevallen wel. We beoordelen de huidige apparatuur en integreren compatibele apparaten via KNX, Matter, Zigbee of bridges."
-      },
-      {
-        "q": "Heb ik bedrading nodig of kan het draadloos?",
-        "a": "Beide opties zijn mogelijk. Nieuwe gebouwen gebruiken meestal bedrading; renovaties kunnen veilige, betrouwbare draadloze oplossingen gebruiken waar dat geschikt is."
-      },
-      {
-        "q": "Is er een app?",
-        "a": "Ja — wandpaneel en mobiele app met externe toegang, meldingen, scènes en gebruikersrollen."
-      },
-      {
-        "q": "Hoe zit het met privacy?",
-        "a": "Lokale controle waar mogelijk, sterke versleuteling voor externe toegang en duidelijke instellingen voor gegevensbewaring."
-      }
-    ]
-  }
-},
-"careers": {
-  "hero": {
-    "badge": "Carrières",
-    "kicker": "Word lid van het team",
-    "title": "Bouw, onderhoud en innoveer met HBC Group",
-    "subtitle": "We groeien in functies binnen elektrotechniek, mechanica en automatisering. Bekijk openstaande functies en solliciteer binnen enkele minuten."
-  },
-  "labels": {
-    "travel": "Reizen"
-  },
-  "cta": {
-    "viewDetails": "Bekijk details"
-  },
-  "jobs": {
-    "industrial-electrician": {
-      "title": "Industrieel elektricien – Zware machines",
-      "location": "Verenigde Staten (landelijke reizen kunnen vereist zijn)",
-      "type": "Fulltime",
-      "hours": "50 uur/week",
-      "travel": "Regionaal/Nationaal",
-      "summary": "Elektrische diagnose, installatie/inbedrijfstelling en preventief onderhoud van zware industriële machines in recycling-, biomassa- en productiesectoren.",
-      "tags": [
-        "Elektrisch",
-        "Veldservice",
-        "PLC"
-      ]
-    },
-    "industrial-mechanic": {
-      "title": "Industriële monteur – Zware machines",
-      "location": "Verenigde Staten (landelijke reizen kunnen vereist zijn)",
-      "type": "Fulltime",
-      "hours": "50 uur/week",
-      "travel": "Regionaal/Nationaal",
-      "summary": "Veldservice, diagnose, reparaties en preventief onderhoud van zware industriële machines (mobiel en stationair).",
-      "tags": [
-        "Mechanisch",
-        "Hydraulisch",
-        "Pneumatisch"
-      ]
-    },
-    "industrial-programmer": {
-      "title": "Industrieel programmeur – Zware machines",
-      "location": "Verenigde Staten (landelijke reizen kunnen vereist zijn)",
-      "type": "Fulltime",
-      "hours": "50 uur/week",
-      "travel": "Nationaal",
-      "summary": "Programmeren, optimaliseren en inbedrijfstellen van PLC-gebaseerde besturingssystemen voor complexe machines; software- en communicatieproblemen oplossen; ondersteuning ter plaatse bieden.",
-      "tags": [
-        "PLC",
-        "Inbedrijfstelling",
-        "HMI/SCADA"
-      ]
+  "pallet": {
+    "title": "Pallet- / IBC-hoes",
+    "summary": "Volledige palletafdekking om risicovolle ladingen in logistiek en magazijnen te scheiden en kettingreacties bij brand te beperken.",
+    "bullets": [
+      "Snel van bovenaf aan te brengen en vast te zetten met riemen.",
+      "Compatibel met wikkel- en krimpfolieprocessen.",
+      "Herbruikbaar voor terugkerende verzendingen."
+    ],
+    "specs": {
+      "size": "EU/US-palletformaten; aanpasbare hoogtes",
+      "temp": "Warmte- en stralingswerende stof",
+      "fixation": "Riemen / haken afhankelijk van model"
     }
   }
-},
-"translatorBn": {
-  "switchL": "Taal wijzigen",
-  "langSubTitle": "Kies je voorkeurstaal.",
-  "notFound": "Geen talen gevonden.",
-  "current": "Huidige",
-  "placholder": "Typ om talen te zoeken..."
-},
-"preload": {
-  "subtitle": "Je ervaring wordt voorbereid…"
 }
+
+  },
+  "smart": {
+    "hero": {
+      "badge": "HBC Intelligent Gebouw",
+      "title": "Slimmere huizen.",
+      "highlight": "Groener leven.",
+      "description": "Verbind comfort, veiligheid en energie-intelligentie. Beheer, bewaak en optimaliseer je ruimte — betrouwbaar en moeiteloos.",
+      "chips": {
+        "automation": "Automatisering",
+        "pv": "PV & Energie",
+        "security": "Beveiliging",
+        "monitoring": "Monitoring"
+      },
+      "cta": "Neem contact met ons op"
+    },
+    "grid": {
+      "heading": "Slimme woning, op de HBC-manier",
+      "items": [
+        {
+          "title": "Automatisering",
+          "desc": "Scènes, schema’s, spraakbesturing — jouw huis, perfect afgestemd."
+        },
+        {
+          "title": "PV & Energie",
+          "desc": "Houd het verbruik in de gaten, sla slim op, verlaag pieken en bespaar."
+        },
+        {
+          "title": "Beveiliging",
+          "desc": "Alarmen, toegang, camera’s en serversystemen — volledig geïntegreerd."
+        },
+        {
+          "title": "Monitoring",
+          "desc": "Realtime status van apparaten, kamers en subsystemen."
+        },
+        {
+          "title": "Comfort",
+          "desc": "Verlichting, klimaat en zonwering die zich aan jou aanpassen."
+        },
+        {
+          "title": "Besparingen",
+          "desc": "Datagestuurde optimalisatie die verspilling vermindert — niet het comfort."
+        }
+      ]
+    },
+    "tags": {
+      "0": "Hydraulisch",
+      "1": "Elektrisch",
+      "2": "Mechanisch",
+      "3": "Programmering",
+      "4": "PV & Energie",
+      "5": "Beveiliging",
+      "6": "Monitoring",
+      "7": "Accessoires",
+      "8": "Landbouw",
+      "9": "Beton",
+      "10": "Bouw",
+      "11": "Energie",
+      "12": "Grond"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Heb ik een bestaande smart-home hub nodig?",
+      "a1": "Niet noodzakelijk. We kunnen integreren met je huidige ecosysteem of een robuust, veilig HBC-systeem implementeren — wat het meest betrouwbaar werkt met de minste moeite.",
+      "q2": "Kan ik klein beginnen en later uitbreiden?",
+      "a2": "Ja. Begin met één prioriteit (bijv. energie­monitoring). We ontwerpen modulaire systemen zodat functies eenvoudig kunnen worden toegevoegd naarmate je behoeften groeien.",
+      "q3": "Hoe beschermen jullie mijn gegevens?",
+      "a3": "We ontwerpen met privacy-by-default, veilige servers en minimale toegangsrechten. Jouw gegevens blijven van jou, versleuteld tijdens overdracht en opslag."
+    },
+    "cta": {
+      "title": "Laten we je gebouw slim en efficiënt maken.",
+      "description": "We bepalen de beste weg voor comfort, veiligheid en besparingen, met de nadruk op betrouwbaarheid.",
+      "secondaryLabel": "Contact verkoop"
+    }
+  },
+  "form": {
+    "title": "Start een project",
+    "progress": "Stap {cur} van {total}",
+    "steps": {
+      "client": {
+        "title": "Klantinformatie",
+        "subtitle": "Vertel ons wie je bent en hoe we contact kunnen opnemen."
+      },
+      "overview": {
+        "title": "Projectoverzicht",
+        "subtitle": "Wat bouwen we en waarom nu?"
+      },
+      "scope": {
+        "title": "Omvang en Tijdlijn",
+        "subtitle": "Functies, gebruikers en planning."
+      },
+      "budget": {
+        "title": "Budget en Succes",
+        "subtitle": "Investeringsrange en meetbare resultaten."
+      },
+      "security": {
+        "title": "Integraties en Beveiliging",
+        "subtitle": "Hoe we verbinden en beschermen."
+      },
+      "review": {
+        "title": "Controleren en Verzenden",
+        "subtitle": "Bevestig alle gegevens voordat je verzendt."
+      }
+    },
+    "fields": {
+      "fullName": {
+        "label": "Volledige naam",
+        "ph": "Jane Doe"
+      },
+      "company": {
+        "label": "Bedrijf",
+        "ph": "Acme GmbH"
+      },
+      "email": {
+        "label": "Zakelijk e-mailadres",
+        "ph": "jane@acme.com"
+      },
+      "phone": {
+        "label": "Telefoon",
+        "ph": "+31 6XX XXX XXX"
+      },
+      "country": {
+        "label": "Land",
+        "ph": "Selecteer land"
+      },
+      "projectType": {
+        "label": "Projecttype",
+        "ph": "Kies type"
+      },
+      "expectedUsers": {
+        "label": "Verwachte gebruikers (maandelijks)",
+        "ph": "bijv. 5.000"
+      },
+      "brief": {
+        "label": "Projectbeschrijving",
+        "ph": "Wat bouwen we en waarom nu?"
+      },
+      "goals": {
+        "label": "Belangrijkste doelen",
+        "ph": "bijv. Onboarding-tijd met 30% verminderen, MVP lanceren in 8 weken…"
+      },
+      "features": {
+        "label": "Gewenste functies"
+      },
+      "deadline": {
+        "label": "Gewenste deadline"
+      },
+      "timelineFlex": {
+        "label": "Tijdlijn­flexibiliteit"
+      },
+      "budget": {
+        "label": "Budgetbereik",
+        "ph": "Selecteer budget"
+      },
+      "procurement": {
+        "label": "Samenwerkingstype"
+      },
+      "success": {
+        "label": "Succescriteria",
+        "ph": "KPI’s, SLA’s, prestatiedoelen…"
+      },
+      "risks": {
+        "label": "Risico’s of beperkingen (optioneel)",
+        "ph": "Afhankelijkheden, compliance-eisen, legacy-systemen…"
+      },
+      "integrations": {
+        "label": "Vereiste integraties"
+      },
+      "auth": {
+        "label": "Authenticatie"
+      },
+      "residency": {
+        "label": "Dataopslaglocatie"
+      },
+      "compliance": {
+        "label": "Compliance-eisen"
+      }
+    },
+    "buttons": {
+      "back": "Terug",
+      "next": "Volgende",
+      "submit": "Verzoek indienen"
+    },
+    "consent": "Ik ga akkoord met de verwerking van mijn gegevens voor dit verzoek.",
+    "footerNote": "Beveiligd formulier • GDPR-conform • Concept lokaal opgeslagen",
+    "alerts": {
+      "submitted": "✅ Dank je! Je projectverzoek is verzonden."
+    },
+    "summary": {
+      "fullName": "Volledige naam",
+      "company": "Bedrijf",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "country": "Land",
+      "projectType": "Projecttype",
+      "summary": "Samenvatting",
+      "goals": "Doelen",
+      "features": "Functies",
+      "expectedUsers": "Verwachte gebruikers",
+      "deadline": "Deadline",
+      "timeline": "Tijdlijn",
+      "budget": "Budget",
+      "engagement": "Samenwerking",
+      "success": "Succes",
+      "risks": "Risico’s",
+      "integrations": "Integraties",
+      "auth": "Authenticatie",
+      "residency": "Dataopslaglocatie",
+      "compliance": "Compliance"
+    },
+    "lists": {
+      "countries": {
+        "Austria": "Oostenrijk",
+        "Belgium": "België",
+        "Croatia": "Kroatië",
+        "Czechia": "Tsjechië",
+        "Denmark": "Denemarken",
+        "Egypt": "Egypte",
+        "France": "Frankrijk",
+        "Germany": "Duitsland",
+        "Italy": "Italië",
+        "Netherlands": "Nederland",
+        "Poland": "Polen",
+        "Portugal": "Portugal",
+        "Qatar": "Qatar",
+        "Saudi Arabia": "Saoedi-Arabië",
+        "Spain": "Spanje",
+        "Sweden": "Zweden",
+        "Switzerland": "Zwitserland",
+        "Turkey": "Turkije",
+        "UAE": "VAE",
+        "UK": "Verenigd Koninkrijk",
+        "USA": "Verenigde Staten"
+      },
+      "projectTypes": {
+        "Website / Landing": "Website / Landingspagina",
+        "SaaS / Platform": "SaaS / Platform",
+        "E-commerce": "E-commerce",
+        "Mobile App": "Mobiele app",
+        "AI / Automation": "AI / Automatisering",
+        "Web3 / Payments": "Web3 / Betalingen",
+        "Data / BI": "Data / BI",
+        "Other": "Anders"
+      },
+      "features": {
+        "User Auth / SSO": "Gebruikersauthenticatie / SSO",
+        "Admin Panel": "Beheerpaneel",
+        "E-commerce / Payments": "E-commerce / Betalingen",
+        "Subscriptions / Billing": "Abonnementen / Facturatie",
+        "Realtime Chat / Notifications": "Realtime chat / Meldingen",
+        "Analytics Dashboard": "Analyse-dashboard",
+        "Mobile App": "Mobiele app",
+        "AI Assistant / RAG": "AI-assistent / RAG",
+        "Web3 Wallet / Tokens": "Web3 Wallet / Tokens",
+        "3rd-party Integrations": "Integraties van derden"
+      },
+      "integrations": {
+        "Salesforce": "Salesforce",
+        "HubSpot": "HubSpot",
+        "SAP": "SAP",
+        "Stripe": "Stripe",
+        "PayPal": "PayPal",
+        "Plaid": "Plaid",
+        "Auth0": "Auth0",
+        "Okta": "Okta",
+        "AWS": "AWS",
+        "GCP": "GCP",
+        "Azure": "Azure"
+      },
+      "compliance": {
+        "GDPR": "AVG",
+        "ISO 27001": "ISO 27001",
+        "SOC 2": "SOC 2",
+        "HIPAA": "HIPAA",
+        "PCI DSS": "PCI DSS"
+      },
+      "timelineFlex": {
+        "strict": "Strikt",
+        "target": "Doelgericht",
+        "open": "Open"
+      },
+      "budget": {
+        "<10k": "<10k",
+        "10–30k": "10–30k",
+        "30–80k": "30–80k",
+        "80–200k": "80–200k",
+        ">200k": ">200k"
+      },
+      "procurement": {
+        "Startup": "Startup",
+        "B2B": "B2B",
+        "Enterprise": "Enterprise",
+        "B2G": "B2G"
+      },
+      "auth": {
+        "None": "Geen",
+        "Email/Password": "E-mail/Wachtwoord",
+        "SSO/SAML": "SSO/SAML",
+        "OAuth": "OAuth"
+      },
+      "residency": {
+        "EU": "EU",
+        "US": "VS",
+        "MENA": "MENA",
+        "Any": "Alle"
+      }
+    }
+  },
+  "it": {
+    "hero": {
+      "badge": "HBC IT-oplossingen",
+      "title": "Bouw, Schaal & Beveilig",
+      "highlight": "Jouw Digitale Product",
+      "description": "Wij ontwerpen en leveren high-performance software, Web3-betalingen en cloudinfrastructuur — ontwikkeld voor uptime, veiligheid en groei.\n\nVan SaaS-platformen en e-commerce tot AI-automatisering en blockchain: wij leveren end-to-end oplossingen met meetbare impact.",
+      "chips": [
+        "Software",
+        "APIs/GraphQL",
+        "E-commerce",
+        "UI/UX",
+        "Cloud/DevOps",
+        "CI/CD",
+        "Observability",
+        "Beveiliging",
+        "SSO/IAM",
+        "AI/Automatisering",
+        "Data & Analyse",
+        "Web3"
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Hoe snel kan jullie team aan een project beginnen?",
+      "a1": "Ons team reageert meestal binnen één werkdag. Binnen 48–72 uur kan een kennismakingsgesprek worden ingepland om de scope, prioriteiten en mijlpalen te bepalen. Zodra alles is afgestemd, beginnen onboarding en kick-off direct.",
+      "q2": "Bieden jullie volledige frontend- en backend-ontwikkeling aan?",
+      "a2": "Ja. Wij leveren full-stack oplossingen die frontend, backend en infrastructuur dekken. Onze teams zijn gespecialiseerd in moderne webframeworks, schaalbare API’s, databases en CI/CD-pijplijnen — met consistente kwaliteit gedurende de hele levenscyclus van het product.",
+      "q3": "Kunnen jullie nieuwe technologieën zoals AI of Web3 integreren in bestaande platforms?",
+      "a3": "Zeker. Wij ontwerpen veilige en standaardconforme integraties die je bestaande systemen uitbreiden met AI-automatisering, data-analyse of blockchain-functionaliteit. Elke integratie omvat documentatie, testen en rollback-strategieën voor maximale stabiliteit.",
+      "q4": "Hoe beheren jullie projectcommunicatie en voortgang?",
+      "a4": "Elke klant krijgt een toegewijde projectmanager en toegang tot onze samenwerkingsomgeving. We bieden transparante wekelijkse updates, mijlpaalreviews en realtime dashboards voor voortgang, risico’s en resultaten.",
+      "q5": "In welke sectoren zijn jullie actief?",
+      "a5": "Wij werken met klanten in de financiële sector, productie, e-commerce, onderwijs en technologie. Onze flexibele architectuurbenadering stelt ons in staat snel aan te passen aan elk gereguleerd of gegevensgevoelig domein."
+    },
+    "pinned": {
+      "title": "IT-diensten",
+      "software": {
+        "tag": "Diensten",
+        "title": "Softwareontwikkeling",
+        "text": "Wij ontwikkelen digitale producten van begin tot eind — van concept tot wereldwijde lancering. Ons team bouwt schaalbare, veilige en krachtige applicaties voor web, mobiel en desktop, met moderne technologieën en een schone architectuur. Elke oplossing is modulair, onderhoudsvriendelijk en klaar voor toekomstige integraties.",
+        "bullets": [
+          "Aangepaste bedrijfssoftware",
+          "Cross-platform mobiele apps",
+          "Webapplicaties en portals",
+          "Ontwikkeling van API’s & SDK’s",
+          "Microservices & event-driven architectuur",
+          "DevSecOps-integratie"
+        ]
+      },
+      "cloud": {
+        "tag": "Diensten",
+        "title": "Cloud & DevOps",
+        "text": "Wij ontwerpen, implementeren en onderhouden cloudinfrastructuren die zijn gebouwd voor hoge beschikbaarheid, veerkracht en naleving. Onze DevOps-aanpak zorgt voor soepele leveringspijplijnen, continue monitoring en kostenefficiënte schaalbaarheid bij grote providers zoals AWS, Google Cloud en Microsoft Azure.",
+        "bullets": [
+          "Infrastructure as Code (IaC)",
+          "Kubernetes-orchestratie",
+          "Multi-cloud architectuur (AWS, GCP, Azure)",
+          "CI/CD-automatisering",
+          "Monitoring, logging en waarschuwingen",
+          "Implementaties zonder downtime"
+        ]
+      },
+      "ai": {
+        "tag": "Diensten",
+        "title": "AI & Automatisering",
+        "text": "Wij veranderen data in intelligente actie. Van natuurlijke taalchatbots tot voorspellende analyses en geautomatiseerde workflows — onze AI-oplossingen helpen organisaties slimmer te beslissen, menselijke fouten te verminderen en de klantervaring te verbeteren.",
+        "bullets": [
+          "Conversational AI & chatbots",
+          "Voorspellende analyse & forecasting",
+          "Automatisering van bedrijfsprocessen",
+          "Implementatie van op maat gemaakte ML-modellen",
+          "AI-datapijplijnen & ETL",
+          "LLM-integratie & RAG-systemen"
+        ]
+      },
+      "web3": {
+        "tag": "Diensten",
+        "title": "Blockchain & Web3",
+        "text": "Wij bouwen veilige, conforme en schaalbare gedecentraliseerde systemen op toonaangevende blockchain-netwerken — waaronder Ethereum, BNB Chain, Polygon en Avalanche. Onze Web3-expertise omvat tokens, smart contracts en betaalinfrastructuur die blockchain-innovatie koppelt aan echte waarde.",
+        "bullets": [
+          "Architectuur & audit van smart contracts",
+          "Token-ecosystemen & staking-systemen",
+          "Cross-chain interoperabiliteit",
+          "P2P-betalingen & on-chain settlements",
+          "Ontwikkeling van DeFi & NFT-marktplaatsen",
+          "Blockchain-oplossingen met naleving"
+        ]
+      },
+      "security": {
+        "tag": "Diensten",
+        "title": "Beveiliging & Integratie",
+        "text": "Beveiliging is ingebouwd in elk stadium — van applicatieontwerp tot productie. We implementeren geavanceerd identiteitsbeheer, gegevensversleuteling en compliance-frameworks om gebruikers en infrastructuur te beschermen, terwijl we je systemen naadloos integreren.",
+        "bullets": [
+          "Identity & Access Management (IAM/SSO)",
+          "Penetratietests & kwetsbaarheidsscans",
+          "Zero-Trust-architectuur",
+          "Regelgevingsnaleving (AVG, ISO, SOC 2)",
+          "Veilige API- & systeemintegratie",
+          "Continue beveiligingsmonitoring"
+        ]
+      }
+    },
+    "capabilities": {
+      "api": {
+        "title": "API-first Levering",
+        "desc": "Schone GraphQL/REST-contracten, SDK’s en documentatie voor partners."
+      },
+      "devops": {
+        "title": "DevOps Standaard",
+        "desc": "CI/CD, monitoring, logboeken/metingen/traces vanaf dag één."
+      },
+      "security": {
+        "title": "Beveiligingsmentaliteit",
+        "desc": "SSO/IAM, geheimbeheer, afhankelijkheidscontroles en audits."
+      },
+      "performance": {
+        "title": "Prestaties",
+        "desc": "Edge-caching, database-optimalisatie en Lighthouse-vriendelijke UX."
+      },
+      "scalability": {
+        "title": "Schaalbaarheid",
+        "desc": "Event-driven microservices en message queues waar dat relevant is."
+      },
+      "docs": {
+        "title": "Documentatie",
+        "desc": "Playbooks, runbooks, ADR’s en overdrachtsgidsen."
+      }
+    },
+    "process": {
+      "title": "Hoe Wij Leveren",
+      "assurance": "Kwaliteitsgarantie",
+      "steps": {
+        "discover": {
+          "title": "Ontdekken",
+          "desc": "We beginnen met workshops, succesindicatoren en risicobeoordelingen. Elk project start met een diepgaand begrip van je bedrijfsdoelen, technische landschap en nalevingsvereisten."
+        },
+        "design": {
+          "title": "Ontwerpen",
+          "desc": "Onze architecten en ontwerpers vertalen doelen naar schaalbare architecturen, UX-stromen en technische proof-of-concepts. We focussen vanaf het begin op prestaties, veiligheid en gebruiksgemak."
+        },
+        "build": {
+          "title": "Bouwen",
+          "desc": "We werken in agile sprints met continue integratie, testautomatisering en observability. Elke iteratie levert meetbare resultaten en productierijpe onderdelen."
+        },
+        "deploy": {
+          "title": "Implementeren",
+          "desc": "Blue/green- en canary-strategieën zorgen voor veilige releases zonder downtime. Elke implementatie bevat rollback-beleid, monitoringdashboards en documentatie."
+        },
+        "scale": {
+          "title": "Schalen & Optimaliseren",
+          "desc": "Na de livegang verbeteren we prestaties, kosten en betrouwbaarheid. Proactieve monitoring, incidentrespons en naleving van SLA’s garanderen langdurige operationele excellentie."
+        }
+      },
+      "badges": [
+        "ISO 27001 / AVG-naleving",
+        "99,9% uptime SLA",
+        "Security-First Architectuur",
+        "Wereldwijde 24/7 ondersteuning",
+        "Continue levering & monitoring",
+        "Transparante rapportage",
+        "Toegewijd accountbeheer",
+        "Volledige documentatie & kennisoverdracht"
+      ]
+    }
+  },
+  "meeting": {
+    "badge": "Laten we praten",
+    "title": "Plan een afspraak",
+    "intro": "Praat met een ingenieur om de beste aanpak te bepalen voor industriële efficiëntie, slim wonen en veiligheid. We stemmen het gesprek af op jouw doelen.",
+    "bullets": [
+      "Snel en vrijblijvend gesprek",
+      "Duidelijke opties voor jouw situatie",
+      "Advies over planning en ROI",
+      "Expertise in veiligheid, brand en onderhoud"
+    ],
+    "chips": [
+      "24/7 Ondersteuning",
+      "EU & VS",
+      "Industrieel & Particulier"
+    ],
+    "form": {
+      "fullName": "Volledige naam",
+      "email": "Zakelijk e-mailadres",
+      "company": "Bedrijf",
+      "phone": "Telefoonnummer",
+      "topic": "Onderwerp van de afspraak",
+      "topicOptions": [
+        "Industriel onderhoud",
+        "Brand- / beveiligingssystemen",
+        "Slim huis / gebouw",
+        "Groene producten",
+        "Anders"
+      ],
+      "size": "Bedrijfsgrootte",
+      "sizeOptions": [
+        "1–10",
+        "11–50",
+        "51–200",
+        "201–1000",
+        "1000+"
+      ],
+      "date": "Voorkeursdatum",
+      "time": "Voorkeurstijd",
+      "message": "Wat wil je bereiken?",
+      "selectPlaceholder": "Selecteren…",
+      "consentHtml": "Ik ga akkoord met het <link>privacybeleid</link> en geef HBC Group toestemming om contact met mij op te nemen over mijn aanvraag.",
+      "submit": "Afspraak aanvragen",
+      "sending": "Verzenden…",
+      "ok": "Bedankt! We nemen binnenkort contact met je op.",
+      "err": "Controleer je naam en e-mailadres en probeer het opnieuw."
+    },
+    "noteHtml": "Liever via e-mail? Schrijf ons op <link>support@hbc-engineering.com</link>.",
+    "cta": {
+      "title": "Nog niet klaar om te boeken? Vraag een snel consult aan.",
+      "desc": "Deel een paar details en wij adviseren de snelste weg naar resultaat.",
+      "button": "Contact verkoop"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Neem contact op met HBC Group",
+      "kicker": "Wij staan klaar om te helpen",
+      "title": "Neem contact met ons op",
+      "description": "Verkoop • Support • Partnerschappen — deel enkele gegevens en we nemen binnen één werkdag contact op."
+    },
+    "info": {
+      "address": "Adres",
+      "hours": "Openingstijden",
+      "hoursWeek": "Ma–Do · 8:00–17:00",
+      "hoursFri": "Vr · 8:00–12:00",
+      "regions": "Regio’s",
+      "regionUSA": "VS",
+      "regionEU": "EU",
+      "response": "Responstijd",
+      "responseSla": "< 1 werkdag"
+    },
+    "buttons": {
+      "call": "bel {phone}"
+    },
+    "lead": {
+      "title": "Vertel ons over je project",
+      "subtitle": "Kies hieronder een dienst en deel enkele details. Wij nemen contact op met de volgende stappen."
+    },
+    "direct": {
+      "title": "Direct contact",
+      "subtitle": "Wil je nu praten? Neem op elk moment contact met ons op.",
+      "phone": "Telefoon",
+      "email": "E-mail",
+      "hq": "Hoofdkantoor"
+    },
+    "why": {
+      "title": "Waarom HBC"
+    },
+    "whyPoints": [
+      "Gecertificeerde multi-OEM technici",
+      "Snelle levering van reserveonderdelen",
+      "Digitale checklists en rapporten",
+      "Dekking in EU & VS"
+    ],
+    "map": {
+      "title": "Vind ons",
+      "subtitle": "Bezoek ons hoofdkantoor of plan een locatiebezoek — wij komen naar jou toe."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Kunnen jullie mijn bestaande apparaten gebruiken?",
+          "a": "In veel gevallen wel. We beoordelen de huidige apparatuur en integreren compatibele apparaten via KNX, Matter, Zigbee of bridges."
+        },
+        {
+          "q": "Heb ik bedrading nodig of kan het draadloos?",
+          "a": "Beide opties zijn mogelijk. Nieuwe gebouwen gebruiken meestal bedrading; renovaties kunnen veilige, betrouwbare draadloze oplossingen gebruiken waar dat geschikt is."
+        },
+        {
+          "q": "Is er een app?",
+          "a": "Ja — wandpaneel en mobiele app met externe toegang, meldingen, scènes en gebruikersrollen."
+        },
+        {
+          "q": "Hoe zit het met privacy?",
+          "a": "Lokale controle waar mogelijk, sterke versleuteling voor externe toegang en duidelijke instellingen voor gegevensbewaring."
+        }
+      ]
+    }
+  },
+  "careers": {
+    "hero": {
+      "badge": "Carrières",
+      "kicker": "Word lid van het team",
+      "title": "Bouw, onderhoud en innoveer met HBC Group",
+      "subtitle": "We groeien in functies binnen elektrotechniek, mechanica en automatisering. Bekijk openstaande functies en solliciteer binnen enkele minuten."
+    },
+    "labels": {
+      "travel": "Reizen"
+    },
+    "cta": {
+      "viewDetails": "Bekijk details"
+    },
+    "jobs": {
+      "industrial-electrician": {
+        "title": "Industrieel elektricien – Zware machines",
+        "location": "Verenigde Staten (landelijke reizen kunnen vereist zijn)",
+        "type": "Fulltime",
+        "hours": "50 uur/week",
+        "travel": "Regionaal/Nationaal",
+        "summary": "Elektrische diagnose, installatie/inbedrijfstelling en preventief onderhoud van zware industriële machines in recycling-, biomassa- en productiesectoren.",
+        "tags": [
+          "Elektrisch",
+          "Veldservice",
+          "PLC"
+        ]
+      },
+      "industrial-mechanic": {
+        "title": "Industriële monteur – Zware machines",
+        "location": "Verenigde Staten (landelijke reizen kunnen vereist zijn)",
+        "type": "Fulltime",
+        "hours": "50 uur/week",
+        "travel": "Regionaal/Nationaal",
+        "summary": "Veldservice, diagnose, reparaties en preventief onderhoud van zware industriële machines (mobiel en stationair).",
+        "tags": [
+          "Mechanisch",
+          "Hydraulisch",
+          "Pneumatisch"
+        ]
+      },
+      "industrial-programmer": {
+        "title": "Industrieel programmeur – Zware machines",
+        "location": "Verenigde Staten (landelijke reizen kunnen vereist zijn)",
+        "type": "Fulltime",
+        "hours": "50 uur/week",
+        "travel": "Nationaal",
+        "summary": "Programmeren, optimaliseren en inbedrijfstellen van PLC-gebaseerde besturingssystemen voor complexe machines; software- en communicatieproblemen oplossen; ondersteuning ter plaatse bieden.",
+        "tags": [
+          "PLC",
+          "Inbedrijfstelling",
+          "HMI/SCADA"
+        ]
+      }
+    }
+  },
+  "translatorBn": {
+    "switchL": "Taal wijzigen",
+    "langSubTitle": "Kies je voorkeurstaal.",
+    "notFound": "Geen talen gevonden.",
+    "current": "Huidige",
+    "placholder": "Typ om talen te zoeken..."
+  },
+  "preload": {
+    "subtitle": "Je ervaring wordt voorbereid…"
+  }
 }
