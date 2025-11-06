@@ -16,20 +16,50 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { jobs } from "../../jobsData";
 
 /* ---------------------------------- STEP CONFIG ---------------------------------- */
-const STEPS = [
-  "Personal",
-  "Experience",
-  "Skills",
-  "Documents",
-  "Review",
-] as const;
+const STEPS = ["Personal & Documents", "Review"] as const;
 const currencies = ["EUR", "USD"] as const;
+
+/* ---------------------------------- COUNTRY CODES ---------------------------------- */
+const countryCodes = [
+  { code: "+1", country: "United States", flag: "🇺🇸", countryCode: "US" },
+  { code: "+1", country: "Canada", flag: "🇨🇦", countryCode: "CA" },
+  { code: "+44", country: "United Kingdom", flag: "🇬🇧", countryCode: "GB" },
+  { code: "+43", country: "Austria", flag: "🇦🇹", countryCode: "AT" },
+  { code: "+49", country: "Germany", flag: "🇩🇪", countryCode: "DE" },
+  { code: "+33", country: "France", flag: "🇫🇷", countryCode: "FR" },
+  { code: "+39", country: "Italy", flag: "🇮🇹", countryCode: "IT" },
+  { code: "+34", country: "Spain", flag: "🇪🇸", countryCode: "ES" },
+  { code: "+31", country: "Netherlands", flag: "🇳🇱", countryCode: "NL" },
+  { code: "+32", country: "Belgium", flag: "🇧🇪", countryCode: "BE" },
+  { code: "+41", country: "Switzerland", flag: "🇨🇭", countryCode: "CH" },
+  { code: "+45", country: "Denmark", flag: "🇩🇰", countryCode: "DK" },
+  { code: "+46", country: "Sweden", flag: "🇸🇪", countryCode: "SE" },
+  { code: "+47", country: "Norway", flag: "🇳🇴", countryCode: "NO" },
+  { code: "+48", country: "Poland", flag: "🇵🇱", countryCode: "PL" },
+  { code: "+351", country: "Portugal", flag: "🇵🇹", countryCode: "PT" },
+  { code: "+353", country: "Ireland", flag: "🇮🇪", countryCode: "IE" },
+  { code: "+61", country: "Australia", flag: "🇦🇺", countryCode: "AU" },
+  { code: "+64", country: "New Zealand", flag: "🇳🇿", countryCode: "NZ" },
+  { code: "+91", country: "India", flag: "🇮🇳", countryCode: "IN" },
+  { code: "+86", country: "China", flag: "🇨🇳", countryCode: "CN" },
+  { code: "+81", country: "Japan", flag: "🇯🇵", countryCode: "JP" },
+  { code: "+82", country: "South Korea", flag: "🇰🇷", countryCode: "KR" },
+  { code: "+65", country: "Singapore", flag: "🇸🇬", countryCode: "SG" },
+  { code: "+971", country: "UAE", flag: "🇦🇪", countryCode: "AE" },
+] as const;
 
 /* ---------------------------------- ZOD SCHEMAS ---------------------------------- */
 const personalSchema = z.object({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Please enter a valid email"),
-  phone: z.string().optional().or(z.literal("")),
+  phoneCountryCode: z.string().min(1, "Country code is required"),
+  phone: z
+    .string()
+    .min(1, "Phone number is required")
+    .regex(
+      /^[0-9\s\-().]+$/,
+      "Please enter a valid phone number (digits, spaces, dashes, and parentheses only)"
+    ),
   profile: z
     .string()
     .url("Please enter a valid URL (including https://)")
@@ -104,6 +134,7 @@ const FIELDS_BY_STEP: Record<number, (keyof ApplyFormData | string)[]> = {
   0: [
     "name",
     "email",
+    "phoneCountryCode",
     "phone",
     "profile",
     "addressStreet",
@@ -112,20 +143,11 @@ const FIELDS_BY_STEP: Record<number, (keyof ApplyFormData | string)[]> = {
     "addressRegion",
     "addressPostal",
     "addressCountry",
+    "coverLetter",
+    "cv",
+    "files",
   ],
-  1: [
-    "yearsExperience",
-    "earliestStart",
-    "noticePeriod",
-    "salaryCurrency",
-    "salary",
-    "workAuthorization",
-    "relocate",
-    "travel",
-  ],
-  2: ["driversLicense", "languages", "skills", "notes"],
-  3: ["coverLetter", "cv", "files"],
-  4: ["consentContact", "consentData", "signature"],
+  1: ["consentContact", "consentData", "signature"],
 };
 
 /* -------------------------------------- PAGE -------------------------------------- */
@@ -138,7 +160,12 @@ export default function ApplyPage() {
   const methods = useForm<ApplyFormData>({
     resolver: zodResolver(formSchema),
     mode: "onBlur",
-    defaultValues: { salaryCurrency: "EUR", skills: [] },
+    defaultValues: {
+      salaryCurrency: "EUR",
+      skills: [],
+      phoneCountryCode: "+43", // Default to Austria
+      addressCountry: "",
+    },
   });
   const {
     handleSubmit,
@@ -146,9 +173,40 @@ export default function ApplyPage() {
     watch,
     formState: { isSubmitting },
     setError,
+    setValue,
   } = methods;
 
   const [step, setStep] = React.useState(0);
+
+  // Auto-detect user's country based on geolocation
+  React.useEffect(() => {
+    async function detectCountry() {
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        if (res.ok) {
+          const data = await res.json();
+          const userCountryCode = data.country_code; // e.g., "AT", "US"
+
+          // Find matching country in our list
+          const matchedCountry = countryCodes.find(
+            (c) => c.countryCode === userCountryCode
+          );
+
+          if (matchedCountry) {
+            // Set phone country code
+            setValue("phoneCountryCode", matchedCountry.code);
+            // Set address country
+            setValue("addressCountry", matchedCountry.country);
+          }
+        }
+      } catch (error) {
+        // Silently fail - keep default values
+        console.error("Failed to detect country:", error);
+      }
+    }
+
+    detectCountry();
+  }, [setValue]);
 
   const job = React.useMemo(
     () => (slugStr ? jobs.find((j) => j.slug === slugStr) : undefined),
@@ -185,7 +243,7 @@ export default function ApplyPage() {
     if (!cvFL?.[0]) throw new Error("CV is required");
     if (cvFL[0].size > MAX_BYTES) {
       setError("cv", { message: "CV must be 10MB or less" });
-      setStep(3);
+      setStep(0);
       return;
     }
     fd.append("cv", cvFL[0]);
@@ -196,7 +254,7 @@ export default function ApplyPage() {
       for (const f of Array.from(extraFL)) {
         if (f.size > MAX_BYTES) {
           setError("files", { message: `File "${f.name}" exceeds 10MB` });
-          setStep(3);
+          setStep(0);
           return;
         }
         fd.append("files", f);
@@ -282,9 +340,13 @@ export default function ApplyPage() {
 
       {/* Form */}
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="w-full rounded-2xl border border-slate-200 bg-white p-4 sm:p-6 shadow-sm">
           <FormProvider {...methods}>
-            <form onSubmit={handleSubmit(onSubmit)} noValidate>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+              className="w-full max-w-full"
+            >
               {/* STEP 1 — Personal */}
               <fieldset
                 className={step === 0 ? "" : "hidden"}
@@ -307,7 +369,7 @@ export default function ApplyPage() {
                     required
                     autoComplete="email"
                   />
-                  <TextField name="phone" label="Phone" autoComplete="tel" />
+                  <CountryPhoneField required />
                   <TextField
                     name="profile"
                     label="LinkedIn / Portfolio (optional)"
@@ -331,7 +393,7 @@ export default function ApplyPage() {
                       label="Address line 2 (optional)"
                       placeholder="Apartment, suite, unit, etc."
                     />
-                    <div className="grid gap-4 sm:grid-cols-3">
+                    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                       <TextField name="addressCity" label="City" required />
                       <TextField name="addressRegion" label="State / Region" />
                       <TextField
@@ -339,187 +401,59 @@ export default function ApplyPage() {
                         label="Postal code"
                         required
                       />
+                      <TextField
+                        name="addressCountry"
+                        label="Country"
+                        required
+                        placeholder="e.g., Austria"
+                      />
                     </div>
-                    <TextField
-                      name="addressCountry"
-                      label="Country"
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <h4 className="text-sm font-medium text-slate-900">
+                    Documents
+                  </h4>
+
+                  <div className="mt-4">
+                    <label className="block text-sm text-slate-700">
+                      Cover letter (optional)
+                    </label>
+                    <Textarea name="coverLetter" rows={4} />
+                    <FieldError name="coverLetter" />
+                  </div>
+
+                  <div className="mt-6">
+                    <FileDrop
+                      name="cv"
+                      label="CV / Résumé"
+                      description="PDF or DOC/DOCX, max 10MB."
+                      accept=".pdf,.doc,.docx"
                       required
-                      placeholder="e.g., Austria"
+                      maxBytes={10 * 1024 * 1024}
+                      multiple={false}
+                    />
+                  </div>
+
+                  <div className="mt-6">
+                    <FileDrop
+                      name="files"
+                      label="Additional documents (optional)"
+                      description="PDF, DOC/DOCX, PNG/JPG, ZIP — up to 5 files, 10MB each."
+                      accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.zip"
+                      multiple
+                      maxFiles={5}
+                      maxBytes={10 * 1024 * 1024}
                     />
                   </div>
                 </div>
               </fieldset>
 
-              {/* STEP 2 — Experience */}
+              {/* STEP 2 — Review / Consent + REVIEW SUMMARY */}
               <fieldset
                 className={step === 1 ? "" : "hidden"}
                 aria-hidden={step !== 1}
-              >
-                <legend className="text-lg font-semibold">
-                  Experience & availability
-                </legend>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <TextField
-                    name="yearsExperience"
-                    type="number"
-                    label="Years of relevant experience"
-                    min={0}
-                    step={1}
-                    placeholder="e.g., 5"
-                  />
-                  <TextField
-                    name="earliestStart"
-                    type="date"
-                    label="Earliest start date"
-                  />
-                  <TextField
-                    name="noticePeriod"
-                    label="Notice period"
-                    placeholder="e.g., 2 weeks / 1 month"
-                  />
-                  <div>
-                    <label className="block text-sm text-slate-700">
-                      Expected salary (gross)
-                    </label>
-                    <div className="mt-1 flex gap-2">
-                      <SelectField
-                        name="salaryCurrency"
-                        options={currencies}
-                        className="w-28"
-                      />
-                      <InputRaw
-                        name="salary"
-                        type="number"
-                        min={0}
-                        step={100}
-                        placeholder="e.g., 60000"
-                      />
-                      <FieldError name="salary" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                  <SelectField
-                    name="workAuthorization"
-                    label="Work authorization"
-                    options={[
-                      "Citizen / Permanent resident",
-                      "Work visa / Permit",
-                      "Require sponsorship",
-                      "Other / Not sure",
-                    ]}
-                  />
-                  <SelectField
-                    name="relocate"
-                    label="Relocation"
-                    options={[
-                      "Open to relocate",
-                      "Maybe, case-by-case",
-                      "Not at this time",
-                    ]}
-                  />
-                  <SelectField
-                    name="travel"
-                    label="Travel availability"
-                    options={["Up to 25%", "Up to 50%", "Up to 75%", "100%+"]}
-                  />
-                </div>
-              </fieldset>
-
-              {/* STEP 3 — Skills */}
-              <fieldset
-                className={step === 2 ? "" : "hidden"}
-                aria-hidden={step !== 2}
-              >
-                <legend className="text-lg font-semibold">
-                  Skills & links
-                </legend>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <SelectField
-                    name="driversLicense"
-                    label="Driver’s license"
-                    options={["Yes", "No"]}
-                  />
-                  <TextField
-                    name="languages"
-                    label="Languages"
-                    placeholder="English (Fluent), German (Intermediate)"
-                  />
-                </div>
-
-                {job.tags?.length ? (
-                  <div className="mt-4">
-                    <div className="text-xs text-slate-500">
-                      Relevant skills (select all that apply)
-                    </div>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {job.tags.map((s: string) => (
-                        <CheckboxPill
-                          key={s}
-                          name="skills"
-                          value={s}
-                          label={s}
-                        />
-                      ))}
-                    </div>
-                    <FieldError name="skills" />
-                  </div>
-                ) : null}
-
-                <div className="mt-4">
-                  <label className="block text-sm text-slate-700">
-                    Anything else we should know? (optional)
-                  </label>
-                  <Textarea name="notes" rows={3} />
-                  <FieldError name="notes" />
-                </div>
-              </fieldset>
-
-              {/* STEP 4 — Documents (Enhanced) */}
-              <fieldset
-                className={step === 3 ? "" : "hidden"}
-                aria-hidden={step !== 3}
-              >
-                <legend className="text-lg font-semibold">Documents</legend>
-
-                <div className="mt-4">
-                  <label className="block text-sm text-slate-700">
-                    Cover letter
-                  </label>
-                  <Textarea name="coverLetter" rows={4} />
-                  <FieldError name="coverLetter" />
-                </div>
-
-                <div className="mt-6">
-                  <FileDrop
-                    name="cv"
-                    label="CV / Résumé"
-                    description="PDF or DOC/DOCX, max 10MB."
-                    accept=".pdf,.doc,.docx"
-                    required
-                    maxBytes={10 * 1024 * 1024}
-                    multiple={false}
-                  />
-                </div>
-
-                <div className="mt-6">
-                  <FileDrop
-                    name="files"
-                    label="Additional documents (optional)"
-                    description="PDF, DOC/DOCX, PNG/JPG, ZIP — up to 5 files, 10MB each."
-                    accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.zip"
-                    multiple
-                    maxFiles={5}
-                    maxBytes={10 * 1024 * 1024}
-                  />
-                </div>
-              </fieldset>
-
-              {/* STEP 5 — Review / Consent + REVIEW SUMMARY */}
-              <fieldset
-                className={step === 4 ? "" : "hidden"}
-                aria-hidden={step !== 4}
               >
                 <legend className="text-lg font-semibold">
                   Review & consent
@@ -558,7 +492,14 @@ export default function ApplyPage() {
                   <SummarySection title="Personal" onEdit={() => setStep(0)}>
                     <KV label="Full name" value={v.name} />
                     <KV label="Email" value={v.email} />
-                    <KV label="Phone" value={v.phone} />
+                    <KV
+                      label="Phone"
+                      value={
+                        v.phone
+                          ? `${v.phoneCountryCode || ""} ${v.phone}`
+                          : undefined
+                      }
+                    />
                     <KV label="Profile" value={v.profile} isLink />
                   </SummarySection>
 
@@ -571,49 +512,7 @@ export default function ApplyPage() {
                     <KV label="Country" value={v.addressCountry} />
                   </SummarySection>
 
-                  <SummarySection
-                    title="Experience & availability"
-                    onEdit={() => setStep(1)}
-                  >
-                    <KV
-                      label="Years experience"
-                      value={stringOrDash(v.yearsExperience)}
-                    />
-                    <KV
-                      label="Earliest start"
-                      value={dateOrDash(v.earliestStart)}
-                    />
-                    <KV label="Notice period" value={v.noticePeriod} />
-                    <KV
-                      label="Expected salary"
-                      value={
-                        v.salary != null
-                          ? `${v.salaryCurrency ?? ""} ${String(v.salary)}`
-                          : undefined
-                      }
-                    />
-                    <KV
-                      label="Work authorization"
-                      value={v.workAuthorization}
-                    />
-                    <KV label="Relocation" value={v.relocate} />
-                    <KV label="Travel availability" value={v.travel} />
-                  </SummarySection>
-
-                  <SummarySection
-                    title="Skills & links"
-                    onEdit={() => setStep(2)}
-                  >
-                    <KV label="Driver’s license" value={v.driversLicense} />
-                    <KV label="Languages" value={v.languages} />
-                    <KV
-                      label="Relevant skills"
-                      value={v.skills?.length ? v.skills.join(", ") : undefined}
-                    />
-                    <KV label="Notes" value={v.notes} />
-                  </SummarySection>
-
-                  <SummarySection title="Documents" onEdit={() => setStep(3)}>
+                  <SummarySection title="Documents" onEdit={() => setStep(0)}>
                     <KV
                       label="CV / Résumé"
                       value={fileNameFromFileList(v.cv as unknown as FileList)}
@@ -629,11 +528,11 @@ export default function ApplyPage() {
               </fieldset>
 
               {/* Navigation buttons */}
-              <div className="mt-8 flex items-center justify-between">
-                <div className="flex gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex gap-2 sm:gap-3">
                   <Link
                     href={`/careers/${job.slug}`}
-                    className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-slate-900 shadow-sm hover:bg-slate-50"
+                    className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base text-slate-900 shadow-sm hover:bg-slate-50"
                   >
                     Back to job
                   </Link>
@@ -641,7 +540,7 @@ export default function ApplyPage() {
                     <button
                       type="button"
                       onClick={back}
-                      className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-slate-900 shadow-sm hover:bg-slate-50"
+                      className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base text-slate-900 shadow-sm hover:bg-slate-50"
                     >
                       Back
                     </button>
@@ -652,7 +551,7 @@ export default function ApplyPage() {
                   <button
                     type="button"
                     onClick={next}
-                    className="rounded-xl bg-slate-900 px-5 py-3 font-medium text-white shadow-sm hover:bg-slate-700"
+                    className="rounded-xl bg-slate-900 px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-medium text-white shadow-sm hover:bg-slate-700"
                   >
                     Continue
                   </button>
@@ -660,7 +559,7 @@ export default function ApplyPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="rounded-xl bg-slate-900 px-5 py-3 font-medium text-white shadow-sm hover:bg-slate-700 disabled:opacity-60"
+                    className="rounded-xl bg-slate-900 px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-medium text-white shadow-sm hover:bg-slate-700 disabled:opacity-60"
                   >
                     {isSubmitting ? "Submitting…" : "Submit application"}
                   </button>
@@ -744,26 +643,6 @@ function TextField({
   );
 }
 
-function InputRaw({
-  name,
-  className,
-  ...rest
-}: React.InputHTMLAttributes<HTMLInputElement> & {
-  name: keyof ApplyFormData | string;
-}) {
-  const { register } = useFormContext<ApplyFormData>();
-  return (
-    <input
-      {...register(name as keyof ApplyFormData)}
-      {...rest}
-      className={[
-        "rounded-xl border border-slate-300 px-3 py-2 shadow-sm",
-        className || "",
-      ].join(" ")}
-    />
-  );
-}
-
 function FieldError({ name }: { name: keyof ApplyFormData | string }) {
   const { formState } = useFormContext<ApplyFormData>();
   const err = getErr(formState.errors, name);
@@ -799,41 +678,6 @@ function Textarea({
   );
 }
 
-function SelectField({
-  name,
-  label,
-  options,
-  className,
-}: {
-  name: keyof ApplyFormData | string;
-  label?: string;
-  options: readonly string[];
-  className?: string;
-}) {
-  const { register, formState } = useFormContext<ApplyFormData>();
-  const err = getErr(formState.errors, name);
-  return (
-    <div>
-      {label && <label className="block text-sm text-slate-700">{label}</label>}
-      <select
-        {...register(name as keyof ApplyFormData)}
-        className={[
-          "mt-1 w-full rounded-xl border bg-white px-3 py-2 shadow-sm",
-          err
-            ? "border-rose-300 focus:border-rose-400 focus:ring-rose-200"
-            : "border-slate-300 focus:border-slate-400 focus:ring-slate-300",
-          className || "",
-        ].join(" ")}
-      >
-        {options.map((o) => (
-          <option key={o}>{o}</option>
-        ))}
-      </select>
-      {err && <p className="mt-1 text-xs text-rose-700">{err}</p>}
-    </div>
-  );
-}
-
 function Checkbox({
   name,
   label,
@@ -859,27 +703,55 @@ function Checkbox({
     </label>
   );
 }
+/* ------------------------------ Country Phone Field ------------------------------ */
+function CountryPhoneField({ required }: { required?: boolean }) {
+  const { register, formState } = useFormContext<ApplyFormData>();
+  const codeErr = getErr(formState.errors, "phoneCountryCode");
+  const phoneErr = getErr(formState.errors, "phone");
+  const hasError = codeErr || phoneErr;
 
-function CheckboxPill({
-  name,
-  value,
-  label,
-}: {
-  name: keyof ApplyFormData | string;
-  value: string;
-  label: string;
-}) {
-  const { register } = useFormContext<ApplyFormData>();
   return (
-    <label className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-3 py-1 text-sm">
-      <input
-        type="checkbox"
-        value={value}
-        {...register(name as keyof ApplyFormData)}
-        className="h-4 w-4"
-      />{" "}
-      {label}
-    </label>
+    <div className="min-w-0">
+      <label className="block text-sm text-slate-700">
+        Phone {required && <span className="text-rose-600">*</span>}
+      </label>
+      <div className="mt-1 flex gap-2 min-w-0">
+        <select
+          {...register("phoneCountryCode")}
+          className={[
+            "w-24 sm:w-32 flex-shrink-0 rounded-xl border bg-white px-2 sm:px-3 py-2 shadow-sm text-sm sm:text-base",
+            hasError
+              ? "border-rose-300 focus:border-rose-400 focus:ring-rose-200"
+              : "border-slate-300 focus:border-slate-400 focus:ring-slate-300",
+          ].join(" ")}
+          style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
+        >
+          {countryCodes.map((c, idx) => (
+            <option
+              key={`${c.code}-${c.country}-${idx}`}
+              value={c.code}
+              style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
+            >
+              {c.flag} {c.code}
+            </option>
+          ))}
+        </select>
+        <input
+          type="tel"
+          {...register("phone")}
+          placeholder="123 456 7890"
+          autoComplete="tel"
+          className={[
+            "flex-1 min-w-0 rounded-xl border px-3 py-2 shadow-sm",
+            hasError
+              ? "border-rose-300 focus:border-rose-400 focus:ring-rose-200"
+              : "border-slate-300 focus:border-slate-400 focus:ring-slate-300",
+          ].join(" ")}
+        />
+      </div>
+      {codeErr && <p className="mt-1 text-xs text-rose-700">{codeErr}</p>}
+      {phoneErr && <p className="mt-1 text-xs text-rose-700">{phoneErr}</p>}
+    </div>
   );
 }
 
@@ -1251,17 +1123,7 @@ function getErr(errors: FieldErrors<ApplyFormData>, name: string) {
   const e = errors?.[name as keyof typeof errors];
   return e?.message as string | undefined;
 }
-function stringOrDash(v?: unknown) {
-  return v != null && v !== "" ? String(v) : "—";
-}
-function dateOrDash(v?: string) {
-  if (!v) return "—";
-  try {
-    return new Date(v).toLocaleDateString();
-  } catch {
-    return v;
-  }
-}
+
 function fileNameFromFileList(fl?: FileList) {
   return fl && fl[0]?.name ? fl[0].name : "—";
 }
