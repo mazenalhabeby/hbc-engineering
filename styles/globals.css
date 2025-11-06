@@ -113,6 +113,17 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @layer utilities {
   .font-geist {
     font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -128,6 +139,10 @@
   .font-manrope {
     font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   }
+
+  .animate-appear {
+    animation: appear 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
 }
 
 @layer base {
@@ -141,4 +156,154 @@
 
 .test {
   @apply hidden;
+}
+
+.not-found {
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.not-found__container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.not-found__content {
+  width: 100%;
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+  animation: nf-appear 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Title */
+.not-found__title {
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-size: clamp(56px, 8vw, 96px);
+  background: linear-gradient(180deg, #111111 0%, #6b7280 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.25em;
+}
+
+/* GIF */
+.not-found__image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.not-found__image {
+  height: 220px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .not-found__image {
+    height: 300px;
+  }
+}
+
+/* Subtitle + Text */
+.not-found__subtitle {
+  margin-top: 1.5rem;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 600;
+  color: #111827;
+}
+
+.not-found__text {
+  margin-top: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 520px;
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: #4b5563;
+}
+
+/* Actions (buttons wrapper) */
+.not-found__actions {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons (base) */
+.not-found__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+}
+
+/* --- HBC Blue Buttons --- */
+
+/* Primary Button (gradient blue) */
+.not-found__btn--primary {
+  background: linear-gradient(90deg, #0b4da2 0%, #1664c0 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(11, 77, 162, 0.25);
+  animation: btn-pulse 3s infinite ease-in-out;
+}
+
+.not-found__btn--primary:hover {
+  background: linear-gradient(90deg, #083e88 0%, #1152a0 100%);
+  transform: scale(1.03);
+  box-shadow: 0 8px 22px rgba(11, 77, 162, 0.35);
+}
+
+.not-found__btn--primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(22, 100, 192, 0.4);
+}
+
+/* Footer */
+.not-found__footer {
+  margin-top: 2.5rem;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* --- Animations --- */
+@keyframes nf-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes btn-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(11, 77, 162, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(11, 77, 162, 0);
+  }
 }
