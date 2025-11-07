@@ -8,8 +8,8 @@ import { useTranslations } from "next-intl";
 type Corner = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
 type Props = {
-  /** Total time the overlay stays visible (ms), including exit animations */
-  minShowMs?: number; // default 2000 in your use, can set 5000, etc.
+  /** Minimum display time (ms) before loader can exit. Default: 1200ms for optimal UX */
+  minShowMs?: number;
   /** Circle wipe origin */
   revealFrom?: Corner;
   /** Headline text */
@@ -23,7 +23,7 @@ type Props = {
 };
 
 export default function HBCGrandLoaderFull({
-  minShowMs = 5000,
+  minShowMs = 800,
   revealFrom = "bottom-right",
   title = "HBC Engineering",
   subtitle = "subtitle",
@@ -41,11 +41,14 @@ export default function HBCGrandLoaderFull({
   const LETTERS_OUT_MS = 520; // time between switching to lettersOut and starting wipe
   const WIPE_MS = 700; // circle wipe duration
   const EXIT_CHAIN_MS = LETTERS_OUT_MS + WIPE_MS;
+  const POST_LOAD_DELAY_MS = 300; // Wait 300ms after page loads (quick UX)
+  const MAX_LOADER_TIME_MS = 3000; // Maximum time loader can be visible (fallback - 3 seconds)
 
   // ---- timers & guards
   const timers = React.useRef<number[]>([]);
   const inFlightRef = React.useRef(false);
   const lastKeyRef = React.useRef<string | null>(null);
+  const isInitialLoadRef = React.useRef(true);
 
   // Returns a stable “route key” we compare against to decide when to show the loader.
   // If you want to react to hash changes, read from window.location.hash as well.
@@ -67,37 +70,154 @@ export default function HBCGrandLoaderFull({
     return id;
   }, []);
 
+  // Check if page content is ready
+  const checkContentReady = React.useCallback(() => {
+    if (typeof window === "undefined") return false;
+
+    try {
+      // Check DOM readiness
+      const isDOMReady = document.readyState === "complete" || document.readyState === "interactive";
+      if (!isDOMReady) return false;
+
+      // Check if body has meaningful content
+      const hasBody = document.body && document.body.children.length > 0;
+      if (!hasBody) return false;
+
+      // Check if main content area exists (adjust selector as needed)
+      const hasMainContent = document.querySelector("main") !== null ||
+                            document.querySelector("#__next") !== null ||
+                            document.querySelector('[role="main"]') !== null;
+
+      // If no main content yet, not ready
+      if (!hasMainContent) return false;
+
+      // Check images - be lenient
+      const images = Array.from(document.images);
+      if (images.length === 0) return true; // No images = ready
+
+      // Only wait for first few critical images
+      const criticalImages = images.slice(0, 3); // First 3 images only
+      const criticalLoaded = criticalImages.filter(
+        (img) => img.complete && img.naturalHeight !== 0
+      );
+
+      // If at least one critical image loaded or 40% of all images, consider ready
+      return criticalLoaded.length > 0 || (images.length > 0 && criticalLoaded.length / images.length >= 0.4);
+    } catch (e) {
+      // If error checking, assume ready to avoid getting stuck
+      console.warn("Error checking content ready:", e);
+      return true;
+    }
+  }, []);
+
+  // Start the exit animation sequence
+  const startExitSequence = React.useCallback(() => {
+    if (!inFlightRef.current) return; // Guard: only exit if loader is active
+
+    setPhase("lettersOut");
+    // Then start the wipe
+    later(() => setPhase("wipe"), LETTERS_OUT_MS);
+    // And finally unmount after the wipe ends
+    later(() => {
+      setVisible(false);
+      inFlightRef.current = false;
+    }, LETTERS_OUT_MS + WIPE_MS);
+  }, [LETTERS_OUT_MS, WIPE_MS, later]);
+
+  const startTimeRef = React.useRef<number>(0);
+
+  // Wait for page content to load, then trigger exit
+  const waitForPageLoad = React.useCallback(() => {
+    if (!inFlightRef.current) return;
+
+    const startTime = Date.now();
+    const isNavigation = !isInitialLoadRef.current;
+
+    // For navigation, use very short times; for initial load, slightly longer
+    const minDisplayTime = isNavigation
+      ? Math.max(300, minShowMs - EXIT_CHAIN_MS)  // 300ms min for navigation
+      : Math.max(400, minShowMs - EXIT_CHAIN_MS); // 400ms min for initial load
+
+    const maxTime = isNavigation ? 2000 : MAX_LOADER_TIME_MS; // 2s for navigation, 3s for initial
+
+    // Function to check if we should start the exit
+    const checkAndExit = () => {
+      if (!inFlightRef.current) return; // Loader was already hidden
+
+      const elapsed = Date.now() - startTime;
+      const contentReady = checkContentReady();
+
+      // Exit conditions (prioritized for best UX):
+      if (elapsed >= maxTime) {
+        // Fallback: force exit after max time
+        startExitSequence();
+      } else if (contentReady && elapsed >= minDisplayTime) {
+        // Content is ready and minimum time has passed, wait POST_LOAD_DELAY then exit
+        later(() => startExitSequence(), POST_LOAD_DELAY_MS);
+      } else {
+        // Keep checking every 100ms for faster response
+        later(() => checkAndExit(), 100);
+      }
+    };
+
+    // Start checking immediately for initial load, with small delay for navigation
+    if (isNavigation) {
+      // Give React time to render the new route before checking
+      later(() => checkAndExit(), 100);
+    } else {
+      checkAndExit();
+    }
+  }, [
+    minShowMs,
+    EXIT_CHAIN_MS,
+    POST_LOAD_DELAY_MS,
+    MAX_LOADER_TIME_MS,
+    checkContentReady,
+    startExitSequence,
+    later,
+  ]);
+
   const run = React.useCallback(() => {
     // Prevent re-entry while current run is active
     if (inFlightRef.current) return;
 
     inFlightRef.current = true;
+    startTimeRef.current = Date.now();
     setVisible(true);
     setPhase("enter");
 
-    // small enter dwell before holding (purely visual)
+    // Small enter dwell before holding (purely visual)
     later(() => setPhase("hold"), 180);
 
-    // We want TOTAL visible time (from now until unmount) to be exactly minShowMs.
-    // So we start the exit chain at (minShowMs - EXIT_CHAIN_MS), never negative.
-    const holdMs = Math.max(0, minShowMs - EXIT_CHAIN_MS);
+    // Start waiting for page load
+    waitForPageLoad();
+  }, [later, waitForPageLoad]);
 
-    // Begin letters-out at the right moment
-    later(() => {
-      setPhase("lettersOut");
-      // Then start the wipe
-      later(() => setPhase("wipe"), LETTERS_OUT_MS);
-      // And finally unmount after the wipe ends
-      later(() => {
-        setVisible(false);
-        inFlightRef.current = false;
-      }, LETTERS_OUT_MS + WIPE_MS);
-    }, holdMs);
-  }, [minShowMs, EXIT_CHAIN_MS, LETTERS_OUT_MS, WIPE_MS, later]);
-
-  // first mount
+  // first mount - handle both initial load and full page refresh
   React.useEffect(() => {
-    if (initialShow) run();
+    if (typeof window === "undefined") return;
+
+    // Check if this is a fresh page load
+    let isPageLoad = true;
+    try {
+      const navEntries = performance.getEntriesByType?.("navigation") as PerformanceNavigationTiming[];
+      if (navEntries && navEntries.length > 0) {
+        const navType = navEntries[0].type;
+        isPageLoad = navType === "navigate" || navType === "reload";
+      }
+    } catch {
+      // Fallback: assume it's a page load
+      isPageLoad = true;
+    }
+
+    if (initialShow && isPageLoad) {
+      // Reset any stuck state from previous session
+      inFlightRef.current = false;
+      clearAll();
+
+      run();
+    }
+
     return clearAll;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialShow]);
@@ -106,16 +226,48 @@ export default function HBCGrandLoaderFull({
   React.useEffect(() => {
     if (lastKeyRef.current === null) {
       lastKeyRef.current = routeKey;
+      isInitialLoadRef.current = false;
       return;
     }
     if (routeKey !== lastKeyRef.current) {
       lastKeyRef.current = routeKey;
-      run();
+
+      // If loader is already running, force stop it first
+      if (inFlightRef.current) {
+        clearAll(); // Clear any pending timers
+        inFlightRef.current = false;
+        setVisible(false);
+
+        // Small delay before starting new loader for clean transition
+        setTimeout(() => {
+          run();
+        }, 50);
+      } else {
+        clearAll();
+        run();
+      }
     }
-  }, [routeKey, run]);
+  }, [routeKey, run, clearAll]);
 
   // cleanup timers on unmount
   React.useEffect(() => clearAll, [clearAll]);
+
+  // Safety mechanism: force close loader if visible for too long
+  React.useEffect(() => {
+    if (!visible) return;
+
+    // Absolute maximum time - force close no matter what
+    const safetyTimeout = setTimeout(() => {
+      if (inFlightRef.current && visible) {
+        console.warn("HBCGrandLoader: Force closing loader after maximum time");
+        clearAll();
+        setVisible(false);
+        inFlightRef.current = false;
+      }
+    }, 5000); // 5 seconds absolute maximum
+
+    return () => clearTimeout(safetyTimeout);
+  }, [visible, clearAll]);
 
   // circle wipe origin
   const clipAt = React.useMemo(() => {
