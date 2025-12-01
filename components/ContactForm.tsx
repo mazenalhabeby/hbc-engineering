@@ -1,8 +1,82 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+
 export default function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    // Store form reference before async operation
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      console.log("Submitting form to /api/contact...");
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
+
+      // Check if response is JSON
+      const contentType = response.headers.get("content-type");
+      console.log("Content-Type:", contentType);
+
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Server did not return JSON response");
+      }
+
+      const data = await response.json();
+      console.log("Response data:", data);
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        console.log("Form submitted successfully!");
+        // Reset form using stored reference
+        form.reset();
+      } else {
+        setSubmitStatus("error");
+        // Show detailed error in development, generic error in production
+        const detailedError = data.details ? `: ${data.details}` : "";
+        setErrorMessage(data.error + detailedError || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+      const errorMsg = error instanceof Error ? error.message : "Unknown error";
+      setErrorMessage(`Network error: ${errorMsg}. Please check your connection and try again.`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <form action="#" method="post" className="space-y-4">
+      {submitStatus === "success" && (
+        <div className="mb-4 rounded-lg bg-green-50 p-4 text-green-800 border border-green-200">
+          <p className="font-medium">Message sent successfully!</p>
+          <p className="text-sm mt-1">We'll get back to you within 24 hours.</p>
+        </div>
+      )}
+
+      {submitStatus === "error" && (
+        <div className="mb-4 rounded-lg bg-red-50 p-4 text-red-800 border border-red-200">
+          <p className="font-medium">Error sending message</p>
+          <p className="text-sm mt-1">{errorMessage}</p>
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
           name="website"
@@ -130,7 +204,9 @@ export default function ContactForm() {
         <div className="flex items-center gap-3">
           <input
             id="consent"
+            name="consent"
             type="checkbox"
+            required
             className="h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-300"
           />
           <label htmlFor="consent" className="text-sm text-slate-600">
@@ -139,9 +215,10 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-medium text-white shadow-sm transition hover:bg-slate-700 sm:w-auto"
+          disabled={isSubmitting}
+          className="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-medium text-white shadow-sm transition hover:bg-slate-700 disabled:bg-slate-400 disabled:cursor-not-allowed sm:w-auto"
         >
-          Submit request
+          {isSubmitting ? "Sending..." : "Submit request"}
         </button>
         <p className="text-xs text-slate-500">
           We respect your privacy and won’t share your details.

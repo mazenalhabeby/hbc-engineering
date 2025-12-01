@@ -13,6 +13,7 @@ import {
 } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast, Toaster } from "sonner";
 import { jobs } from "../../jobsData";
 
 /* ---------------------------------- STEP CONFIG ---------------------------------- */
@@ -153,8 +154,9 @@ const FIELDS_BY_STEP: Record<number, (keyof ApplyFormData | string)[]> = {
 /* -------------------------------------- PAGE -------------------------------------- */
 export default function ApplyPage() {
   // Hooks first
-  const { slug } = useParams<{ slug: string }>();
-  const slugStr = Array.isArray(slug) ? slug[0] : slug;
+  const params = useParams<{ slug: string; locale: string }>();
+  const slugStr = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  const locale = Array.isArray(params.locale) ? params.locale[0] : params.locale;
   const router = useRouter();
 
   const methods = useForm<ApplyFormData>({
@@ -269,15 +271,22 @@ export default function ApplyPage() {
 
     const res = await fetch("/api/apply", { method: "POST", body: fd });
     if (!res.ok) {
-      const msg = await res.text().catch(() => "Application failed.");
-      alert(msg || "Application failed.");
+      const errorData = await res.json().catch(() => ({ error: "Application failed." }));
+      toast.error(errorData.error || "Application failed. Please try again.");
       return;
     }
-    router.push(
-      `/careers/thank-you?role=${encodeURIComponent(
-        job?.title ?? "Role"
-      )}&name=${encodeURIComponent(values.name)}`
-    );
+
+    // Success!
+    toast.success("Application submitted successfully! Redirecting...");
+
+    // Small delay to show success message
+    setTimeout(() => {
+      router.push(
+        `/${locale}/careers/thank-you?role=${encodeURIComponent(
+          job?.title ?? "Role"
+        )}&name=${encodeURIComponent(values.name)}`
+      );
+    }, 1000);
   };
 
   // Safe fallbacks after hooks
@@ -288,6 +297,7 @@ export default function ApplyPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900 py-16">
+      <Toaster position="top-center" richColors closeButton />
       {/* Hero */}
       <section className="relative overflow-hidden py-8">
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -531,7 +541,7 @@ export default function ApplyPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex gap-2 sm:gap-3">
                   <Link
-                    href={`/careers/${job.slug}`}
+                    href={`/${locale}/careers/${job.slug}`}
                     className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base text-slate-900 shadow-sm hover:bg-slate-50"
                   >
                     Back to job
@@ -586,6 +596,9 @@ function SkeletonPage() {
 }
 
 function NotFoundCard() {
+  const params = useParams<{ locale: string }>();
+  const locale = Array.isArray(params.locale) ? params.locale[0] : params.locale;
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
       <section className="mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
@@ -594,11 +607,11 @@ function NotFoundCard() {
             Job not found
           </h1>
           <p className="mt-2 text-slate-600">
-            The position you’re looking for doesn’t exist or may have been
+            The position you're looking for doesn't exist or may have been
             closed.
           </p>
           <Link
-            href="/careers"
+            href={`/${locale}/careers`}
             className="mt-6 inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white shadow-sm transition hover:bg-slate-700"
           >
             Back to Careers

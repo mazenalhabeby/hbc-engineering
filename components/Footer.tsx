@@ -14,6 +14,42 @@ const PANEL_IMAGES = ["/hbc-logo.svg"]; // put files in /public
 
 export default function CinematicFooter() {
   const t = useTranslations("footer");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setNewsletterEmail("");
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Newsletter submission error:", error);
+      setSubmitStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       className="
@@ -67,31 +103,67 @@ export default function CinematicFooter() {
             </div>
           </div>
 
-          <form className="w-full max-w-md">
+          <form className="w-full max-w-md" onSubmit={handleNewsletterSubmit}>
             <label className="text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] text-white/60">
               {t("subscribe")}
             </label>
             <div className="mt-2 flex gap-3">
               <input
                 type="email"
+                name="email"
                 inputMode="email"
                 placeholder="Your email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
+                disabled={isSubmitting}
                 className="
                   min-w-0 flex-1 rounded-none border-0 border-b border-white/25
                   bg-transparent px-0 py-2 text-white placeholder-white/40
                   focus:border-white focus:outline-none text-base sm:text-[17px]
+                  disabled:opacity-50
                 "
+              />
+              {/* Honeypot field - hidden from users, catches bots */}
+              <input
+                type="text"
+                name="website"
+                autoComplete="off"
+                tabIndex={-1}
+                className="absolute left-[-9999px]"
+                aria-hidden="true"
               />
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="
                   rounded-full bg-white px-4 py-2 text-sm sm:text-[15px]
                   font-semibold text-black transition hover:bg-white/90
+                  disabled:opacity-50 disabled:cursor-not-allowed
                 "
               >
-                {t("send")}
+                {isSubmitting ? "..." : t("send")}
               </button>
             </div>
+            {/* Success/Error Messages */}
+            {submitStatus === "success" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-3 text-sm text-green-400"
+              >
+                Thank you for subscribing! Check your email for confirmation.
+              </motion.div>
+            )}
+            {submitStatus === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-3 text-sm text-red-400"
+              >
+                {errorMessage}
+              </motion.div>
+            )}
           </form>
         </div>
 

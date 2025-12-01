@@ -45,7 +45,6 @@ const ASSETS = {
 const paths = {
   contact: { href: "/contact", label: "Contact" },
   corporate: { href: "/corporate", label: "Schedule Meeting" },
-  shop: { href: "/shop", label: "Shop Green" },
 };
 
 /* --------------------------------------------------------------- */

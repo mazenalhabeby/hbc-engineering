@@ -30,11 +30,25 @@ export default function MeetingPage() {
     setOk(null);
 
     try {
-      // await fetch("/api/meeting", { method: "POST", body: JSON.stringify(data) });
-      await new Promise((r) => setTimeout(r, 900));
-      setOk("ok");
-      form.reset();
-    } catch {
+      const response = await fetch("/api/corporate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setOk("ok");
+        form.reset();
+      } else {
+        console.error("Corporate form error:", result);
+        setOk("err");
+      }
+    } catch (error) {
+      console.error("Corporate form submission error:", error);
       setOk("err");
     } finally {
       setLoading(false);

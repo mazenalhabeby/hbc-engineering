@@ -91,8 +91,7 @@ export default function Navbar() {
           <Image
             src="/hbc-logo.svg"
             alt="HBC Engineering"
-            className="h-20 w-20"
-            width={80}
+            width={260}
             height={80}
             priority
           />
@@ -301,7 +300,7 @@ function MobileMenu() {
                 className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-black/5"
               />
 
-              <div className="relative flex items-center justify-between">
+              <div className="relative flex items-center justify-between gap-2">
                 <span className="text-base font-semibold">Menu</span>
                 <button
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/20 supports-[backdrop-filter]:backdrop-blur-xl"
