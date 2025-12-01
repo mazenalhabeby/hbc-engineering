@@ -156,7 +156,9 @@ export default function ApplyPage() {
   // Hooks first
   const params = useParams<{ slug: string; locale: string }>();
   const slugStr = Array.isArray(params.slug) ? params.slug[0] : params.slug;
-  const locale = Array.isArray(params.locale) ? params.locale[0] : params.locale;
+  const locale = Array.isArray(params.locale)
+    ? params.locale[0]
+    : params.locale;
   const router = useRouter();
 
   const methods = useForm<ApplyFormData>({
@@ -271,7 +273,9 @@ export default function ApplyPage() {
 
     const res = await fetch("/api/apply", { method: "POST", body: fd });
     if (!res.ok) {
-      const errorData = await res.json().catch(() => ({ error: "Application failed." }));
+      const errorData = await res
+        .json()
+        .catch(() => ({ error: "Application failed." }));
       toast.error(errorData.error || "Application failed. Please try again.");
       return;
     }
@@ -597,7 +601,9 @@ function SkeletonPage() {
 
 function NotFoundCard() {
   const params = useParams<{ locale: string }>();
-  const locale = Array.isArray(params.locale) ? params.locale[0] : params.locale;
+  const locale = Array.isArray(params.locale)
+    ? params.locale[0]
+    : params.locale;
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
@@ -607,8 +613,8 @@ function NotFoundCard() {
             Job not found
           </h1>
           <p className="mt-2 text-slate-600">
-            The position you're looking for doesn't exist or may have been
-            closed.
+            The position you&#39;re looking for doesn&#39;t exist or may have
+            been closed.
           </p>
           <Link
             href={`/${locale}/careers`}

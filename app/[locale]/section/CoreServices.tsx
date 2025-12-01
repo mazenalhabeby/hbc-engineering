@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ArrowRight, ArrowRightFromLine } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export type ServiceItem = {
   id: number;

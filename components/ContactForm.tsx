@@ -4,7 +4,9 @@ import React, { useState } from "react";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -48,13 +50,18 @@ export default function ContactForm() {
         setSubmitStatus("error");
         // Show detailed error in development, generic error in production
         const detailedError = data.details ? `: ${data.details}` : "";
-        setErrorMessage(data.error + detailedError || "Something went wrong. Please try again.");
+        setErrorMessage(
+          data.error + detailedError ||
+            "Something went wrong. Please try again."
+        );
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
       const errorMsg = error instanceof Error ? error.message : "Unknown error";
-      setErrorMessage(`Network error: ${errorMsg}. Please check your connection and try again.`);
+      setErrorMessage(
+        `Network error: ${errorMsg}. Please check your connection and try again.`
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -65,7 +72,9 @@ export default function ContactForm() {
       {submitStatus === "success" && (
         <div className="mb-4 rounded-lg bg-green-50 p-4 text-green-800 border border-green-200">
           <p className="font-medium">Message sent successfully!</p>
-          <p className="text-sm mt-1">We'll get back to you within 24 hours.</p>
+          <p className="text-sm mt-1">
+            We&#39;ll get back to you within 24 hours.
+          </p>
         </div>
       )}
 
