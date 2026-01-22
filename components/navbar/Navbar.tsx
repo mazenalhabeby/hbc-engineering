@@ -17,6 +17,7 @@ const LanguageDialog = dynamic(
 export type NavItem = {
   label: string;
   href?: string;
+  external?: boolean;
   children?: { label: string; href: string }[];
 };
 
@@ -29,7 +30,7 @@ const NOISE_BG =
 
 const NAV: NavItem[] = [
   { label: paths.industrial.label, href: paths.industrial.href },
-  { label: paths.fireProtection.label, href: paths.fireProtection.href },
+  { label: paths.fireProtection.label, href: paths.fireProtection.href, external: paths.fireProtection.external },
   {
     label: paths.intelligentBuilding.label,
     href: paths.intelligentBuilding.href,
@@ -144,17 +145,33 @@ function MenuItem({
   const isActive = activeRoot === item.label;
 
   if (!item.children) {
+    const linkClasses = cn(
+      "px-3 py-1.5 text-sm rounded-full transition",
+      "hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400",
+      isActive
+        ? "bg-white/25 font-semibold text-slate-900"
+        : "text-slate-800"
+    );
+
+    if (item.external) {
+      return (
+        <a
+          href={item.href || "/"}
+          role="menuitem"
+          className={linkClasses}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t(item.label)}
+        </a>
+      );
+    }
+
     return (
       <Link
         href={item.href || "/"}
         role="menuitem"
-        className={cn(
-          "px-3 py-1.5 text-sm rounded-full transition",
-          "hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400",
-          isActive
-            ? "bg-white/25 font-semibold text-slate-900"
-            : "text-slate-800"
-        )}
+        className={linkClasses}
       >
         {t(item.label)}
       </Link>
@@ -322,13 +339,25 @@ function MobileMenu() {
                 {NAV.map((item) => (
                   <div key={item.label}>
                     {item.href ? (
-                      <Link
-                        href={item.href}
-                        onClick={close}
-                        className="block rounded-xl border border-white/25 bg-white/55 supports-[backdrop-filter]:backdrop-blur-2xl px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,.45)]"
-                      >
-                        {item.label}
-                      </Link>
+                      item.external ? (
+                        <a
+                          href={item.href}
+                          onClick={close}
+                          className="block rounded-xl border border-white/25 bg-white/55 supports-[backdrop-filter]:backdrop-blur-2xl px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,.45)]"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={close}
+                          className="block rounded-xl border border-white/25 bg-white/55 supports-[backdrop-filter]:backdrop-blur-2xl px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,.45)]"
+                        >
+                          {item.label}
+                        </Link>
+                      )
                     ) : (
                       <details className="rounded-xl border border-white/25 bg-white/55 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,.45)]">
                         <summary className="cursor-pointer list-none px-4 py-3 font-medium">

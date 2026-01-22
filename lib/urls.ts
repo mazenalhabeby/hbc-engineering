@@ -1,10 +1,10 @@
-type PathEntry = { label: string; href: `/${string}` };
+type PathEntry = { label: string; href: string; external?: boolean };
 
 export const paths: Record<string, PathEntry> = {
     home: { label: "home", href: "/" },
     company: { label: "company", href: "/company" },
     industrial: { label: "industrial", href: "/industrial" },
-    fireProtection: { label: "fireProtection", href: "/fire-protection" },
+    fireProtection: { label: "fireProtection", href: "https://fire-protection.tech", external: true },
     intelligentBuilding: {
       label: "intelligent",
       href: "/intelligent-building",
