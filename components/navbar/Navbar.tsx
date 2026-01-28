@@ -14,6 +14,39 @@ const LanguageDialog = dynamic(
   { ssr: false }
 );
 
+function ShopButton() {
+  return (
+    <a
+      href="https://shop.hbc-engineering.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex items-center justify-center h-9 w-9 rounded-xl border border-white/25 bg-white/10 backdrop-blur-2xl shadow-sm hover:shadow-md hover:bg-white/20 transition-all duration-300 overflow-hidden"
+      aria-label="HBC Shop"
+    >
+      {/* Gradient hover effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 via-amber-500/0 to-orange-500/0 group-hover:from-amber-400/20 group-hover:via-amber-500/10 group-hover:to-orange-500/20 transition-all duration-300" />
+
+      {/* Icon */}
+      <svg
+        viewBox="0 0 24 24"
+        className="h-4 w-4 text-slate-700 group-hover:text-amber-600 transition-colors duration-300 relative z-10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <path d="M16 10a4 4 0 0 1-8 0" />
+      </svg>
+
+      {/* Shine effect on hover */}
+      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+    </a>
+  );
+}
+
 export type NavItem = {
   label: string;
   href?: string;
@@ -113,6 +146,7 @@ export default function Navbar() {
               <MenuItem key={item.label} item={item} activeRoot={activeRoot} />
             ))}
           </div>
+          <ShopButton />
           <LanguageDialog />
           {/* CTA */}
           <Link
@@ -382,6 +416,20 @@ function MobileMenu() {
                 ))}
 
                 <div className="pt-2 flex gap-2">
+                  <a
+                    href="https://shop.hbc-engineering.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={close}
+                    className="flex items-center justify-center gap-2 rounded-full px-4 py-2 font-semibold text-slate-800 shadow-lg border border-amber-400/30 bg-gradient-to-r from-amber-50 to-orange-50"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                      <line x1="3" y1="6" x2="21" y2="6" />
+                      <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    Shop
+                  </a>
                   <Link
                     href={paths.corporate.href}
                     onClick={close}
