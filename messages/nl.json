@@ -1183,5 +1183,8 @@
   },
   "preload": {
     "subtitle": "Je ervaring wordt voorbereid…"
+  },
+  "fireProtectionBadge": {
+    "visit": "Bezoek"
   }
 }

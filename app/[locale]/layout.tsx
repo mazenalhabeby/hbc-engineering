@@ -10,6 +10,7 @@ import LenisProvider from "@/providers/LenisProvider";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import HBCGrandLoaderFull from "@/components/HBCGrandLoaderFull";
+import FireProtectionBadge from "@/components/FireProtectionBadge";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -74,6 +75,7 @@ export default async function RootLayout({ children, params }: Props) {
             {children}
             <CinematicFooter />
           </LenisProvider>
+          <FireProtectionBadge />
         </NextIntlClientProvider>
       </body>
     </html>

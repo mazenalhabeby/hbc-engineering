@@ -4,7 +4,7 @@ export const paths: Record<string, PathEntry> = {
     home: { label: "home", href: "/" },
     company: { label: "company", href: "/company" },
     industrial: { label: "industrial", href: "/industrial" },
-    fireProtection: { label: "fireProtection", href: "https://fire-protection.tech", external: true },
+    fireProtection: { label: "fireProtection", href: "/fire-protection" },
     intelligentBuilding: {
       label: "intelligent",
       href: "/intelligent-building",

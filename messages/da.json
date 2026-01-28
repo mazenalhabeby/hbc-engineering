@@ -1182,5 +1182,8 @@
   },
   "preload": {
     "subtitle": "Forbereder din oplevelse…"
+  },
+  "fireProtectionBadge": {
+    "visit": "Besøg"
   }
 }

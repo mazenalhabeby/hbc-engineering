@@ -1182,5 +1182,8 @@
   },
   "preload": {
     "subtitle": "Preparing your experience…"
+  },
+  "fireProtectionBadge": {
+    "visit": "Visit"
   }
 }

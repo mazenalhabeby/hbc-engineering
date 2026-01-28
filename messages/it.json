@@ -1182,6 +1182,9 @@
     "placholder": "Digita per cercare lingue..."
   },
   "preload": {
-    "subtitle": "Preparazione dell’esperienza in corso…"
+    "subtitle": "Preparazione dell'esperienza in corso…"
+  },
+  "fireProtectionBadge": {
+    "visit": "Visita"
   }
 }
