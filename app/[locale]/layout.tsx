@@ -12,19 +12,21 @@ import { setRequestLocale } from "next-intl/server";
 import HBCGrandLoaderFull from "@/components/HBCGrandLoaderFull";
 import FireProtectionBadge from "@/components/FireProtectionBadge";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700", "800"],
+  display: "swap",
   variable: "--font-orbitron",
 });
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-manrope",
 });
@@ -36,8 +38,54 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
-  title: "HBC Engineering",
+  title: {
+    default: "HBC Engineering",
+    template: "%s | HBC Engineering",
+  },
   description,
+  keywords: [
+    "industrial maintenance",
+    "fire protection",
+    "smart building",
+    "IT solutions",
+    "cloud infrastructure",
+    "DevOps",
+    "AI automation",
+  ],
+  authors: [{ name: "HBC Engineering" }],
+  creator: "HBC Engineering",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "HBC Engineering",
+    title: "HBC Engineering",
+    description,
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "HBC Engineering - Industrial Maintenance & Smart Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HBC Engineering",
+    description,
+    images: ["/images/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export function generateStaticParams() {
@@ -65,7 +113,7 @@ export default async function RootLayout({ children, params }: Props) {
       >
         <NextIntlClientProvider>
           <HBCGrandLoaderFull
-            minShowMs={3000}
+            minShowMs={500}
             revealFrom="bottom-right" // "top-left" | "top-right" | "bottom-left" | "bottom-right"
             title="HBC Engineering"
             subtitle="Preparing your experience…"

@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -18,8 +19,17 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // Alternative: domains: ['assets.aceternity.com', 'images.unsplash.com']
   },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      '@tabler/icons-react',
+      'framer-motion',
+      'motion',
+      '@react-three/drei',
+    ],
+  },
+  compress: true,
 };
 
 export default withNextIntl(nextConfig);

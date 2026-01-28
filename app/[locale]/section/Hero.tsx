@@ -1,11 +1,26 @@
 "use client";
 
 import { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
-import ThreeCanvas from "@/components/3d_logo/ThreeCanvas";
-import LogoStage from "@/components/3d_logo/LogoStage";
+import dynamic from "next/dynamic";
 import { Boxes } from "@/components/ui/background-boxes";
 import { useTranslations } from "next-intl";
+
+// Lazy load heavy 3D components
+const ThreeCanvas = dynamic(() => import("@/components/3d_logo/ThreeCanvas"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full bg-gradient-to-br from-blue-100/50 to-blue-200/50 rounded-2xl animate-pulse" />
+  ),
+});
+
+const LogoStage = dynamic(() => import("@/components/3d_logo/LogoStage"), {
+  ssr: false,
+});
+
+const OrbitControls = dynamic(
+  () => import("@react-three/drei").then((mod) => mod.OrbitControls),
+  { ssr: false }
+);
 
 type HeroProps = {
   title?: {
@@ -45,8 +60,8 @@ export default function Hero({
         aria-hidden="true"
       />
       <div
-        className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 
-                gap-10 px-4 sm:px-6 lg:px-8 
+        className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2
+                gap-10 px-4 sm:px-6 lg:px-8
                 min-h-screen items-center"
       >
         <div className="flex h-full flex-col items-start justify-end md:justify-center gap-6">
