@@ -17,19 +17,16 @@ const LanguageDialog = dynamic(
 function ShopButton() {
   return (
     <a
-      href="https://shop.hbc-engineering.com"
+      href="https://8bc.store"
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex items-center justify-center h-9 w-9 rounded-xl border border-white/25 bg-white/10 backdrop-blur-2xl shadow-sm hover:shadow-md hover:bg-white/20 transition-all duration-300 overflow-hidden"
-      aria-label="HBC Shop"
+      className="inline-flex items-center gap-2 h-9 px-3 rounded-2xl border border-input bg-background shadow-sm hover:shadow transition-all hover:bg-accent hover:text-accent-foreground"
+      aria-label="8BC Store - Professional Workwear"
     >
-      {/* Gradient hover effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 via-amber-500/0 to-orange-500/0 group-hover:from-amber-400/20 group-hover:via-amber-500/10 group-hover:to-orange-500/20 transition-all duration-300" />
-
-      {/* Icon */}
+      {/* Shopping bag icon */}
       <svg
         viewBox="0 0 24 24"
-        className="h-4 w-4 text-slate-700 group-hover:text-amber-600 transition-colors duration-300 relative z-10"
+        className="h-4 w-4"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -40,9 +37,7 @@ function ShopButton() {
         <line x1="3" y1="6" x2="21" y2="6" />
         <path d="M16 10a4 4 0 0 1-8 0" />
       </svg>
-
-      {/* Shine effect on hover */}
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+      <span className="text-sm font-medium hidden sm:inline">Workwear</span>
     </a>
   );
 }
@@ -64,10 +59,6 @@ const NOISE_BG =
 const NAV: NavItem[] = [
   { label: paths.industrial.label, href: paths.industrial.href },
   { label: paths.fireProtection.label, href: paths.fireProtection.href, external: paths.fireProtection.external },
-  {
-    label: paths.intelligentBuilding.label,
-    href: paths.intelligentBuilding.href,
-  },
   { label: paths.itSolutions.label, href: paths.itSolutions.href },
   { label: paths.careers.label, href: paths.careers.href },
   { label: paths.contact.label, href: paths.contact.href },
@@ -417,18 +408,18 @@ function MobileMenu() {
 
                 <div className="pt-2 flex gap-2">
                   <a
-                    href="https://shop.hbc-engineering.com"
+                    href="https://8bc.store"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={close}
-                    className="flex items-center justify-center gap-2 rounded-full px-4 py-2 font-semibold text-slate-800 shadow-lg border border-amber-400/30 bg-gradient-to-r from-amber-50 to-orange-50"
+                    className="flex items-center justify-center gap-2 rounded-full px-4 py-2 font-medium text-slate-700 shadow-md border border-slate-200 bg-white"
                   >
                     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
                       <line x1="3" y1="6" x2="21" y2="6" />
                       <path d="M16 10a4 4 0 0 1-8 0" />
                     </svg>
-                    Shop
+                    Workwear
                   </a>
                   <Link
                     href={paths.corporate.href}
