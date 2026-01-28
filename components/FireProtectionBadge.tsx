@@ -136,14 +136,9 @@ export default function FireProtectionBadge() {
                     animate={{ opacity: 1, width: 180, scaleY: 1 }}
                     exit={{ opacity: 0, width: 0, scaleY: 0.8 }}
                     transition={{
-                      width: { duration: 0.35, ease: [0.4, 0, 0.2, 1] },
-                      opacity: { duration: 0.25, ease: "easeInOut" },
-                      scaleY: { duration: 0.35, ease: [0.4, 0, 0.2, 1] },
-                      exit: {
-                        width: { duration: 0.4, ease: [0.4, 0, 0.6, 1] },
-                        opacity: { duration: 0.2, ease: "easeIn" },
-                        scaleY: { duration: 0.4, ease: [0.4, 0, 0.6, 1] }
-                      }
+                      width: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
+                      opacity: { duration: 0.3, ease: "easeInOut" },
+                      scaleY: { duration: 0.4, ease: [0.4, 0, 0.2, 1] }
                     }}
                     style={{ originY: 0.5 }}
                     className="flex flex-col justify-center overflow-hidden"
