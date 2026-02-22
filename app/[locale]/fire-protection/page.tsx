@@ -172,6 +172,7 @@ function CoreServices() {
                   src={s.img}
                   alt={s.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -248,6 +249,7 @@ function SystemsDeepDive() {
                     src={sub.img}
                     alt={sub.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>
@@ -345,7 +347,7 @@ function CaseStudies() {
               className="rounded-3xl overflow-hidden border border-white/60 shadow-lg bg-white/70 backdrop-blur"
             >
               <div className="relative h-48 w-full">
-                <Image src={p.img} alt={p.name} fill className="object-cover" />
+                <Image src={p.img} alt={p.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
               <div className="p-6">
                 <div className="text-xl font-semibold text-slate-900">
@@ -517,6 +519,7 @@ function TextileCatalogSection() {
                         src={g}
                         alt={`${p.title} image`}
                         fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover"
                       />
                     </div>

@@ -243,7 +243,7 @@ function PinnedShowcase() {
                     transition={{ duration: 0.35 }}
                     className="absolute inset-0"
                   >
-                    <Image src={s.img} alt="" fill className="object-cover" />
+                    <Image src={s.img} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                   </motion.div>
                 ))}
               </div>
@@ -612,7 +612,7 @@ function SecuritySuite() {
               className="overflow-hidden rounded-3xl border border-white/60 bg-white/70 shadow-sm backdrop-blur"
             >
               <div className="relative h-56 w-full overflow-hidden">
-                <Image src={b.img} alt="" fill className="object-cover" />
+                <Image src={b.img} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
               </div>
               <div className="p-6">
                 <span className="text-sm font-semibold uppercase tracking-wide text-[#066eb0]">
@@ -642,6 +642,7 @@ function SecuritySuite() {
                             src={s.img}
                             alt=""
                             fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover"
                           />
                         </div>
@@ -663,6 +664,7 @@ function SecuritySuite() {
                         src={b.extra.img}
                         alt=""
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>
@@ -724,6 +726,7 @@ function OtherServices() {
                   src={ASSETS.other}
                   alt=""
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover opacity-90"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120px_120px_at_0%_0%,rgba(255,255,255,0.5),transparent_60%)]" />

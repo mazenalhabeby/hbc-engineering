@@ -10,7 +10,10 @@ import LenisProvider from "@/providers/LenisProvider";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import HBCGrandLoaderFull from "@/components/HBCGrandLoaderFull";
-import FireProtectionBadge from "@/components/FireProtectionBadge";
+import dynamic from "next/dynamic";
+const FireProtectionBadge = dynamic(
+  () => import("@/components/FireProtectionBadge")
+);
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
 const geistMono = Geist_Mono({
@@ -108,8 +111,14 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} data-locale={locale} dir="ltr" suppressHydrationWarning>
+      <head>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preload" href="/hbc-logo.glb" as="fetch" crossOrigin="anonymous" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${manrope.variable} antialiased`}
+        suppressHydrationWarning
       >
         <NextIntlClientProvider>
           <HBCGrandLoaderFull

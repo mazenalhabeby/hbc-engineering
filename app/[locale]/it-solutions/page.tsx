@@ -156,7 +156,7 @@ function PinnedShowcase() {
                     transition={{ duration: 0.35 }}
                     className="absolute inset-0"
                   >
-                    <Image src={s.img} alt="" fill className="object-cover" />
+                    <Image src={s.img} alt="" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                   </motion.div>
                 ))}
               </div>

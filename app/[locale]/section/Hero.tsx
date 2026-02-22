@@ -2,7 +2,14 @@
 
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Boxes } from "@/components/ui/background-boxes";
+import { AuroraBackground } from "@/components/ui/AuroraBackground";
+const Boxes = dynamic(
+  () =>
+    import("@/components/ui/background-boxes").then((mod) => ({
+      default: mod.Boxes,
+    })),
+  { ssr: false, loading: () => null }
+);
 import { useTranslations } from "next-intl";
 
 // Lazy load heavy 3D components
@@ -44,10 +51,14 @@ export default function Hero({
       aria-labelledby="hero-heading"
       className="relative overflow-hidden bg-[radial-gradient(circle_at_20%_40%,#d0eafe_0%,#d0eafe_60%,#83bff1_100%)] min-h-screen"
     >
-      <Boxes />
+      <AuroraBackground />
+      <div className="absolute inset-0 z-[1] opacity-40">
+        <Boxes />
+      </div>
       <div
         className="absolute bottom-0 left-0 z-0 h-full w-full bg-[#c6e0f4]"
         style={{
+          WebkitClipPath: "polygon(100% 100%, 100% 100%, 0% 84%, 0% 100%)",
           clipPath: "polygon(100% 100%, 100% 100%, 0% 84%, 0% 100%)",
         }}
         aria-hidden="true"
@@ -55,6 +66,7 @@ export default function Hero({
       <div
         className="absolute bottom-0 left-0 z-0 h-full w-full bg-[#d9ecfb]"
         style={{
+          WebkitClipPath: "polygon(100% 100%, 100% 100%, 0% 85%, 0% 100%)",
           clipPath: "polygon(100% 100%, 100% 100%, 0% 85%, 0% 100%)",
         }}
         aria-hidden="true"

@@ -106,25 +106,25 @@ function ImageStack({ images }: { images: string[] }) {
     <div ref={ref} className="relative h-[520px] w-full">
       <motion.div style={{ y: y1 }} className="absolute right-6 top-0">
         <div className="relative h-64 w-44 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
-          <Image src={images[0]} alt="" fill className="object-cover" />
+          <Image src={images[0]} alt="" fill sizes="176px" className="object-cover" />
         </div>
       </motion.div>
 
       <motion.div style={{ y: y2 }} className="absolute right-56 top-16">
         <div className="relative h-72 w-52 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
-          <Image src={images[1]} alt="" fill className="object-cover" />
+          <Image src={images[1]} alt="" fill sizes="208px" className="object-cover" />
         </div>
       </motion.div>
 
       <motion.div style={{ y: y3 }} className="absolute right-10 bottom-2">
         <div className="relative h-52 w-40 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
-          <Image src={images[2]} alt="" fill className="object-cover" />
+          <Image src={images[2]} alt="" fill sizes="160px" className="object-cover" />
         </div>
       </motion.div>
 
       <motion.div style={{ y: y2 }} className="absolute right-64 bottom-6">
         <div className="relative h-40 w-40 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
-          <Image src={images[3]} alt="" fill className="object-cover" />
+          <Image src={images[3]} alt="" fill sizes="160px" className="object-cover" />
         </div>
       </motion.div>
 

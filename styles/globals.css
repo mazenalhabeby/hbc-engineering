@@ -287,6 +287,80 @@
 }
 
 /* --- Animations --- */
+/* Box grid hover — pure CSS, no JS needed */
+.box-cell {
+  -webkit-transition: background-color 0s;
+  transition: background-color 0s;
+}
+.box-cell:hover {
+  background-color: var(--hover-color);
+}
+
+/* Aurora background blobs — with -webkit- prefixes for Safari */
+@-webkit-keyframes aurora-drift-1 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(8%, 12%) scale(1.12) rotate(8deg); transform: translate(8%, 12%) scale(1.12) rotate(8deg); }
+  100% { -webkit-transform: translate(18%, 22%) scale(1.2) rotate(18deg); transform: translate(18%, 22%) scale(1.2) rotate(18deg); }
+}
+@keyframes aurora-drift-1 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(8%, 12%) scale(1.12) rotate(8deg); transform: translate(8%, 12%) scale(1.12) rotate(8deg); }
+  100% { -webkit-transform: translate(18%, 22%) scale(1.2) rotate(18deg); transform: translate(18%, 22%) scale(1.2) rotate(18deg); }
+}
+
+@-webkit-keyframes aurora-drift-2 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(-10%, 8%) scale(1.08) rotate(-10deg); transform: translate(-10%, 8%) scale(1.08) rotate(-10deg); }
+  100% { -webkit-transform: translate(-20%, -8%) scale(1.15) rotate(-22deg); transform: translate(-20%, -8%) scale(1.15) rotate(-22deg); }
+}
+@keyframes aurora-drift-2 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(-10%, 8%) scale(1.08) rotate(-10deg); transform: translate(-10%, 8%) scale(1.08) rotate(-10deg); }
+  100% { -webkit-transform: translate(-20%, -8%) scale(1.15) rotate(-22deg); transform: translate(-20%, -8%) scale(1.15) rotate(-22deg); }
+}
+
+@-webkit-keyframes aurora-drift-3 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(12%, -8%) scale(1.1) rotate(6deg); transform: translate(12%, -8%) scale(1.1) rotate(6deg); }
+  100% { -webkit-transform: translate(15%, -18%) scale(1.25) rotate(14deg); transform: translate(15%, -18%) scale(1.25) rotate(14deg); }
+}
+@keyframes aurora-drift-3 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(12%, -8%) scale(1.1) rotate(6deg); transform: translate(12%, -8%) scale(1.1) rotate(6deg); }
+  100% { -webkit-transform: translate(15%, -18%) scale(1.25) rotate(14deg); transform: translate(15%, -18%) scale(1.25) rotate(14deg); }
+}
+
+@-webkit-keyframes aurora-drift-4 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(-6%, 15%) scale(1.15) rotate(-8deg); transform: translate(-6%, 15%) scale(1.15) rotate(-8deg); }
+  100% { -webkit-transform: translate(10%, 20%) scale(1.05) rotate(12deg); transform: translate(10%, 20%) scale(1.05) rotate(12deg); }
+}
+@keyframes aurora-drift-4 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(-6%, 15%) scale(1.15) rotate(-8deg); transform: translate(-6%, 15%) scale(1.15) rotate(-8deg); }
+  100% { -webkit-transform: translate(10%, 20%) scale(1.05) rotate(12deg); transform: translate(10%, 20%) scale(1.05) rotate(12deg); }
+}
+
+@-webkit-keyframes aurora-drift-5 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(-12%, 6%) scale(1.1) rotate(-6deg); transform: translate(-12%, 6%) scale(1.1) rotate(-6deg); }
+  100% { -webkit-transform: translate(-8%, 15%) scale(1.18) rotate(-15deg); transform: translate(-8%, 15%) scale(1.18) rotate(-15deg); }
+}
+@keyframes aurora-drift-5 {
+  0%   { -webkit-transform: translate(0, 0) scale(1) rotate(0deg); transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%  { -webkit-transform: translate(-12%, 6%) scale(1.1) rotate(-6deg); transform: translate(-12%, 6%) scale(1.1) rotate(-6deg); }
+  100% { -webkit-transform: translate(-8%, 15%) scale(1.18) rotate(-15deg); transform: translate(-8%, 15%) scale(1.18) rotate(-15deg); }
+}
+
+@-webkit-keyframes aurora-shimmer {
+  0%   { background-position: 150% 0; }
+  100% { background-position: -50% 0; }
+}
+@keyframes aurora-shimmer {
+  0%   { background-position: 150% 0; }
+  100% { background-position: -50% 0; }
+}
+
 @keyframes nf-appear {
   0% {
     opacity: 0;

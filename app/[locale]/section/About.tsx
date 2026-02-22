@@ -29,6 +29,7 @@ export default function AboutSection() {
               src={"/images/factoryBg.jpeg"}
               alt="Background"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="absolute inset-0 object-cover"
             />
             <div className="absolute inset-0 bg-secondary opacity-80" />
