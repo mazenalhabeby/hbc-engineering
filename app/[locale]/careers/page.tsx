@@ -2,38 +2,20 @@
 import { jobs } from "./jobsData";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import CareersHero from "@/components/CareersHero";
 
 export default function Careers() {
   const t = useTranslations("careers");
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900 py-16">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden>
-          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-blue-300" />
-          <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-emerald-300" />
-        </div>
-
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="mb-3 inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 ring-1 ring-blue-200">
-              {t("hero.badge")}
-            </p>
-            <div>
-              <span className="text-xl font-bold tracking-wider">
-                {t("hero.kicker")}
-              </span>
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                {t("hero.title")}
-              </h1>
-            </div>
-            <p className="mt-4 max-w-prose text-slate-600">
-              {t("hero.subtitle")}
-            </p>
-          </div>
-        </div>
-      </section>
+      <CareersHero
+        badge={t("hero.badge")}
+        kicker={t("hero.kicker")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+      />
 
       {/* Jobs */}
       <section className="bg-slate-50/60">
