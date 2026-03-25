@@ -14,34 +14,6 @@ const LanguageDialog = dynamic(
   { ssr: false }
 );
 
-function ShopButton() {
-  return (
-    <a
-      href="https://8bc.store"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 h-9 px-3 rounded-2xl border border-input bg-background shadow-sm hover:shadow transition-all hover:bg-accent hover:text-accent-foreground"
-      aria-label="8BC Store - Professional Workwear"
-    >
-      {/* Shopping bag icon */}
-      <svg
-        viewBox="0 0 24 24"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <path d="M16 10a4 4 0 0 1-8 0" />
-      </svg>
-      <span className="text-sm font-medium hidden sm:inline">Workwear</span>
-    </a>
-  );
-}
-
 export type NavItem = {
   label: string;
   href?: string;
@@ -137,7 +109,6 @@ export default function Navbar() {
               <MenuItem key={item.label} item={item} activeRoot={activeRoot} />
             ))}
           </div>
-          <ShopButton />
           <LanguageDialog />
           {/* CTA */}
           <Link
@@ -407,20 +378,6 @@ function MobileMenu() {
                 ))}
 
                 <div className="pt-2 flex gap-2">
-                  <a
-                    href="https://8bc.store"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={close}
-                    className="flex items-center justify-center gap-2 rounded-full px-4 py-2 font-medium text-slate-700 shadow-md border border-slate-200 bg-white"
-                  >
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                      <line x1="3" y1="6" x2="21" y2="6" />
-                      <path d="M16 10a4 4 0 0 1-8 0" />
-                    </svg>
-                    Workwear
-                  </a>
                   <Link
                     href={paths.corporate.href}
                     onClick={close}
