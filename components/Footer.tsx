@@ -190,8 +190,11 @@ export default function CinematicFooter() {
             <a className="hover:text-white" href="#">
               LinkedIn ↗
             </a>
-            <a className="hover:text-white" href="#">
+            <a className="hover:text-white" href="/legal">
               Legal
+            </a>
+            <a className="hover:text-white" href="/privacy-policy">
+              Privacy Policy
             </a>
           </div>
         </div>
