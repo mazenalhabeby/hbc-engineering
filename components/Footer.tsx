@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
@@ -190,12 +191,12 @@ export default function CinematicFooter() {
             <a className="hover:text-white" href="#">
               LinkedIn ↗
             </a>
-            <a className="hover:text-white" href="/legal">
+            <Link className="hover:text-white" href="/legal">
               Legal
-            </a>
-            <a className="hover:text-white" href="/privacy-policy">
+            </Link>
+            <Link className="hover:text-white" href="/privacy-policy">
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
