@@ -109,6 +109,8 @@ export default function Navbar() {
               <MenuItem key={item.label} item={item} activeRoot={activeRoot} />
             ))}
           </div>
+          {/* Shop — always visible (desktop + mobile, outside the burger) */}
+          <ShopButton />
           <LanguageDialog />
           {/* CTA */}
           <Link
@@ -127,6 +129,41 @@ export default function Navbar() {
         </div>
       </nav>
     </header>
+  );
+}
+
+/* ---------- Shop icon button (visible on all breakpoints) ---------- */
+function ShopButton() {
+  const t = useTranslations("navbar");
+  return (
+    <a
+      href={paths.shop.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={t("shop")}
+      title={t("shop")}
+      className={cn(
+        "inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-800 transition",
+        "border border-white/25 bg-white/15 supports-[backdrop-filter]:backdrop-blur-2xl",
+        "shadow-[inset_0_1px_0_rgba(255,255,255,.35)]",
+        "hover:bg-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+      )}
+    >
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden>
+        <path
+          d="M6 8h12l-.9 11.1A2 2 0 0 1 15.1 21H8.9a2 2 0 0 1-2-1.9L6 8z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 8a3 3 0 0 1 6 0"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    </a>
   );
 }
 

@@ -14,7 +14,8 @@
     "contact": "Contact",
     "careers": "Carrières",
     "scheduleMeeting": "Plan een afspraak",
-    "itSolutions": "IT-oplossingen"
+    "itSolutions": "IT-oplossingen",
+    "shop": "Shop"
   },
   "home": {
     "midTitle": "de toekomst,",
@@ -443,90 +444,89 @@
       "description": "Neem contact op met HBC om uw brandbeveiligingssystemen te ontwerpen of te upgraden met ingebouwde intelligentie, naleving en duurzaamheid."
     },
     "textileCatalog": {
-  "badge": "Productlijn",
-  "heading": "Textiel brandbeveiligingscatalogus",
-  "intro": "Een modulaire reeks textieloplossingen voor hoge temperaturen – van grote voertuigafdekkingen tot compacte batterijveiligheidstassen en afdekkingen voor pallets en containers. Alle varianten zijn flexibel, waterloos en ontworpen om vlamverspreiding, warmtestraling en rookontwikkeling te beperken.",
-  "specs": {
-    "size": "Afmeting / dekking",
-    "temp": "Thermische prestaties",
-    "weight": "Hanteerbaarheid",
-    "ip": "Weerbestendigheid",
-    "closure": "Sluiting",
-    "fixation": "Bevestiging"
-  },
-  "cta": "Nu aanvragen",
-  "vehicle": {
-    "title": "Voertuig-branddeken",
-    "summary": "Grote afdekking om auto’s en bestelwagens in parkeergarages, werkplaatsen en laadzones in te kapselen.",
-    "bullets": [
-      "Blokkeert warmtestraling en helpt rookvorming te verminderen.",
-      "Kan door twee personen worden gebruikt; laat geen residu achter.",
-      "Herbruikbare textieldeken met versterkte naden."
-    ],
-    "specs": {
-      "size": "Ongeveer 6×8 m; aangepaste maten op aanvraag",
-      "temp": "Hoge weerstand tegen warmtestraling",
-      "weight": "Lichtgewicht, opvouwbaar en gemakkelijk te hanteren"
+      "badge": "Productlijn",
+      "heading": "Textiel brandbeveiligingscatalogus",
+      "intro": "Een modulaire reeks textieloplossingen voor hoge temperaturen – van grote voertuigafdekkingen tot compacte batterijveiligheidstassen en afdekkingen voor pallets en containers. Alle varianten zijn flexibel, waterloos en ontworpen om vlamverspreiding, warmtestraling en rookontwikkeling te beperken.",
+      "specs": {
+        "size": "Afmeting / dekking",
+        "temp": "Thermische prestaties",
+        "weight": "Hanteerbaarheid",
+        "ip": "Weerbestendigheid",
+        "closure": "Sluiting",
+        "fixation": "Bevestiging"
+      },
+      "cta": "Nu aanvragen",
+      "vehicle": {
+        "title": "Voertuig-branddeken",
+        "summary": "Grote afdekking om auto’s en bestelwagens in parkeergarages, werkplaatsen en laadzones in te kapselen.",
+        "bullets": [
+          "Blokkeert warmtestraling en helpt rookvorming te verminderen.",
+          "Kan door twee personen worden gebruikt; laat geen residu achter.",
+          "Herbruikbare textieldeken met versterkte naden."
+        ],
+        "specs": {
+          "size": "Ongeveer 6×8 m; aangepaste maten op aanvraag",
+          "temp": "Hoge weerstand tegen warmtestraling",
+          "weight": "Lichtgewicht, opvouwbaar en gemakkelijk te hanteren"
+        }
+      },
+      "emobility": {
+        "title": "E-Mobility-deken (E-bike / Scooter)",
+        "summary": "Compacte deken voor kleinere voertuigen en onderhoudsruimtes – ideaal voor showrooms, hotels en servicestations.",
+        "bullets": [
+          "Snelle afdekking voor laad- of opslagzones.",
+          "Neemt weinig ruimte in beslag; eenvoudig op te bergen.",
+          "Te gebruiken als zelfstandige of secundaire barrière."
+        ],
+        "specs": {
+          "size": "Circa 3×3 m; verschillende varianten beschikbaar",
+          "temp": "Hoge temperatuurbestendigheid bij langdurige blootstelling",
+          "weight": "Door één persoon te bedienen"
+        }
+      },
+      "container": {
+        "title": "Container- / Kooihoes",
+        "summary": "Textiele afdekking voor draadcontainers of batterijkooien om warmte en rook tijdens incidenten te beperken.",
+        "bullets": [
+          "Geschikt voor industriële bakken, rolkooien of trolleys.",
+          "Optionele riemen voor snelle en veilige bevestiging.",
+          "Weerbestendige siliconen-gecoate stof."
+        ],
+        "specs": {
+          "size": "Standaard containerformaten; maatwerk mogelijk",
+          "temp": "Textiellaag die warmtestraling blokkeert",
+          "ip": "Geschikt voor buitengebruik"
+        }
+      },
+      "bag": {
+        "title": "Batterijveiligheidstas / Boxvoering",
+        "summary": "Draagbare tas of voering voor modules, gereedschapsaccu’s en kleine batterijopslag. Beperkt de verspreiding van deeltjes, warmte en rook.",
+        "bullets": [
+          "Sluiting met rits of klittenband.",
+          "Stapelaar opslag met labelvenster.",
+          "Ideaal voor transport tussen werkzones."
+        ],
+        "specs": {
+          "size": "Diverse maten (gereedschap, e-bike, module)",
+          "temp": "Hittesbestendige binnenlaag",
+          "closure": "Rits- / klittenbandvarianten"
+        }
+      },
+      "pallet": {
+        "title": "Pallet- / IBC-hoes",
+        "summary": "Volledige palletafdekking om risicovolle ladingen in logistiek en magazijnen te scheiden en kettingreacties bij brand te beperken.",
+        "bullets": [
+          "Snel van bovenaf aan te brengen en vast te zetten met riemen.",
+          "Compatibel met wikkel- en krimpfolieprocessen.",
+          "Herbruikbaar voor terugkerende verzendingen."
+        ],
+        "specs": {
+          "size": "EU/US-palletformaten; aanpasbare hoogtes",
+          "temp": "Warmte- en stralingswerende stof",
+          "fixation": "Riemen / haken afhankelijk van model"
+        }
+      }
     }
-  },
-  "emobility": {
-    "title": "E-Mobility-deken (E-bike / Scooter)",
-    "summary": "Compacte deken voor kleinere voertuigen en onderhoudsruimtes – ideaal voor showrooms, hotels en servicestations.",
-    "bullets": [
-      "Snelle afdekking voor laad- of opslagzones.",
-      "Neemt weinig ruimte in beslag; eenvoudig op te bergen.",
-      "Te gebruiken als zelfstandige of secundaire barrière."
-    ],
-    "specs": {
-      "size": "Circa 3×3 m; verschillende varianten beschikbaar",
-      "temp": "Hoge temperatuurbestendigheid bij langdurige blootstelling",
-      "weight": "Door één persoon te bedienen"
-    }
-  },
-  "container": {
-    "title": "Container- / Kooihoes",
-    "summary": "Textiele afdekking voor draadcontainers of batterijkooien om warmte en rook tijdens incidenten te beperken.",
-    "bullets": [
-      "Geschikt voor industriële bakken, rolkooien of trolleys.",
-      "Optionele riemen voor snelle en veilige bevestiging.",
-      "Weerbestendige siliconen-gecoate stof."
-    ],
-    "specs": {
-      "size": "Standaard containerformaten; maatwerk mogelijk",
-      "temp": "Textiellaag die warmtestraling blokkeert",
-      "ip": "Geschikt voor buitengebruik"
-    }
-  },
-  "bag": {
-    "title": "Batterijveiligheidstas / Boxvoering",
-    "summary": "Draagbare tas of voering voor modules, gereedschapsaccu’s en kleine batterijopslag. Beperkt de verspreiding van deeltjes, warmte en rook.",
-    "bullets": [
-      "Sluiting met rits of klittenband.",
-      "Stapelaar opslag met labelvenster.",
-      "Ideaal voor transport tussen werkzones."
-    ],
-    "specs": {
-      "size": "Diverse maten (gereedschap, e-bike, module)",
-      "temp": "Hittesbestendige binnenlaag",
-      "closure": "Rits- / klittenbandvarianten"
-    }
-  },
-  "pallet": {
-    "title": "Pallet- / IBC-hoes",
-    "summary": "Volledige palletafdekking om risicovolle ladingen in logistiek en magazijnen te scheiden en kettingreacties bij brand te beperken.",
-    "bullets": [
-      "Snel van bovenaf aan te brengen en vast te zetten met riemen.",
-      "Compatibel met wikkel- en krimpfolieprocessen.",
-      "Herbruikbaar voor terugkerende verzendingen."
-    ],
-    "specs": {
-      "size": "EU/US-palletformaten; aanpasbare hoogtes",
-      "temp": "Warmte- en stralingswerende stof",
-      "fixation": "Riemen / haken afhankelijk van model"
-    }
-  }
-}
-
   },
   "smart": {
     "hero": {

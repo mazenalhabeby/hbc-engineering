@@ -2,6 +2,7 @@ type PathEntry = { label: string; href: string; external?: boolean };
 
 export const paths: Record<string, PathEntry> = {
     home: { label: "home", href: "/" },
+    shop: { label: "shop", href: "https://shop.hbc-engineering.com", external: true },
     company: { label: "company", href: "/company" },
     industrial: { label: "industrial", href: "/industrial" },
     fireProtection: { label: "fireProtection", href: "/fire-protection" },

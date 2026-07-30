@@ -14,7 +14,8 @@
     "contact": "Kontakt",
     "careers": "Karriere",
     "scheduleMeeting": "Planlæg et møde",
-    "itSolutions": "IT-løsninger"
+    "itSolutions": "IT-løsninger",
+    "shop": "Shop"
   },
   "home": {
     "midTitle": "fremtiden,",
@@ -442,89 +443,89 @@
       "title": "Øg din sikkerhed. Beskyt det, der betyder mest.",
       "description": "Kontakt HBC for at designe eller opgradere dine brandsikringssystemer med indbygget intelligens, overholdelse og holdbarhed."
     },
-   "textileCatalog": {
-    "badge": "Produktlinje",
-  "heading": "Tekstilbaseret Brandbeskyttelseskatalog",
-  "intro": "Et modulært udvalg af højtemperatur-tekstil­løsninger – fra store køretøjsdækkener til kompakte batteritasker samt paller- og containerovertræk. Alle varianter er fleksible, vandfrie og designet til at reducere flammeudbredelse, varmestråling og røgudvikling.",
-  "specs": {
-    "size": "Størrelse / dækning",
-    "temp": "Termisk ydeevne",
-    "weight": "Håndtering",
-    "ip": "Vejrbestandighed",
-    "closure": "Lukning",
-    "fixation": "Fastgørelse"
-  },
-  "cta": "Anmod nu",
-  "vehicle": {
-    "title": "Køretøjs-Brandtæppe",
-    "summary": "Stort dækken til at indkapsle personbiler og varevogne i parkeringshuse, værksteder og ladestationer.",
-    "bullets": [
-      "Blokerer varmestråling og hjælper med at begrænse røgudvikling.",
-      "Kan håndteres af to personer; efterlader ingen rester.",
-      "Genanvendeligt tekstil med forstærkede sømme."
-    ],
-    "specs": {
-      "size": "Typisk 6×8 m; tilpassede størrelser på forespørgsel",
-      "temp": "Høj modstand mod varmestråling",
-      "weight": "Letvægtig og sammenklappelig"
-    }
-  },
-  "emobility": {
-    "title": "E-Mobilitetstæppe (E-cykel/Scooter)",
-    "summary": "Kompakt tæppe til mindre køretøjer og værkstedsområder – ideelt til showrooms, hoteller og servicecentre.",
-    "bullets": [
-      "Hurtig dækning ved opladnings- eller opbevaringszoner.",
-      "Kræver minimal plads; nemt at opbevare.",
-      "Kan bruges alene eller som sekundær barriere."
-    ],
-    "specs": {
-      "size": "Ca. 3×3 m; forskellige varianter tilgængelige",
-      "temp": "Højtemperaturbestandig ved længere eksponering",
-      "weight": "Kan håndteres af én person"
-    }
-  },
-  "container": {
-    "title": "Container- / Burafdækning",
-    "summary": "Tekstilafdækning til netcontainere eller batteribure, som begrænser varme og røg under hændelser.",
-    "bullets": [
-      "Passer til industribeholdere, rullebure eller vogne.",
-      "Valgfri stropper for hurtig og sikker fastgørelse.",
-      "Vejrbestandigt stof belagt med silikone."
-    ],
-    "specs": {
-      "size": "Standardcontainerstørrelser; specialmål muligt",
-      "temp": "Tekstilopbygning, der blokerer varmestråling",
-      "ip": "Udendørs anvendelig belægning"
-    }
-  },
-  "bag": {
-    "title": "Batterisikkerhedstaske / Boksliner",
-    "summary": "Transportabel taske/liner til moduler, værktøjspakker og mindre batteriopbevaring. Begrænser partikler, varme og røg.",
-    "bullets": [
-      "Lukning med lynlås eller velcro.",
-      "Stabelbar opbevaring med gennemsigtige mærkningsfelter.",
-      "Ideel til transport mellem arbejdsområder."
-    ],
-    "specs": {
-      "size": "Flere størrelser (værktøj, e-cykel, modul)",
-      "temp": "Varmebestandigt inderlag",
-      "closure": "Lynlås / Velcro-varianter"
-    }
-  },
-  "pallet": {
-    "title": "Palle- / IBC-Overtræk",
-    "summary": "Fuldpallegardiner, der adskiller risikofyldte laster i logistik og lagre og reducerer kædereaktioner ved brand.",
-    "bullets": [
-      "Hurtig topmontering og fastspænding med stropper.",
-      "Kompatibelt med strækfilmprocesser.",
-      "Genanvendeligt til gentagen brug."
-    ],
-    "specs": {
-      "size": "EU/US-pallemål; tilpassede højder muligt",
-      "temp": "Varme- og strålingsafskærmende tekstil",
-      "fixation": "Stropper / kroge afhængig af model"
-    }
-  }
+    "textileCatalog": {
+      "badge": "Produktlinje",
+      "heading": "Tekstilbaseret Brandbeskyttelseskatalog",
+      "intro": "Et modulært udvalg af højtemperatur-tekstil­løsninger – fra store køretøjsdækkener til kompakte batteritasker samt paller- og containerovertræk. Alle varianter er fleksible, vandfrie og designet til at reducere flammeudbredelse, varmestråling og røgudvikling.",
+      "specs": {
+        "size": "Størrelse / dækning",
+        "temp": "Termisk ydeevne",
+        "weight": "Håndtering",
+        "ip": "Vejrbestandighed",
+        "closure": "Lukning",
+        "fixation": "Fastgørelse"
+      },
+      "cta": "Anmod nu",
+      "vehicle": {
+        "title": "Køretøjs-Brandtæppe",
+        "summary": "Stort dækken til at indkapsle personbiler og varevogne i parkeringshuse, værksteder og ladestationer.",
+        "bullets": [
+          "Blokerer varmestråling og hjælper med at begrænse røgudvikling.",
+          "Kan håndteres af to personer; efterlader ingen rester.",
+          "Genanvendeligt tekstil med forstærkede sømme."
+        ],
+        "specs": {
+          "size": "Typisk 6×8 m; tilpassede størrelser på forespørgsel",
+          "temp": "Høj modstand mod varmestråling",
+          "weight": "Letvægtig og sammenklappelig"
+        }
+      },
+      "emobility": {
+        "title": "E-Mobilitetstæppe (E-cykel/Scooter)",
+        "summary": "Kompakt tæppe til mindre køretøjer og værkstedsområder – ideelt til showrooms, hoteller og servicecentre.",
+        "bullets": [
+          "Hurtig dækning ved opladnings- eller opbevaringszoner.",
+          "Kræver minimal plads; nemt at opbevare.",
+          "Kan bruges alene eller som sekundær barriere."
+        ],
+        "specs": {
+          "size": "Ca. 3×3 m; forskellige varianter tilgængelige",
+          "temp": "Højtemperaturbestandig ved længere eksponering",
+          "weight": "Kan håndteres af én person"
+        }
+      },
+      "container": {
+        "title": "Container- / Burafdækning",
+        "summary": "Tekstilafdækning til netcontainere eller batteribure, som begrænser varme og røg under hændelser.",
+        "bullets": [
+          "Passer til industribeholdere, rullebure eller vogne.",
+          "Valgfri stropper for hurtig og sikker fastgørelse.",
+          "Vejrbestandigt stof belagt med silikone."
+        ],
+        "specs": {
+          "size": "Standardcontainerstørrelser; specialmål muligt",
+          "temp": "Tekstilopbygning, der blokerer varmestråling",
+          "ip": "Udendørs anvendelig belægning"
+        }
+      },
+      "bag": {
+        "title": "Batterisikkerhedstaske / Boksliner",
+        "summary": "Transportabel taske/liner til moduler, værktøjspakker og mindre batteriopbevaring. Begrænser partikler, varme og røg.",
+        "bullets": [
+          "Lukning med lynlås eller velcro.",
+          "Stabelbar opbevaring med gennemsigtige mærkningsfelter.",
+          "Ideel til transport mellem arbejdsområder."
+        ],
+        "specs": {
+          "size": "Flere størrelser (værktøj, e-cykel, modul)",
+          "temp": "Varmebestandigt inderlag",
+          "closure": "Lynlås / Velcro-varianter"
+        }
+      },
+      "pallet": {
+        "title": "Palle- / IBC-Overtræk",
+        "summary": "Fuldpallegardiner, der adskiller risikofyldte laster i logistik og lagre og reducerer kædereaktioner ved brand.",
+        "bullets": [
+          "Hurtig topmontering og fastspænding med stropper.",
+          "Kompatibelt med strækfilmprocesser.",
+          "Genanvendeligt til gentagen brug."
+        ],
+        "specs": {
+          "size": "EU/US-pallemål; tilpassede højder muligt",
+          "temp": "Varme- og strålingsafskærmende tekstil",
+          "fixation": "Stropper / kroge afhængig af model"
+        }
+      }
     }
   },
   "smart": {

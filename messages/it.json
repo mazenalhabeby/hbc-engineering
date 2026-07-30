@@ -14,7 +14,8 @@
     "contact": "Contatto",
     "careers": "Carriere",
     "scheduleMeeting": "Pianifica un incontro",
-    "itSolutions": "Soluzioni IT"
+    "itSolutions": "Soluzioni IT",
+    "shop": "Shop"
   },
   "home": {
     "midTitle": "il futuro,",
@@ -443,90 +444,89 @@
       "description": "Contatta HBC per progettare o aggiornare i tuoi sistemi di protezione antincendio con intelligenza, conformità e durata integrate."
     },
     "textileCatalog": {
-  "badge": "Linea di prodotti",
-  "heading": "Catalogo di protezione antincendio tessile",
-  "intro": "Una gamma modulare di soluzioni tessili ad alta temperatura – dalle coperture di grandi dimensioni per veicoli alle borse di sicurezza per batterie, fino alle coperture per pallet e container. Tutte le varianti sono flessibili, prive d’acqua e progettate per ridurre la propagazione delle fiamme, la radiazione termica e lo sviluppo di fumo.",
-  "specs": {
-    "size": "Dimensione / copertura",
-    "temp": "Prestazioni termiche",
-    "weight": "Maneggevolezza",
-    "ip": "Resistenza agli agenti atmosferici",
-    "closure": "Chiusura",
-    "fixation": "Fissaggio"
-  },
-  "cta": "Richiedi ora",
-  "vehicle": {
-    "title": "Coperta antincendio per veicoli",
-    "summary": "Copertura di grande formato per racchiudere auto e furgoni in parcheggi, officine e aree di ricarica.",
-    "bullets": [
-      "Blocca la radiazione termica e aiuta a limitare la produzione di fumo.",
-      "Utilizzabile da due persone; non lascia residui.",
-      "Tessuto riutilizzabile con cuciture rinforzate."
-    ],
-    "specs": {
-      "size": "Circa 6×8 m; misure personalizzate su richiesta",
-      "temp": "Elevata resistenza alla radiazione termica",
-      "weight": "Leggera, pieghevole e facile da maneggiare"
+      "badge": "Linea di prodotti",
+      "heading": "Catalogo di protezione antincendio tessile",
+      "intro": "Una gamma modulare di soluzioni tessili ad alta temperatura – dalle coperture di grandi dimensioni per veicoli alle borse di sicurezza per batterie, fino alle coperture per pallet e container. Tutte le varianti sono flessibili, prive d’acqua e progettate per ridurre la propagazione delle fiamme, la radiazione termica e lo sviluppo di fumo.",
+      "specs": {
+        "size": "Dimensione / copertura",
+        "temp": "Prestazioni termiche",
+        "weight": "Maneggevolezza",
+        "ip": "Resistenza agli agenti atmosferici",
+        "closure": "Chiusura",
+        "fixation": "Fissaggio"
+      },
+      "cta": "Richiedi ora",
+      "vehicle": {
+        "title": "Coperta antincendio per veicoli",
+        "summary": "Copertura di grande formato per racchiudere auto e furgoni in parcheggi, officine e aree di ricarica.",
+        "bullets": [
+          "Blocca la radiazione termica e aiuta a limitare la produzione di fumo.",
+          "Utilizzabile da due persone; non lascia residui.",
+          "Tessuto riutilizzabile con cuciture rinforzate."
+        ],
+        "specs": {
+          "size": "Circa 6×8 m; misure personalizzate su richiesta",
+          "temp": "Elevata resistenza alla radiazione termica",
+          "weight": "Leggera, pieghevole e facile da maneggiare"
+        }
+      },
+      "emobility": {
+        "title": "Coperta E-Mobility (E-bike / Scooter)",
+        "summary": "Coperta compatta per veicoli di piccole dimensioni e aree di manutenzione – ideale per showroom, hotel e stazioni di servizio.",
+        "bullets": [
+          "Copertura rapida per zone di ricarica o stoccaggio.",
+          "Occupa poco spazio; facile da riporre.",
+          "Può essere utilizzata da sola o come barriera secondaria."
+        ],
+        "specs": {
+          "size": "Circa 3×3 m; varianti disponibili",
+          "temp": "Resistente alle alte temperature per esposizioni prolungate",
+          "weight": "Gestibile da una sola persona"
+        }
+      },
+      "container": {
+        "title": "Copertura per container / gabbia",
+        "summary": "Coperchio tessile per contenitori a rete o gabbie per batterie che serve a confinare calore e fumo in caso di incidente.",
+        "bullets": [
+          "Adatta a contenitori industriali, carrelli o cestoni.",
+          "Cinghie opzionali per un fissaggio rapido e sicuro.",
+          "Tessuto rivestito in silicone resistente agli agenti atmosferici."
+        ],
+        "specs": {
+          "size": "Dimensioni standard dei container; personalizzabili",
+          "temp": "Struttura tessile che blocca la radiazione termica",
+          "ip": "Adatta anche per uso esterno"
+        }
+      },
+      "bag": {
+        "title": "Borsa di sicurezza per batterie / rivestimento per contenitori",
+        "summary": "Borsa o rivestimento portatile per moduli, utensili elettrici e piccoli sistemi di stoccaggio batterie. Riduce particelle, calore e fumo.",
+        "bullets": [
+          "Chiusura con zip o velcro.",
+          "Impilabile con finestra per etichettatura.",
+          "Ideale per il trasporto tra diverse aree di lavoro."
+        ],
+        "specs": {
+          "size": "Diverse capacità (utensile, e-bike, modulo)",
+          "temp": "Strato interno resistente al calore",
+          "closure": "Versioni con zip / velcro"
+        }
+      },
+      "pallet": {
+        "title": "Copertura per pallet / IBC",
+        "summary": "Copertura completa per pallet che consente di separare i carichi a rischio nella logistica e nei magazzini, riducendo le reazioni a catena in caso di incendio.",
+        "bullets": [
+          "Installazione rapida dall’alto e fissaggio con cinghie.",
+          "Compatibile con processi di avvolgimento con film estensibile.",
+          "Riutilizzabile per spedizioni o usi ripetuti."
+        ],
+        "specs": {
+          "size": "Dimensioni pallet EU/US; altezze personalizzabili",
+          "temp": "Tessuto isolante contro calore e radiazioni",
+          "fixation": "Cinghie / ganci a seconda del modello"
+        }
+      }
     }
-  },
-  "emobility": {
-    "title": "Coperta E-Mobility (E-bike / Scooter)",
-    "summary": "Coperta compatta per veicoli di piccole dimensioni e aree di manutenzione – ideale per showroom, hotel e stazioni di servizio.",
-    "bullets": [
-      "Copertura rapida per zone di ricarica o stoccaggio.",
-      "Occupa poco spazio; facile da riporre.",
-      "Può essere utilizzata da sola o come barriera secondaria."
-    ],
-    "specs": {
-      "size": "Circa 3×3 m; varianti disponibili",
-      "temp": "Resistente alle alte temperature per esposizioni prolungate",
-      "weight": "Gestibile da una sola persona"
-    }
-  },
-  "container": {
-    "title": "Copertura per container / gabbia",
-    "summary": "Coperchio tessile per contenitori a rete o gabbie per batterie che serve a confinare calore e fumo in caso di incidente.",
-    "bullets": [
-      "Adatta a contenitori industriali, carrelli o cestoni.",
-      "Cinghie opzionali per un fissaggio rapido e sicuro.",
-      "Tessuto rivestito in silicone resistente agli agenti atmosferici."
-    ],
-    "specs": {
-      "size": "Dimensioni standard dei container; personalizzabili",
-      "temp": "Struttura tessile che blocca la radiazione termica",
-      "ip": "Adatta anche per uso esterno"
-    }
-  },
-  "bag": {
-    "title": "Borsa di sicurezza per batterie / rivestimento per contenitori",
-    "summary": "Borsa o rivestimento portatile per moduli, utensili elettrici e piccoli sistemi di stoccaggio batterie. Riduce particelle, calore e fumo.",
-    "bullets": [
-      "Chiusura con zip o velcro.",
-      "Impilabile con finestra per etichettatura.",
-      "Ideale per il trasporto tra diverse aree di lavoro."
-    ],
-    "specs": {
-      "size": "Diverse capacità (utensile, e-bike, modulo)",
-      "temp": "Strato interno resistente al calore",
-      "closure": "Versioni con zip / velcro"
-    }
-  },
-  "pallet": {
-    "title": "Copertura per pallet / IBC",
-    "summary": "Copertura completa per pallet che consente di separare i carichi a rischio nella logistica e nei magazzini, riducendo le reazioni a catena in caso di incendio.",
-    "bullets": [
-      "Installazione rapida dall’alto e fissaggio con cinghie.",
-      "Compatibile con processi di avvolgimento con film estensibile.",
-      "Riutilizzabile per spedizioni o usi ripetuti."
-    ],
-    "specs": {
-      "size": "Dimensioni pallet EU/US; altezze personalizzabili",
-      "temp": "Tessuto isolante contro calore e radiazioni",
-      "fixation": "Cinghie / ganci a seconda del modello"
-    }
-  }
-}
-
   },
   "smart": {
     "hero": {

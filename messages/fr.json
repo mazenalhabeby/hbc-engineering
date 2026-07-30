@@ -14,7 +14,8 @@
     "contact": "Contact",
     "careers": "Carrières",
     "scheduleMeeting": "Planifier une réunion",
-    "itSolutions": "Solutions informatiques"
+    "itSolutions": "Solutions informatiques",
+    "shop": "Shop"
   },
   "home": {
     "midTitle": "le futur,",
@@ -443,90 +444,89 @@
       "description": "Contactez HBC pour concevoir ou moderniser vos systèmes de protection incendie avec intelligence, conformité et durabilité intégrées."
     },
     "textileCatalog": {
-  "badge": "Ligne de produits",
-  "heading": "Catalogue de protection incendie textile",
-  "intro": "Une gamme modulaire de solutions textiles haute température – allant des grandes couvertures pour véhicules aux sacs de sécurité pour batteries, ainsi qu’aux housses pour palettes et conteneurs. Toutes les versions sont flexibles, sans eau, et conçues pour limiter la propagation des flammes, le rayonnement thermique et la production de fumée.",
-  "specs": {
-    "size": "Taille / couverture",
-    "temp": "Performance thermique",
-    "weight": "Maniement",
-    "ip": "Résistance aux intempéries",
-    "closure": "Fermeture",
-    "fixation": "Fixation"
-  },
-  "cta": "Demander maintenant",
-  "vehicle": {
-    "title": "Couverture anti-feu pour véhicule",
-    "summary": "Grande couverture destinée à encapsuler les voitures et utilitaires dans les parkings, ateliers ou zones de recharge.",
-    "bullets": [
-      "Bloque le rayonnement thermique et aide à limiter la fumée.",
-      "Peut être manipulée par deux personnes ; ne laisse aucun résidu.",
-      "Textile réutilisable avec coutures renforcées."
-    ],
-    "specs": {
-      "size": "Environ 6×8 m ; tailles personnalisées sur demande",
-      "temp": "Excellente résistance au rayonnement thermique",
-      "weight": "Légère, pliable et facile à manipuler"
+      "badge": "Ligne de produits",
+      "heading": "Catalogue de protection incendie textile",
+      "intro": "Une gamme modulaire de solutions textiles haute température – allant des grandes couvertures pour véhicules aux sacs de sécurité pour batteries, ainsi qu’aux housses pour palettes et conteneurs. Toutes les versions sont flexibles, sans eau, et conçues pour limiter la propagation des flammes, le rayonnement thermique et la production de fumée.",
+      "specs": {
+        "size": "Taille / couverture",
+        "temp": "Performance thermique",
+        "weight": "Maniement",
+        "ip": "Résistance aux intempéries",
+        "closure": "Fermeture",
+        "fixation": "Fixation"
+      },
+      "cta": "Demander maintenant",
+      "vehicle": {
+        "title": "Couverture anti-feu pour véhicule",
+        "summary": "Grande couverture destinée à encapsuler les voitures et utilitaires dans les parkings, ateliers ou zones de recharge.",
+        "bullets": [
+          "Bloque le rayonnement thermique et aide à limiter la fumée.",
+          "Peut être manipulée par deux personnes ; ne laisse aucun résidu.",
+          "Textile réutilisable avec coutures renforcées."
+        ],
+        "specs": {
+          "size": "Environ 6×8 m ; tailles personnalisées sur demande",
+          "temp": "Excellente résistance au rayonnement thermique",
+          "weight": "Légère, pliable et facile à manipuler"
+        }
+      },
+      "emobility": {
+        "title": "Couverture E-Mobility (E-bike / Trottinette)",
+        "summary": "Couverture compacte pour petits véhicules et zones d’entretien – idéale pour les showrooms, hôtels et stations-service.",
+        "bullets": [
+          "Mise en place rapide dans les zones de charge ou de stockage.",
+          "Peu encombrante ; facile à ranger.",
+          "Utilisable seule ou comme barrière secondaire."
+        ],
+        "specs": {
+          "size": "Environ 3×3 m ; plusieurs variantes disponibles",
+          "temp": "Résistance élevée à la chaleur sur longue durée",
+          "weight": "Manipulable par une seule personne"
+        }
+      },
+      "container": {
+        "title": "Housse de conteneur / cage",
+        "summary": "Couvercle textile pour cages grillagées ou conteneurs à batteries, afin de contenir la chaleur et la fumée lors d’un incident.",
+        "bullets": [
+          "Convient aux bacs industriels, chariots roulants ou paniers.",
+          "Sangles en option pour une fixation rapide et sécurisée.",
+          "Tissu enduit de silicone résistant aux intempéries."
+        ],
+        "specs": {
+          "size": "Tailles standards de conteneurs ; modèles personnalisés possibles",
+          "temp": "Structure textile bloquant le rayonnement thermique",
+          "ip": "Utilisable en extérieur"
+        }
+      },
+      "bag": {
+        "title": "Sac de sécurité pour batteries / doublure de boîte",
+        "summary": "Sac ou doublure portable pour modules, packs d’outils ou petits stockages de batteries. Limite les particules, la chaleur et la fumée.",
+        "bullets": [
+          "Fermeture par zip ou velcro.",
+          "Stockage empilable avec fenêtre d’étiquetage.",
+          "Idéal pour le transport entre zones de travail."
+        ],
+        "specs": {
+          "size": "Différents volumes (outils, e-bike, module)",
+          "temp": "Couche intérieure résistante à la chaleur",
+          "closure": "Versions zip / velcro"
+        }
+      },
+      "pallet": {
+        "title": "Housse de palette / IBC",
+        "summary": "Housse complète pour palette permettant de séparer les charges à risque dans la logistique et les entrepôts, réduisant les risques de propagation d’incendie.",
+        "bullets": [
+          "Mise en place rapide par le dessus et fixation par sangles.",
+          "Compatible avec les procédés de film étirable.",
+          "Réutilisable pour les expéditions répétées."
+        ],
+        "specs": {
+          "size": "Dimensions palettes EU/US ; hauteurs personnalisables",
+          "temp": "Tissu isolant contre la chaleur et le rayonnement",
+          "fixation": "Sangles / crochets selon le modèle"
+        }
+      }
     }
-  },
-  "emobility": {
-    "title": "Couverture E-Mobility (E-bike / Trottinette)",
-    "summary": "Couverture compacte pour petits véhicules et zones d’entretien – idéale pour les showrooms, hôtels et stations-service.",
-    "bullets": [
-      "Mise en place rapide dans les zones de charge ou de stockage.",
-      "Peu encombrante ; facile à ranger.",
-      "Utilisable seule ou comme barrière secondaire."
-    ],
-    "specs": {
-      "size": "Environ 3×3 m ; plusieurs variantes disponibles",
-      "temp": "Résistance élevée à la chaleur sur longue durée",
-      "weight": "Manipulable par une seule personne"
-    }
-  },
-  "container": {
-    "title": "Housse de conteneur / cage",
-    "summary": "Couvercle textile pour cages grillagées ou conteneurs à batteries, afin de contenir la chaleur et la fumée lors d’un incident.",
-    "bullets": [
-      "Convient aux bacs industriels, chariots roulants ou paniers.",
-      "Sangles en option pour une fixation rapide et sécurisée.",
-      "Tissu enduit de silicone résistant aux intempéries."
-    ],
-    "specs": {
-      "size": "Tailles standards de conteneurs ; modèles personnalisés possibles",
-      "temp": "Structure textile bloquant le rayonnement thermique",
-      "ip": "Utilisable en extérieur"
-    }
-  },
-  "bag": {
-    "title": "Sac de sécurité pour batteries / doublure de boîte",
-    "summary": "Sac ou doublure portable pour modules, packs d’outils ou petits stockages de batteries. Limite les particules, la chaleur et la fumée.",
-    "bullets": [
-      "Fermeture par zip ou velcro.",
-      "Stockage empilable avec fenêtre d’étiquetage.",
-      "Idéal pour le transport entre zones de travail."
-    ],
-    "specs": {
-      "size": "Différents volumes (outils, e-bike, module)",
-      "temp": "Couche intérieure résistante à la chaleur",
-      "closure": "Versions zip / velcro"
-    }
-  },
-  "pallet": {
-    "title": "Housse de palette / IBC",
-    "summary": "Housse complète pour palette permettant de séparer les charges à risque dans la logistique et les entrepôts, réduisant les risques de propagation d’incendie.",
-    "bullets": [
-      "Mise en place rapide par le dessus et fixation par sangles.",
-      "Compatible avec les procédés de film étirable.",
-      "Réutilisable pour les expéditions répétées."
-    ],
-    "specs": {
-      "size": "Dimensions palettes EU/US ; hauteurs personnalisables",
-      "temp": "Tissu isolant contre la chaleur et le rayonnement",
-      "fixation": "Sangles / crochets selon le modèle"
-    }
-  }
-}
-
   },
   "smart": {
     "hero": {

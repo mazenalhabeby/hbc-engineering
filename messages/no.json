@@ -14,7 +14,8 @@
     "contact": "Kontakt",
     "careers": "Karriere",
     "scheduleMeeting": "Planlegg et møte",
-    "itSolutions": "IT-løsninger"
+    "itSolutions": "IT-løsninger",
+    "shop": "Shop"
   },
   "home": {
     "midTitle": "fremtiden,",
@@ -443,90 +444,89 @@
       "description": "Kontakt HBC for å designe eller oppgradere dine brannbeskyttelsessystemer med innebygd intelligens, samsvar og holdbarhet."
     },
     "textileCatalog": {
-  "badge": "Produktlinje",
-  "heading": "Katalog for tekstil brannbeskyttelse",
-  "intro": "En modulær serie med tekstilløsninger for høye temperaturer – fra store kjøretøystepper til kompakte batterisikkerhetsposer og deksler for paller og containere. Alle varianter er fleksible, vannfrie og designet for å redusere flammeutbredelse, varmestråling og røykutvikling.",
-  "specs": {
-    "size": "Størrelse / dekning",
-    "temp": "Termisk ytelse",
-    "weight": "Håndtering",
-    "ip": "Værbestandighet",
-    "closure": "Lukking",
-    "fixation": "Festing"
-  },
-  "cta": "Be om nå",
-  "vehicle": {
-    "title": "Brannteppe for kjøretøy",
-    "summary": "Stor duk for å kapsle inn biler og varebiler i parkeringshus, verksteder og ladeområder.",
-    "bullets": [
-      "Blokkerer varmestråling og hjelper med å redusere røykutvikling.",
-      "Kan håndteres av to personer; etterlater ingen rester.",
-      "Gjenbrukbart tekstil med forsterkede sømmer."
-    ],
-    "specs": {
-      "size": "Omtrent 6×8 m; spesialstørrelser på forespørsel",
-      "temp": "Høy motstand mot varmestråling",
-      "weight": "Lett, sammenleggbar og enkel å håndtere"
+      "badge": "Produktlinje",
+      "heading": "Katalog for tekstil brannbeskyttelse",
+      "intro": "En modulær serie med tekstilløsninger for høye temperaturer – fra store kjøretøystepper til kompakte batterisikkerhetsposer og deksler for paller og containere. Alle varianter er fleksible, vannfrie og designet for å redusere flammeutbredelse, varmestråling og røykutvikling.",
+      "specs": {
+        "size": "Størrelse / dekning",
+        "temp": "Termisk ytelse",
+        "weight": "Håndtering",
+        "ip": "Værbestandighet",
+        "closure": "Lukking",
+        "fixation": "Festing"
+      },
+      "cta": "Be om nå",
+      "vehicle": {
+        "title": "Brannteppe for kjøretøy",
+        "summary": "Stor duk for å kapsle inn biler og varebiler i parkeringshus, verksteder og ladeområder.",
+        "bullets": [
+          "Blokkerer varmestråling og hjelper med å redusere røykutvikling.",
+          "Kan håndteres av to personer; etterlater ingen rester.",
+          "Gjenbrukbart tekstil med forsterkede sømmer."
+        ],
+        "specs": {
+          "size": "Omtrent 6×8 m; spesialstørrelser på forespørsel",
+          "temp": "Høy motstand mot varmestråling",
+          "weight": "Lett, sammenleggbar og enkel å håndtere"
+        }
+      },
+      "emobility": {
+        "title": "E-Mobility-teppe (E-sykkel / Scooter)",
+        "summary": "Kompakt teppe for mindre kjøretøy og verkstedsområder – ideelt for utstillingsrom, hoteller og servicesentre.",
+        "bullets": [
+          "Rask dekning i lade- eller lagringssoner.",
+          "Tar liten plass og er enkelt å oppbevare.",
+          "Kan brukes alene eller som sekundær barriere."
+        ],
+        "specs": {
+          "size": "Ca. 3×3 m; ulike varianter tilgjengelig",
+          "temp": "Høy temperaturbestandighet ved langvarig eksponering",
+          "weight": "Kan håndteres av én person"
+        }
+      },
+      "container": {
+        "title": "Container- / Burtrekk",
+        "summary": "Tekstiltrekk for gittercontainere eller batteriburer for å begrense varme og røyk ved hendelser.",
+        "bullets": [
+          "Passer til industrielle beholdere, rullebur eller traller.",
+          "Valgfrie stropper for rask og sikker festing.",
+          "Værbestandig silikonbelagt stoff."
+        ],
+        "specs": {
+          "size": "Standard containerstørrelser; spesialmål mulig",
+          "temp": "Tekstilstruktur som blokkerer varmestråling",
+          "ip": "Egnet for utendørs bruk"
+        }
+      },
+      "bag": {
+        "title": "Batterisikkerhetsbag / Boksfôr",
+        "summary": "Bærbar bag eller fôr til moduler, verktøybatterier og små batterilagre. Reduserer partikler, varme og røyk.",
+        "bullets": [
+          "Lukking med glidelås eller borrelås.",
+          "Stablebar lagring med merkingsvindu.",
+          "Ideell for transport mellom arbeidsområder."
+        ],
+        "specs": {
+          "size": "Flere størrelser (verktøy, e-sykkel, modul)",
+          "temp": "Varmebestandig innerlag",
+          "closure": "Glidelås- / borrelåsvarianter"
+        }
+      },
+      "pallet": {
+        "title": "Palle- / IBC-trekk",
+        "summary": "Fullt palletrekk for å skille risikable laster i logistikk og lager og redusere kjedereaksjoner ved brann.",
+        "bullets": [
+          "Rask montering ovenfra og festing med stropper.",
+          "Kompatibel med strekkfilmprosesser.",
+          "Gjenbrukbar for gjentatt bruk og forsendelser."
+        ],
+        "specs": {
+          "size": "EU/US-pallestørrelser; tilpassbare høyder",
+          "temp": "Varme- og strålingsbeskyttende stoff",
+          "fixation": "Stropper / kroker avhengig av modell"
+        }
+      }
     }
-  },
-  "emobility": {
-    "title": "E-Mobility-teppe (E-sykkel / Scooter)",
-    "summary": "Kompakt teppe for mindre kjøretøy og verkstedsområder – ideelt for utstillingsrom, hoteller og servicesentre.",
-    "bullets": [
-      "Rask dekning i lade- eller lagringssoner.",
-      "Tar liten plass og er enkelt å oppbevare.",
-      "Kan brukes alene eller som sekundær barriere."
-    ],
-    "specs": {
-      "size": "Ca. 3×3 m; ulike varianter tilgjengelig",
-      "temp": "Høy temperaturbestandighet ved langvarig eksponering",
-      "weight": "Kan håndteres av én person"
-    }
-  },
-  "container": {
-    "title": "Container- / Burtrekk",
-    "summary": "Tekstiltrekk for gittercontainere eller batteriburer for å begrense varme og røyk ved hendelser.",
-    "bullets": [
-      "Passer til industrielle beholdere, rullebur eller traller.",
-      "Valgfrie stropper for rask og sikker festing.",
-      "Værbestandig silikonbelagt stoff."
-    ],
-    "specs": {
-      "size": "Standard containerstørrelser; spesialmål mulig",
-      "temp": "Tekstilstruktur som blokkerer varmestråling",
-      "ip": "Egnet for utendørs bruk"
-    }
-  },
-  "bag": {
-    "title": "Batterisikkerhetsbag / Boksfôr",
-    "summary": "Bærbar bag eller fôr til moduler, verktøybatterier og små batterilagre. Reduserer partikler, varme og røyk.",
-    "bullets": [
-      "Lukking med glidelås eller borrelås.",
-      "Stablebar lagring med merkingsvindu.",
-      "Ideell for transport mellom arbeidsområder."
-    ],
-    "specs": {
-      "size": "Flere størrelser (verktøy, e-sykkel, modul)",
-      "temp": "Varmebestandig innerlag",
-      "closure": "Glidelås- / borrelåsvarianter"
-    }
-  },
-  "pallet": {
-    "title": "Palle- / IBC-trekk",
-    "summary": "Fullt palletrekk for å skille risikable laster i logistikk og lager og redusere kjedereaksjoner ved brann.",
-    "bullets": [
-      "Rask montering ovenfra og festing med stropper.",
-      "Kompatibel med strekkfilmprosesser.",
-      "Gjenbrukbar for gjentatt bruk og forsendelser."
-    ],
-    "specs": {
-      "size": "EU/US-pallestørrelser; tilpassbare høyder",
-      "temp": "Varme- og strålingsbeskyttende stoff",
-      "fixation": "Stropper / kroker avhengig av modell"
-    }
-  }
-}
-
   },
   "smart": {
     "hero": {
